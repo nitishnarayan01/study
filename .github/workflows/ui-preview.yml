@@ -7,6 +7,9 @@ on:
   push:
     branches: [redesign]
 
+permissions:
+  contents: write
+
 jobs:
   screenshots:
     runs-on: ubuntu-latest
@@ -71,3 +74,10 @@ jobs:
             /tmp/shots/*.png
             /tmp/api.log
             /tmp/web.log
+      - name: Publish screenshots to the ui-shots branch
+        if: always()
+        run: |
+          cd /tmp/shots
+          git init -q -b ui-shots && git add *.png
+          git -c user.name=ci -c user.email=ci@example.com commit -qm "UI screenshots for ${GITHUB_SHA}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ui-shots

@@ -12,7 +12,7 @@ export default function LessonView({ lesson, resources }: { lesson: Lesson; reso
     <div className="lesson">
       {lesson.sections.map((s, i) => (
         <section key={i}>
-          <h3>{i + 1}. {s.h.replace(/^\d+\.\s*/, "")}</h3>
+          <h3><span className="hn num">{i + 1}</span>{s.h.replace(/^\d+\.\s*/, "")}</h3>
           {s.p?.map((t, j) => <p key={j}>{t}</p>)}
           {s.flow && (
             <div className="flow" role="img" aria-label={s.flowLabel || "Diagram"}>
@@ -27,8 +27,10 @@ export default function LessonView({ lesson, resources }: { lesson: Lesson; reso
             </div>
           )}
           {s.steps && (
-            <ol>
-              {s.steps.map(([title, text], j) => <li key={j}><b>{title}.</b> {text}</li>)}
+            <ol className="steps">
+              {s.steps.map((step, j) => (
+                <li key={j}>{typeof step === "string" ? step : <><b>{step[0].replace(/\.$/, "")}.</b> {step[1]}</>}</li>
+              ))}
             </ol>
           )}
           {s.table && (
@@ -62,7 +64,8 @@ export default function LessonView({ lesson, resources }: { lesson: Lesson; reso
       ))}
       {lesson.quiz.length > 0 && (
         <section>
-          <h3>{n + 1}. Self-check</h3>
+          <h3><span className="hn num">{n + 1}</span>Self-check</h3>
+          <p className="muted small">Answer in your head first, then open each question to check.</p>
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {lesson.quiz.map(([q, a], j) => (
               <details className="q" key={j}><summary>{j + 1}. {q}</summary><p>{a}</p></details>
@@ -72,7 +75,7 @@ export default function LessonView({ lesson, resources }: { lesson: Lesson; reso
       )}
       {lesson.deeper.length > 0 && (
         <section>
-          <h3>{n + 2}. Go deeper</h3>
+          <h3><span className="hn num">{n + 2}</span>Go deeper</h3>
           <ul>
             {lesson.deeper.filter((k) => byKey[k]).map((k) => (
               <li key={k}><a href={byKey[k].url} target="_blank" rel="noopener noreferrer">{byKey[k].title}</a></li>

@@ -58,7 +58,8 @@ export interface Resource {
 export interface LessonSection {
   h: string;
   p?: string[];
-  steps?: [string, string][];
+  /** Either plain sentences or [title, text] pairs. */
+  steps?: (string | [string, string])[];
   table?: string[][];
   bullets?: string[];
   gloss?: [string, string][];
