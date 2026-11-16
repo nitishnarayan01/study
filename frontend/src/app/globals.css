@@ -4,8 +4,8 @@
   --accent: #2c56c9; --accent-soft: #e7edfb;
   --s0: #97a1b0; --s1: #7454e8; --s2: #b97c0a; --s3: #1b8f5a;
   --p0: #c2412d; --warn-soft: #fdf3e2; --danger: #c2412d;
-  --font: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --font: var(--font-sans), "Segoe UI", system-ui, sans-serif;
+  --mono: var(--font-mono), ui-monospace, Consolas, monospace;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {

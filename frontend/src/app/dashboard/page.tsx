@@ -86,7 +86,7 @@ export default function Dashboard() {
       <TopBar />
       <div className="wrap">
         {user.must_change_password && (
-          <div className="notice">You're using a temporary password. <Link href="/account">Set your own password</Link>.</div>
+          <div className="notice">You’re using a temporary password. <Link href="/account">Set your own password</Link>.</div>
         )}
         <div className="strip">
           <div className="card tile">

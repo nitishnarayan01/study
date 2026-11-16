@@ -37,7 +37,7 @@ export default function AccountPage() {
       <TopBar />
       <main className="wrap narrow">
         <h1 style={{ fontSize: 22 }}>Account</h1>
-        {user.must_change_password && <div className="notice">You're using a temporary password. Please set your own below.</div>}
+        {user.must_change_password && <div className="notice">You’re using a temporary password. Please set your own below.</div>}
         <div className="card" style={{ display: "grid", gap: 6 }}>
           <div><b>{user.name}</b></div>
           <div className="muted">{user.email} · {user.role}</div>
