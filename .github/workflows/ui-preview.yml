@@ -1,0 +1,73 @@
+# Builds the whole app on a throwaway database and saves screenshots of the main pages.
+# Runs on demand and on the redesign branch; it never touches the live site or its data.
+name: UI preview
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [redesign]
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env: { POSTGRES_USER: study, POSTGRES_PASSWORD: study, POSTGRES_DB: study }
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U study -d study" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      DATABASE_URL: postgresql+psycopg://study:study@localhost:5432/study
+      JWT_SECRET: preview-only-secret
+      ADMIN_EMAIL: preview@example.com
+      ADMIN_PASSWORD: PreviewPass123
+      ADMIN_NAME: Nitish Preview
+      CORS_ORIGINS: http://localhost:3000
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip, cache-dependency-path: backend/requirements.txt }
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - name: Start backend
+        working-directory: backend
+        run: |
+          pip install -r requirements.txt
+          alembic upgrade head && python -m app.seed.seed
+          nohup uvicorn app.main:app --port 8000 > /tmp/api.log 2>&1 &
+          for i in $(seq 1 30); do curl -sf localhost:8000/api/health && break; sleep 1; done
+      - name: Add sample progress
+        run: |
+          TOKEN=$(curl -s -X POST localhost:8000/api/auth/login -H 'Content-Type: application/json' \
+            -d "{\"email\":\"$ADMIN_EMAIL\",\"password\":\"$ADMIN_PASSWORD\"}" | python3 -c 'import sys,json;print(json.load(sys.stdin)["access_token"])')
+          H="Authorization: Bearer $TOKEN"
+          curl -s -X POST localhost:8000/api/auth/change-password -H "$H" -H 'Content-Type: application/json' \
+            -d "{\"current_password\":\"$ADMIN_PASSWORD\",\"new_password\":\"${ADMIN_PASSWORD}x\"}"
+          for t in hsw01 hsw02 hsw03 hsw04 hsw05; do
+            curl -s -X PUT localhost:8000/api/progress/me/$t -H "$H" -H 'Content-Type: application/json' -d '{"status":3}' > /dev/null
+          done
+          curl -s -X PUT localhost:8000/api/progress/me/hsw06 -H "$H" -H 'Content-Type: application/json' -d '{"status":1}' > /dev/null
+      - name: Build and start frontend
+        working-directory: frontend
+        env: { NEXT_PUBLIC_API_URL: "http://localhost:8000" }
+        run: |
+          npm install --no-audit --no-fund
+          npm run build
+          nohup npm start > /tmp/web.log 2>&1 &
+          for i in $(seq 1 30); do curl -sf localhost:3000/login > /dev/null && break; sleep 1; done
+      - name: Take screenshots
+        env: { PREVIEW_PASSWORD: "${{ env.ADMIN_PASSWORD }}x" }
+        run: |
+          mkdir -p /tmp/shots && cp .github/ui/shots.mjs /tmp/shots/ && cd /tmp/shots
+          npm init -y > /dev/null && npm install --no-audit --no-fund playwright@1.49.1 > /dev/null
+          npx playwright install --with-deps chromium > /dev/null
+          node shots.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ui-screenshots
+          path: |
+            /tmp/shots/*.png
+            /tmp/api.log
+            /tmp/web.log
