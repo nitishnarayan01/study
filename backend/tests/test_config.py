@@ -17,3 +17,8 @@ def test_other_urls_unchanged():
 def test_cors_origins_split():
     s = Settings(cors_origins="https://a.vercel.app, http://localhost:3000")
     assert s.cors_origin_list == ["https://a.vercel.app", "http://localhost:3000"]
+
+
+def test_cors_origins_tolerate_trailing_slash_and_quotes():
+    s = Settings(cors_origins=' "https://a.vercel.app/" , http://localhost:3000/ ')
+    assert s.cors_origin_list == ["https://a.vercel.app", "http://localhost:3000"]
