@@ -718,6 +718,150 @@
    "title": "Claude SDKs, CLI and libraries (docs)",
    "url": "https://platform.claude.com/docs/en/cli-sdks-libraries/overview",
    "kind": "Read"
+  },
+  {
+   "key": "clStart",
+   "title": "Get started with the Claude API (docs)",
+   "url": "https://platform.claude.com/docs/en/get-started",
+   "kind": "Do"
+  },
+  {
+   "key": "clTools",
+   "title": "Tool use with Claude (docs)",
+   "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview",
+   "kind": "Read"
+  },
+  {
+   "key": "clCache",
+   "title": "Prompt caching (Claude docs)",
+   "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+   "kind": "Read"
+  },
+  {
+   "key": "clRate",
+   "title": "Rate limits (Claude docs)",
+   "url": "https://platform.claude.com/docs/en/api/rate-limits",
+   "kind": "Read"
+  },
+  {
+   "key": "clErrors",
+   "title": "Claude API errors (docs)",
+   "url": "https://platform.claude.com/docs/en/api/errors",
+   "kind": "Reference"
+  },
+  {
+   "key": "clChoose",
+   "title": "Choosing the right model (Claude docs)",
+   "url": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model",
+   "kind": "Read"
+  },
+  {
+   "key": "oaStruct",
+   "title": "Structured model outputs (OpenAI docs)",
+   "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+   "kind": "Read"
+  },
+  {
+   "key": "oaStream",
+   "title": "Streaming API responses (OpenAI docs)",
+   "url": "https://developers.openai.com/api/docs/guides/streaming-responses",
+   "kind": "Read"
+  },
+  {
+   "key": "gemModels",
+   "title": "Gemini models (Google AI docs)",
+   "url": "https://ai.google.dev/gemini-api/docs/models",
+   "kind": "Reference"
+  },
+  {
+   "key": "gemStruct",
+   "title": "Structured outputs (Gemini API docs)",
+   "url": "https://ai.google.dev/gemini-api/docs/structured-output",
+   "kind": "Read"
+  },
+  {
+   "key": "gemVision",
+   "title": "Image understanding (Gemini API docs)",
+   "url": "https://ai.google.dev/gemini-api/docs/image-understanding",
+   "kind": "Read"
+  },
+  {
+   "key": "awsRetry",
+   "title": "Timeouts, retries and backoff with jitter (Amazon Builders' Library)",
+   "url": "https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/",
+   "kind": "Read"
+  },
+  {
+   "key": "ollamaQs",
+   "title": "Ollama quickstart (docs)",
+   "url": "https://docs.ollama.com/quickstart",
+   "kind": "Do"
+  },
+  {
+   "key": "lmsBasics",
+   "title": "Get started with LM Studio (docs)",
+   "url": "https://lmstudio.ai/docs/app/basics",
+   "kind": "Do"
+  },
+  {
+   "key": "llamacpp",
+   "title": "llama.cpp (GitHub)",
+   "url": "https://github.com/ggml-org/llama.cpp",
+   "kind": "Reference"
+  },
+  {
+   "key": "hfGguf",
+   "title": "GGUF (Hugging Face Hub docs)",
+   "url": "https://huggingface.co/docs/hub/gguf",
+   "kind": "Read"
+  },
+  {
+   "key": "hfQuant",
+   "title": "Quantization overview (Hugging Face Transformers docs)",
+   "url": "https://huggingface.co/docs/transformers/quantization",
+   "kind": "Read"
+  },
+  {
+   "key": "vllmBlog",
+   "title": "vLLM: easy, fast and cheap LLM serving with PagedAttention",
+   "url": "https://vllm.ai/blog/vllm",
+   "kind": "Read"
+  },
+  {
+   "key": "hfKv",
+   "title": "KV caching explained (Hugging Face blog)",
+   "url": "https://huggingface.co/blog/not-lain/kv-caching",
+   "kind": "Read"
+  },
+  {
+   "key": "gemmaDocs",
+   "title": "Gemma models overview (Google AI docs)",
+   "url": "https://ai.google.dev/gemma/docs",
+   "kind": "Read"
+  },
+  {
+   "key": "mistralModels",
+   "title": "Mistral models overview (docs)",
+   "url": "https://docs.mistral.ai/models",
+   "kind": "Reference"
+  },
+  {
+   "key": "hfModels",
+   "title": "Models on the Hugging Face Hub (docs)",
+   "url": "https://huggingface.co/docs/hub/models",
+   "kind": "Read"
+  },
+  {
+   "key": "hfCards",
+   "title": "Model cards (Hugging Face Hub docs)",
+   "url": "https://huggingface.co/docs/hub/model-cards",
+   "kind": "Read"
+  },
+  {
+   "key": "lmarena",
+   "title": "LMArena text leaderboard",
+   "url": "https://lmarena.ai/leaderboard/text",
+   "kind": "Tool"
   }
  ],
  "topics": [
@@ -2715,14 +2859,25 @@
    "kind": "New",
    "hours": 2,
    "order": 63,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "Every model provider works the same basic way: your software sends an HTTPS request with an API key, a model name, some settings and the conversation; the provider sends back JSON with the model's reply and how many tokens it used. SDKs are libraries that build those requests for you.",
+   "why": "Once you can read one request and one response, every provider's documentation, every cost report and every 'the AI is broken' incident becomes understandable. It is the single most reusable technical skill in AI delivery.",
+   "concepts": [
+    "API key: a password for software",
+    "Endpoint, headers and body",
+    "Payload fields: model, messages, max tokens",
+    "Response: content, stop reason, usage",
+    "SDK vs raw HTTP",
+    "Keys in environment variables, never in code"
+   ],
+   "resources": [
+    "clStart",
+    "clSdks",
+    "mdnJson"
+   ],
+   "do_it": "Create a Claude or Gemini API key, store it as an environment variable, and use Postman (or the quickstart code with Claude's help) to send one message. Find the input and output token counts in the response.",
+   "prove": "Annotate a real request and response line by line in plain English, and work out the cost of that call from the token counts and the price page.",
+   "interview": "Walk me through what happens, technically, when our app sends a question to an LLM.",
    "covers": [
     "REST API, SDK, API Key",
     "Request, Response, Payload"
@@ -2737,14 +2892,26 @@
    "kind": "New",
    "hours": 3,
    "order": 64,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "The Claude API centres on the Messages endpoint: you send a list of user and assistant turns (plus an optional system prompt) and receive the next assistant turn. Tool use lets Claude ask your code to run a function and use the result. Prompt caching lets repeated prompt prefixes be reused at a much lower price and latency.",
+   "why": "These three features cover most real product designs: conversation, actions (look up an order, create a ticket) and cost control at scale. Knowing how they work lets you challenge estimates and spot designs that will be slow or expensive.",
+   "concepts": [
+    "Messages: roles, system prompt, max_tokens",
+    "Stop reasons",
+    "Tool definitions and the tool-use loop",
+    "Client tools vs server tools",
+    "Prompt caching: stable prefix first",
+    "Batch processing for non-urgent work"
+   ],
+   "resources": [
+    "clStart",
+    "clTools",
+    "clCache",
+    "clPrice"
+   ],
+   "do_it": "Read the tool use overview and draw the round trip for 'What's the status of order 123?': which messages go back and forth, and where your code runs.",
+   "prove": "For a support assistant with a 20-page policy document in every request, estimate monthly cost with and without prompt caching for 10,000 conversations, using the current price page.",
+   "interview": "How would you keep the cost of an LLM feature under control as usage grows?",
    "covers": [
     "Anthropic APIs"
    ]
@@ -2758,14 +2925,24 @@
    "kind": "New",
    "hours": 2.5,
    "order": 65,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "OpenAI's current API for new work is the Responses API. Two features matter most for products: structured outputs, which force the reply to match a JSON schema you define, and streaming, which sends the reply in pieces as it is generated so users see text immediately.",
+   "why": "Structured outputs turn a model from a text generator into a reliable component other software can consume. Streaming decides whether a feature feels instant or sluggish. Both shape design, testing and error handling.",
+   "concepts": [
+    "Responses API vs Chat Completions",
+    "JSON mode vs structured outputs",
+    "Schemas defined with Pydantic or Zod",
+    "Streaming with server-sent events",
+    "Partial output and error handling while streaming",
+    "Refusals still need handling"
+   ],
+   "resources": [
+    "oaStruct",
+    "oaStream"
+   ],
+   "do_it": "Write a JSON schema (in plain English first, then with Claude's help) for extracting a meeting summary: decisions, owners, due dates. Note which fields are required.",
+   "prove": "Explain to an engineer, in five bullet points, what could still go wrong even with schema-enforced output.",
+   "interview": "When would you use structured output instead of free text in an AI feature?",
    "covers": [
     "OpenAI APIs"
    ]
@@ -2779,14 +2956,26 @@
    "kind": "New",
    "hours": 2.5,
    "order": 66,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "The Gemini API gives access to Google's Gemini models. They are multimodal: one request can include text, images, PDFs, audio or video. Like other providers, Gemini supports structured output against a JSON schema or a fixed list of values. Model generations change often (the 1.5 and 2.0 models listed in older material are retired), so always check the models page.",
+   "why": "Multimodal input opens use cases text-only models can't touch: reading invoices, checking photos, summarising recordings. And the retirement of older models is a lesson in itself: model choice is a dependency with an end-of-life date.",
+   "concepts": [
+    "Text, image, document, audio and video input",
+    "Inline data vs uploading files",
+    "Structured output: JSON schema and enums",
+    "Model families: fast vs most capable",
+    "Model versions, previews and retirement",
+    "Free tier vs paid tier terms"
+   ],
+   "resources": [
+    "gemModels",
+    "gemVision",
+    "gemStruct",
+    "gemKey"
+   ],
+   "do_it": "In AI Studio, upload a photo of a receipt and ask for merchant, date, total and line items as JSON. Try three receipts and note any mistakes.",
+   "prove": "Write a one-page plan for a 'receipt to expense claim' feature: model choice, schema, error handling and what a human still checks.",
+   "interview": "What new risks come with multimodal input compared with text-only?",
    "covers": [
     "Gemini API (sheet lists Gemini 1.5/2.0, now retired)"
    ]
@@ -2800,14 +2989,25 @@
    "kind": "New",
    "hours": 2,
    "order": 67,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "Providers limit how much you can use: requests per minute, tokens per minute and monthly spend. Exceed a limit and you get an error (HTTP 429). Sometimes the service itself is overloaded or slow. Retries with exponential backoff and jitter, sensible timeouts and fallbacks are how software stays reliable anyway.",
+   "why": "Rate limits are a launch risk that is easy to miss in testing and painful in production. TPMs who ask about limits, tiers and retry behaviour early avoid the classic 'it worked in the demo, it fell over at launch' story.",
+   "concepts": [
+    "RPM, input and output tokens per minute",
+    "Usage tiers and spend limits",
+    "429 vs overloaded vs server errors",
+    "Retry-after headers",
+    "Exponential backoff with jitter",
+    "Timeouts, idempotency and fallbacks"
+   ],
+   "resources": [
+    "clRate",
+    "clErrors",
+    "awsRetry"
+   ],
+   "do_it": "Read the Claude rate limits page and estimate whether 200 users each sending 10 messages an hour (about 2,000 input tokens each) would fit in the lowest tier.",
+   "prove": "Write a launch checklist section on capacity: limits, expected peak, retry policy, fallback and who requests a limit increase and when.",
+   "interview": "Our AI feature works in testing but fails under load at launch. What happened and what would you do?",
    "covers": [
     "Rate Limits, Quotas",
     "Retry, Backoff, Timeout"
@@ -2822,14 +3022,27 @@
    "kind": "New",
    "hours": 3,
    "order": 68,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "Open-weight models are models whose trained weights you can download and run yourself. The main families come from Meta (Llama), Mistral AI, Alibaba (Qwen), DeepSeek, Google (Gemma) and Microsoft (Phi). They come in many sizes, are often fine-tuned by others, and each has its own licence.",
+   "why": "Open models are the alternative whenever data can't leave your environment, costs at scale must drop, or you need full control. A TPM needs to know the families, the size trade-offs and the licence questions to frame build-vs-buy honestly.",
+   "concepts": [
+    "Open weights vs open source",
+    "Model families and sizes",
+    "Base vs instruction-tuned models",
+    "Licences and usage conditions",
+    "Where to find them: Hugging Face, Ollama library",
+    "Reading model cards and leaderboards critically"
+   ],
+   "resources": [
+    "hfModels",
+    "hfCards",
+    "gemmaDocs",
+    "mistralModels",
+    "lmarena"
+   ],
+   "do_it": "Pick two open models on Hugging Face, read their model cards and fill in a table: maker, sizes, licence, context length, intended use, known limits.",
+   "prove": "Write a half-page note for legal and security on what to check before using an open model in a product.",
+   "interview": "Why might we choose an open model over a commercial API, and what would worry you?",
    "covers": [
     "Llama",
     "Mistral",
@@ -2848,14 +3061,25 @@
    "kind": "New",
    "hours": 3,
    "order": 69,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "You can run open models on your own laptop. Ollama is a simple command-line tool and local server; LM Studio is a desktop app with a model browser and chat window; llama.cpp is the open-source engine many of these tools are built on. All of them can expose an OpenAI-compatible API on your machine.",
+   "why": "Running a model yourself makes the abstract concrete: you feel the speed difference between sizes, see memory limits and learn what 'private, offline AI' really means. It is also a practical option for sensitive documents.",
+   "concepts": [
+    "Download, load and chat",
+    "Model size vs your RAM and GPU",
+    "Local API server and OpenAI compatibility",
+    "Quality and speed vs hosted frontier models",
+    "Privacy: data stays on the machine",
+    "Which tool for whom"
+   ],
+   "resources": [
+    "ollamaQs",
+    "lmsBasics",
+    "llamacpp"
+   ],
+   "do_it": "Install Ollama or LM Studio and run a small model (around 1 to 4 billion parameters). Ask it the same three questions you ask Claude and compare quality and speed.",
+   "prove": "Write a short note: which internal tasks at your company could reasonably run on a local model, and which could not.",
+   "interview": "A team wants to use local models for confidential documents. What would you check?",
    "covers": [
     "Ollama",
     "LM Studio",
@@ -2871,14 +3095,24 @@
    "kind": "New",
    "hours": 2,
    "order": 70,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "A model's parameters (weights) are the billions of numbers it learned in training; a checkpoint is a saved copy of them. Quantization stores those numbers with fewer bits (for example 4-bit instead of 16-bit), making the model much smaller and faster with some loss of quality. GGUF is a popular file format for quantized models used by llama.cpp, Ollama and LM Studio.",
+   "why": "These ideas explain hardware costs, why a model fits on one GPU but not another, and what names like '7B Q4_K_M' mean. You'll hear them in every self-hosting or on-device discussion.",
+   "concepts": [
+    "Parameters and model size",
+    "Precision: fp32, fp16/bf16, int8, int4",
+    "Memory rule of thumb: parameters times bytes per parameter",
+    "Quantization trade-off: size vs quality",
+    "GGUF and safetensors files",
+    "Checkpoints and versions"
+   ],
+   "resources": [
+    "hfQuant",
+    "hfGguf"
+   ],
+   "do_it": "Estimate the memory needed for a 7B and a 70B model at 16-bit and at 4-bit. Then check a GGUF model page on Hugging Face and compare with the listed file sizes.",
+   "prove": "Explain to a finance stakeholder, in one paragraph, why a 4-bit model is cheaper to run and what you give up.",
+   "interview": "What does '7B, 4-bit quantized' tell you about a model?",
    "covers": [
     "Model Weights, Parameters",
     "Quantization, GGUF",
@@ -2894,14 +3128,24 @@
    "kind": "New",
    "hours": 3,
    "order": 71,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "Inference is running a trained model to produce output; serving is doing that reliably for many users. GPUs do the maths and the model must fit in their memory (VRAM). Serving engines such as vLLM batch many requests together and manage the KV cache, the memory that stores context for each conversation, to get far more throughput from the same hardware.",
+   "why": "If your company self-hosts models, GPU cost and capacity become programme-level risks. Knowing the vocabulary (time to first token, throughput, batching, KV cache) lets you discuss capacity plans and performance targets with ML platform teams.",
+   "concepts": [
+    "Inference vs training",
+    "GPU, VRAM, CPU and RAM",
+    "Time to first token vs tokens per second vs throughput",
+    "Batching and continuous batching",
+    "KV cache and why long contexts use memory",
+    "vLLM and PagedAttention"
+   ],
+   "resources": [
+    "vllmBlog",
+    "hfKv"
+   ],
+   "do_it": "Read the vLLM PagedAttention blog post and, with Claude's help, write a five-sentence explanation of why memory, not raw computing power, is often the bottleneck.",
+   "prove": "Draft the performance requirements section for a self-hosted chatbot: target time to first token, tokens per second, peak concurrent users and context length.",
+   "interview": "What drives the cost of self-hosting an LLM, and how would you size it?",
    "covers": [
     "vLLM",
     "Inference, Model Serving",
@@ -2920,14 +3164,25 @@
    "kind": "New",
    "hours": 2,
    "order": 72,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "Choosing a model is a product decision with technical inputs: quality on your task, speed, cost, data and privacy constraints, operational effort and vendor risk. The options range from calling a commercial API, to a cloud platform version of the same models, to self-hosting open models, to fine-tuning or training your own.",
+   "why": "This is one of the most consequential decisions in an AI programme and is often made on hype or habit. A TPM who runs a structured, evidence-based selection protects the budget, the timeline and the product.",
+   "concepts": [
+    "Criteria: quality, latency, cost, privacy, operations, risk",
+    "Start with the strongest model, then optimise down",
+    "Evaluate on your own test set",
+    "API vs cloud platform vs self-hosted",
+    "Fine-tuning vs prompting vs RAG",
+    "Plan for model changes and retirement"
+   ],
+   "resources": [
+    "clChoose",
+    "ibmRagFtPe",
+    "lmarena"
+   ],
+   "do_it": "For one real use case at work, list your top five criteria and weight them. Score three options (two commercial APIs and one open model) on paper.",
+   "prove": "Write a one-page model decision record: options, evidence, decision, and what would make you revisit it.",
+   "interview": "How would you decide between a commercial LLM API and hosting an open-source model?",
    "covers": [
     "Build vs. Buy AI (API vs custom models)",
     "AI Model Selection"
@@ -2942,14 +3197,24 @@
    "kind": "New",
    "hours": 1,
    "order": 73,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "A rubric that describes what 'AI-enabled TPM' means in practice across five areas: AI literacy, building with AI, delivery of AI features, quality and risk, and leadership. Each area has four levels from aware to expert, with observable evidence for each.",
+   "why": "It turns a vague goal into something you can assess, plan against and show in an interview or performance review. It also helps you design learning plans and job descriptions for others.",
+   "concepts": [
+    "Five competency areas",
+    "Four levels: aware, practitioner, advanced, expert",
+    "Evidence over claims",
+    "Self-assessment and peer review",
+    "Linking the rubric to this learning path",
+    "Using it for hiring and team growth"
+   ],
+   "resources": [
+    "clChoose",
+    "owaspLlm"
+   ],
+   "do_it": "Score yourself on each of the five areas today, with one piece of evidence each. Save it in your notes to compare at the end of the path.",
+   "prove": "Ask a technical colleague to review your self-assessment and challenge one score.",
+   "interview": "What makes a TPM 'AI-enabled', and how would you show it?",
    "covers": [
     "AI Skill Competencies"
    ]
@@ -15892,6 +16157,1856 @@
    "deeper": [
     "vercelTpl",
     "clSdks"
+   ]
+  },
+  "mam01": {
+   "sections": [
+    {
+     "h": "The shape of every model API call",
+     "flow": [
+      [
+       "Your app",
+       [
+        [
+         "Build request",
+         "model, messages, settings"
+        ],
+        [
+         "Attach API key",
+         "in a header"
+        ]
+       ]
+      ],
+      [
+       "Provider",
+       [
+        [
+         "Check key and limits",
+         "reject if invalid"
+        ],
+        [
+         "Run the model",
+         "generate tokens"
+        ]
+       ]
+      ],
+      [
+       "Your app",
+       [
+        [
+         "Read response",
+         "text, stop reason, usage"
+        ],
+        [
+         "Log and bill",
+         "tokens and cost"
+        ]
+       ]
+      ]
+     ],
+     "flowLabel": "Your app builds a request with an API key, the provider checks it and runs the model, your app reads the response and logs usage",
+     "p": [
+      "Whether it's Claude, Gemini or OpenAI, a model API is an ordinary web API: an HTTPS POST request with JSON in and JSON out. The differences between providers are mostly field names."
+     ]
+    },
+    {
+     "h": "Reading a request",
+     "table": [
+      [
+       "Part",
+       "Example (Claude Messages API)",
+       "Meaning"
+      ],
+      [
+       "Endpoint",
+       "POST https://api.anthropic.com/v1/messages",
+       "Where the request goes"
+      ],
+      [
+       "Header: x-api-key",
+       "your key",
+       "Who is calling and who pays"
+      ],
+      [
+       "Header: anthropic-version",
+       "2023-06-01",
+       "Which version of the API format"
+      ],
+      [
+       "model",
+       "a model ID from the models page",
+       "Which model answers"
+      ],
+      [
+       "max_tokens",
+       "1000",
+       "Upper limit on reply length"
+      ],
+      [
+       "messages",
+       "[{role: user, content: ...}]",
+       "The conversation so far"
+      ],
+      [
+       "system (optional)",
+       "'You are a support assistant...'",
+       "Standing instructions"
+      ]
+     ]
+    },
+    {
+     "h": "Reading a response",
+     "table": [
+      [
+       "Field",
+       "Meaning",
+       "Why you care"
+      ],
+      [
+       "content",
+       "The model's reply, in blocks (text, tool calls)",
+       "What the user sees or your code uses"
+      ],
+      [
+       "stop_reason",
+       "Why it stopped: finished, hit max_tokens, wants a tool",
+       "'max_tokens' means the answer was cut off"
+      ],
+      [
+       "usage.input_tokens",
+       "Tokens you sent",
+       "Cost and rate limits"
+      ],
+      [
+       "usage.output_tokens",
+       "Tokens generated",
+       "Usually priced higher than input"
+      ],
+      [
+       "id",
+       "Unique ID of the response",
+       "Quote it in support tickets and logs"
+      ]
+     ]
+    },
+    {
+     "h": "API keys and SDKs",
+     "p": [
+      "An API key is a password for software. Anyone who has it can spend your money and read whatever your account can reach. Keep it in an environment variable (the SDKs read ANTHROPIC_API_KEY, GEMINI_API_KEY or OPENAI_API_KEY automatically), in a .env file locally and in the hosting platform's secret settings in production. Use separate keys per environment and per service so one leak can be revoked without breaking everything.",
+      "An SDK builds the request for you and adds retries, types and streaming helpers. The underlying call is identical, so anything you learn with raw requests in Postman applies when engineers use the SDK."
+     ]
+    },
+    {
+     "h": "Worked example: price one call",
+     "steps": [
+      [
+       "Send a message",
+       "Ask for a 200-word summary of a pasted document"
+      ],
+      [
+       "Read usage",
+       "Say input_tokens is 3,000 and output_tokens is 300"
+      ],
+      [
+       "Look up prices",
+       "Prices are quoted per million tokens (MTok), separately for input and output"
+      ],
+      [
+       "Calculate",
+       "cost = 3,000 / 1,000,000 x input price + 300 / 1,000,000 x output price"
+      ],
+      [
+       "Scale it",
+       "Multiply by expected calls per month; this is your first cost model"
+      ]
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Ask for a sample request and response early in any AI project and keep it in the project docs. It settles arguments about what the model sees, and it's the first thing you'll need in an incident.",
+      "Insist on logging token usage and the response ID for every call from day one. Without it you can't explain cost, trace a bad answer or give the provider's support team what they need."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "The model remembers previous calls.",
+       "The API is stateless; your app resends the conversation each time."
+      ],
+      [
+       "SDKs and raw API calls behave differently.",
+       "They send the same request; SDKs add conveniences."
+      ],
+      [
+       "One API key for everything is fine.",
+       "Separate keys per environment and service limit the damage of a leak."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Endpoint",
+       "The URL a request is sent to"
+      ],
+      [
+       "Header",
+       "Metadata sent with a request, such as the API key"
+      ],
+      [
+       "Payload / body",
+       "The JSON data in the request"
+      ],
+      [
+       "Stop reason",
+       "Why the model stopped generating"
+      ],
+      [
+       "MTok",
+       "Million tokens, the unit prices are quoted in"
+      ],
+      [
+       "SDK",
+       "A library that wraps the API for a programming language"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "The response stop_reason says the token limit was reached. What does that mean for the user?",
+     "The answer was cut off; raise max_tokens or ask for shorter output."
+    ],
+    [
+     "Where should an API key live in production?",
+     "In the hosting platform's secret or environment settings, never in code."
+    ],
+    [
+     "Which costs more per token, input or output?",
+     "Usually output; check the provider's price page."
+    ],
+    [
+     "Does using an SDK change what's sent to the provider?",
+     "No. It builds the same HTTPS request and adds conveniences like retries."
+    ]
+   ],
+   "deeper": [
+    "clStart",
+    "clSdks",
+    "mdnJson"
+   ]
+  },
+  "mam02": {
+   "sections": [
+    {
+     "h": "Messages: the core endpoint",
+     "p": [
+      "You send the whole conversation every time: a list of turns alternating between user and assistant, plus an optional system prompt with standing instructions. The API is stateless; it doesn't remember previous calls, so your application stores the conversation and sends it again. That is why long conversations cost more: every turn resends everything before it."
+     ]
+    },
+    {
+     "h": "Tool use: letting Claude act",
+     "flow": [
+      [
+       "Your app",
+       [
+        [
+         "Send request + tool definitions",
+         "name, description, input schema"
+        ]
+       ]
+      ],
+      [
+       "Claude",
+       [
+        [
+         "Decides a tool is needed",
+         "stop_reason: tool_use"
+        ]
+       ]
+      ],
+      [
+       "Your app",
+       [
+        [
+         "Run the tool",
+         "e.g. look up order 123"
+        ],
+        [
+         "Send tool_result",
+         "the data back to Claude"
+        ]
+       ]
+      ],
+      [
+       "Claude",
+       [
+        [
+         "Final answer",
+         "uses the result"
+        ]
+       ]
+      ]
+     ],
+     "flowLabel": "Tool use loop: app sends tools, Claude asks for a tool, app runs it and returns the result, Claude answers",
+     "p": [
+      "You describe each tool with a name, a description and a JSON schema for its inputs. When Claude decides a tool would help, it replies with a tool_use block instead of a final answer. Your code runs the function and sends the result back in a tool_result block; Claude then answers using it.",
+      "Client tools run in your code, so you control exactly what happens. Server tools, such as web search, are run by Anthropic and return results in the same response. Either way, your code decides what a tool is allowed to do, which is where safety lives."
+     ]
+    },
+    {
+     "h": "Prompt caching: pay once for the repeated part",
+     "p": [
+      "Many products send the same large prefix with every request: tool definitions, a long system prompt, a policy document. Prompt caching lets the API reuse the processed prefix. You mark the end of the reusable part with cache_control, keeping the stable content at the start (tools, then system, then messages).",
+      "Reading from the cache is billed at a small fraction of the normal input price, and writing to it costs a little more than normal. Entries expire after a few minutes by default, with a longer, more expensive option. Cached reads also don't count towards input-token rate limits on most models, which raises your effective capacity."
+     ]
+    },
+    {
+     "h": "Other cost and speed levers",
+     "table": [
+      [
+       "Lever",
+       "What it does",
+       "When to use"
+      ],
+      [
+       "Model choice",
+       "Smaller, faster models cost less",
+       "Simple, high-volume tasks"
+      ],
+      [
+       "Prompt caching",
+       "Cheap reuse of repeated prefixes",
+       "Long, stable system prompts or documents"
+      ],
+      [
+       "Batch processing",
+       "Asynchronous processing at a discount",
+       "Overnight jobs, bulk classification"
+      ],
+      [
+       "Shorter outputs",
+       "Fewer output tokens",
+       "Ask for concise formats"
+      ],
+      [
+       "Trim history",
+       "Send less conversation",
+       "Long chats: summarise older turns"
+      ]
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "When reviewing a design that uses tools, ask what each tool can do in the worst case. A tool that can issue refunds needs limits, logging and possibly human approval, whatever the model decides.",
+      "Put prompt caching and batch processing on the cost checklist for every feature. Teams often discover them after the first large bill, when they could have been in the original estimate."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Claude runs the tools itself.",
+       "For client tools, your code runs them; Claude only asks."
+      ],
+      [
+       "Caching changes the answer.",
+       "It reuses processing of an identical prefix; it doesn't cache replies."
+      ],
+      [
+       "Longer system prompts are free.",
+       "Every token is billed each call unless cached."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "System prompt",
+       "Standing instructions for the whole conversation"
+      ],
+      [
+       "Stateless",
+       "The API keeps no memory between calls"
+      ],
+      [
+       "Tool definition",
+       "Name, description and input schema for a function"
+      ],
+      [
+       "tool_use / tool_result",
+       "The request to run a tool and the data sent back"
+      ],
+      [
+       "cache_control",
+       "The marker for the end of the cacheable prefix"
+      ],
+      [
+       "Batch processing",
+       "Submitting many requests to run asynchronously, cheaper"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Why do long conversations cost more per turn?",
+     "The API is stateless, so every turn resends the whole history."
+    ],
+    [
+     "Who actually runs a client tool?",
+     "Your application's code, after Claude asks for it."
+    ],
+    [
+     "Where should cacheable content go in the prompt?",
+     "At the start: tools, then system, then stable context, with cache_control marking the end."
+    ],
+    [
+     "You need to classify 50,000 documents by tomorrow. Which lever?",
+     "Batch processing, possibly with a smaller model."
+    ]
+   ],
+   "deeper": [
+    "clStart",
+    "clTools",
+    "clCache",
+    "clPrice"
+   ]
+  },
+  "mam03": {
+   "sections": [
+    {
+     "h": "Two OpenAI APIs",
+     "p": [
+      "OpenAI has an older Chat Completions API and the newer Responses API. The concepts are the same as everywhere: messages in, text out, tokens counted. OpenAI's documentation recommends the Responses API for new projects, including for streaming. When you read code or tutorials, check which one they use."
+     ]
+    },
+    {
+     "h": "From text to data: structured outputs",
+     "table": [
+      [
+       "Approach",
+       "What you get",
+       "Risk"
+      ],
+      [
+       "Ask nicely in the prompt",
+       "Usually JSON-like text",
+       "Can break format, miss fields"
+      ],
+      [
+       "JSON mode",
+       "Valid JSON",
+       "Can still miss fields or use wrong types"
+      ],
+      [
+       "Structured outputs",
+       "JSON that matches your schema",
+       "Content can still be wrong; refusals possible"
+      ]
+     ],
+     "p": [
+      "Structured outputs is the evolution of JSON mode: both produce valid JSON, but only structured outputs guarantees it matches your schema. Engineers usually define the schema in code with Pydantic (Python) or Zod (JavaScript), and the SDK converts it.",
+      "Remember that the format is guaranteed, not the facts. A schema-perfect answer can still contain a wrong date or an invented owner. You still need validation, evaluation and, for important actions, human review."
+     ]
+    },
+    {
+     "h": "Streaming",
+     "p": [
+      "By default the API returns the complete reply in one response, which for a long answer means the user stares at a spinner. With streaming (stream set to true), the server sends the reply in small events as tokens are generated, using server-sent events. The Responses API sends typed events, such as text deltas and a final completed event, so the front end can render text as it arrives.",
+      "Streaming improves perceived speed, not total time. It also complicates things: an error can arrive halfway through a reply, and structured output arrives as partial JSON that only becomes valid at the end."
+     ]
+    },
+    {
+     "h": "Worked example: meeting notes extractor",
+     "steps": [
+      [
+       "Define the output",
+       "decisions: list; actions: list of {owner, task, due_date or null}; risks: list"
+      ],
+      [
+       "Make fields explicit",
+       "Allow null for unknown due dates rather than forcing a guess"
+      ],
+      [
+       "Request structured output",
+       "Schema-enforced JSON from the transcript"
+      ],
+      [
+       "Validate",
+       "Check owners exist in the team list and dates are in the future"
+      ],
+      [
+       "Show and confirm",
+       "Display extracted actions for the meeting owner to approve before creating tickets"
+      ]
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Wherever AI output feeds another system (tickets, CRM, databases), require structured output plus validation. Free-text parsing is a common, avoidable source of production bugs.",
+      "Specify streaming behaviour in UX requirements: what users see while waiting, how errors mid-stream are shown, and whether partial answers are saved."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Structured outputs means correct outputs.",
+       "It guarantees the shape, not the truth."
+      ],
+      [
+       "Streaming makes the model faster.",
+       "It makes the wait feel shorter; total time is similar."
+      ],
+      [
+       "Chat Completions is deprecated, so old code is broken.",
+       "It still works, but new projects are pointed to the Responses API."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Responses API",
+       "OpenAI's current API for generating responses"
+      ],
+      [
+       "JSON schema",
+       "A formal description of required fields and types"
+      ],
+      [
+       "JSON mode",
+       "Guarantees valid JSON but not a particular shape"
+      ],
+      [
+       "Server-sent events (SSE)",
+       "A way for a server to push a stream of events to a client"
+      ],
+      [
+       "Delta",
+       "A small piece of newly generated text in a stream"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "JSON mode or structured outputs to guarantee every required field is present?",
+     "Structured outputs; JSON mode only guarantees valid JSON."
+    ],
+    [
+     "Does a schema-valid output mean the content is correct?",
+     "No. Format is enforced; facts still need validation."
+    ],
+    [
+     "Does streaming make the total response faster?",
+     "No. It shows text sooner, improving perceived speed."
+    ],
+    [
+     "Why allow null for an unknown due date?",
+     "So the model reports 'unknown' instead of inventing a date."
+    ]
+   ],
+   "deeper": [
+    "oaStruct",
+    "oaStream"
+   ]
+  },
+  "mam04": {
+   "sections": [
+    {
+     "h": "Multimodal from the start",
+     "p": [
+      "Gemini models accept text, images, documents, audio and video in the same request, and can answer questions about them, caption them, classify them or extract data. You can pass small images inline as base64 data, reference a public URL, or upload larger or reused files with the Files API and refer to them."
+     ]
+    },
+    {
+     "h": "Models change: plan for it",
+     "p": [
+      "Model families come in tiers: fast, cheap models for volume and more capable models for hard reasoning. New versions arrive every few months, previews come and go, and older versions are retired. The Gemini 1.5 and 2.0 models listed in older study material are no longer current.",
+      "Treat the model ID as a dependency with an end-of-life date. Keep it in configuration rather than scattered through code, track provider deprecation notices, and re-run your evaluation set whenever you change models."
+     ]
+    },
+    {
+     "h": "Structured output in Gemini",
+     "p": [
+      "Gemini can be constrained to return JSON matching a schema, or one value from a fixed list (an enum), which is ideal for classification. Asking for JSON in the prompt alone doesn't guarantee JSON; passing a schema does. The Google GenAI SDKs accept schemas defined with Pydantic or Zod, like OpenAI's."
+     ]
+    },
+    {
+     "h": "New risks with images and files",
+     "bullets": [
+      "Personal data hides in images: faces, ID cards, addresses on parcels, screens in the background.",
+      "Instructions can hide in documents and images, a form of prompt injection.",
+      "Quality depends on image quality: blur, angle and handwriting cause errors.",
+      "Large files mean many tokens: cost and latency rise quickly with video and long PDFs.",
+      "Check data residency and retention terms before sending customer files."
+     ]
+    },
+    {
+     "h": "Worked example: receipt to expense line",
+     "steps": [
+      [
+       "Define the schema",
+       "merchant, date, currency, total, line_items[{description, amount}], confidence"
+      ],
+      [
+       "Send image + instruction",
+       "'Extract these fields. Use null if unreadable.'"
+      ],
+      [
+       "Validate",
+       "Line items should sum to the total; date should be within the claim period"
+      ],
+      [
+       "Route doubtful cases",
+       "Low confidence or failed checks go to a person"
+      ],
+      [
+       "Measure",
+       "Accuracy on 50 real receipts before launch"
+      ]
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Add model retirement to your risk register for every AI feature: which model, its announced lifecycle, and who re-runs the evaluation before switching.",
+      "For multimodal features, budget time for collecting realistic test inputs: blurry photos, scanned PDFs, other languages. Demos with clean inputs overstate quality."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "The newest model is always better for our task.",
+       "Re-test; behaviour changes between versions."
+      ],
+      [
+       "Images are cheap to send.",
+       "Images, long PDFs and video can use many tokens."
+      ],
+      [
+       "Asking for JSON in the prompt is enough.",
+       "Only a schema guarantees structured output."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Multimodal",
+       "Accepts more than one type of input, such as text and images"
+      ],
+      [
+       "Files API",
+       "Upload once, reference in many requests"
+      ],
+      [
+       "Enum",
+       "A fixed list of allowed values"
+      ],
+      [
+       "Deprecation",
+       "Notice that a model will be retired"
+      ],
+      [
+       "Preview model",
+       "An early version that may change or disappear"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Why keep the model ID in configuration?",
+     "Models get retired and replaced; one setting is easy to change and re-test."
+    ],
+    [
+     "How do you get a single category label reliably?",
+     "Constrain output to an enum of allowed values."
+    ],
+    [
+     "Name one risk specific to image input.",
+     "Hidden personal data, hidden instructions, poor image quality or high token cost."
+    ],
+    [
+     "How can you check an extracted receipt automatically?",
+     "Validate that line items sum to the total and dates are plausible."
+    ]
+   ],
+   "deeper": [
+    "gemModels",
+    "gemVision",
+    "gemStruct",
+    "gemKey"
+   ]
+  },
+  "mam05": {
+   "sections": [
+    {
+     "h": "The limits you will hit",
+     "table": [
+      [
+       "Limit",
+       "Measures",
+       "Typical symptom"
+      ],
+      [
+       "Requests per minute (RPM)",
+       "Number of calls",
+       "429 errors under bursts of small requests"
+      ],
+      [
+       "Input tokens per minute (ITPM)",
+       "Tokens sent",
+       "429 when prompts are long"
+      ],
+      [
+       "Output tokens per minute (OTPM)",
+       "Tokens generated",
+       "429 when replies are long"
+      ],
+      [
+       "Spend limit",
+       "Money per month",
+       "Errors until the limit is raised or the month resets"
+      ]
+     ],
+     "p": [
+      "Limits are set per organisation and usually rise in tiers as you spend more. They apply per model, and you may hit them over intervals shorter than a minute if traffic is bursty."
+     ]
+    },
+    {
+     "h": "Reading the errors",
+     "table": [
+      [
+       "Error",
+       "Meaning",
+       "Retry?"
+      ],
+      [
+       "400 invalid request",
+       "Your request is wrong",
+       "No: fix it"
+      ],
+      [
+       "401 / 403",
+       "Bad key or no permission",
+       "No: fix credentials"
+      ],
+      [
+       "429 rate limit",
+       "You exceeded a limit",
+       "Yes, after the retry-after time"
+      ],
+      [
+       "500 server error",
+       "Problem at the provider",
+       "Yes, with backoff"
+      ],
+      [
+       "529 overloaded (Claude)",
+       "The service is busy for everyone",
+       "Yes, with backoff; consider fallback"
+      ]
+     ],
+     "p": [
+      "Anthropic's official SDKs already retry connection errors, 429s and server errors a couple of times by default. Your team still decides the overall policy: how many attempts, how long to wait and what users see."
+     ]
+    },
+    {
+     "h": "Retries done right",
+     "steps": [
+      [
+       "Set a timeout",
+       "Never wait forever; pick a limit based on normal response times"
+      ],
+      [
+       "Retry only what can succeed",
+       "Rate limits, overloads, timeouts and server errors; not bad requests"
+      ],
+      [
+       "Back off exponentially",
+       "Wait 1s, 2s, 4s, 8s... up to a cap"
+      ],
+      [
+       "Add jitter",
+       "Randomise each wait so thousands of clients don't retry at the same moment"
+      ],
+      [
+       "Respect retry-after",
+       "If the API says how long to wait, wait that long"
+      ],
+      [
+       "Stop and fall back",
+       "After the last attempt: a smaller model, a queued job, or a clear message to the user"
+      ]
+     ],
+     "p": [
+      "Retries are 'selfish': each one adds load to a service that may already be struggling, which is why backoff and jitter matter. Also make sure a retried action can't happen twice, such as creating two tickets; that property is called idempotency."
+     ]
+    },
+    {
+     "h": "Capacity planning in one line",
+     "p": [
+      "Estimate peak tokens per minute: peak requests per minute x (average input tokens + average output tokens). Compare with your tier's limits, add a safety margin, and request increases well before launch."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Add a capacity line to every AI launch plan: expected peak tokens per minute, current tier limits, and the date a limit increase was requested. Increases can take time, so ask weeks ahead.",
+      "Agree what users see when the AI is unavailable: a clear message, a queued request or a non-AI fallback. Deciding this during an outage is too late."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Retrying immediately solves rate limits.",
+       "It makes them worse; back off and respect retry-after."
+      ],
+      [
+       "Limits only matter at huge scale.",
+       "Bursts and long prompts can hit them during a small launch."
+      ],
+      [
+       "The SDK handles all of it.",
+       "It retries a little; your team owns the overall policy and fallback."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Rate limit",
+       "Maximum usage allowed in a time window"
+      ],
+      [
+       "429",
+       "HTTP status for too many requests"
+      ],
+      [
+       "Exponential backoff",
+       "Waiting longer after each failed attempt"
+      ],
+      [
+       "Jitter",
+       "Random variation added to wait times"
+      ],
+      [
+       "Idempotent",
+       "Safe to repeat without extra side effects"
+      ],
+      [
+       "Fallback",
+       "What happens when the primary option fails"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Should you retry a 400 error?",
+     "No. The request itself is wrong; fix it."
+    ],
+    [
+     "Why add jitter to retries?",
+     "So many clients don't retry in sync and overload the service again."
+    ],
+    [
+     "Your launch expects 300 requests per minute at 3,000 tokens each. What do you compare?",
+     "Roughly 900,000 tokens per minute against your tier's token limits, plus RPM."
+    ],
+    [
+     "What's the difference between a 429 and a 529 on Claude?",
+     "429: you hit your limit. 529: the service is overloaded for everyone."
+    ]
+   ],
+   "deeper": [
+    "clRate",
+    "clErrors",
+    "awsRetry"
+   ]
+  },
+  "mam06": {
+   "sections": [
+    {
+     "h": "Open weights, not always open source",
+     "p": [
+      "An open-weight model is one whose trained parameters you can download and run on your own hardware. That's different from fully open source, which would also include the training data and code. Most popular 'open' models are open-weight, and each comes with its own licence that says what you may do with it."
+     ]
+    },
+    {
+     "h": "The main families",
+     "table": [
+      [
+       "Family",
+       "Maker",
+       "Known for"
+      ],
+      [
+       "Llama",
+       "Meta",
+       "Widely used family that started the open-weight wave; huge ecosystem of fine-tunes"
+      ],
+      [
+       "Mistral",
+       "Mistral AI (France)",
+       "Mix of open-weight and commercial models; European option"
+      ],
+      [
+       "Qwen",
+       "Alibaba",
+       "Broad range of sizes, strong multilingual and coding variants"
+      ],
+      [
+       "DeepSeek",
+       "DeepSeek (China)",
+       "Strong reasoning models released with open weights"
+      ],
+      [
+       "Gemma",
+       "Google",
+       "Lightweight open models built from Gemini research"
+      ],
+      [
+       "Phi",
+       "Microsoft",
+       "Small models designed to do a lot at low size"
+      ]
+     ],
+     "p": [
+      "Versions change several times a year, so this table names families, not current versions. Always check the maker's page or the model card for what's current."
+     ]
+    },
+    {
+     "h": "Sizes and variants",
+     "bullets": [
+      "Size is quoted in parameters: 1B, 8B, 70B and so on. Bigger is usually smarter but needs more memory and is slower.",
+      "Some models use a mixture-of-experts design: many parameters in total, but only some active per token, which makes them faster than their total size suggests.",
+      "Base models predict text; instruction-tuned (instruct or chat) models are trained to follow instructions. For products you almost always want instruction-tuned.",
+      "Many community variants exist: fine-tunes, merges and quantized versions. Check who made them and how."
+     ]
+    },
+    {
+     "h": "What to check before using one",
+     "table": [
+      [
+       "Question",
+       "Why"
+      ],
+      [
+       "What is the licence?",
+       "Some are permissive (such as Apache 2.0 or MIT); others add conditions on use or scale"
+      ],
+      [
+       "Who made this exact file?",
+       "Community re-uploads may be modified"
+      ],
+      [
+       "What does the model card say?",
+       "Intended use, training data notes, known limits, evaluation"
+      ],
+      [
+       "How does it do on our tasks?",
+       "Leaderboards measure general preference, not your use case"
+      ],
+      [
+       "Can we run it securely?",
+       "Hosting, patching and access control become your job"
+      ]
+     ]
+    },
+    {
+     "h": "Finding and comparing models",
+     "p": [
+      "Hugging Face hosts millions of models with model cards, which are README files with metadata describing the model. The Ollama and LM Studio catalogues list models ready to run locally. Leaderboards such as LMArena rank models by blind human preference votes; treat them as a rough signal, then test on your own examples."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Before an open model goes into a product, get a licence review. Terms vary by family and sometimes by version, and some include conditions such as acceptable-use rules.",
+      "When teams propose a model from a public leaderboard, ask for results on your own test set. General rankings rarely match a specific business task."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Open models are free.",
+       "The weights may be free; hosting, operations and engineering aren't."
+      ],
+      [
+       "Open models are always worse than commercial ones.",
+       "The gap varies by task; some open models are very competitive."
+      ],
+      [
+       "Any file on Hugging Face is safe to use.",
+       "Check the publisher, licence and file format before using it."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Open weights",
+       "Downloadable trained parameters"
+      ],
+      [
+       "Model card",
+       "Documentation for a model: use, data, limits, evaluation"
+      ],
+      [
+       "Instruction-tuned",
+       "Trained to follow instructions and chat"
+      ],
+      [
+       "Fine-tune",
+       "A model further trained for a specific purpose"
+      ],
+      [
+       "Mixture of experts",
+       "Architecture where only part of the model is active per token"
+      ],
+      [
+       "Licence",
+       "The legal terms for using the model"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Is every open-weight model open source?",
+     "No. Weights are downloadable, but training data and code often aren't, and licences vary."
+    ],
+    [
+     "Base or instruction-tuned for a support assistant?",
+     "Instruction-tuned."
+    ],
+    [
+     "A model ranks first on a public leaderboard. Ship it?",
+     "Not yet. Test it on your own tasks and check licence, cost and hosting."
+    ],
+    [
+     "Name three things a model card should tell you.",
+     "Intended use, training data notes, limitations, evaluation results, licence."
+    ]
+   ],
+   "deeper": [
+    "hfModels",
+    "hfCards",
+    "gemmaDocs",
+    "mistralModels",
+    "lmarena"
+   ]
+  },
+  "mam07": {
+   "sections": [
+    {
+     "h": "Three tools, one idea",
+     "table": [
+      [
+       "Tool",
+       "What it is",
+       "Best for"
+      ],
+      [
+       "Ollama",
+       "Command-line tool plus a local server",
+       "Quick setup; developers connecting apps to local models"
+      ],
+      [
+       "LM Studio",
+       "Desktop app with model browser and chat",
+       "Non-coders; exploring and comparing models visually"
+      ],
+      [
+       "llama.cpp",
+       "Open-source C/C++ inference engine",
+       "The foundation under many tools; maximum control"
+      ]
+     ],
+     "p": [
+      "All three download an open model and run it on your machine. Ollama and LM Studio build on llama.cpp-style engines; LM Studio also uses Apple's MLX on Macs. Each can run a local server that speaks an OpenAI-compatible API, so apps written for a cloud API can often point at your laptop instead."
+     ]
+    },
+    {
+     "h": "Worked example: first local model",
+     "steps": [
+      [
+       "Check your machine",
+       "RAM and GPU memory decide which sizes will run; start small"
+      ],
+      [
+       "Install",
+       "Ollama or LM Studio from the official site"
+      ],
+      [
+       "Download a small model",
+       "Around 1 to 4 billion parameters, quantized, a few gigabytes"
+      ],
+      [
+       "Chat",
+       "In Ollama: 'ollama run' followed by the model name. In LM Studio: Discover tab, download, load, then Chat"
+      ],
+      [
+       "Compare",
+       "Ask the same three questions you ask a frontier model; note quality and speed"
+      ],
+      [
+       "Try the local API",
+       "Ask Claude to help you call the local server from Postman"
+      ]
+     ]
+    },
+    {
+     "h": "What to expect",
+     "bullets": [
+      "Small local models are fast and private but noticeably weaker at complex reasoning than frontier cloud models.",
+      "If a model doesn't fit in GPU memory it spills into slower system memory, or won't load at all.",
+      "First load takes time; after that, responses start quickly.",
+      "Your data stays on the machine, which is the main reason to do this.",
+      "Laptop experiments don't prove production performance; serving many users is a different problem (next lessons)."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Local models are a good answer for internal tools on sensitive documents where quality needs are modest: summarising, tagging, drafting. Pilot on a few laptops before planning servers.",
+      "Use local experiments to set expectations: let stakeholders try a small local model next to a frontier model so 'why not just run it ourselves?' is answered with experience."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "A laptop demo proves production readiness.",
+       "Serving many users needs different infrastructure and testing."
+      ],
+      [
+       "Local means no security work.",
+       "Machines, files and access still need protecting."
+      ],
+      [
+       "All local tools are different technology.",
+       "Many share the same underlying engines and formats."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Local inference",
+       "Running the model on your own machine"
+      ],
+      [
+       "Local server",
+       "A program on your computer that answers API requests"
+      ],
+      [
+       "OpenAI-compatible API",
+       "An API that copies OpenAI's request format so existing code works"
+      ],
+      [
+       "Model library",
+       "The catalogue of ready-to-run models a tool offers"
+      ],
+      [
+       "MLX",
+       "Apple's framework for running models on Apple silicon"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Which tool suits a non-coder who wants to try models visually?",
+     "LM Studio."
+    ],
+    [
+     "Why does 'OpenAI-compatible' matter?",
+     "Existing app code can switch to a local model by changing the address."
+    ],
+    [
+     "Your 16 GB laptop struggles with a 70B model. Why?",
+     "It needs far more memory than you have, even quantized."
+    ],
+    [
+     "What's the main reason to run models locally?",
+     "Privacy and control: data doesn't leave the machine."
+    ]
+   ],
+   "deeper": [
+    "ollamaQs",
+    "lmsBasics",
+    "llamacpp"
+   ]
+  },
+  "mam08": {
+   "sections": [
+    {
+     "h": "Parameters and checkpoints",
+     "p": [
+      "A model's parameters (or weights) are the numbers adjusted during training. '8B' means about 8 billion of them. A checkpoint is a saved snapshot of those numbers at a point in training or release; model versions are checkpoints given names."
+     ]
+    },
+    {
+     "h": "Precision and memory",
+     "table": [
+      [
+       "Precision",
+       "Bytes per parameter",
+       "7B model (approx.)",
+       "70B model (approx.)"
+      ],
+      [
+       "fp32 (full)",
+       "4",
+       "28 GB",
+       "280 GB"
+      ],
+      [
+       "fp16 / bf16 (half)",
+       "2",
+       "14 GB",
+       "140 GB"
+      ],
+      [
+       "int8 (8-bit)",
+       "1",
+       "7 GB",
+       "70 GB"
+      ],
+      [
+       "int4 (4-bit)",
+       "0.5",
+       "3.5 GB",
+       "35 GB"
+      ]
+     ],
+     "p": [
+      "Rule of thumb: memory for the weights is parameters x bytes per parameter. Running the model needs extra memory on top, mainly for the KV cache that grows with context length. That's why a 7B model quantized to 4 bits downloads as roughly 4 GB."
+     ]
+    },
+    {
+     "h": "Quantization: the trade-off",
+     "p": [
+      "Quantization stores weights at lower precision to save memory and often speed up inference, while trying to keep accuracy. Going from 16-bit to 8-bit usually costs little quality; 4-bit is a popular sweet spot for local use; very low bit-widths degrade more noticeably. Some methods calibrate on sample data to lose less quality.",
+      "The practical rule: a larger model at 4-bit often beats a smaller model at full precision for the same memory, but always test on your task."
+     ]
+    },
+    {
+     "h": "File formats",
+     "table": [
+      [
+       "Format",
+       "Used by",
+       "Notes"
+      ],
+      [
+       "safetensors",
+       "Hugging Face Transformers, most training and serving stacks",
+       "Safe, fast format storing just the tensors"
+      ],
+      [
+       "GGUF",
+       "llama.cpp, Ollama, LM Studio",
+       "Single file with tensors plus metadata, designed for quick loading; supports many quantization types"
+      ]
+     ],
+     "p": [
+      "GGUF file names encode the quantization, such as Q4_K_M or Q8_0: roughly, the number is the bits per weight and the suffix is the method variant. Hugging Face shows GGUF metadata on the model page."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "When a team proposes self-hosting, ask for the memory maths: model size, precision, context length and concurrent users. It quickly shows whether one GPU or ten are needed.",
+      "Treat the quantized variant as a distinct model in evaluation. A 4-bit version can behave differently from the full-precision one on your tasks."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "More parameters always means better results.",
+       "Training quality, data and tuning matter as much as size."
+      ],
+      [
+       "Quantization ruins models.",
+       "Moderate quantization usually costs little quality; test to be sure."
+      ],
+      [
+       "Weights alone decide memory needs.",
+       "Context length and concurrency add a lot through the KV cache."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Parameter",
+       "One learned number in the model"
+      ],
+      [
+       "Checkpoint",
+       "A saved set of weights"
+      ],
+      [
+       "Precision",
+       "How many bits store each number"
+      ],
+      [
+       "Quantization",
+       "Storing weights with fewer bits"
+      ],
+      [
+       "GGUF",
+       "A model file format for llama.cpp-based tools"
+      ],
+      [
+       "safetensors",
+       "A common, safe format for model weights"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Roughly how much memory do a 70B model's weights need at 4-bit?",
+     "About 35 GB, plus extra for running it."
+    ],
+    [
+     "What do you give up with quantization?",
+     "Some quality, more at very low bit-widths."
+    ],
+    [
+     "You see 'Q4_K_M' in a file name. What does it tell you?",
+     "It's a 4-bit quantization, using a particular method variant."
+    ],
+    [
+     "Why does running a model need more memory than the weights alone?",
+     "The KV cache and working memory grow with context length and users."
+    ]
+   ],
+   "deeper": [
+    "hfQuant",
+    "hfGguf"
+   ]
+  },
+  "mam09": {
+   "sections": [
+    {
+     "h": "Inference and serving",
+     "p": [
+      "Training creates the model; inference uses it. Serving means running inference for many users at once with good speed, reliability and cost. Generation happens token by token: the model first processes the whole prompt (prefill), then produces output tokens one at a time (decode)."
+     ]
+    },
+    {
+     "h": "The performance numbers",
+     "table": [
+      [
+       "Metric",
+       "Meaning",
+       "Users feel it as"
+      ],
+      [
+       "Time to first token (TTFT)",
+       "Delay before the first output token",
+       "'Is it thinking?' wait"
+      ],
+      [
+       "Tokens per second (per user)",
+       "Speed of the answer appearing",
+       "Reading pace of the stream"
+      ],
+      [
+       "Throughput",
+       "Total tokens per second across all users",
+       "How many users one GPU can serve"
+      ],
+      [
+       "Latency (end to end)",
+       "Total time for a full answer",
+       "Overall responsiveness"
+      ]
+     ],
+     "p": [
+      "These pull against each other: packing more users onto a GPU raises throughput but can slow each user. Requirements should state targets for each, at a stated peak load and context length."
+     ]
+    },
+    {
+     "h": "Hardware basics",
+     "table": [
+      [
+       "Component",
+       "Role"
+      ],
+      [
+       "GPU",
+       "Does the heavy maths in parallel"
+      ],
+      [
+       "VRAM",
+       "GPU memory; must hold the weights plus the KV cache"
+      ],
+      [
+       "CPU and RAM",
+       "Run everything else; can run small models slowly"
+      ]
+     ]
+    },
+    {
+     "h": "KV cache and batching",
+     "p": [
+      "As a model reads context, it computes intermediate values (keys and values) for every token. The KV cache stores them so they aren't recomputed for each new token. It makes generation much faster, but it takes memory that grows with context length and with the number of simultaneous users, which is why long-context serving is often limited by memory rather than raw computing power.",
+      "Batching runs many users' requests through the GPU together. Continuous batching adds and removes requests as they start and finish, instead of waiting for a whole batch."
+     ]
+    },
+    {
+     "h": "vLLM and PagedAttention",
+     "p": [
+      "vLLM is an open-source serving engine from UC Berkeley. Its key idea, PagedAttention, manages the KV cache like an operating system manages memory: in fixed-size blocks that don't need to sit next to each other. That wastes far less memory, so more requests fit on the same GPU. In the authors' published benchmarks this gave many times higher throughput than earlier serving approaches. Other serving stacks use similar ideas."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Write performance requirements in these terms: time to first token, tokens per second, concurrent users and context length at peak. Vague 'should be fast' requirements lead to expensive surprises.",
+      "Long context windows are a cost driver when self-hosting. Ask whether the product truly needs them or whether retrieval can keep prompts short."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "GPU speed is the only bottleneck.",
+       "Memory, especially the KV cache, often limits serving."
+      ],
+      [
+       "Throughput and latency are the same.",
+       "Throughput is total capacity; latency is what one user waits."
+      ],
+      [
+       "Serving engines are interchangeable.",
+       "They differ in performance, features and supported models."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Prefill",
+       "Processing the prompt before generating"
+      ],
+      [
+       "Decode",
+       "Generating output tokens one by one"
+      ],
+      [
+       "TTFT",
+       "Time to first token"
+      ],
+      [
+       "Throughput",
+       "Total output across all users per second"
+      ],
+      [
+       "KV cache",
+       "Stored keys and values for tokens already processed"
+      ],
+      [
+       "Continuous batching",
+       "Dynamically mixing requests on the GPU"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Users complain of a long wait before anything appears. Which metric?",
+     "Time to first token."
+    ],
+    [
+     "Why do long contexts limit how many users a GPU can serve?",
+     "The KV cache grows with context and users, filling VRAM."
+    ],
+    [
+     "What problem does PagedAttention solve?",
+     "Wasted KV cache memory, so more requests fit on a GPU."
+    ],
+    [
+     "Higher throughput always means faster for each user. True?",
+     "No. Packing more users raises throughput but can slow each one."
+    ]
+   ],
+   "deeper": [
+    "vllmBlog",
+    "hfKv"
+   ]
+  },
+  "mam10": {
+   "sections": [
+    {
+     "h": "The options",
+     "table": [
+      [
+       "Option",
+       "What it means",
+       "Good when"
+      ],
+      [
+       "Commercial API",
+       "Call a provider's hosted model",
+       "Fastest start, best quality, variable cost"
+      ],
+      [
+       "Cloud platform",
+       "Same models through AWS, Google Cloud or Azure",
+       "Enterprise contracts, data residency, existing cloud controls"
+      ],
+      [
+       "Self-hosted open model",
+       "Run open weights on your own infrastructure",
+       "Strict privacy, high steady volume, full control"
+      ],
+      [
+       "Fine-tuned model",
+       "Adapt a model to your data or style",
+       "Consistent format or domain behaviour that prompting can't achieve"
+      ],
+      [
+       "Train your own",
+       "Build a model from scratch",
+       "Almost never for product teams"
+      ]
+     ]
+    },
+    {
+     "h": "Criteria that matter",
+     "table": [
+      [
+       "Criterion",
+       "Question"
+      ],
+      [
+       "Quality",
+       "How well does it do our task on our test set?"
+      ],
+      [
+       "Latency",
+       "Can it meet our time-to-first-token and total time targets?"
+      ],
+      [
+       "Cost",
+       "What's the cost per task at expected volume, including engineering and operations?"
+      ],
+      [
+       "Data and privacy",
+       "Where does data go, how long is it kept, is it used for training?"
+      ],
+      [
+       "Operations",
+       "Who runs, patches, monitors and scales it?"
+      ],
+      [
+       "Vendor risk",
+       "What if prices change, the model is retired or the vendor has an outage?"
+      ]
+     ]
+    },
+    {
+     "h": "A sensible selection process",
+     "steps": [
+      [
+       "Define the task and success",
+       "Write 30 to 100 real test cases with expected results"
+      ],
+      [
+       "Start strong",
+       "Prototype with a capable model to learn what's possible"
+      ],
+      [
+       "Measure",
+       "Score quality, latency and cost per task for each candidate"
+      ],
+      [
+       "Optimise down",
+       "Try smaller models, lower effort settings or better prompts; keep the cheapest that passes"
+      ],
+      [
+       "Check the constraints",
+       "Privacy, compliance and operations can rule options out regardless of quality"
+      ],
+      [
+       "Record and revisit",
+       "Write the decision down with a trigger for review, such as a new model release or volume change"
+      ]
+     ]
+    },
+    {
+     "h": "Prompting, RAG or fine-tuning?",
+     "p": [
+      "Try them in that order. Better prompts fix many problems cheaply. RAG fixes missing or changing knowledge. Fine-tuning helps with consistent style, format or narrow behaviour, but needs good training data and must be redone when you switch models. It isn't the best way to add facts."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Write a model decision record for every AI feature. When a new model launches or prices change, you can revisit the decision quickly instead of reopening the whole debate.",
+      "Make 'can we switch models in a week?' a design requirement: model IDs in configuration, an internal wrapper and an evaluation set ready to re-run."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Fine-tuning is how you add company knowledge.",
+       "RAG is usually better for knowledge; fine-tuning shapes behaviour."
+      ],
+      [
+       "Self-hosting is always cheaper.",
+       "Only at steady high volume, and only if you count all costs."
+      ],
+      [
+       "Pick the model once and move on.",
+       "Models, prices and needs change; plan to revisit."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Build vs buy",
+       "Make it yourself vs use a vendor's product"
+      ],
+      [
+       "Total cost of ownership",
+       "All costs over time, not just per-call price"
+      ],
+      [
+       "Data residency",
+       "Where data is stored and processed geographically"
+      ],
+      [
+       "Decision record",
+       "A short document capturing a decision and its reasons"
+      ],
+      [
+       "Vendor lock-in",
+       "The difficulty and cost of switching providers"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Your model must keep customer data inside your cloud account. Which options remain?",
+     "A cloud platform offering in your account or a self-hosted open model."
+    ],
+    [
+     "What's the right order to try improvements?",
+     "Prompting, then RAG, then fine-tuning."
+    ],
+    [
+     "Why start with a strong model?",
+     "To learn what's achievable before optimising for cost."
+    ],
+    [
+     "What does a cheap per-call price hide when self-hosting?",
+     "Engineering, GPUs, operations, monitoring and on-call costs."
+    ]
+   ],
+   "deeper": [
+    "clChoose",
+    "ibmRagFtPe",
+    "lmarena"
+   ]
+  },
+  "mam11": {
+   "sections": [
+    {
+     "h": "Why a rubric",
+     "p": [
+      "'AI-enabled TPM' can mean anything from 'uses ChatGPT' to 'ran a production AI programme'. A rubric makes it concrete: specific areas, clear levels and evidence you can show. Use it to assess yourself now, plan what to learn, and talk credibly in interviews and reviews."
+     ]
+    },
+    {
+     "h": "Five competency areas",
+     "table": [
+      [
+       "Area",
+       "What it covers",
+       "Where in this path"
+      ],
+      [
+       "AI literacy",
+       "How models work, limits, costs, vocabulary",
+       "Phase 1"
+      ],
+      [
+       "Building with AI",
+       "Using AI tools to build, prototype and automate",
+       "Phase 2"
+      ],
+      [
+       "Delivering AI features",
+       "APIs, agents, RAG, integration, launch planning",
+       "Phases 2 to 4"
+      ],
+      [
+       "Quality and risk",
+       "Evaluation, security, privacy, responsible AI",
+       "Phase 4"
+      ],
+      [
+       "Leadership",
+       "Strategy, roadmaps, stakeholders, team enablement",
+       "Phases 5 and 6"
+      ]
+     ]
+    },
+    {
+     "h": "Four levels",
+     "table": [
+      [
+       "Level",
+       "Looks like",
+       "Example evidence"
+      ],
+      [
+       "Aware",
+       "Knows the terms, follows discussions",
+       "Can explain tokens, RAG and hallucinations"
+      ],
+      [
+       "Practitioner",
+       "Uses it in own work reliably",
+       "Built a working tool with AI; ran a prompt evaluation"
+      ],
+      [
+       "Advanced",
+       "Leads delivery of it for a team",
+       "Shipped an AI feature with an evaluation set and launch checklist"
+      ],
+      [
+       "Expert",
+       "Shapes how an organisation does it",
+       "Set AI delivery standards adopted by several teams"
+      ]
+     ]
+    },
+    {
+     "h": "How to use it",
+     "steps": [
+      [
+       "Self-assess",
+       "One level per area, with one piece of evidence each"
+      ],
+      [
+       "Get challenged",
+       "Ask a technical peer to question your weakest claimed level"
+      ],
+      [
+       "Pick two areas",
+       "Choose the two that matter most for your next role"
+      ],
+      [
+       "Plan evidence",
+       "Pick a project or capstone that will produce that evidence"
+      ],
+      [
+       "Reassess quarterly",
+       "Compare with your earlier scores and update"
+      ]
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Turn the rubric into your learning plan: each phase of this path should move at least one area up a level, with a named piece of evidence.",
+      "Use the rubric when hiring or growing TPMs. It gives interviewers shared language and stops 'AI experience' meaning very different things to different people."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Using chat tools daily makes you AI-enabled.",
+       "Delivery, quality and risk skills matter as much as tool use."
+      ],
+      [
+       "You need to code to reach the advanced levels.",
+       "Advanced is about leading AI delivery, which this path builds without hand-coding."
+      ],
+      [
+       "Self-assessment is enough.",
+       "Calibrate with someone technical who will challenge you."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Competency",
+       "An area of skill with observable behaviours"
+      ],
+      [
+       "Rubric",
+       "A scoring guide with levels and criteria"
+      ],
+      [
+       "Evidence",
+       "Concrete proof: artefacts, outcomes, feedback"
+      ],
+      [
+       "Calibration",
+       "Checking your scores against others' judgement"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What makes a rubric score credible?",
+     "Concrete evidence, not self-description."
+    ],
+    [
+     "Which area covers evaluation and security?",
+     "Quality and risk."
+    ],
+    [
+     "What's the difference between practitioner and advanced?",
+     "Practitioner uses it in their own work; advanced leads delivery for a team."
+    ],
+    [
+     "How often should you reassess?",
+     "Regularly, for example every quarter."
+    ]
+   ],
+   "deeper": [
+    "clChoose",
+    "owaspLlm"
    ]
   }
  }
