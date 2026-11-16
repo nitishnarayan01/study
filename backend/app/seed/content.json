@@ -520,6 +520,204 @@
    "title": "8 expert tips for getting started with NotebookLM (Google)",
    "url": "https://blog.google/technology/ai/notebooklm-beginner-tips/",
    "kind": "Read"
+  },
+  {
+   "key": "clProjects",
+   "title": "What are projects? (Claude Help Center)",
+   "url": "https://support.claude.com/en/articles/9517075-what-are-projects",
+   "kind": "Read"
+  },
+  {
+   "key": "ccOverview",
+   "title": "Claude Code overview (docs)",
+   "url": "https://code.claude.com/docs/en/overview",
+   "kind": "Read"
+  },
+  {
+   "key": "ccHow",
+   "title": "How Claude Code works (docs)",
+   "url": "https://code.claude.com/docs/en/how-claude-code-works",
+   "kind": "Read"
+  },
+  {
+   "key": "ccBest",
+   "title": "Best practices for Claude Code (docs)",
+   "url": "https://code.claude.com/docs/en/best-practices",
+   "kind": "Read"
+  },
+  {
+   "key": "ccMem",
+   "title": "How Claude remembers your project: CLAUDE.md (docs)",
+   "url": "https://code.claude.com/docs/en/memory",
+   "kind": "Read"
+  },
+  {
+   "key": "skillsOv",
+   "title": "Agent Skills overview (Claude docs)",
+   "url": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+   "kind": "Read"
+  },
+  {
+   "key": "cursorRules",
+   "title": "Rules (Cursor docs)",
+   "url": "https://cursor.com/docs/rules",
+   "kind": "Read"
+  },
+  {
+   "key": "cursorSearch",
+   "title": "Semantic search (Cursor docs)",
+   "url": "https://cursor.com/docs/context/semantic-search",
+   "kind": "Read"
+  },
+  {
+   "key": "cursorIdxBlog",
+   "title": "Securely indexing large codebases (Cursor blog)",
+   "url": "https://cursor.com/blog/secure-codebase-indexing",
+   "kind": "Read"
+  },
+  {
+   "key": "copilotDocs",
+   "title": "GitHub Copilot documentation",
+   "url": "https://docs.github.com/en/copilot",
+   "kind": "Read"
+  },
+  {
+   "key": "ghHello",
+   "title": "Hello World: repos, branches, pull requests (GitHub Docs)",
+   "url": "https://docs.github.com/en/get-started/using-github/hello-world",
+   "kind": "Do"
+  },
+  {
+   "key": "mdnCli",
+   "title": "Command line crash course (MDN)",
+   "url": "https://developer.mozilla.org/docs/Learn_web_development/Getting_started/Environment_setup/Command_line",
+   "kind": "Read"
+  },
+  {
+   "key": "npmLock",
+   "title": "package-lock.json (npm docs)",
+   "url": "https://docs.npmjs.com/cli/v11/configuring-npm/package-lock-json",
+   "kind": "Read"
+  },
+  {
+   "key": "gitIgnore",
+   "title": "gitignore reference (Git docs)",
+   "url": "https://git-scm.com/docs/gitignore",
+   "kind": "Reference"
+  },
+  {
+   "key": "pmFirst",
+   "title": "Send your first API request (Postman)",
+   "url": "https://learning.postman.com/docs/getting-started/first-steps/sending-the-first-request/",
+   "kind": "Do"
+  },
+  {
+   "key": "pmReq",
+   "title": "Send API requests in Postman",
+   "url": "https://learning.postman.com/docs/use/send-requests/",
+   "kind": "Read"
+  },
+  {
+   "key": "vercelStart",
+   "title": "Getting started with Vercel (docs)",
+   "url": "https://vercel.com/docs/getting-started-with-vercel",
+   "kind": "Do"
+  },
+  {
+   "key": "vercelDeploys",
+   "title": "Deployments on Vercel (docs)",
+   "url": "https://vercel.com/docs/deployments/overview",
+   "kind": "Read"
+  },
+  {
+   "key": "vercelTpl",
+   "title": "Next.js starter templates (Vercel)",
+   "url": "https://vercel.com/templates/nextjs",
+   "kind": "Tool"
+  },
+  {
+   "key": "lovableStart",
+   "title": "Lovable quick start (docs)",
+   "url": "https://docs.lovable.dev/introduction/getting-started",
+   "kind": "Do"
+  },
+  {
+   "key": "lovableSec",
+   "title": "Lovable security best practices (docs)",
+   "url": "https://docs.lovable.dev/tips-tricks/security-best-practices",
+   "kind": "Read"
+  },
+  {
+   "key": "v0Intro",
+   "title": "What is v0? (docs)",
+   "url": "https://v0.app/docs/introduction",
+   "kind": "Read"
+  },
+  {
+   "key": "cfWorkers",
+   "title": "Cloudflare Workers: get started (docs)",
+   "url": "https://developers.cloudflare.com/workers/get-started/",
+   "kind": "Do"
+  },
+  {
+   "key": "eslintStart",
+   "title": "Getting started with ESLint",
+   "url": "https://eslint.org/docs/user-guide/getting-started",
+   "kind": "Read"
+  },
+  {
+   "key": "testPyramid",
+   "title": "The Practical Test Pyramid (martinfowler.com)",
+   "url": "https://martinfowler.com/articles/practical-test-pyramid.html",
+   "kind": "Read"
+  },
+  {
+   "key": "rgPatterns",
+   "title": "Design patterns (Refactoring.Guru)",
+   "url": "https://refactoring.guru/design-patterns",
+   "kind": "Read"
+  },
+  {
+   "key": "rgHome",
+   "title": "Refactoring, patterns and SOLID (Refactoring.Guru)",
+   "url": "https://refactoring.guru/",
+   "kind": "Read"
+  },
+  {
+   "key": "googleCr",
+   "title": "Google code review guide",
+   "url": "https://google.github.io/eng-practices/review/",
+   "kind": "Read"
+  },
+  {
+   "key": "googleLook",
+   "title": "What to look for in a code review (Google)",
+   "url": "https://google.github.io/eng-practices/review/reviewer/looking-for.html",
+   "kind": "Read"
+  },
+  {
+   "key": "fowlerDebt",
+   "title": "Technical debt (Martin Fowler)",
+   "url": "https://martinfowler.com/bliki/TechnicalDebt.html",
+   "kind": "Read"
+  },
+  {
+   "key": "ghSecret",
+   "title": "About secret scanning (GitHub Docs)",
+   "url": "https://docs.github.com/en/enterprise-cloud@latest/code-security/secret-scanning/about-secret-scanning",
+   "kind": "Read"
+  },
+  {
+   "key": "owaspLlm",
+   "title": "OWASP Top 10 for LLM Applications 2025",
+   "url": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+   "kind": "Read"
+  },
+  {
+   "key": "clSdks",
+   "title": "Claude SDKs, CLI and libraries (docs)",
+   "url": "https://platform.claude.com/docs/en/cli-sdks-libraries/overview",
+   "kind": "Read"
   }
  ],
  "topics": [
@@ -1905,14 +2103,26 @@
    "kind": "New",
    "hours": 3,
    "order": 44,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "Claude comes in several working modes. Chat is for thinking and drafting. Projects keep your files and instructions together so every chat starts with the right context. Artifacts turn an answer into a page, document or small app you can share. Claude Code works directly inside a codebase: it reads files, runs commands and makes changes.",
+   "why": "Picking the right mode is most of the skill. A PM who drafts specs in a Project, prototypes in an artifact and hands real code changes to Claude Code can ship working software without writing code by hand. That is how this learning hub was built.",
+   "concepts": [
+    "Chat vs Project vs artifact vs Claude Code",
+    "Project knowledge and project instructions",
+    "Artifacts as shareable outputs",
+    "Claude Code: the agentic loop (read, plan, act, check)",
+    "Plan mode and permission prompts",
+    "CLAUDE.md as standing instructions"
+   ],
+   "resources": [
+    "clProjects",
+    "ccOverview",
+    "ccHow",
+    "ccBest"
+   ],
+   "do_it": "Create a Project called 'TPM Learning' with your study PDF as knowledge and an instruction such as 'Explain like I'm a PM, give one real example'. Then open this repo in Claude Code and ask it, in plan mode, how the progress tracker saves data. Don't approve changes; just read the plan.",
+   "prove": "Write a one-page 'which Claude mode for which job' guide for your team with three real examples from your own work.",
+   "interview": "How do you personally use AI tools to deliver faster, and where do you not trust them?",
    "covers": [
     "Claude (capabilities and artifacts)"
    ]
@@ -1926,14 +2136,25 @@
    "kind": "New",
    "hours": 2,
    "order": 45,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "A set of habits that let you build real software with AI without being able to judge every line yourself: small steps, save points in Git, automatic checks (tests and CI), secrets kept out of code, and independent review before anything reaches users.",
+   "why": "AI writes plausible code quickly, including plausible mistakes. Your safety net is process, not reading skill. These are the same controls good engineering teams use, so learning them also makes you a better TPM.",
+   "concepts": [
+    "Plan first, then build in small steps",
+    "Commits as save points; branches for experiments",
+    "Tests and CI as the automatic reviewer",
+    "Secrets in .env, never in code or chat",
+    "Checking new dependencies",
+    "Second-opinion review and asking 'what could go wrong'"
+   ],
+   "resources": [
+    "ccBest",
+    "ghSecret",
+    "owaspLlm"
+   ],
+   "do_it": "In this repo, ask Claude to explain the last commit in plain English, list what could break, and say which test covers it. Then check the GitHub Actions run for that commit is green.",
+   "prove": "Write your personal 'AI build checklist' (10 items max) and use it on your next change.",
+   "interview": "You don't code. How do you make sure what you ship with AI is safe?",
    "covers": [
     "Added: reviewing AI-written code as a non-coder"
    ]
@@ -1947,14 +2168,24 @@
    "kind": "New",
    "hours": 2,
    "order": 46,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "Cursor is a code editor (based on VS Code) with AI built in: autocomplete as you type, a chat that can see your project, and an Agent that can edit many files and run commands. Other editors such as VS Code with Copilot and Windsurf offer similar features.",
+   "why": "Your engineers probably use one of these daily. Knowing what they can and cannot do helps you estimate work, set team norms and understand why some tasks now take hours instead of days.",
+   "concepts": [
+    "Tab autocomplete vs chat vs Agent",
+    "Context: @-mentioning files, folders and docs",
+    "Codebase indexing",
+    "Rules files (.cursor/rules, AGENTS.md)",
+    "Reviewing diffs before accepting",
+    "Ignore files for privacy and speed"
+   ],
+   "resources": [
+    "cursorRules",
+    "cursorSearch"
+   ],
+   "do_it": "Install Cursor, open this repo and ask the chat: 'Where is login handled, front end and back end?' Check its answer by opening the files it names.",
+   "prove": "Compare Cursor and Claude Code on the same small task (for example, change a button label) and write five lines on the difference.",
+   "interview": "How would you roll out an AI code editor to a 30-person engineering team?",
    "covers": [
     "Cursor",
     "Cursor Workflow"
@@ -1969,14 +2200,23 @@
    "kind": "New",
    "hours": 1.5,
    "order": 47,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "GitHub Copilot is GitHub's AI assistant. It suggests code in the editor, answers questions about a codebase in chat, reviews pull requests, and has a coding agent that can take an issue and open a pull request on its own.",
+   "why": "Many companies standardise on Copilot because it lives inside GitHub, where their code, issues and permissions already are. As a TPM you'll be asked about licences, policies and how assigned-to-AI issues fit into sprint planning.",
+   "concepts": [
+    "Code completion",
+    "Copilot Chat",
+    "Copilot code review",
+    "Copilot coding agent (issue to pull request)",
+    "Organisation policies and seat licences",
+    "Human review stays mandatory"
+   ],
+   "resources": [
+    "copilotDocs"
+   ],
+   "do_it": "Read the Copilot docs home page and list which features your company could use today with the tools it already has.",
+   "prove": "Draft a one-paragraph team policy: which tasks may be assigned to an AI coding agent and who must review the result.",
+   "interview": "An engineer wants to assign half the backlog to Copilot's agent. What do you ask before agreeing?",
    "covers": [
     "GitHub Copilot",
     "Copilot Concepts"
@@ -1991,14 +2231,25 @@
    "kind": "New",
    "hours": 1.5,
    "order": 48,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "An AI model can only consider what fits in its context window, and a real codebase is far bigger. Tools solve this by searching: some build an index of the code (chunks turned into embeddings, like RAG for code), others search on demand with tools such as grep and file listing. Either way, the AI only 'knows' the parts it found.",
+   "why": "This explains most AI coding failures: it edited the wrong file, missed a second place that needed changing, or invented a function. Good context (clear file names, a README, rules files, pointing at the right files) fixes more problems than better prompts.",
+   "concepts": [
+    "Context window limits",
+    "Indexing: chunks, embeddings, semantic search",
+    "Agentic search: grep, glob, reading files",
+    "Why ignore files matter",
+    "Giving context explicitly: @files, paths, examples",
+    "Context fills up; start fresh sessions"
+   ],
+   "resources": [
+    "cursorSearch",
+    "cursorIdxBlog",
+    "ccHow"
+   ],
+   "do_it": "Ask Claude Code or Cursor 'Which files would you change to add a new field to topics?' and compare its list with the real one: models.py, a migration, schemas.py, seed, types.ts and the page.",
+   "prove": "Explain to a colleague, in two minutes, why an AI coding tool sometimes 'forgets' part of the project.",
+   "interview": "Why does an AI assistant work better on some repositories than others?",
    "covers": [
     "Repo Indexing",
     "AI Repository Understanding"
@@ -2013,14 +2264,25 @@
    "kind": "New",
    "hours": 1.5,
    "order": 49,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "A rules file is a plain-text file in the repo that the AI tool reads at the start of every session: how to run the project, what the stack is, what must never happen. Claude Code reads CLAUDE.md; Cursor reads rules in .cursor/rules (older projects use a single .cursorrules file) and also AGENTS.md.",
+   "why": "It is the cheapest quality lever you have. Writing down the team's rules once stops the AI repeating the same mistakes, and it doubles as onboarding documentation for humans.",
+   "concepts": [
+    "What goes in: commands, stack, conventions, never-do rules",
+    "What stays out: secrets, long essays",
+    "Project vs personal vs team rules",
+    "Keeping it short and current",
+    "Rules are guidance, not enforcement",
+    "Version-controlled like code"
+   ],
+   "resources": [
+    "ccMem",
+    "cursorRules",
+    "ccBest"
+   ],
+   "do_it": "Open CLAUDE.md in this repo. Add one rule you learned the hard way (for example, 'Explain every change in plain English before committing') and commit it.",
+   "prove": "Write a CLAUDE.md for a project at work (without secrets) and get one engineer to review it.",
+   "interview": "How would you make AI coding assistants follow your team's standards?",
    "covers": [
     "Rules Files (.cursorrules, CLAUDE.md)"
    ]
@@ -2034,14 +2296,23 @@
    "kind": "New",
    "hours": 2,
    "order": 50,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "A Skill is a folder with a SKILL.md file (a short name and description at the top, instructions below) plus any scripts or templates it needs. Claude reads only the name and description until a task matches, then loads the full instructions. It turns a workflow you repeat into something Claude does the same way every time.",
+   "why": "Skills are how you package your PM know-how: status-report format, risk-review checklist, release-notes style. Instead of re-explaining in every chat, you write it once and the whole team gets consistent output.",
+   "concepts": [
+    "SKILL.md structure: frontmatter (name, description) and body",
+    "The description decides when it triggers",
+    "Loaded only when relevant",
+    "Bundled scripts and reference files",
+    "Skills vs rules files vs Projects",
+    "Only install Skills from sources you trust"
+   ],
+   "resources": [
+    "skillsOv"
+   ],
+   "do_it": "Write a SKILL.md for your weekly status report: inputs, sections, tone and one example. Ask Claude to use it on last week's notes.",
+   "prove": "Run the same Skill on two different weeks and check the output follows the same structure both times.",
+   "interview": "How would you standardise how your team uses AI for recurring documents?",
    "covers": [
     "AI Skills Framework (SKILL.md)"
    ]
@@ -2055,14 +2326,23 @@
    "kind": "New",
    "hours": 2.5,
    "order": 51,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "GitHub hosts Git repositories online. A repository holds the project and its full history; a commit is a saved change with a message; a branch is a parallel line of work; a pull request asks for a branch to be reviewed and merged; Actions run checks automatically. Issues track work, and open-source projects share code publicly.",
+   "why": "Pull requests are where engineering decisions, reviews and quality gates actually happen. If you can read a PR, its checks and its discussion, you can follow delivery in real time instead of waiting for stand-up.",
+   "concepts": [
+    "Repository, commit, history",
+    "Branch and merge",
+    "Pull request: diff, review, checks",
+    "GitHub Actions (CI)",
+    "Issues and projects",
+    "Open source: licences, stars, forks, trending"
+   ],
+   "resources": [
+    "ghHello"
+   ],
+   "do_it": "Do the GitHub Hello World exercise in a new repo. Then open nitishnarayan01/study, click the latest commit and the Actions tab, and find the test count in the backend job log.",
+   "prove": "Open a pull request in your own repo that changes one lesson's text, and merge it yourself after the checks pass.",
+   "interview": "How do you use GitHub to track delivery without micromanaging engineers?",
    "covers": [
     "GitHub",
     "GitHub Trending & Open Source"
@@ -2077,14 +2357,23 @@
    "kind": "New",
    "hours": 2,
    "order": 52,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "The terminal is a text window where you type commands instead of clicking. The shell (PowerShell on Windows; bash or zsh on Mac and Linux) runs those commands. CLI tools such as git, npm, docker and claude are programs you control from there.",
+   "why": "Every setup guide, including this project's README, starts with terminal commands. You don't need to master it; you need to run commands, read the output and tell whether something failed.",
+   "concepts": [
+    "Where am I: current folder",
+    "Moving around: cd, listing files",
+    "Running a program with arguments",
+    "Reading errors vs warnings",
+    "Stopping a running command (Ctrl+C)",
+    "History and copy-paste safety"
+   ],
+   "resources": [
+    "mdnCli"
+   ],
+   "do_it": "Open PowerShell, go to your study folder with cd, list files, then run 'git status' and 'git log --oneline -5'. Ask Claude to explain each line of output.",
+   "prove": "Start the project with docker compose from the README without help, and stop it cleanly.",
+   "interview": "An engineer says 'just run the migration locally'. What would you actually do?",
    "covers": [
     "CLI, Terminal, Shell"
    ]
@@ -2098,14 +2387,24 @@
    "kind": "New",
    "hours": 2,
    "order": 53,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "Every project has a few standard files around the code. package.json or requirements.txt lists the libraries it needs; a package manager (npm, pip) installs them; a lock file pins exact versions; .env holds secrets and settings for one machine; .gitignore lists files Git must not track; README explains how to run it.",
+   "why": "These files explain many 'works on my machine' problems, security leaks and broken builds. Knowing them lets you review a repo's health in five minutes and ask the right question when a build breaks.",
+   "concepts": [
+    "Dependencies and versions",
+    "Package managers: npm, pip",
+    "Lock files: package-lock.json",
+    "Environment variables, .env vs .env.example",
+    "What .gitignore protects",
+    "A good README"
+   ],
+   "resources": [
+    "npmLock",
+    "gitIgnore"
+   ],
+   "do_it": "In this repo open frontend/package.json, backend/requirements.txt, .env.example and .gitignore. Ask Claude why .env is ignored but .env.example is committed.",
+   "prove": "Write a five-point 'repo health check' you could run on any project at work.",
+   "interview": "A build that worked yesterday fails today with no code changes. What do you suspect?",
    "covers": [
     "Package Managers",
     "Dependency Management",
@@ -2124,14 +2423,24 @@
    "kind": "New",
    "hours": 2.5,
    "order": 54,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "Postman is an app for calling APIs without writing code. You set the method, URL, headers and body, press Send and see the response. Requests can be saved into collections, use variables and environments (local vs production), and include small tests that check the response.",
+   "why": "It lets you verify a backend yourself: does the endpoint exist, what does it return, what happens with a bad token? You can reproduce a bug before filing it and confirm a fix without waiting for the UI.",
+   "concepts": [
+    "Request: method, URL, headers, body",
+    "Response: status code, body, time",
+    "Collections",
+    "Variables and environments",
+    "Auth tokens",
+    "Simple tests on responses"
+   ],
+   "resources": [
+    "pmFirst",
+    "pmReq"
+   ],
+   "do_it": "With the hub running locally, call POST /api/auth/login with your admin email and password, copy the token, then call GET /api/progress/me with an Authorization: Bearer header.",
+   "prove": "Build a collection that logs in, fetches the catalog and updates one topic's progress, with a status-200 test on each step.",
+   "interview": "How would you check whether a bug is in the front end or the back end?",
    "covers": [
     "Postman",
     "API Integration Testing (Level 2)"
@@ -2146,14 +2455,24 @@
    "kind": "New",
    "hours": 2,
    "order": 55,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "Vercel is a hosting platform for web front ends (it makes Next.js). You connect a GitHub repo and every push builds and deploys automatically: each branch or pull request gets its own preview URL, and the main branch goes to production. Settings such as environment variables and domains are managed per project.",
+   "why": "Preview links change how teams review work: product, design and QA click a real link on every pull request instead of reading screenshots. It is also the fastest route to putting this hub online.",
+   "concepts": [
+    "Import a Git repo and deploy",
+    "Preview vs production deployments",
+    "Environment variables per environment",
+    "Custom domains",
+    "Build logs",
+    "Front end on Vercel, backend and database elsewhere"
+   ],
+   "resources": [
+    "vercelStart",
+    "vercelDeploys"
+   ],
+   "do_it": "Deploy a starter Next.js template to Vercel from GitHub. Make a change on a branch, open a pull request and open its preview link.",
+   "prove": "Write the steps (and the open questions, such as where the FastAPI backend and Postgres would run) to put this hub online.",
+   "interview": "What changes for QA and stakeholders when every pull request gets a preview deployment?",
    "covers": [
     "Vercel"
    ]
@@ -2167,14 +2486,25 @@
    "kind": "New",
    "hours": 3,
    "order": 56,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "Lovable and v0 build web apps from a chat. You describe what you want, they generate the code, show a live preview and publish it. Lovable leans towards complete products with a built-in backend; v0, from Vercel, generates Next.js and React apps that deploy to Vercel and can open pull requests on an existing repo.",
+   "why": "They are the quickest way for a PM to turn an idea into something clickable for user tests or stakeholder alignment. The skill is knowing when a prototype is good enough and when it needs real engineering.",
+   "concepts": [
+    "Prompt to working prototype",
+    "Iterating with specific feedback",
+    "Connecting GitHub and exporting code",
+    "Backend, auth and data in generated apps",
+    "Prototype vs production",
+    "Security review before real users"
+   ],
+   "resources": [
+    "lovableStart",
+    "v0Intro",
+    "lovableSec"
+   ],
+   "do_it": "Build the same small app (a team reading-list tracker) in both Lovable and v0 in under an hour each. Note where each one struggled.",
+   "prove": "Show one prototype to two real users and write down what you learned that a document would not have told you.",
+   "interview": "When would you prototype with an AI app builder, and when would you insist on engineering from the start?",
    "covers": [
     "Lovable",
     "v0 by Vercel"
@@ -2189,14 +2519,24 @@
    "kind": "New",
    "hours": 1.5,
    "order": 57,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "Google AI Studio is Google's free browser workspace for the Gemini models. You can try prompts, change model settings, upload files, compare outputs, create an API key and export the working prompt as code.",
+   "why": "It is the quickest way to test whether a model can do a task before anyone builds anything. A PM who can bring a working prompt and sample outputs to a kick-off saves the team a week of debate.",
+   "concepts": [
+    "Choosing a model",
+    "System instructions",
+    "Temperature and other settings",
+    "Multimodal input (images, PDFs)",
+    "Structured output",
+    "Get code and API keys"
+   ],
+   "resources": [
+    "aiStudio",
+    "gemKey"
+   ],
+   "do_it": "Take 10 real support tickets (with personal data removed) and build a prompt in AI Studio that classifies them by product area. Note how many it gets right.",
+   "prove": "Share the prompt, settings and a results table with a colleague and agree whether it is good enough for a pilot.",
+   "interview": "How would you test whether an AI feature is feasible before committing engineering time?",
    "covers": [
     "Google AI Studio"
    ]
@@ -2210,14 +2550,24 @@
    "kind": "New",
    "hours": 1.5,
    "order": 58,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "NotebookLM is Google's research notebook. You add sources (PDFs, Google Docs, websites, YouTube videos) and it answers questions grounded in those sources, with citations back to the exact passage. It can also create summaries, study guides and audio overviews.",
+   "why": "It is a ready-made RAG system you can use today, which makes it ideal for learning a new domain fast and for seeing what source-grounded AI feels like before you build one.",
+   "concepts": [
+    "Sources define what it knows",
+    "Citations you can click",
+    "Notes and generated guides",
+    "Audio overviews",
+    "Limits: only as good as the sources",
+    "Sharing notebooks"
+   ],
+   "resources": [
+    "nblm",
+    "nblmTips"
+   ],
+   "do_it": "Create a notebook with the Claude Code docs pages from this phase. Ask it for the five things a PM must know and click every citation.",
+   "prove": "Use a notebook to prepare for a real meeting and note one question it answered faster than search would have.",
+   "interview": "What's the difference between asking a chatbot and asking a source-grounded tool?",
    "covers": [
     "NotebookLM"
    ]
@@ -2231,14 +2581,25 @@
    "kind": "New",
    "hours": 1.5,
    "order": 59,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "Cloudflare sits in front of websites on a global network. It provides DNS, a CDN that caches content close to users, security (DDoS protection, firewall rules, bot control) and developer products such as Workers (small serverless functions that run at the network edge) and Pages (static site hosting).",
+   "why": "A large share of the web runs through Cloudflare, so it shows up in outages, security reviews and performance discussions. For builders, it is also a cheap place to host small tools and APIs.",
+   "concepts": [
+    "DNS and proxying",
+    "CDN caching",
+    "DDoS protection and WAF",
+    "Workers: code at the edge",
+    "Pages: static hosting",
+    "When an outage is 'Cloudflare, not us'"
+   ],
+   "resources": [
+    "cfCdn",
+    "cfWaf",
+    "cfWorkers"
+   ],
+   "do_it": "Read the CDN and WAF explainers, then follow the Workers get-started guide far enough to see a 'Hello World' running on a workers.dev URL.",
+   "prove": "Explain to a stakeholder in three sentences what would and wouldn't keep working if Cloudflare had an outage.",
+   "interview": "Our site is slow for users in Asia. What could a CDN do, and what couldn't it?",
    "covers": [
     "Cloudflare"
    ]
@@ -2252,14 +2613,26 @@
    "kind": "New",
    "hours": 2.5,
    "order": 60,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "Code quality has automatic and human parts. Linters flag likely mistakes and formatters fix layout; unit tests check small pieces of logic, integration and end-to-end tests check that pieces work together. Design patterns are named, proven solutions to common design problems, and SOLID is five principles for code that stays easy to change.",
+   "why": "With AI writing more of the code, automatic checks are your main quality gate. Knowing the vocabulary lets you ask 'Is there a test for that?' and understand answers like 'that breaks single responsibility'.",
+   "concepts": [
+    "Linters and formatters",
+    "Unit, integration and end-to-end tests",
+    "The test pyramid",
+    "Test coverage and its limits",
+    "Common patterns: adapter, strategy, observer, factory",
+    "SOLID in plain English"
+   ],
+   "resources": [
+    "eslintStart",
+    "testPyramid",
+    "rgPatterns",
+    "rgHome"
+   ],
+   "do_it": "Open backend/tests/test_api.py and ask Claude to explain, test by test, what each one proves about the app. Find one behaviour that has no test.",
+   "prove": "Ask Claude to add the missing test, run CI and see it pass.",
+   "interview": "How do you know AI-generated code is good enough to ship?",
    "covers": [
     "Linters, Formatters",
     "Unit Testing Frameworks",
@@ -2276,14 +2649,25 @@
    "kind": "Refresh",
    "hours": 2,
    "order": 61,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "Code review is a second person (or AI) checking a change before it merges: its design, whether it works, complexity, tests, naming and documentation. Technical debt is the extra future cost of shortcuts in code: like a loan, it buys speed now and charges interest later as every change in that area takes longer.",
+   "why": "Review speed and debt levels quietly drive delivery dates. A TPM who can talk about both in business terms (risk, cost of delay, interest) gets debt work prioritised instead of endlessly postponed.",
+   "concepts": [
+    "What reviewers look for",
+    "Small pull requests review faster and better",
+    "Approve when it improves the code, not when perfect",
+    "Debt as principal and interest",
+    "Deliberate vs accidental, prudent vs reckless debt",
+    "Making debt visible and budgeting for it"
+   ],
+   "resources": [
+    "googleCr",
+    "googleLook",
+    "fowlerDebt"
+   ],
+   "do_it": "Read Google's 'What to look for in a code review'. Then ask Claude to review the last commit in this repo against that list and tell you which points apply.",
+   "prove": "Write a one-page debt register for a project at work: three items, the interest each one charges, and a proposed fix.",
+   "interview": "Engineering wants a quarter to pay down tech debt. How do you evaluate the request?",
    "covers": [
     "Code Review",
     "Technical Debt"
@@ -2298,14 +2682,24 @@
    "kind": "New",
    "hours": 1.5,
    "order": 62,
-   "status": "outline",
-   "summary": "",
-   "why": "",
-   "concepts": [],
-   "resources": [],
-   "do_it": "",
-   "prove": "",
-   "interview": "",
+   "status": "full",
+   "summary": "Starter kits (templates, boilerplates) give you a working project skeleton so you don't start from an empty folder. SDKs are official libraries that wrap a raw API with types, retries and streaming; many teams add their own thin wrapper on top. Internal developer tools are the scripts, bots and consoles a company builds for its own teams.",
+   "why": "These are the build-vs-reuse decisions you'll make on every AI project: which starter, which SDK, whether to build an internal wrapper for logging and cost control. Each one saves weeks or creates lock-in.",
+   "concepts": [
+    "Templates and boilerplates",
+    "Official SDKs vs raw HTTP calls",
+    "Internal wrapper: one place for keys, logging, cost, model switching",
+    "Internal tools and platform teams",
+    "Lock-in and upgrade cost",
+    "Licences of starters"
+   ],
+   "resources": [
+    "vercelTpl",
+    "clSdks"
+   ],
+   "do_it": "Browse the Vercel Next.js templates and pick one AI starter. Read its README and list what it gives you and what you'd still need to build.",
+   "prove": "Write a half-page proposal for an internal AI wrapper at your company: what it centralises and who owns it.",
+   "interview": "Should every team call the model provider directly, or should we build a shared AI gateway?",
    "covers": [
     "Starter Kits",
     "SDK Wrappers",
@@ -12567,6 +12961,2937 @@
    "deeper": [
     "karpIntro",
     "clPrice"
+   ]
+  },
+  "abt01": {
+   "sections": [
+    {
+     "h": "Four ways to work with Claude",
+     "table": [
+      [
+       "Mode",
+       "What it is",
+       "Use it for"
+      ],
+      [
+       "Chat",
+       "A single conversation",
+       "Thinking, drafting, explaining, quick analysis"
+      ],
+      [
+       "Project",
+       "A workspace with its own files, instructions and chat history",
+       "Ongoing work: a programme, a product area, your learning"
+      ],
+      [
+       "Artifact",
+       "A page, document or small app produced in the conversation",
+       "Something to keep, share or click: a dashboard, a one-pager, a prototype"
+      ],
+      [
+       "Claude Code",
+       "An agent that works inside a codebase",
+       "Real changes to software: reading files, running commands, editing code"
+      ]
+     ],
+     "p": [
+      "The same model sits behind all four. What changes is what Claude can see and what it is allowed to do. In a chat it sees only the conversation. In a Project it also sees the files and instructions you added. In Claude Code it can open any file in the repository and, with your permission, run commands and change things."
+     ]
+    },
+    {
+     "h": "Projects: give Claude standing context",
+     "p": [
+      "A Project bundles knowledge (uploaded documents) with instructions (how Claude should behave in every chat inside it). Upload the programme charter, architecture notes and last quarter's decisions, add an instruction such as 'Answer as our TPM; flag risks first', and every new chat starts informed.",
+      "When the knowledge gets large, Claude retrieves the relevant parts rather than reading everything each time (the RAG idea from the AI Fundamentals lesson). Good file names and clean documents improve what it finds."
+     ]
+    },
+    {
+     "h": "Artifacts: answers you can keep",
+     "p": [
+      "When the output is something you'll come back to, ask for it as an artifact: a status page, a decision log, a calculator, a clickable mock-up. Artifacts can be revised in place and shared by link. The first version of this learning hub was an artifact, built entirely by describing what was needed."
+     ]
+    },
+    {
+     "h": "Claude Code: the agentic loop",
+     "flow": [
+      [
+       "You",
+       [
+        [
+         "Describe the goal",
+         "what and why"
+        ]
+       ]
+      ],
+      [
+       "Claude Code",
+       [
+        [
+         "Explore",
+         "reads files, searches"
+        ],
+        [
+         "Plan",
+         "proposes steps"
+        ],
+        [
+         "Act",
+         "edits, runs commands"
+        ],
+        [
+         "Check",
+         "runs tests, reads output"
+        ]
+       ]
+      ],
+      [
+       "You",
+       [
+        [
+         "Review",
+         "approve, redirect or undo"
+        ]
+       ]
+      ]
+     ],
+     "flowLabel": "Claude Code loop: you describe, it explores, plans, acts and checks, you review",
+     "p": [
+      "Claude Code repeats a loop: gather context, take an action, check the result, decide the next step. Plan mode lets it explore and propose without changing anything, which is the safest way to start any task. Permission prompts ask before risky actions such as running commands, and a CLAUDE.md file in the repository gives it the project's rules every time."
+     ]
+    },
+    {
+     "h": "Worked example: how this hub was built",
+     "steps": [
+      [
+       "Plan in chat",
+       "Agree the scope, stack and structure in plain English before any code"
+      ],
+      [
+       "Prototype as an artifact",
+       "A single-page dashboard to test the idea with real content"
+      ],
+      [
+       "Move to a repository",
+       "Claude Code generates the FastAPI back end, Next.js front end and tests"
+      ],
+      [
+       "Let CI judge",
+       "GitHub Actions runs the tests on every push; red means stop"
+      ],
+      [
+       "Iterate in small steps",
+       "One feature per change, each explained in plain English"
+      ]
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Use Projects to give yourself a programme memory: charter, architecture, decision log and stakeholder map in one place, with instructions like 'flag risks before answering'. Before any steering meeting, ask the Project for open decisions and contradictions between documents.",
+      "When a team starts using Claude Code, agree three norms upfront: start in plan mode, one change per pull request, and CI must be green before merge. These turn a powerful tool into a predictable one, and they map directly onto the controls you already run."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Claude Code just writes code faster.",
+       "It also explores, runs commands and checks results in a loop; the bigger win is that non-engineers can drive real changes safely."
+      ],
+      [
+       "Artifacts are only for demos.",
+       "Many are durable working tools: trackers, calculators and dashboards that people keep using."
+      ],
+      [
+       "A Project means Claude reads every file every time.",
+       "For large knowledge it retrieves the relevant parts, so clear, well-named documents matter."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Project knowledge",
+       "Files attached to a Project that Claude can draw on in every chat"
+      ],
+      [
+       "Project instructions",
+       "Standing guidance applied to every chat in the Project"
+      ],
+      [
+       "Artifact",
+       "A standalone output (page, document, app) produced by Claude"
+      ],
+      [
+       "Agentic",
+       "Able to take actions in a loop towards a goal, not just answer"
+      ],
+      [
+       "Plan mode",
+       "Claude Code explores and proposes without editing"
+      ],
+      [
+       "CLAUDE.md",
+       "A file Claude Code reads at the start of each session"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "You need Claude to remember your programme's architecture across many chats. Which mode?",
+     "A Project: add the architecture docs as knowledge and set instructions."
+    ],
+    [
+     "What's the safest first step when asking Claude Code to change a codebase?",
+     "Use plan mode so it explores and proposes before editing anything."
+    ],
+    [
+     "Why build a quick artifact before a full app?",
+     "To test the idea and content cheaply before investing in a real codebase."
+    ],
+    [
+     "What makes Claude Code different from chat?",
+     "It can read the whole repository, run commands and edit files in a loop, with your permission."
+    ]
+   ],
+   "deeper": [
+    "clProjects",
+    "ccOverview",
+    "ccHow",
+    "ccBest"
+   ]
+  },
+  "abt02": {
+   "sections": [
+    {
+     "h": "Why process beats reading skill",
+     "p": [
+      "AI-generated code is usually reasonable and occasionally wrong in ways that look right. Experienced engineers catch some of those mistakes by reading; you mostly can't, yet. So you rely on what engineering teams rely on anyway: small changes, automatic checks, save points and independent review.",
+      "Think of it like approving a supplier's work. You don't inspect every weld; you insist on test certificates, a sign-off process and the ability to roll back."
+     ]
+    },
+    {
+     "h": "The safe build loop",
+     "steps": [
+      [
+       "Plan before building",
+       "Ask for a plan in plain English: which files change, what could break. Approve or correct it."
+      ],
+      [
+       "One small change at a time",
+       "A change you can describe in one sentence is a change you can check."
+      ],
+      [
+       "Commit after every working step",
+       "A commit is a save point. If the next step goes wrong you can return to it."
+      ],
+      [
+       "Let tests and CI decide",
+       "Ask for a test with every behaviour change. Never merge on a red CI run."
+      ],
+      [
+       "Ask what could go wrong",
+       "Have Claude list risks, edge cases and anything it is unsure about."
+      ],
+      [
+       "Get a second opinion",
+       "A fresh session, a different tool or a human engineer reviews before real users see it."
+      ]
+     ]
+    },
+    {
+     "h": "Secrets and data",
+     "bullets": [
+      "API keys, passwords and tokens go in a .env file that .gitignore excludes, never in code, screenshots or chat.",
+      "Commit a .env.example with the names but not the values.",
+      "If a secret is ever committed, treat it as leaked: rotate it, even if you delete the commit.",
+      "Turn on GitHub secret scanning and push protection where available.",
+      "Don't paste customer personal data into AI tools your company hasn't approved."
+     ]
+    },
+    {
+     "h": "Dependencies and AI-specific risks",
+     "p": [
+      "AI tools sometimes suggest a library that doesn't exist or has a name close to a popular one; attackers register such names. Before adding a dependency, check it is real, widely used and maintained.",
+      "If your product itself uses an LLM, a second set of risks applies, such as prompt injection, sensitive data disclosure and excessive agency. The OWASP Top 10 for LLM Applications is the standard checklist; you'll study it in Phase 4."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Before you merge anything an AI wrote, ask three questions: what changed, what could break, and which test proves it works? If nobody, human or AI, can answer the third, the change isn't finished.",
+      "Agree a 'two keys' rule for anything touching auth, payments or personal data: an engineer reviews it even if everything else is AI-driven. Being explicit about where human review is mandatory is what makes AI-assisted delivery acceptable to security and leadership."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "If it runs, it's correct.",
+       "Code can run and still be wrong, insecure or fragile; tests and review catch what a quick click-through can't."
+      ],
+      [
+       "Deleting a leaked key from the code fixes the leak.",
+       "It stays in Git history and may already be copied; rotate it."
+      ],
+      [
+       "Non-coders can't review code.",
+       "You can review intent, scope, tests and risk, which is where many serious problems show up."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Commit",
+       "A saved snapshot of changes with a message"
+      ],
+      [
+       "CI",
+       "Continuous integration: checks that run automatically on every push"
+      ],
+      [
+       "Secret",
+       "Any credential that grants access: keys, passwords, tokens"
+      ],
+      [
+       "Rotate",
+       "Replace a credential with a new one and disable the old"
+      ],
+      [
+       "Push protection",
+       "Blocks a push that contains a detected secret"
+      ],
+      [
+       "Diff",
+       "The exact lines added and removed by a change"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "You accidentally committed an API key and deleted it in the next commit. Are you safe?",
+     "No. It remains in Git history; rotate the key immediately."
+    ],
+    [
+     "Why commit after every working step?",
+     "Each commit is a save point you can return to if the next change breaks something."
+    ],
+    [
+     "CI is red but the app looks fine locally. Merge?",
+     "No. Find out why it fails; red means a check that should pass doesn't."
+    ],
+    [
+     "What should you check before adding a library the AI suggested?",
+     "That it exists, is widely used, maintained and is the package you think it is."
+    ]
+   ],
+   "deeper": [
+    "ccBest",
+    "ghSecret",
+    "owaspLlm"
+   ]
+  },
+  "abt03": {
+   "sections": [
+    {
+     "h": "Three levels of help",
+     "table": [
+      [
+       "Feature",
+       "What it does",
+       "Your control"
+      ],
+      [
+       "Autocomplete (Tab)",
+       "Predicts the next lines as you type",
+       "Accept or ignore each suggestion"
+      ],
+      [
+       "Chat",
+       "Answers questions about the code you point it at",
+       "You decide what to apply"
+      ],
+      [
+       "Agent",
+       "Plans and edits across many files, can run commands",
+       "Review the diff, approve commands, accept or reject"
+      ]
+     ],
+     "p": [
+      "Cursor is a fork of VS Code, so it looks like the editor many engineers already know, with AI added at each level. VS Code with GitHub Copilot, Windsurf and others offer similar tiers; the concepts transfer."
+     ]
+    },
+    {
+     "h": "Context is the whole game",
+     "p": [
+      "The AI answers well only about what it can see. In Cursor you add context by @-mentioning files, folders, documentation or the web. Cursor also indexes the codebase so the Agent can search by meaning, not only by exact words.",
+      "Files listed in .gitignore or a .cursorignore are left out of the index. That keeps searches accurate and keeps generated or sensitive files out of view."
+     ]
+    },
+    {
+     "h": "Rules: team standards for the AI",
+     "p": [
+      "Cursor reads rules from the .cursor/rules folder in the project, from your personal settings, from team settings and from an AGENTS.md file. Older projects use a single .cursorrules file. Rules carry things like 'use our logging helper' or 'never edit generated files'. The next lesson but two covers rules files in depth."
+     ]
+    },
+    {
+     "h": "A good Agent workflow",
+     "steps": [
+      [
+       "Ask first",
+       "Ask the chat where something lives and how it works before changing it"
+      ],
+      [
+       "Scope the task",
+       "One clear outcome per request, with the relevant files mentioned"
+      ],
+      [
+       "Read the plan",
+       "Check which files it intends to touch"
+      ],
+      [
+       "Review the diff",
+       "Red lines removed, green lines added; ask about anything surprising"
+      ],
+      [
+       "Run the checks",
+       "Lint and tests locally or in CI before committing"
+      ]
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "When teams adopt AI editors, the risky period is the first month: big unreviewed diffs, inconsistent styles and secrets pasted into chat. A short shared rules file, a 'small PRs' norm and an agreed list of what can be sent to the AI prevent most of it.",
+      "Measure adoption by outcomes (cycle time, review time, defects) rather than lines of AI-generated code. More code is not the goal."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "The Agent understands the whole codebase.",
+       "It sees what it retrieves; on large repos it can miss related code unless guided."
+      ],
+      [
+       "AI editors replace code review.",
+       "They make producing changes faster, which makes review more important."
+      ],
+      [
+       "Rules files are optional extras.",
+       "They're the cheapest way to make output consistent across the team."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Fork (of an app)",
+       "A copy of an open-source product developed separately"
+      ],
+      [
+       "@-mention",
+       "Pointing the AI at a specific file, folder or doc"
+      ],
+      [
+       "Codebase index",
+       "A searchable map of the code built from embeddings"
+      ],
+      [
+       "Agent mode",
+       "AI that edits files and runs commands to complete a task"
+      ],
+      [
+       "Diff view",
+       "Side-by-side or inline view of proposed changes"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "The Agent changed the wrong file. What's the most likely cause?",
+     "It lacked context; point it at the right files or improve the rules and README."
+    ],
+    [
+     "Where does Cursor look for project rules today?",
+     "The .cursor/rules folder, plus user and team rules and AGENTS.md; .cursorrules is the older single-file form."
+    ],
+    [
+     "Why exclude build folders from indexing?",
+     "Generated files add noise, slow indexing and reduce search accuracy."
+    ],
+    [
+     "Tab, chat or Agent: which suits renaming a field across 12 files?",
+     "Agent, followed by a careful diff review and tests."
+    ]
+   ],
+   "deeper": [
+    "cursorRules",
+    "cursorSearch"
+   ]
+  },
+  "abt04": {
+   "sections": [
+    {
+     "h": "Copilot's main capabilities",
+     "table": [
+      [
+       "Capability",
+       "Where",
+       "What it does"
+      ],
+      [
+       "Code completion",
+       "Editor",
+       "Suggests code as the engineer types"
+      ],
+      [
+       "Copilot Chat",
+       "Editor, GitHub.com, mobile",
+       "Answers questions about code and explains changes"
+      ],
+      [
+       "Code review",
+       "Pull requests",
+       "Leaves review comments on a pull request"
+      ],
+      [
+       "Coding agent",
+       "Issues and pull requests",
+       "Takes an assigned task and opens a pull request with its changes"
+      ]
+     ],
+     "p": [
+      "Because Copilot is part of GitHub, it works with things your organisation already manages: repositories, issues, pull requests and access permissions. Administrators control which features are enabled and for whom."
+     ]
+    },
+    {
+     "h": "What changes for delivery",
+     "p": [
+      "When an AI agent can take an issue and come back with a pull request, the bottleneck moves from writing code to specifying and reviewing it. Well-written issues with clear acceptance criteria become far more valuable, and review capacity becomes a planning constraint.",
+      "Treat agent work like work from a new team member: scope it tightly, review it fully, and don't let it merge without the same checks as human code."
+     ]
+    },
+    {
+     "h": "Questions a TPM should ask",
+     "bullets": [
+      "Which features are enabled for our organisation, and who has seats?",
+      "Which repositories may the coding agent work on?",
+      "Who reviews and approves agent pull requests?",
+      "How do we measure impact: cycle time, review time, defects?",
+      "What is our policy on code suggestions that match public code?"
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "If your company buys Copilot, ask for the admin policy settings and the usage reports: they tell you which features are on, who uses them and how often. That data turns 'is AI helping?' into a fact-based discussion.",
+      "Treat AI-assignable issues as a ticket type: clear acceptance criteria, small scope, and a named human reviewer. Agents return the most value on well-defined, repetitive tasks such as test additions, small bug fixes and dependency updates."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Copilot is just autocomplete.",
+       "It also includes chat, pull request review and a coding agent."
+      ],
+      [
+       "The agent's PR passed checks, so merge it.",
+       "Checks only test what they test; a human still reviews intent and design."
+      ],
+      [
+       "More AI seats means faster delivery.",
+       "Without good specs and review capacity, it often means more work waiting in review."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Seat",
+       "A paid licence for one user"
+      ],
+      [
+       "Coding agent",
+       "An AI that works on a task independently and returns a pull request"
+      ],
+      [
+       "Acceptance criteria",
+       "Conditions a change must meet to be accepted"
+      ],
+      [
+       "Policy",
+       "An admin setting that enables or restricts a feature"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What's the biggest planning change when AI agents can implement issues?",
+     "Specification quality and review capacity become the main constraints."
+    ],
+    [
+     "Can agent-written pull requests skip review?",
+     "No. They need the same review and checks as any other change."
+    ],
+    [
+     "Name four Copilot capabilities.",
+     "Code completion, chat, pull request code review and the coding agent."
+    ],
+    [
+     "Why do companies often prefer Copilot?",
+     "It lives inside GitHub, where code, issues and permissions are already managed."
+    ]
+   ],
+   "deeper": [
+    "copilotDocs"
+   ]
+  },
+  "abt05": {
+   "sections": [
+    {
+     "h": "The problem: big code, limited context",
+     "p": [
+      "A model's context window holds a lot, but a real product may have thousands of files. The AI can't read everything for every question, so the tool must decide what to show it. Whatever it doesn't find, the AI effectively doesn't know, and it may fill the gap with a confident guess."
+     ]
+    },
+    {
+     "h": "Two ways tools find the right code",
+     "table": [
+      [
+       "Approach",
+       "How it works",
+       "Strength",
+       "Weakness"
+      ],
+      [
+       "Indexing (semantic search)",
+       "Code is split into chunks, turned into embeddings and stored; questions are matched by meaning",
+       "Finds code even when you don't know its name",
+       "Index can lag behind changes; needs setup on big repos"
+      ],
+      [
+       "Agentic search",
+       "The AI uses tools like grep, file listing and reading files, step by step",
+       "Always current, precise for exact names",
+       "Can miss things if it searches for the wrong words; uses more steps"
+      ]
+     ],
+     "p": [
+      "Cursor builds an index of your codebase and combines semantic search with exact-text search. Claude Code mainly explores on demand: it lists, searches and reads files as it goes. Both are forms of retrieval, the same idea as RAG applied to code."
+     ]
+    },
+    {
+     "h": "Why AI coding goes wrong, and the fix",
+     "table": [
+      [
+       "Symptom",
+       "Usual cause",
+       "Fix"
+      ],
+      [
+       "Edits the wrong file",
+       "Two similar files; it found the other one",
+       "Name the file or folder explicitly"
+      ],
+      [
+       "Changes one place, misses another",
+       "It didn't search for every usage",
+       "Ask it to list all usages before editing"
+      ],
+      [
+       "Invents a function",
+       "It never saw the real helper",
+       "Point to the helper; describe it in the rules file"
+      ],
+      [
+       "Gets worse in a long session",
+       "Context window filling with old detail",
+       "Start a fresh session with a short summary"
+      ]
+     ]
+    },
+    {
+     "h": "Make your repository AI-friendly",
+     "bullets": [
+      "A README that explains the structure and how to run it",
+      "Clear folder and file names",
+      "A rules file (CLAUDE.md, AGENTS.md) with conventions and commands",
+      "Ignore files for generated and bulky folders",
+      "Tests that show how things are meant to behave"
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "When an engineer says 'the AI keeps getting this wrong', the fix is often context, not a better model: add a README section, rename confusing files, or record the convention in the rules file. That's a cheap, high-leverage improvement a TPM can sponsor.",
+      "On large codebases, ask teams how their tools see the code: indexed, searched on demand, or both, and what's excluded. It affects both answer quality and what data is sent to vendors."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "The AI has read the entire repository.",
+       "It has seen only what it retrieved for this task."
+      ],
+      [
+       "Bigger context windows solve everything.",
+       "Quality drops as context fills with irrelevant detail; focused context still wins."
+      ],
+      [
+       "Indexing means the code is used to train the model.",
+       "Indexing is for search; training use depends on the vendor's terms, which you should check."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Context window",
+       "The maximum text a model can consider at once"
+      ],
+      [
+       "Chunk",
+       "A piece of code (function, class) indexed separately"
+      ],
+      [
+       "Embedding",
+       "Numbers representing meaning, used for similarity search"
+      ],
+      [
+       "grep",
+       "A tool that finds exact text across files"
+      ],
+      [
+       "Retrieval",
+       "Finding the relevant material to put in front of the model"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Why might an AI invent a function that doesn't exist?",
+     "It never retrieved the real code, so it generated something plausible."
+    ],
+    [
+     "Indexing vs agentic search: which is always current?",
+     "Agentic search, because it reads the files as they are now."
+    ],
+    [
+     "A long session is getting worse. What do you do?",
+     "Start a fresh session with a short summary of the goal and key files."
+    ],
+    [
+     "Name two cheap ways to make a repo easier for AI.",
+     "A clear README and a rules file; also good names, ignore files and tests."
+    ]
+   ],
+   "deeper": [
+    "cursorSearch",
+    "cursorIdxBlog",
+    "ccHow"
+   ]
+  },
+  "abt06": {
+   "sections": [
+    {
+     "h": "What a rules file is",
+     "p": [
+      "A rules file is a plain text (usually Markdown) file in the repository that the AI tool loads automatically. It gives every session the same starting knowledge: what the project is, how to run it, how the team works and what must never happen. Claude Code reads CLAUDE.md; Cursor reads its rules folder and AGENTS.md; other tools have similar files."
+     ]
+    },
+    {
+     "h": "Where the files live",
+     "table": [
+      [
+       "File",
+       "Tool",
+       "Scope"
+      ],
+      [
+       "CLAUDE.md (project root)",
+       "Claude Code",
+       "Shared with everyone working on the repo"
+      ],
+      [
+       "CLAUDE.local.md",
+       "Claude Code",
+       "Your private preferences for this project, not committed"
+      ],
+      [
+       "~/.claude/CLAUDE.md",
+       "Claude Code",
+       "Your personal rules for every project"
+      ],
+      [
+       ".cursor/rules/*",
+       "Cursor",
+       "Project rules, can target specific files"
+      ],
+      [
+       ".cursorrules",
+       "Cursor (older)",
+       "Single legacy project rules file"
+      ],
+      [
+       "AGENTS.md",
+       "Cursor and others",
+       "A cross-tool convention for agent instructions"
+      ]
+     ]
+    },
+    {
+     "h": "What to put in, and what to leave out",
+     "table": [
+      [
+       "Put in",
+       "Leave out"
+      ],
+      [
+       "Commands: start, test, lint",
+       "Secrets, keys, passwords"
+      ],
+      [
+       "Stack and folder map",
+       "Long explanations of general concepts"
+      ],
+      [
+       "Conventions: naming, where types live",
+       "Rules nobody follows any more"
+      ],
+      [
+       "Never-do rules: no edits to migrations, no secrets",
+       "Things the linter already enforces"
+      ],
+      [
+       "How to explain changes to you",
+       "One-off task instructions"
+      ]
+     ],
+     "p": [
+      "Keep it short and specific. The rules are read every session, so every line costs a little context and attention. If a rule must never be broken, also enforce it with a test, a linter or CI; a rules file guides, it does not guarantee."
+     ]
+    },
+    {
+     "h": "Worked example: this repo's CLAUDE.md",
+     "p": [
+      "This project's CLAUDE.md lists the stack, says every schema change needs an Alembic migration, says permissions are enforced in the back end, requires tests for every API change, defines the lesson JSON format and forbids committing .env. Each rule exists because breaking it would cause a real problem: data loss, a security hole or broken content."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Treat the rules file as living documentation: whenever the AI repeats a mistake, add a one-line rule and commit it. Review it at retrospectives the same way you review the definition of done.",
+      "For teams using several tools, keep one source of truth (for example AGENTS.md) and point the tool-specific files at it, so rules don't drift apart."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Rules files are enforced.",
+       "They're instructions the model usually follows; enforce critical rules with tests and CI."
+      ],
+      [
+       "More rules give better results.",
+       "Long rules files dilute the important lines and waste context."
+      ],
+      [
+       "Rules files are only for AI.",
+       "They're excellent onboarding notes for new humans too."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Rules file",
+       "A file of standing instructions the AI tool loads automatically"
+      ],
+      [
+       "Scope",
+       "Who or what a rule applies to: user, project, team, file type"
+      ],
+      [
+       "Enforcement",
+       "A check that blocks a bad change, such as a test or CI"
+      ],
+      [
+       "Memory",
+       "What the tool carries between sessions, including rules files"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Should an API key go in CLAUDE.md so the AI can use it?",
+     "Never. Keys go in .env, which is not committed."
+    ],
+    [
+     "You need a rule that must never be broken. Is CLAUDE.md enough?",
+     "No. Back it up with a test, linter rule or CI check."
+    ],
+    [
+     "Where do private, per-project Claude Code preferences go?",
+     "CLAUDE.local.md, which isn't shared."
+    ],
+    [
+     "Why keep rules files short?",
+     "They're loaded every session; long files waste context and dilute important rules."
+    ]
+   ],
+   "deeper": [
+    "ccMem",
+    "cursorRules",
+    "ccBest"
+   ]
+  },
+  "abt07": {
+   "sections": [
+    {
+     "h": "What a Skill is",
+     "p": [
+      "A Skill is a folder that teaches Claude one repeatable job. At minimum it contains SKILL.md: a small header (YAML frontmatter) with a name and a description, then the instructions in Markdown. It can also include templates, examples, reference files and scripts.",
+      "Claude doesn't read every Skill all the time. It sees the names and descriptions, and loads the full instructions only when your task matches. That's why you can have many Skills without crowding the context."
+     ]
+    },
+    {
+     "h": "Anatomy of SKILL.md",
+     "table": [
+      [
+       "Part",
+       "Purpose",
+       "Example"
+      ],
+      [
+       "name",
+       "Short identifier",
+       "weekly-status-report"
+      ],
+      [
+       "description",
+       "What it does and when to use it; this decides when it triggers",
+       "Writes the weekly programme status report from raw notes. Use when asked for a status update or weekly report."
+      ],
+      [
+       "Body",
+       "Step-by-step instructions, format, tone, examples",
+       "Sections: headline, RAG status, milestones, risks, asks"
+      ],
+      [
+       "Extra files",
+       "Templates, reference docs, scripts",
+       "template.md, glossary.md"
+      ]
+     ]
+    },
+    {
+     "h": "Skills vs rules files vs Projects",
+     "table": [
+      [
+       "Tool",
+       "Best for"
+      ],
+      [
+       "Rules file (CLAUDE.md)",
+       "How to behave in one codebase, every session"
+      ],
+      [
+       "Project",
+       "Background knowledge for one area of work"
+      ],
+      [
+       "Skill",
+       "A specific, repeatable workflow you can use anywhere"
+      ]
+     ]
+    },
+    {
+     "h": "Worked example: a status-report Skill",
+     "steps": [
+      [
+       "Collect three good past reports",
+       "They show the format and tone you want"
+      ],
+      [
+       "Write the description carefully",
+       "Say what it does and the words that should trigger it"
+      ],
+      [
+       "Write the steps",
+       "Inputs to ask for, sections in order, length limits, how to mark risks"
+      ],
+      [
+       "Add one example",
+       "A short sample output is the strongest instruction"
+      ],
+      [
+       "Test on two different weeks",
+       "Check structure is identical and nothing is invented"
+      ],
+      [
+       "Share it",
+       "Team members install the same Skill for consistent reports"
+      ]
+     ]
+    },
+    {
+     "h": "Safety",
+     "p": [
+      "A Skill can contain instructions and code that Claude will follow, so treat it like software: only install Skills from sources you trust, and read them before use."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Start with the documents you produce every week or month: status reports, release notes, risk reviews, meeting summaries. Each is a natural Skill, and consistency across a programme is valuable to stakeholders.",
+      "Version your Skills like any other asset. When a stakeholder asks for a format change, update the Skill once instead of telling ten people."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "A Skill is just a saved prompt.",
+       "It's a package: instructions, examples, templates and optionally scripts, loaded only when needed."
+      ],
+      [
+       "Claude uses every installed Skill all the time.",
+       "It loads a Skill only when the task matches its description."
+      ],
+      [
+       "Any Skill from the internet is safe.",
+       "Skills can contain instructions and code; install only from trusted sources."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "SKILL.md",
+       "The required instruction file in a Skill folder"
+      ],
+      [
+       "Frontmatter",
+       "The YAML header at the top with name and description"
+      ],
+      [
+       "Trigger",
+       "The match between your request and a Skill's description"
+      ],
+      [
+       "Progressive loading",
+       "Only metadata is read until the Skill is needed"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Which part of SKILL.md decides when Claude uses it?",
+     "The description in the frontmatter."
+    ],
+    [
+     "Why can you install many Skills without filling the context?",
+     "Only names and descriptions are loaded until a task needs the full Skill."
+    ],
+    [
+     "A colleague sends a Skill from an unknown website. Install it?",
+     "Only after reading it; Skills can contain instructions and scripts, so use trusted sources."
+    ],
+    [
+     "Skill or CLAUDE.md for 'always run tests before committing in this repo'?",
+     "CLAUDE.md, because it's a rule for one codebase rather than a portable workflow."
+    ]
+   ],
+   "deeper": [
+    "skillsOv"
+   ]
+  },
+  "abt08": {
+   "sections": [
+    {
+     "h": "Git vs GitHub",
+     "p": [
+      "Git is the version-control tool: it records every change to a project as a history of snapshots. GitHub is a website that hosts Git repositories and adds collaboration: pull requests, reviews, issues, automation and permissions. Your study repository lives on GitHub; Claude pushes Git commits to it."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Use GitHub as your delivery dashboard: open PRs per team, PR age, failing checks and linked issues tell you more about real progress than a status meeting. Ask for read access to the repos you manage.",
+      "When a release slips, look at the PRs: are they huge, waiting on review, or failing checks? Each points to a different fix: smaller slices, review capacity or test stability."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "GitHub is only for engineers.",
+       "Issues, PRs and Actions are core delivery signals a TPM should read."
+      ],
+      [
+       "Main is just another branch.",
+       "It's the agreed source of truth; protect it with required reviews and checks."
+      ],
+      [
+       "Open source means free to use any way you like.",
+       "The licence sets the rules, and some carry obligations."
+      ]
+     ]
+    },
+    {
+     "h": "The core vocabulary",
+     "gloss": [
+      [
+       "Repository (repo)",
+       "The project folder plus its full history"
+      ],
+      [
+       "Commit",
+       "A saved set of changes with a message and an author"
+      ],
+      [
+       "Branch",
+       "A separate line of work; main is the official one"
+      ],
+      [
+       "Pull request (PR)",
+       "A request to merge a branch, with diff, discussion and checks"
+      ],
+      [
+       "Merge",
+       "Bringing a branch's changes into another branch"
+      ],
+      [
+       "Clone",
+       "Copy a repo to your computer"
+      ],
+      [
+       "Issue",
+       "A tracked task, bug or idea"
+      ],
+      [
+       "GitHub Actions",
+       "Automated workflows, such as running tests on every push"
+      ],
+      [
+       "Fork",
+       "Your own copy of someone else's repo"
+      ]
+     ]
+    },
+    {
+     "h": "The pull request workflow",
+     "flow": [
+      [
+       "Branch",
+       [
+        [
+         "Create branch",
+         "from main"
+        ],
+        [
+         "Commit changes",
+         "small, described"
+        ]
+       ]
+      ],
+      [
+       "Pull request",
+       [
+        [
+         "Open PR",
+         "what and why"
+        ],
+        [
+         "Checks run",
+         "tests, lint"
+        ],
+        [
+         "Review",
+         "comments, approval"
+        ]
+       ]
+      ],
+      [
+       "main",
+       [
+        [
+         "Merge",
+         "change is official"
+        ]
+       ]
+      ]
+     ],
+     "flowLabel": "Pull request workflow: branch, commit, open PR, checks and review, merge to main"
+    },
+    {
+     "h": "Reading a pull request as a TPM",
+     "bullets": [
+      "Title and description: is the why clear, and is it linked to an issue?",
+      "Files changed: how big is it? Big PRs are slow and risky to review.",
+      "Checks: green ticks or red crosses next to the commit.",
+      "Conversation: open questions, requested changes, approvals.",
+      "Age: a PR open for a week is a delivery signal worth asking about."
+     ]
+    },
+    {
+     "h": "Open source basics",
+     "p": [
+      "Public repositories let anyone read the code. Stars show interest, forks show reuse, and GitHub Trending lists repositories gaining attention, which is a good way to spot new AI tools early. Always check the licence before using open-source code in a product: some licences place obligations on how you distribute your own software."
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What is the difference between Git and GitHub?",
+     "Git tracks versions; GitHub hosts Git repos and adds collaboration and automation."
+    ],
+    [
+     "A PR has a red cross next to it. What does it mean?",
+     "A check, such as tests or lint, failed. It shouldn't merge yet."
+    ],
+    [
+     "Why prefer small pull requests?",
+     "They're reviewed faster and more thoroughly, and are easier to roll back."
+    ],
+    [
+     "What should you check before using an open-source library in a product?",
+     "Its licence, plus whether it's maintained and widely used."
+    ]
+   ],
+   "deeper": [
+    "ghHello"
+   ]
+  },
+  "abt09": {
+   "sections": [
+    {
+     "h": "Terminal, shell and CLI",
+     "table": [
+      [
+       "Term",
+       "Meaning"
+      ],
+      [
+       "Terminal",
+       "The window you type into"
+      ],
+      [
+       "Shell",
+       "The program that reads and runs your commands: PowerShell on Windows, bash or zsh on Mac and Linux"
+      ],
+      [
+       "Command line",
+       "The line where you type, with a prompt showing where you are"
+      ],
+      [
+       "CLI tool",
+       "A program you use by typing commands: git, npm, docker, claude"
+      ]
+     ]
+    },
+    {
+     "h": "The handful of commands you need",
+     "table": [
+      [
+       "Goal",
+       "PowerShell (Windows)",
+       "Mac / Linux"
+      ],
+      [
+       "Where am I?",
+       "pwd",
+       "pwd"
+      ],
+      [
+       "List files",
+       "ls (or dir)",
+       "ls"
+      ],
+      [
+       "Go into a folder",
+       "cd study",
+       "cd study"
+      ],
+      [
+       "Go up one folder",
+       "cd ..",
+       "cd .."
+      ],
+      [
+       "Make a folder",
+       "mkdir notes",
+       "mkdir notes"
+      ],
+      [
+       "Show a file",
+       "cat README.md",
+       "cat README.md"
+      ],
+      [
+       "Stop a running command",
+       "Ctrl+C",
+       "Ctrl+C"
+      ],
+      [
+       "Repeat a previous command",
+       "Up arrow",
+       "Up arrow"
+      ]
+     ]
+    },
+    {
+     "h": "How a command is built",
+     "p": [
+      "Most commands follow the pattern: program, subcommand, options, arguments. In 'git log --oneline -5', git is the program, log is the subcommand, and --oneline and -5 are options that change the output. 'docker compose up --build' reads the same way.",
+      "Paths can be relative (cd backend, from where you are) or absolute (the full path from the drive). Most 'file not found' errors come from running a command in the wrong folder; check with pwd."
+     ]
+    },
+    {
+     "h": "Reading output without panic",
+     "bullets": [
+      "Errors usually say 'error' and stop the command; warnings let it continue.",
+      "The useful line is often the last one, or the first line mentioning your own file.",
+      "A long red block is often one problem repeated; copy the whole thing to Claude and ask for the cause in one sentence.",
+      "Never paste a command you don't understand from a random website; ask Claude to explain it first, especially anything with sudo, rm or curl piped to a shell."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Keep a small personal command cheat sheet for your projects: start, stop, test, check status. Most of your terminal use will be those few commands.",
+      "When asking engineers for help, paste the exact command and the full output rather than 'it doesn't work'. You'll get answers in minutes instead of hours."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "The terminal is dangerous.",
+       "Most commands are harmless; be careful with deletion, admin rights and scripts piped from the internet."
+      ],
+      [
+       "You need to memorise commands.",
+       "You need to recognise patterns and know how to ask; help flags and AI do the rest."
+      ],
+      [
+       "Red text means everything failed.",
+       "Warnings are often red too; read for the actual error line."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Prompt",
+       "The text before the cursor showing the current folder"
+      ],
+      [
+       "Working directory",
+       "The folder commands run in"
+      ],
+      [
+       "Argument",
+       "Input given to a command, such as a file name"
+      ],
+      [
+       "Flag / option",
+       "A switch that changes behaviour, like --help"
+      ],
+      [
+       "Exit code",
+       "A number a program returns; 0 means success"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "A command says 'file not found' but the file exists. First check?",
+     "Whether you're in the right folder (pwd), since paths are relative to it."
+    ],
+    [
+     "How do you stop a command that's still running?",
+     "Press Ctrl+C."
+    ],
+    [
+     "In 'docker compose up --build', what is --build?",
+     "An option that changes behaviour: rebuild images before starting."
+    ],
+    [
+     "What should you do before running an unfamiliar command from the web?",
+     "Ask Claude to explain exactly what it does."
+    ]
+   ],
+   "deeper": [
+    "mdnCli"
+   ]
+  },
+  "abt10": {
+   "sections": [
+    {
+     "h": "The files around the code",
+     "table": [
+      [
+       "File",
+       "What it does",
+       "In this repo"
+      ],
+      [
+       "package.json",
+       "Lists a JavaScript project's dependencies and scripts",
+       "frontend/package.json (Next.js, React)"
+      ],
+      [
+       "package-lock.json",
+       "Pins the exact version of every installed package",
+       "Generated by npm"
+      ],
+      [
+       "requirements.txt",
+       "Lists Python dependencies",
+       "backend/requirements.txt (FastAPI, SQLAlchemy)"
+      ],
+      [
+       ".env",
+       "Secrets and settings for one machine",
+       "Not committed"
+      ],
+      [
+       ".env.example",
+       "The list of variables needed, with safe placeholder values",
+       "Committed"
+      ],
+      [
+       ".gitignore",
+       "Files Git must not track",
+       "Ignores .env, node_modules, caches"
+      ],
+      [
+       "README.md",
+       "How to understand and run the project",
+       "Windows setup steps"
+      ]
+     ]
+    },
+    {
+     "h": "Dependencies and package managers",
+     "p": [
+      "Projects reuse libraries other people wrote. A package manager (npm for JavaScript, pip for Python) downloads them from a registry and installs them. The project declares what it accepts (for example 'version 2.x'), and the lock file records exactly what was installed, so every machine and every build gets the same versions.",
+      "Without a lock file, two installs a week apart can pull different versions, which is a classic cause of 'it worked yesterday'. Commit the lock file."
+     ]
+    },
+    {
+     "h": "Environment variables and .env",
+     "p": [
+      "Settings that differ between machines or must stay secret (database address, JWT secret, API keys) are read from environment variables instead of being written in code. Locally they live in .env; in production they're set in the hosting platform's settings.",
+      "The rule: .env is ignored by Git and never shared; .env.example is committed so a new person knows which variables to set."
+     ]
+    },
+    {
+     "h": "What .gitignore protects",
+     "bullets": [
+      "Secrets: .env files",
+      "Huge downloaded folders: node_modules, virtual environments",
+      "Build output: .next, dist, __pycache__",
+      "Personal editor and OS files",
+      "Note: .gitignore only affects files not yet tracked. A file already committed must be removed from tracking first."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "A five-minute repo health check: is there a README that explains how to run it, a lock file, a .env.example, a sensible .gitignore, and CI that runs tests? Missing pieces predict onboarding pain and fragile releases.",
+      "When a vendor or contractor hands over code, check these files first. Secrets committed in history or no lock file are red flags worth raising before acceptance."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Lock files are clutter and can be deleted.",
+       "They're what make installs repeatable; commit them."
+      ],
+      [
+       ".gitignore removes files from the repository.",
+       "It only stops untracked files being added; tracked files stay."
+      ],
+      [
+       "Environment variables are only for secrets.",
+       "They hold any per-environment setting, such as URLs and feature flags."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Dependency",
+       "A library your project needs to run"
+      ],
+      [
+       "Registry",
+       "Online store of packages: npm registry, PyPI"
+      ],
+      [
+       "Lock file",
+       "A record of exact installed versions"
+      ],
+      [
+       "Environment variable",
+       "A named setting supplied from outside the code"
+      ],
+      [
+       "Semantic versioning",
+       "MAJOR.MINOR.PATCH numbering; a major bump can break things"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Why commit package-lock.json?",
+     "So every install uses the same exact versions."
+    ],
+    [
+     "Why is .env.example committed but .env isn't?",
+     "The example lists variable names safely; .env holds real secrets."
+    ],
+    [
+     "You add a secret file to .gitignore after committing it. Is it now safe?",
+     "No. It's still tracked and in history; stop tracking it and rotate the secret."
+    ],
+    [
+     "A build broke with no code change. One likely cause?",
+     "A dependency updated to a new version, often because there was no lock file or it wasn't used."
+    ]
+   ],
+   "deeper": [
+    "npmLock",
+    "gitIgnore"
+   ]
+  },
+  "abt11": {
+   "sections": [
+    {
+     "h": "What Postman does",
+     "p": [
+      "Postman is an API client: a tool for building a request, sending it and inspecting the response, with no code. In the earlier API lessons you learned the theory of methods, status codes and JSON. Postman is where you see them for real.",
+      "Postman acts as the client, just like the browser or the mobile app would. That lets you test the back end on its own and see exactly what it returns."
+     ]
+    },
+    {
+     "h": "Anatomy of a request and response",
+     "table": [
+      [
+       "Part",
+       "Example from this hub"
+      ],
+      [
+       "Method",
+       "POST"
+      ],
+      [
+       "URL",
+       "http://localhost:8000/api/auth/login"
+      ],
+      [
+       "Headers",
+       "Content-Type: application/json"
+      ],
+      [
+       "Body",
+       "{\"email\": \"admin@learninghub.dev\", \"password\": \"...\"}"
+      ],
+      [
+       "Status",
+       "200 OK, or 401 Unauthorized if the password is wrong"
+      ],
+      [
+       "Response body",
+       "{\"access_token\": \"eyJ...\", \"token_type\": \"bearer\"}"
+      ]
+     ]
+    },
+    {
+     "h": "Worked example: test the hub's API",
+     "steps": [
+      [
+       "Start the app",
+       "docker compose up from the README, so the back end runs on port 8000"
+      ],
+      [
+       "Log in",
+       "POST /api/auth/login with your email and password as JSON; copy access_token from the response"
+      ],
+      [
+       "Save the token as a variable",
+       "Create an environment called Local with variables baseUrl and token"
+      ],
+      [
+       "Call a protected endpoint",
+       "GET {{baseUrl}}/api/progress/me with header Authorization: Bearer {{token}}"
+      ],
+      [
+       "Try it without the token",
+       "Remove the header and confirm you get 401: the back end, not the UI, enforces access"
+      ],
+      [
+       "Add a test",
+       "In the request's tests, check the status is 200 so the collection can be re-run as a quick health check"
+      ]
+     ]
+    },
+    {
+     "h": "Collections, environments and secrets",
+     "p": [
+      "A collection is a saved, ordered set of requests: perfect for 'can a user log in, load the catalog and save progress?' Environments hold variables such as the base URL, so the same collection runs against local, staging or production by switching one dropdown.",
+      "Store tokens and passwords as secret variables or in Postman's Vault, and never share a collection export that still contains real credentials."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Before filing a bug, reproduce it in Postman. If the API returns the wrong data, it's a back-end bug; if the API is right but the screen is wrong, it's front end. That one step routes the ticket correctly and saves a day of back-and-forth.",
+      "Keep a smoke-test collection for each product you manage: log in, fetch the main data, perform the key action. Running it after a release takes two minutes and catches the obvious breaks."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Postman is a testing tool only for QA.",
+       "Anyone who needs to see what an API really does can use it."
+      ],
+      [
+       "If the UI hides a button, the action is protected.",
+       "Only the back end protects data; check by calling the API directly."
+      ],
+      [
+       "A 200 status means the answer is correct.",
+       "It means the request succeeded; you still need to check the data."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "API client",
+       "A tool that sends requests to an API and shows responses"
+      ],
+      [
+       "Collection",
+       "A saved group of requests"
+      ],
+      [
+       "Environment",
+       "A set of variables for one target, such as local or production"
+      ],
+      [
+       "Bearer token",
+       "A credential sent in the Authorization header"
+      ],
+      [
+       "Status code",
+       "Three-digit result: 2xx success, 4xx client error, 5xx server error"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "You remove the Authorization header and still get data back. What does that tell you?",
+     "The endpoint isn't protected on the back end, which is a security bug."
+    ],
+    [
+     "Why use environments?",
+     "To run the same requests against local, staging and production by switching variables."
+    ],
+    [
+     "The login request returns 422. What's the likely cause?",
+     "The request body is malformed or missing fields."
+    ],
+    [
+     "How do you keep tokens safe in Postman?",
+     "Use secret variables or the Vault, and don't export collections with real credentials."
+    ]
+   ],
+   "deeper": [
+    "pmFirst",
+    "pmReq"
+   ]
+  },
+  "abt12": {
+   "sections": [
+    {
+     "h": "What Vercel does",
+     "p": [
+      "Vercel takes your code from GitHub, builds it and serves it on a global network. It is built by the company behind Next.js, so Next.js apps deploy with almost no configuration, though it supports many other frameworks too.",
+      "The key idea is that deployment is tied to Git: you don't 'release' by hand, you merge, and the platform deploys."
+     ]
+    },
+    {
+     "h": "Preview vs production",
+     "flow": [
+      [
+       "Branch / PR",
+       [
+        [
+         "Push to a branch",
+         "any change"
+        ],
+        [
+         "Preview deployment",
+         "unique URL per change"
+        ]
+       ]
+      ],
+      [
+       "main",
+       [
+        [
+         "Merge PR",
+         "after review and checks"
+        ],
+        [
+         "Production deployment",
+         "your real domain"
+        ]
+       ]
+      ]
+     ],
+     "flowLabel": "Pushing a branch creates a preview deployment; merging to main creates the production deployment",
+     "p": [
+      "Every push to a branch or pull request gets its own preview URL. Reviewers, designers and stakeholders click a real working version instead of reading screenshots. Merging into main deploys to production."
+     ]
+    },
+    {
+     "h": "Worked example: first deploy",
+     "steps": [
+      [
+       "Pick a starter",
+       "Use a Next.js template or your own repo on GitHub"
+      ],
+      [
+       "Import the repo",
+       "In Vercel, create a new project and select the repository"
+      ],
+      [
+       "Set environment variables",
+       "Add values such as API URLs in project settings, separately for preview and production"
+      ],
+      [
+       "Deploy",
+       "Vercel detects the framework, builds and gives you a .vercel.app URL"
+      ],
+      [
+       "Change on a branch",
+       "Open a pull request and open its preview link"
+      ],
+      [
+       "Add a domain",
+       "Optionally connect a custom domain"
+      ]
+     ]
+    },
+    {
+     "h": "What about this hub?",
+     "p": [
+      "This project has three parts: the Next.js front end, the FastAPI back end and a Postgres database. The front end is a natural fit for Vercel. The back end and database could run on Vercel or on another provider, and that choice involves cost, region and operations trade-offs. Deciding this is exactly the kind of question a TPM frames for engineering, so it's part of the prove exercise."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Push for preview deployments in your teams' workflow: attach the preview link to the ticket, and make 'stakeholder clicked it' part of the definition of done for UI changes.",
+      "Check who can see preview URLs. Previews of unreleased features may need protection, especially for regulated or confidential work."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Vercel only hosts Next.js.",
+       "It supports many frameworks and back-end runtimes, though Next.js is its strongest fit."
+      ],
+      [
+       "Deploying is the same as releasing.",
+       "Feature flags let you deploy code that users don't see yet."
+      ],
+      [
+       "Preview links are private by default.",
+       "Check your project's deployment protection settings."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Deployment",
+       "One built, running version of the app"
+      ],
+      [
+       "Preview deployment",
+       "A deployment of a branch or PR with its own URL"
+      ],
+      [
+       "Production",
+       "The version real users see"
+      ],
+      [
+       "Build log",
+       "The output of the build step; first place to look when a deploy fails"
+      ],
+      [
+       "Rollback",
+       "Switching production back to a previous deployment"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What triggers a production deployment in a Git-connected Vercel project?",
+     "Merging or pushing to the production branch, usually main."
+    ],
+    [
+     "Why are preview deployments valuable to non-engineers?",
+     "Everyone can click and test a real version of each change before it ships."
+    ],
+    [
+     "A deploy fails. Where do you look first?",
+     "The build log."
+    ],
+    [
+     "Should production and preview share the same secrets?",
+     "Usually not; set environment variables per environment."
+    ]
+   ],
+   "deeper": [
+    "vercelStart",
+    "vercelDeploys"
+   ]
+  },
+  "abt13": {
+   "sections": [
+    {
+     "h": "What these tools do",
+     "p": [
+      "Lovable and v0 are AI app builders. You describe an app in plain language, they generate a working web app, show it in a live preview, and let you refine it through conversation or visual edits. When you're happy, you publish it to a public URL.",
+      "Lovable aims at complete products, with integrations for a database, user login and payments. v0, made by Vercel, generates Next.js and React code, deploys to Vercel, and can connect to a GitHub repository and open pull requests for review."
+     ]
+    },
+    {
+     "h": "Comparison",
+     "table": [
+      [
+       "",
+       "Lovable",
+       "v0"
+      ],
+      [
+       "Best at",
+       "Full small products quickly",
+       "UI and Next.js apps that fit an existing Vercel or GitHub workflow"
+      ],
+      [
+       "Output",
+       "Hosted app; code can sync to GitHub",
+       "Next.js code; deploy to Vercel or open a PR"
+      ],
+      [
+       "Back end",
+       "Built-in options for data and auth",
+       "Integrations and environment variables"
+      ],
+      [
+       "Watch out for",
+       "Security settings before real users",
+       "Prototype code needs engineering review"
+      ]
+     ]
+    },
+    {
+     "h": "How to prompt an app builder",
+     "steps": [
+      [
+       "Start with the user and the job",
+       "'A tracker for my team to log which lessons they finished'"
+      ],
+      [
+       "List the screens",
+       "Dashboard, topic page, settings"
+      ],
+      [
+       "Describe data simply",
+       "Each item has a title, status and owner"
+      ],
+      [
+       "Build in rounds",
+       "Get the skeleton right before styling"
+      ],
+      [
+       "Give precise feedback",
+       "'The status chip on the card is too small on mobile' beats 'make it nicer'"
+      ],
+      [
+       "Save working versions",
+       "Use version history or GitHub before big changes"
+      ]
+     ]
+    },
+    {
+     "h": "Prototype vs production",
+     "p": [
+      "A generated app can look finished long before it's safe. Before real users or real data: check who can see what (row-level security, auth), where secrets are stored, what happens on errors, and who will maintain it. Lovable's own docs include a security best-practices page; read it before publishing anything with personal data.",
+      "Used well, these tools change the PM role: you can test an idea with users on day two instead of week six, and hand engineering a working reference instead of a document."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Use app builders to answer one question at a time: will users understand this flow, will they use this feature, does this layout work? Then throw the prototype away or hand it to engineering as a reference.",
+      "Set a team rule: prototypes built with app builders never get real customer data or production credentials without an engineering and security review."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "If it looks finished, it's production-ready.",
+       "Security, error handling, scale and maintenance are usually not done."
+      ],
+      [
+       "App builders will replace engineers.",
+       "They move the starting line; real products still need engineering judgement."
+      ],
+      [
+       "Generated code can't be edited.",
+       "Both tools let you view and export code, often via GitHub."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "App builder",
+       "AI tool that generates and hosts a full app from prompts"
+      ],
+      [
+       "Live preview",
+       "The running app shown while you edit"
+      ],
+      [
+       "Publish",
+       "Make the app available at a public URL"
+      ],
+      [
+       "Row-level security",
+       "Database rules that limit which rows each user can read or change"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Your Lovable prototype will store customer emails. What must happen first?",
+     "A security review: auth, data access rules and secret handling."
+    ],
+    [
+     "Why build in rounds rather than one giant prompt?",
+     "Smaller steps are easier to check and fix, and earlier choices shape later ones."
+    ],
+    [
+     "You want generated UI to go into an existing Next.js repo via review. Which fits better?",
+     "v0, which can work with a GitHub repo and open pull requests."
+    ],
+    [
+     "What's the main PM benefit of these tools?",
+     "Testing ideas with users quickly using something clickable."
+    ]
+   ],
+   "deeper": [
+    "lovableStart",
+    "v0Intro",
+    "lovableSec"
+   ]
+  },
+  "abt14": {
+   "sections": [
+    {
+     "h": "What AI Studio is for",
+     "p": [
+      "Google AI Studio is a web workspace for experimenting with Gemini models. It is where you find out whether a model can do your task, tune the instructions and settings, and then take the result to engineering as an API key and code snippet."
+     ]
+    },
+    {
+     "h": "The main controls",
+     "table": [
+      [
+       "Control",
+       "What it does",
+       "Tip"
+      ],
+      [
+       "Model",
+       "Which Gemini model answers",
+       "Try a fast, cheap model first; move up only if quality demands it"
+      ],
+      [
+       "System instructions",
+       "Standing rules for every answer",
+       "Role, task, format, what to do when unsure"
+      ],
+      [
+       "Temperature",
+       "Randomness of output",
+       "Low for classification and extraction, higher for ideas"
+      ],
+      [
+       "Files and media",
+       "Add PDFs, images, audio, video",
+       "Test with real (anonymised) inputs, not toy ones"
+      ],
+      [
+       "Structured output",
+       "Force a JSON shape",
+       "Makes results easy to score and feed into software"
+      ],
+      [
+       "Get code",
+       "Exports the prompt and settings as code",
+       "Hand this to engineering with your test results"
+      ]
+     ]
+    },
+    {
+     "h": "Worked example: a feasibility test",
+     "steps": [
+      [
+       "Pick a real task",
+       "Classify support tickets by product area"
+      ],
+      [
+       "Collect 20 real examples",
+       "Remove personal data; note the right answer for each"
+      ],
+      [
+       "Write the instruction",
+       "Categories with one-line definitions, plus 'unknown' as an allowed answer"
+      ],
+      [
+       "Run and score",
+       "Count correct answers; look at the wrong ones for patterns"
+      ],
+      [
+       "Adjust and rerun",
+       "Clarify confusing categories, add two examples, lower temperature"
+      ],
+      [
+       "Decide",
+       "Record accuracy, cost per call and failure types; that's your pilot decision"
+      ]
+     ]
+    },
+    {
+     "h": "Where it fits",
+     "p": [
+      "AI Studio is for prototyping. For production, companies typically use the Gemini API with proper key management, or Google Cloud's Vertex AI for enterprise controls. Free-tier usage may be used to improve Google's products, so check your company's data policy before using real customer data."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Bring evidence, not opinions, to AI feature discussions: a scored test set run in AI Studio (accuracy, typical errors, cost per call) ends most debates about feasibility.",
+      "Save the exact prompt, model and settings with your results. Results change when any of those change, and engineering needs them to reproduce your test."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "A great demo means the feature works.",
+       "A few hand-picked examples prove little; test on 20 or more real cases."
+      ],
+      [
+       "AI Studio is the production platform.",
+       "It's for prototyping; production uses the API or an enterprise platform."
+      ],
+      [
+       "The most powerful model is always best.",
+       "Smaller models are often good enough, faster and much cheaper."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "System instruction",
+       "Standing guidance applied to every response"
+      ],
+      [
+       "Temperature",
+       "Setting controlling randomness"
+      ],
+      [
+       "Structured output",
+       "Response constrained to a defined schema such as JSON"
+      ],
+      [
+       "Feasibility test",
+       "A small, scored experiment to see if AI can do the task"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Classifying tickets: high or low temperature?",
+     "Low, for consistent answers."
+    ],
+    [
+     "Why include 'unknown' as an allowed answer?",
+     "So the model doesn't force a wrong category when unsure."
+    ],
+    [
+     "What do you hand engineering after a successful test?",
+     "The exported code, settings, test set and results."
+    ],
+    [
+     "Can you paste customer data into a free AI tool?",
+     "Only if your company's data policy allows it; anonymise by default."
+    ]
+   ],
+   "deeper": [
+    "aiStudio",
+    "gemKey"
+   ]
+  },
+  "abt15": {
+   "sections": [
+    {
+     "h": "Source-grounded AI",
+     "p": [
+      "A general chatbot answers from what it learned in training plus whatever you paste. NotebookLM answers from the sources you add to a notebook, and every claim links back to the passage it came from. That's retrieval-augmented generation packaged as a product."
+     ]
+    },
+    {
+     "h": "What you can do",
+     "table": [
+      [
+       "Feature",
+       "Use it for"
+      ],
+      [
+       "Add sources",
+       "PDFs, Google Docs and Slides, websites, YouTube videos, pasted text"
+      ],
+      [
+       "Chat with citations",
+       "Ask questions; click a citation to see the exact source passage"
+      ],
+      [
+       "Notes",
+       "Save useful answers into the notebook"
+      ],
+      [
+       "Study guides and briefings",
+       "Generated summaries, FAQs, timelines"
+      ],
+      [
+       "Audio overviews",
+       "A podcast-style discussion of your sources to listen to"
+      ]
+     ]
+    },
+    {
+     "h": "Worked example: learn a domain fast",
+     "steps": [
+      [
+       "Gather 5 to 10 strong sources",
+       "Official docs and well-regarded guides, not random blogs"
+      ],
+      [
+       "Ask for the map",
+       "'What are the 5 key concepts and how do they relate?'"
+      ],
+      [
+       "Click the citations",
+       "Confirm each claim really comes from the source"
+      ],
+      [
+       "Probe the gaps",
+       "'What do the sources disagree on?' 'What isn't covered?'"
+      ],
+      [
+       "Test yourself",
+       "Ask for 10 quiz questions, answer them, then check"
+      ]
+     ]
+    },
+    {
+     "h": "Limits to remember",
+     "bullets": [
+      "It only knows your sources: bad sources give confident bad answers.",
+      "Citations show where a claim came from, not that the source is right.",
+      "Summaries lose nuance; read the original for decisions that matter.",
+      "Check your company's policy before uploading internal documents."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Before a new programme kicks off, build a notebook from the contracts, architecture docs and previous post-mortems. Ask it for risks, dependencies and open questions, then verify the citations. It's a fast way to arrive informed.",
+      "For learning, use NotebookLM on official docs rather than random articles; the quality of your sources is the quality of your answers."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "NotebookLM knows everything Gemini knows.",
+       "Answers are grounded in your sources, by design."
+      ],
+      [
+       "Citations make answers trustworthy.",
+       "They make answers checkable; you still judge the source."
+      ],
+      [
+       "It's just a summariser.",
+       "It supports questioning, comparison, study guides and audio, all grounded in sources."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Grounding",
+       "Tying answers to specific source material"
+      ],
+      [
+       "Citation",
+       "A link from a claim to the passage supporting it"
+      ],
+      [
+       "Source",
+       "A document or page added to the notebook"
+      ],
+      [
+       "Audio overview",
+       "Generated spoken discussion of the sources"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "How is NotebookLM different from a general chatbot?",
+     "It answers from your chosen sources and cites the exact passages."
+    ],
+    [
+     "A citation points to a passage. Does that make the claim true?",
+     "No. It shows where the claim came from; the source can still be wrong."
+    ],
+    [
+     "What's the RAG connection?",
+     "NotebookLM retrieves relevant passages from your sources and generates answers from them."
+    ],
+    [
+     "Best first question for a new domain?",
+     "Ask for the key concepts and how they relate, then follow the citations."
+    ]
+   ],
+   "deeper": [
+    "nblm",
+    "nblmTips"
+   ]
+  },
+  "abt16": {
+   "sections": [
+    {
+     "h": "Where Cloudflare sits",
+     "flow": [
+      [
+       "User",
+       [
+        [
+         "Browser / app",
+         "types your URL"
+        ]
+       ]
+      ],
+      [
+       "Cloudflare edge",
+       [
+        [
+         "DNS",
+         "finds your site"
+        ],
+        [
+         "Security",
+         "DDoS, WAF, bots"
+        ],
+        [
+         "CDN cache",
+         "serves copies nearby"
+        ],
+        [
+         "Workers",
+         "optional code at the edge"
+        ]
+       ]
+      ],
+      [
+       "Your servers",
+       [
+        [
+         "Origin",
+         "app and database"
+        ]
+       ]
+      ]
+     ],
+     "flowLabel": "Requests go from the user to Cloudflare's edge (DNS, security, cache, Workers) and then to your origin servers",
+     "p": [
+      "When a site uses Cloudflare, users connect to Cloudflare's nearest data centre first. Cloudflare answers what it can (cached files, blocked attacks) and forwards the rest to your own servers, called the origin."
+     ]
+    },
+    {
+     "h": "The main services",
+     "table": [
+      [
+       "Service",
+       "What it does",
+       "Earlier lesson"
+      ],
+      [
+       "DNS",
+       "Translates your domain into addresses",
+       "How Software Works: DNS"
+      ],
+      [
+       "CDN",
+       "Caches static content close to users",
+       "CDN and load balancing"
+      ],
+      [
+       "DDoS protection and WAF",
+       "Absorbs floods of traffic, blocks malicious requests",
+       "Security basics"
+      ],
+      [
+       "Workers",
+       "Runs small pieces of code on Cloudflare's network, close to users",
+       "New"
+      ],
+      [
+       "Pages",
+       "Hosts static and front-end sites from Git",
+       "New"
+      ]
+     ]
+    },
+    {
+     "h": "Workers in plain English",
+     "p": [
+      "A Worker is a small function that runs on Cloudflare's network for each request, without you managing a server. Typical uses: redirect rules, adding headers, a small API, A/B routing, or calling an AI model and returning the result. They start fast and you pay for usage, which makes them a cheap home for small tools.",
+      "Cloudflare also offers storage and AI products around Workers. For a TPM the important point is architectural: some logic can live at the edge, which changes where bugs, logs and costs appear."
+     ]
+    },
+    {
+     "h": "Outages and dependencies",
+     "p": [
+      "Because so much of the internet runs through a few providers, an outage at one can take down many unrelated sites at once. In incident reviews, ask which parts of the user journey depend on each provider, and what the fallback is."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "During incidents, check provider status pages (Cloudflare, your cloud, your CDN) early. Many 'our site is down' events are upstream, and knowing quickly changes the communication plan.",
+      "In architecture reviews, ask which requests go through the CDN, what is cached and for how long. Stale caches cause confusing bugs: users see old content after a release."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "A CDN makes everything faster.",
+       "It speeds up cacheable content; slow APIs and databases stay slow."
+      ],
+      [
+       "Cloudflare is only for big companies.",
+       "Its free and low-cost tiers are widely used by small sites and side projects."
+      ],
+      [
+       "Edge code replaces the back end.",
+       "It's suited to small, fast tasks; core logic and data usually stay at the origin."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Edge",
+       "Servers close to users, at the network's edge"
+      ],
+      [
+       "Origin",
+       "Your own servers behind the CDN"
+      ],
+      [
+       "Proxy",
+       "Cloudflare sits in the middle and forwards requests"
+      ],
+      [
+       "Cache hit",
+       "A request served from the CDN without reaching the origin"
+      ],
+      [
+       "Serverless",
+       "Code that runs on demand without servers you manage"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What is the 'origin'?",
+     "Your own servers that Cloudflare forwards requests to."
+    ],
+    [
+     "Will a CDN speed up a slow database query?",
+     "Not for dynamic, uncached responses; it mainly speeds up cacheable content."
+    ],
+    [
+     "Name two uses for Cloudflare Workers.",
+     "Redirects, header changes, small APIs, A/B routing, calling AI models."
+    ],
+    [
+     "Why does a Cloudflare outage break many sites at once?",
+     "Many sites route their traffic through Cloudflare's network."
+    ]
+   ],
+   "deeper": [
+    "cfCdn",
+    "cfWaf",
+    "cfWorkers"
+   ]
+  },
+  "abt17": {
+   "sections": [
+    {
+     "h": "Automatic checks",
+     "table": [
+      [
+       "Tool type",
+       "What it catches",
+       "Examples"
+      ],
+      [
+       "Linter",
+       "Likely bugs and bad patterns: unused variables, unsafe code",
+       "ESLint (JavaScript/TypeScript), Ruff (Python)"
+      ],
+      [
+       "Formatter",
+       "Inconsistent layout; rewrites it automatically",
+       "Prettier, Black"
+      ],
+      [
+       "Type checker",
+       "Wrong kinds of data passed around",
+       "TypeScript, mypy"
+      ],
+      [
+       "Tests",
+       "Behaviour that doesn't match what's expected",
+       "pytest, Jest, Playwright"
+      ]
+     ],
+     "p": [
+      "This repo's CI runs 'next lint' and a TypeScript build on the front end and pytest on the back end. If any fail, the change isn't safe to merge."
+     ]
+    },
+    {
+     "h": "The test pyramid",
+     "table": [
+      [
+       "Level",
+       "Checks",
+       "Speed",
+       "How many"
+      ],
+      [
+       "Unit",
+       "One function or small piece",
+       "Milliseconds",
+       "Lots"
+      ],
+      [
+       "Integration / API",
+       "Pieces working together, such as an endpoint plus the database",
+       "Seconds",
+       "Some"
+      ],
+      [
+       "End-to-end (UI)",
+       "A full user journey through the browser",
+       "Slow and fragile",
+       "Few, for key journeys"
+      ]
+     ],
+     "p": [
+      "The idea: have many fast, focused tests and fewer slow, broad ones. Most of this repo's back-end tests are API-level: they call endpoints and check status codes and data, such as 'a learner can't see another team's progress'."
+     ]
+    },
+    {
+     "h": "Coverage isn't quality",
+     "p": [
+      "Test coverage measures how much code ran during tests, not whether the tests check the right things. A test that calls a function but checks nothing raises coverage and proves nothing. Ask 'which behaviour does this test prove?' rather than 'what's the coverage percentage?'"
+     ]
+    },
+    {
+     "h": "Design patterns and SOLID",
+     "table": [
+      [
+       "Idea",
+       "Plain English"
+      ],
+      [
+       "Adapter pattern",
+       "A translator so two parts with different interfaces can work together, such as wrapping different AI providers behind one interface"
+      ],
+      [
+       "Strategy pattern",
+       "Swap the method used for a job without changing the caller, such as choosing a cheap or premium model"
+      ],
+      [
+       "Observer pattern",
+       "Notify interested parts when something happens, such as events and webhooks"
+      ],
+      [
+       "Single responsibility (S)",
+       "Each piece has one reason to change"
+      ],
+      [
+       "Open/closed (O)",
+       "Add behaviour by extending, not by editing working code"
+      ],
+      [
+       "Liskov substitution (L)",
+       "A replacement part must work wherever the original did"
+      ],
+      [
+       "Interface segregation (I)",
+       "Small, focused interfaces beat one giant one"
+      ],
+      [
+       "Dependency inversion (D)",
+       "Depend on abstractions, so parts can be swapped"
+      ]
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Make 'tests included' part of the definition of done for every story, including AI-written ones. Ask engineers which behaviour each new test proves; vague answers reveal weak tests.",
+      "Track flaky tests as a delivery risk. A suite that randomly fails trains people to ignore red builds, which defeats the point of CI."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "High coverage means high quality.",
+       "Coverage counts executed lines, not meaningful checks."
+      ],
+      [
+       "Design patterns should be used everywhere.",
+       "They solve specific problems; forcing them in adds complexity."
+      ],
+      [
+       "Linting is just about style.",
+       "Linters also catch real bugs such as unused results and unsafe patterns."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Lint",
+       "Automatic analysis that flags suspicious code"
+      ],
+      [
+       "Regression",
+       "Something that used to work and broke"
+      ],
+      [
+       "Flaky test",
+       "A test that sometimes passes and sometimes fails without changes"
+      ],
+      [
+       "Refactor",
+       "Restructure code without changing behaviour"
+      ],
+      [
+       "Design pattern",
+       "A named, reusable solution to a common design problem"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Coverage is 90%. Is the code well tested?",
+     "Not necessarily; coverage shows code ran, not that behaviour was checked."
+    ],
+    [
+     "Why have fewer end-to-end tests than unit tests?",
+     "They're slow, costly and fragile, so you keep them for key journeys."
+    ],
+    [
+     "Which pattern helps you switch AI providers without rewriting callers?",
+     "Adapter (often combined with strategy)."
+    ],
+    [
+     "The linter passes. Does that mean the feature works?",
+     "No. Linters catch suspicious code patterns, not wrong behaviour; that's what tests are for."
+    ]
+   ],
+   "deeper": [
+    "eslintStart",
+    "testPyramid",
+    "rgPatterns",
+    "rgHome"
+   ]
+  },
+  "abt18": {
+   "sections": [
+    {
+     "h": "What code review is for",
+     "p": [
+      "Code review means someone other than the author examines a change before it merges. The goal is to keep the codebase healthy over time, not to make each change perfect. Google's published guidance says to approve a change once it clearly improves the overall health of the code, even if it isn't perfect."
+     ]
+    },
+    {
+     "h": "What reviewers look at",
+     "table": [
+      [
+       "Area",
+       "Question"
+      ],
+      [
+       "Design",
+       "Does this belong here and fit the system?"
+      ],
+      [
+       "Functionality",
+       "Does it do what's intended, for users and other developers?"
+      ],
+      [
+       "Complexity",
+       "Could it be simpler? Is it built for imaginary future needs?"
+      ],
+      [
+       "Tests",
+       "Are there sensible tests that would fail if it broke?"
+      ],
+      [
+       "Naming",
+       "Are names clear?"
+      ],
+      [
+       "Comments",
+       "Do they explain why, not what?"
+      ],
+      [
+       "Style and docs",
+       "Does it follow the style guide; are docs updated?"
+      ]
+     ]
+    },
+    {
+     "h": "Review as a delivery lever",
+     "bullets": [
+      "Small pull requests get faster and better reviews; large ones get rubber-stamped or stall.",
+      "Review turnaround time is a real constraint, and it grows with AI-generated code.",
+      "AI reviewers catch many issues fast; a human still owns design and risk decisions.",
+      "Watch for PRs waiting days: ask whether the change is too big, unclear or blocked on a decision."
+     ]
+    },
+    {
+     "h": "Technical debt",
+     "p": [
+      "Ward Cunningham's metaphor: taking a shortcut is like borrowing money. You get speed now (the principal), and then every future change in that area costs extra effort (the interest) until you pay it back by cleaning up.",
+      "Martin Fowler adds a useful split: debt can be deliberate or inadvertent, and prudent or reckless. 'We must ship now and will fix it next sprint' is deliberate and prudent. 'What's layering?' is inadvertent and reckless."
+     ],
+     "table": [
+      [
+       "",
+       "Reckless",
+       "Prudent"
+      ],
+      [
+       "Deliberate",
+       "'No time for design'",
+       "'Ship now, deal with consequences'"
+      ],
+      [
+       "Inadvertent",
+       "'What's layering?'",
+       "'Now we know how we should have done it'"
+      ]
+     ]
+    },
+    {
+     "h": "Managing debt as a TPM",
+     "steps": [
+      [
+       "Make it visible",
+       "Keep a debt register: item, area, interest (what it slows down), fix size"
+      ],
+      [
+       "Price the interest",
+       "Translate into business terms: 'every payments change takes three extra days'"
+      ],
+      [
+       "Pay high-interest debt first",
+       "Debt in code that changes often costs most"
+      ],
+      [
+       "Budget continuously",
+       "Reserve a share of each sprint rather than waiting for a 'debt quarter'"
+      ],
+      [
+       "Record deliberate debt when taken",
+       "Note the shortcut, the reason and when to repay"
+      ]
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Add review turnaround to your delivery metrics alongside cycle time. If PRs wait two days for review, adding more AI-generated code makes the queue worse, not better.",
+      "When engineering asks for debt work, ask for the interest: which features are slowed, by how much, and what breaks more often. Then you can trade it against roadmap items honestly."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Reviews should block until the code is perfect.",
+       "Approve when it clearly improves code health; perfect is the enemy of shipped."
+      ],
+      [
+       "All technical debt is bad.",
+       "Deliberate, prudent debt can be a smart trade if it's recorded and repaid."
+      ],
+      [
+       "Debt can wait for a dedicated clean-up quarter.",
+       "Continuous budgeting works better; big clean-up projects often get cancelled."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Code health",
+       "How easy the codebase is to understand and change"
+      ],
+      [
+       "LGTM",
+       "Looks good to me: an approval"
+      ],
+      [
+       "Nit",
+       "A minor, optional review comment"
+      ],
+      [
+       "Principal",
+       "The work needed to fix a shortcut"
+      ],
+      [
+       "Interest",
+       "The extra cost the shortcut adds to every future change"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "When should a reviewer approve?",
+     "When the change clearly improves overall code health, even if not perfect."
+    ],
+    [
+     "Which debt should be paid first?",
+     "High-interest debt in code that changes often."
+    ],
+    [
+     "'We shipped knowing it needs a refactor next sprint.' Which quadrant?",
+     "Deliberate and prudent."
+    ],
+    [
+     "How do you get debt work prioritised?",
+     "Express its interest in business terms and budget for it continuously."
+    ]
+   ],
+   "deeper": [
+    "googleCr",
+    "googleLook",
+    "fowlerDebt"
+   ]
+  },
+  "abt19": {
+   "sections": [
+    {
+     "h": "Starter kits and templates",
+     "p": [
+      "A starter kit (also called a template or boilerplate) is a working project skeleton: folder structure, configuration, login, styling and deployment already wired up. Vercel's template gallery, for example, has starters for AI chatbots, SaaS apps and RAG chat with a vector database.",
+      "They save days, but you inherit every choice the author made. Check the licence, how actively it's maintained and whether its stack matches what your team can support."
+     ]
+    },
+    {
+     "h": "SDKs and wrappers",
+     "table": [
+      [
+       "Layer",
+       "What it is",
+       "Example"
+      ],
+      [
+       "Raw HTTP API",
+       "Send JSON requests yourself",
+       "POST to the Messages API endpoint"
+      ],
+      [
+       "Official SDK",
+       "A library from the provider that wraps the API with types, retries, streaming and error handling",
+       "Anthropic's Python and TypeScript SDKs"
+      ],
+      [
+       "Internal wrapper",
+       "Your company's thin layer on top of one or more SDKs",
+       "An ai_client module or an AI gateway service"
+      ]
+     ],
+     "p": [
+      "An internal wrapper is often worth building once more than one team calls AI models. It's the one place to manage keys, log every call, track cost per team, enforce safety checks and switch models or providers. This is the adapter pattern from the code-quality lesson."
+     ]
+    },
+    {
+     "h": "Internal developer tools",
+     "p": [
+      "Companies build tools for their own engineers: command-line scripts, Slack bots that answer 'what's deployed?', admin consoles, project templates. Larger companies have a platform team that owns these. AI makes such tools cheap to build, so the real question becomes ownership: who maintains it when the person who built it moves on?"
+     ]
+    },
+    {
+     "h": "Build vs reuse checklist",
+     "bullets": [
+      "Does a maintained official option already exist?",
+      "What would lock-in cost us if we needed to switch later?",
+      "Who owns upgrades and security fixes?",
+      "Is the licence compatible with our product?",
+      "Does it centralise something we must control: keys, cost, logging, safety?"
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "When several teams start building AI features, propose a shared AI gateway or wrapper early. Retro-fitting cost tracking, logging and key management across ten codebases is much harder than starting with one.",
+      "For any internal tool someone builds in a weekend with AI, ask who owns it, where it's documented and what happens if it breaks. Unowned tools become hidden operational risk."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Starter kits are free shortcuts.",
+       "You inherit their choices, dependencies and maintenance burden."
+      ],
+      [
+       "Wrapping an SDK is wasted effort.",
+       "A thin internal layer centralises keys, costs, logging and provider switching."
+      ],
+      [
+       "Internal tools don't need ownership.",
+       "Unowned tools fail quietly at the worst time."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Boilerplate",
+       "Standard setup code repeated across projects"
+      ],
+      [
+       "SDK",
+       "Software development kit: a library for using a service"
+      ],
+      [
+       "AI gateway",
+       "A shared service all AI calls pass through for control and visibility"
+      ],
+      [
+       "Lock-in",
+       "The cost of switching away from a tool or vendor"
+      ],
+      [
+       "Platform team",
+       "A team that builds shared tools for other engineering teams"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What do you inherit when you use a starter kit?",
+     "All its technology and design choices, plus its maintenance and licence terms."
+    ],
+    [
+     "What does an official SDK add over raw HTTP calls?",
+     "Types, retries, streaming helpers and error handling."
+    ],
+    [
+     "Give two reasons to build an internal AI wrapper.",
+     "Central key management, logging, cost tracking, safety checks or easy model switching."
+    ],
+    [
+     "What's the key question for any internal tool built quickly with AI?",
+     "Who owns and maintains it over time."
+    ]
+   ],
+   "deeper": [
+    "vercelTpl",
+    "clSdks"
    ]
   }
  }
