@@ -17,7 +17,21 @@ See [docs/architecture.md](docs/architecture.md) for how the pieces fit together
 | Manager | Everything a learner can, plus see their own team's progress |
 | Admin | Everything, plus manage users and teams and edit topics and lessons |
 
-## Run it on Windows (first time)
+## Quick start on Windows
+
+Install and start [Docker Desktop](https://www.docker.com/products/docker-desktop/), then double-click **`start-windows.bat`** in the project folder. It checks Docker, creates `.env` if needed, starts everything and opens http://localhost:3000. If something fails, it tells you why.
+
+### Troubleshooting
+
+| You see | Fix |
+|---|---|
+| `localhost refused to connect` | The app isn't running. Start it with `start-windows.bat` and keep the window open. |
+| `docker is not recognized` | Install Docker Desktop. |
+| `error during connect` / `cannot find the file specified` | Docker Desktop isn't running: open it and wait for "Engine running". |
+| `port is already allocated` | Another program uses port 3000 or 8000. Close it, or restart your computer. |
+| Page loads but login fails | Check `ADMIN_EMAIL` and `ADMIN_PASSWORD` in `.env`. If you changed them after the first start, run `docker compose down -v` (wipes local data) and start again. |
+
+## Run it on Windows (step by step)
 
 1. **Install** [Git for Windows](https://git-scm.com/download/win) and [Docker Desktop](https://www.docker.com/products/docker-desktop/). Start Docker Desktop and wait until it says it's running.
 2. **Get the code.** Open PowerShell and run:

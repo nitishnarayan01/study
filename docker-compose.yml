@@ -5,8 +5,7 @@ services:
       POSTGRES_USER: study
       POSTGRES_PASSWORD: study
       POSTGRES_DB: study
-    ports:
-      - "5432:5432"
+    # No host port: the database is only reachable by the backend. This avoids clashing with a Postgres already installed on your computer.
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
@@ -17,7 +16,10 @@ services:
 
   backend:
     build: ./backend
-    env_file: .env
+    # Optional: the app starts with safe local defaults if .env is missing
+    env_file:
+      - path: .env
+        required: false
     environment:
       DATABASE_URL: postgresql+psycopg://study:study@db:5432/study
     ports:
