@@ -1159,8 +1159,8 @@
   },
   {
    "key": "atlDevops",
-   "title": "What is DevOps? (Atlassian)",
-   "url": "https://www.atlassian.com/devops",
+   "title": "How to do DevOps: a step-by-step guide (Atlassian)",
+   "url": "https://www.atlassian.com/devops/what-is-devops/how-to-start-devops",
    "kind": "Read"
   },
   {
@@ -1471,8 +1471,8 @@
   },
   {
    "key": "gherkinRef",
-   "title": "Gherkin reference (Cucumber)",
-   "url": "https://cucumber.io/docs/gherkin/reference/",
+   "title": "Gherkin documentation (Cucumber)",
+   "url": "https://docs.cucumber.io/gherkin/",
    "kind": "Reference"
   },
   {
@@ -32580,10 +32580,65 @@
      ]
     },
     {
+     "h": "Worked example: a weekly status report",
+     "steps": [
+      [
+       "Before",
+       "You spend about 90 minutes each Friday collecting updates from Jira, Slack and meeting notes, then writing a status email."
+      ],
+      [
+       "Set up",
+       "Create one project in your AI assistant that holds the report template, last week's report and the list of workstreams."
+      ],
+      [
+       "Each Friday",
+       "Paste the board export and the meeting summaries. Ask for a draft in the template, with every claim linked to its source line."
+      ],
+      [
+       "Review",
+       "Check each red or amber item against the source, rewrite the headline in your own words and add the decisions you need."
+      ],
+      [
+       "After two weeks",
+       "Compare time spent (for example 90 down to 35 minutes) and count the errors you caught. Keep the workflow only if both look good."
+      ]
+     ]
+    },
+    {
+     "h": "Questions to ask before adopting a tool",
+     "table": [
+      [
+       "Question",
+       "Why it matters"
+      ],
+      [
+       "Where is our data stored and is it used for training?",
+       "Confidential plans and customer data must stay within policy"
+      ],
+      [
+       "Is it on the approved vendor list?",
+       "Unapproved tools create audit and security findings"
+      ],
+      [
+       "Can it export my work?",
+       "Avoids lock-in if the tool is dropped"
+      ],
+      [
+       "Who else needs to adopt it for it to help?",
+       "Shared tools only pay off when the team uses them"
+      ],
+      [
+       "What will I stop doing?",
+       "If nothing changes, the tool adds work rather than saving it"
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Share a short 'how I use AI' note with your team; it spreads good habits and surfaces policy questions early.",
-      "Re-check summaries against the transcript for the first few weeks of any meeting tool."
+      "Re-check summaries against the transcript for the first few weeks of any meeting tool.",
+      "Keep a two-column log for any trial: minutes saved and errors caught. It turns a vague feeling into a decision you can defend."
      ]
     },
     {
@@ -32645,6 +32700,14 @@
     [
      "How do you measure a tool's value?",
      "Time saved and errors caught over a trial."
+    ],
+    [
+     "What should you ask the AI to include so you can review a status draft quickly?",
+     "Links or references from each claim back to its source."
+    ],
+    [
+     "Name one question to ask about any AI tool's data handling.",
+     "Where data is stored, or whether it is used to train models."
     ]
    ],
    "deeper": [
@@ -32719,10 +32782,55 @@
      ]
     },
     {
+     "h": "Worked example: a PRD for AI ticket summaries",
+     "table": [
+      [
+       "Section",
+       "Example content"
+      ],
+      [
+       "Problem",
+       "Support agents spend about 4 minutes reading long ticket threads before replying"
+      ],
+      [
+       "Goal",
+       "Cut time-to-first-reply on long threads by 30% without lowering satisfaction scores"
+      ],
+      [
+       "Non-goals",
+       "No automatic replies to customers in this release"
+      ],
+      [
+       "Requirements",
+       "Summary appears in under 3 seconds; shows the last customer request first; agent can rate it"
+      ],
+      [
+       "Eval plan",
+       "200 real threads scored by senior agents for accuracy and missing facts before launch"
+      ],
+      [
+       "Fallback",
+       "If the model is slow or unavailable, show the thread as today with no summary"
+      ],
+      [
+       "Cost",
+       "Estimated cost per summary times expected daily volume, reviewed against the support budget"
+      ]
+     ]
+    },
+    {
+     "h": "A reusable critique prompt",
+     "p": [
+      "After drafting, ask: 'Review this PRD as a sceptical staff engineer, a support lead and a privacy lawyer. For each, list the three biggest gaps or risks, any requirement that cannot be tested, and any question you would ask in the review meeting.'",
+      "Then fix what is valid and add the rest to Open questions with an owner. This usually takes 15 minutes and saves a review cycle."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Keep a reusable 'PRD critic' prompt; running it before every review catches most gaps.",
-      "Put non-goals near the top; they prevent the most arguments."
+      "Put non-goals near the top; they prevent the most arguments.",
+      "Ask reviewers to comment on the problem and goals first; agreeing on those makes the rest of the review much faster."
      ]
     },
     {
@@ -32784,6 +32892,14 @@
     [
      "Who writes the technical spec?",
      "Engineering."
+    ],
+    [
+     "Why does an AI feature PRD need a fallback section?",
+     "Models can be slow, wrong or unavailable, so the product must still work."
+    ],
+    [
+     "What makes a requirement testable?",
+     "It states a measurable condition, such as a time limit or an accuracy threshold."
     ]
    ],
    "deeper": [
@@ -32859,10 +32975,43 @@
      ]
     },
     {
+     "h": "Weak vs strong acceptance criteria",
+     "table": [
+      [
+       "Weak",
+       "Strong"
+      ],
+      [
+       "Checkout should be fast",
+       "Given a saved card, when I tap Pay, then confirmation appears within 2 seconds for 95% of payments"
+      ],
+      [
+       "Handle errors properly",
+       "Given the payment provider times out, when I tap Pay, then I see 'Payment not completed, try again' and no charge is made"
+      ],
+      [
+       "User can manage cards",
+       "Given two saved cards, when I remove one, then it no longer appears at checkout and the other stays default"
+      ]
+     ]
+    },
+    {
+     "h": "Story review checklist",
+     "bullets": [
+      "Does the story name a real user and a reason, not just a feature?",
+      "Can it be finished and shown within one sprint?",
+      "Is there at least one failure scenario as well as the happy path?",
+      "Are numbers (time limits, sizes, counts) stated rather than implied?",
+      "Would QA know exactly what to test without asking you?",
+      "Are designs, API contracts or data needs linked?"
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Ask Claude to propose missing scenarios for every story; it reliably finds two or three you skipped.",
-      "Review stories with QA before sprint planning, not after."
+      "Review stories with QA before sprint planning, not after.",
+      "Read your criteria aloud to an engineer and ask them to describe the test they would write; gaps show up immediately."
      ]
     },
     {
@@ -32924,6 +33073,14 @@
     [
      "Why not split stories by layer?",
      "Each story should deliver user value on its own."
+    ],
+    [
+     "Rewrite 'search should be quick' as a testable criterion.",
+     "For example: when I search, results appear within 1 second for 95% of queries."
+    ],
+    [
+     "What is one sign a story is too big?",
+     "It cannot be finished and demoed within a single sprint."
     ]
    ],
    "deeper": [
@@ -33002,10 +33159,53 @@
      ]
     },
     {
+     "h": "A sprint with AI help",
+     "table": [
+      [
+       "Ceremony",
+       "Human job",
+       "Where AI helps"
+      ],
+      [
+       "Backlog refinement",
+       "Decide priority and clarify intent",
+       "Draft acceptance criteria, find missing edge cases"
+      ],
+      [
+       "Sprint planning",
+       "Commit to a goal the team believes in",
+       "Summarise capacity, flag stories without estimates"
+      ],
+      [
+       "Daily standup",
+       "Surface blockers and help each other",
+       "Summarise board changes since yesterday"
+      ],
+      [
+       "Review",
+       "Show working software and get feedback",
+       "Turn feedback notes into backlog items"
+      ],
+      [
+       "Retrospective",
+       "Agree what to change",
+       "Group anonymous comments into themes"
+      ]
+     ]
+    },
+    {
+     "h": "Worked example: a sprint that slipped",
+     "p": [
+      "A team committed to 40 points and finished 22. The retrospective found three causes: two stories depended on an API that another team had not finished, one story had no acceptance criteria, and a production incident took two engineers for three days.",
+      "Actions: check cross-team dependencies during refinement, refuse stories without criteria into planning, and keep about 15% of capacity for unplanned work. The next sprint finished 30 of 32 points."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Introduce one AI change per sprint and ask the team in the retro if it helped.",
-      "Keep AI summaries visible and editable, so the team corrects them."
+      "Keep AI summaries visible and editable, so the team corrects them.",
+      "Track planned versus finished work for a few sprints before changing anything; trends matter more than one bad sprint."
      ]
     },
     {
@@ -33067,6 +33267,14 @@
     [
      "What should stay human?",
      "Priorities, commitments, morale and final quality judgement."
+    ],
+    [
+     "Which ceremony decides what the team commits to?",
+     "Sprint planning."
+    ],
+    [
+     "Name one cause of sprint slippage you can catch during refinement.",
+     "Unfinished dependencies or stories without acceptance criteria."
     ]
    ],
    "deeper": [
@@ -33147,10 +33355,65 @@
      ]
     },
     {
+     "h": "Worked example: a go/no-go meeting",
+     "table": [
+      [
+       "Check",
+       "Status",
+       "Decision input"
+      ],
+      [
+       "Critical bugs open",
+       "0",
+       "Go"
+      ],
+      [
+       "Major bugs open",
+       "2, both with workarounds documented",
+       "Go if support is briefed"
+      ],
+      [
+       "UAT sign-off",
+       "Finance signed; Operations signed with one minor note",
+       "Go"
+      ],
+      [
+       "Performance test",
+       "Checkout p95 1.8s against a 2s target",
+       "Go"
+      ],
+      [
+       "Rollback plan",
+       "Feature flag off within 5 minutes; tested yesterday",
+       "Go"
+      ],
+      [
+       "Support readiness",
+       "FAQ drafted, training on Thursday",
+       "Go after training"
+      ]
+     ],
+     "p": [
+      "Outcome: a conditional go, releasing on Friday after support training, with named owners for the two major bugs."
+     ]
+    },
+    {
+     "h": "Writing a good bug report",
+     "bullets": [
+      "Title that says what is wrong and where.",
+      "Steps to reproduce, numbered.",
+      "Expected result and actual result.",
+      "Environment: device, browser, app version, test account.",
+      "Evidence: screenshot, video or log extract.",
+      "Severity and who is affected."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Agree severity definitions with stakeholders before testing starts.",
-      "Keep the go/no-go to 30 minutes by circulating evidence a day ahead."
+      "Keep the go/no-go to 30 minutes by circulating evidence a day ahead.",
+      "Agree go/no-go criteria at the start of the release, not on release day, so the meeting checks facts rather than debating standards."
      ]
     },
     {
@@ -33212,6 +33475,14 @@
     [
      "What should a go/no-go decision record?",
      "Decision, approvers, conditions and known issues."
+    ],
+    [
+     "What makes a go decision conditional?",
+     "A remaining action, such as support training, must be finished before release."
+    ],
+    [
+     "Name four parts of a good bug report.",
+     "Title, steps to reproduce, expected vs actual result, environment, evidence, severity (any four)."
     ]
    ],
    "deeper": [
@@ -33278,10 +33549,77 @@
      ]
     },
     {
+     "h": "Worked example: from complaint to problem statement",
+     "steps": [
+      [
+       "Raw request",
+       "'We need an AI chatbot on the help page.'"
+      ],
+      [
+       "Ask why",
+       "Support volume rose 40% this quarter; most tickets are about order status and refunds."
+      ],
+      [
+       "Find evidence",
+       "Ticket data shows 55% of contacts ask 'where is my order', and the answer is already in the order system."
+      ],
+      [
+       "Problem statement",
+       "Customers cannot easily find their order status, so they contact support, costing about 3,000 agent hours a month."
+      ],
+      [
+       "Options",
+       "Better order tracking page, proactive delivery emails, or an assistant that reads order status. Compare cost and impact before choosing AI."
+      ]
+     ]
+    },
+    {
+     "h": "Journey map example: returning an item",
+     "table": [
+      [
+       "Stage",
+       "Customer does",
+       "Feels",
+       "Opportunity"
+      ],
+      [
+       "Decide",
+       "Checks return policy",
+       "Unsure if eligible",
+       "Show eligibility on the order page"
+      ],
+      [
+       "Start",
+       "Finds return form",
+       "Frustrated by searching",
+       "One-tap return from the order"
+      ],
+      [
+       "Ship",
+       "Prints label, visits drop-off",
+       "Inconvenienced",
+       "QR code instead of printing"
+      ],
+      [
+       "Wait",
+       "Checks refund status",
+       "Anxious",
+       "Proactive status updates"
+      ],
+      [
+       "Refund",
+       "Receives money",
+       "Relieved",
+       "Faster refund on scan at drop-off"
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Always present a non-AI option next to the AI one; it builds credibility and sometimes wins.",
-      "Read 20 support tickets before framing a problem; they ground everything."
+      "Read 20 support tickets before framing a problem; they ground everything.",
+      "Bring one real customer quote or data point to every problem statement; it keeps discussions grounded."
      ]
     },
     {
@@ -33343,6 +33681,14 @@
     [
      "How do journey maps reveal edge cases?",
      "Walking each step for different users and failures."
+    ],
+    [
+     "Why ask 'why' before accepting a solution request?",
+     "The real problem may have a simpler or cheaper solution than the one requested."
+    ],
+    [
+     "What four columns make a basic journey map?",
+     "Stage, what the customer does, how they feel, and the opportunity."
     ]
    ],
    "deeper": [
@@ -33431,10 +33777,63 @@
      ]
     },
     {
+     "h": "Worked example: build or buy a document search assistant",
+     "table": [
+      [
+       "Factor",
+       "Buy (SaaS tool)",
+       "Build (own RAG on a model API)"
+      ],
+      [
+       "Time to first value",
+       "2 to 4 weeks",
+       "2 to 3 months"
+      ],
+      [
+       "Upfront cost",
+       "Low; subscription per user",
+       "Engineering time"
+      ],
+      [
+       "Running cost",
+       "Fixed per seat",
+       "Model usage plus hosting; varies with volume"
+      ],
+      [
+       "Fit to our data",
+       "Limited connectors",
+       "Any source we can index"
+      ],
+      [
+       "Control and security",
+       "Vendor's controls",
+       "Our own controls and logging"
+      ],
+      [
+       "Differentiation",
+       "Same as competitors",
+       "Can become a product advantage"
+      ]
+     ],
+     "p": [
+      "A common answer: buy first to learn what users need, then build only if search is a core advantage or the tool cannot meet security needs."
+     ]
+    },
+    {
+     "h": "MVP scoping example",
+     "bullets": [
+      "In: one document source (the policy wiki), one user group (support), answers with citations, thumbs up or down feedback.",
+      "Out: other sources, write actions, multiple languages, mobile app.",
+      "Success gate: 80% of answers rated correct by support leads on a 100-question test set, and weekly active use by half the pilot group.",
+      "Kill criteria: below 60% correct after two improvement rounds."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Write stop criteria before starting a pilot; it makes killing a weak idea painless.",
-      "Ask vendors for a pilot on your data, not their demo."
+      "Ask vendors for a pilot on your data, not their demo.",
+      "Write kill criteria before the MVP starts; it is much harder to agree them once people are invested."
      ]
     },
     {
@@ -33496,6 +33895,14 @@
     [
      "Why keep a human fallback?",
      "To protect users while quality is unproven."
+    ],
+    [
+     "When does building usually beat buying?",
+     "When the capability is a core advantage or no tool meets data and security needs."
+    ],
+    [
+     "What are kill criteria?",
+     "Agreed thresholds that, if not met, mean stopping the project."
     ]
    ],
    "deeper": [
@@ -33584,10 +33991,71 @@
      ]
     },
     {
+     "h": "Worked example: metrics for an AI reply assistant",
+     "table": [
+      [
+       "Type",
+       "Metric",
+       "Target"
+      ],
+      [
+       "Primary",
+       "Median time to resolve a ticket",
+       "Down 20% in 8 weeks"
+      ],
+      [
+       "Adoption",
+       "Share of replies that started from an AI draft",
+       "Above 50% of eligible tickets"
+      ],
+      [
+       "Quality guardrail",
+       "Customer satisfaction score",
+       "No drop of more than 1 point"
+      ],
+      [
+       "Safety guardrail",
+       "Replies flagged for wrong or risky content",
+       "Below 0.5%"
+      ],
+      [
+       "Cost",
+       "Model cost per resolved ticket",
+       "Under the agreed budget"
+      ]
+     ]
+    },
+    {
+     "h": "A simple cost estimate",
+     "steps": [
+      [
+       "Volume",
+       "20,000 tickets a month, 60% eligible: 12,000 AI drafts."
+      ],
+      [
+       "Tokens per draft",
+       "About 3,000 input tokens (thread plus instructions) and 400 output tokens."
+      ],
+      [
+       "Price",
+       "Multiply by the current per-token price of the chosen model from the provider's pricing page."
+      ],
+      [
+       "Overheads",
+       "Add retries, evals and testing, often 20 to 30% on top."
+      ],
+      [
+       "Compare",
+       "Set the monthly total against agent time saved to check the business case."
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Review the risk register every two weeks; stale registers give false comfort.",
-      "Always pair a success metric with a guardrail."
+      "Always pair a success metric with a guardrail.",
+      "Always look up current model prices when estimating; they change often and can shift the business case."
      ]
     },
     {
@@ -33649,6 +34117,14 @@
     [
      "Name two dependency types.",
      "Teams, systems, vendors (any two)."
+    ],
+    [
+     "Why pair a primary metric with guardrails?",
+     "So you notice if speed or adoption improves at the expense of quality or safety."
+    ],
+    [
+     "What two numbers drive model cost?",
+     "Volume of requests and tokens per request, multiplied by the per-token price."
     ]
    ],
    "deeper": [
@@ -33732,10 +34208,76 @@
      ]
     },
     {
+     "h": "Worked example: RICE scoring three ideas",
+     "table": [
+      [
+       "Idea",
+       "Reach (users/quarter)",
+       "Impact (0.25 to 3)",
+       "Confidence",
+       "Effort (person-months)",
+       "Score"
+      ],
+      [
+       "Saved cards",
+       "8,000",
+       "2",
+       "80%",
+       "2",
+       "6,400"
+      ],
+      [
+       "AI order tracking assistant",
+       "15,000",
+       "1",
+       "50%",
+       "4",
+       "1,875"
+      ],
+      [
+       "Dark mode",
+       "5,000",
+       "0.5",
+       "100%",
+       "1",
+       "2,500"
+      ]
+     ],
+     "p": [
+      "RICE score = Reach x Impact x Confidence / Effort. Saved cards wins here, but low confidence on the assistant is a signal to run a cheap test before deciding."
+     ]
+    },
+    {
+     "h": "Choosing a method",
+     "table": [
+      [
+       "Situation",
+       "Good fit"
+      ],
+      [
+       "Many ideas competing for one roadmap",
+       "RICE, for a consistent comparison"
+      ],
+      [
+       "Understanding what delights versus what is expected",
+       "Kano, using a short customer survey"
+      ],
+      [
+       "Fixed deadline with too much scope",
+       "MoSCoW, to agree what must ship"
+      ],
+      [
+       "Executive debate with strong opinions",
+       "Any scored method, shared in advance, to anchor the conversation"
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Show scores and reasoning openly; transparency matters more than precision.",
-      "Re-score quarterly as evidence changes confidence."
+      "Re-score quarterly as evidence changes confidence.",
+      "Share scores before the prioritisation meeting and invite challenges to the inputs; arguing about numbers is more productive than arguing about opinions."
      ]
     },
     {
@@ -33797,6 +34339,14 @@
     [
      "What work doesn't suit RICE?",
      "Compliance, security fixes, strategic bets."
+    ],
+    [
+     "What is the RICE formula?",
+     "Reach x Impact x Confidence divided by Effort."
+    ],
+    [
+     "When is MoSCoW most useful?",
+     "When a deadline is fixed and scope must be cut."
     ]
    ],
    "deeper": [
@@ -33858,10 +34408,64 @@
      ]
     },
     {
+     "h": "Worked example: ROI for AI meeting summaries",
+     "table": [
+      [
+       "Line",
+       "Assumption",
+       "Value per year"
+      ],
+      [
+       "Time saved",
+       "200 managers x 1.5 hours a week x 46 weeks",
+       "13,800 hours"
+      ],
+      [
+       "Value of time",
+       "At an internal cost of 40 per hour (your own figure)",
+       "552,000"
+      ],
+      [
+       "Realisation factor",
+       "Only about half of saved time turns into useful work",
+       "276,000"
+      ],
+      [
+       "Tool cost",
+       "Licences, at the vendor's quoted price",
+       "Subtract"
+      ],
+      [
+       "Rollout cost",
+       "Training, security review, admin time",
+       "Subtract"
+      ],
+      [
+       "Risk",
+       "Wrong summaries, privacy issues",
+       "Mitigate with review rules"
+      ]
+     ],
+     "p": [
+      "Show the realisation factor openly. Executives trust a cautious estimate more than a large headline number."
+     ]
+    },
+    {
+     "h": "Value beyond time saved",
+     "bullets": [
+      "Revenue: faster sales responses, better conversion, new AI-powered features customers pay for.",
+      "Quality: fewer errors in documents, more consistent customer replies.",
+      "Speed: shorter cycle time from idea to release.",
+      "Risk reduction: earlier detection of issues in contracts, code or tickets.",
+      "Employee experience: less repetitive work, which can help retention."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Measure the baseline before the pilot starts; it's impossible to reconstruct later.",
-      "Present ranges (conservative, expected) rather than single numbers."
+      "Present ranges (conservative, expected) rather than single numbers.",
+      "Measure a baseline before rollout; without it you cannot prove any ROI afterwards."
      ]
     },
     {
@@ -33923,6 +34527,14 @@
     [
      "Why measure a baseline first?",
      "You can't prove improvement without it."
+    ],
+    [
+     "What is a realisation factor?",
+     "The share of saved time that actually turns into useful work or value."
+    ],
+    [
+     "Name two kinds of AI value other than time saved.",
+     "Revenue, quality, speed, risk reduction or employee experience (any two)."
     ]
    ],
    "deeper": [
@@ -33982,10 +34594,51 @@
      ]
     },
     {
+     "h": "Worked example: a 90-day adoption plan",
+     "table": [
+      [
+       "Weeks",
+       "Focus",
+       "Output"
+      ],
+      [
+       "1 to 2",
+       "Pick two use cases with clear owners and data",
+       "One-page brief per use case with a baseline metric"
+      ],
+      [
+       "3 to 6",
+       "Pilot with 20 to 30 volunteers",
+       "Weekly usage and quality data; list of issues"
+      ],
+      [
+       "7 to 8",
+       "Fix the top issues and write guidance",
+       "Prompt library, do and don't rules, training session"
+      ],
+      [
+       "9 to 12",
+       "Expand to the full team",
+       "Adoption dashboard; decision to scale, change or stop"
+      ]
+     ]
+    },
+    {
+     "h": "Change management basics",
+     "bullets": [
+      "Explain why: link the change to problems people already feel.",
+      "Find champions in each team who share tips and answer questions.",
+      "Make it safe: clear rules on data, review and who is accountable.",
+      "Show early wins with real numbers and real names (with permission).",
+      "Remove old ways gradually, once the new way is clearly better."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Give every AI use case a business owner, not just a tech owner.",
-      "Celebrate stopped pilots; it frees resources for winners."
+      "Celebrate stopped pilots; it frees resources for winners.",
+      "Hold a short monthly show-and-tell where staff demo how they use AI; peer examples drive adoption faster than training slides."
      ]
     },
     {
@@ -34047,6 +34700,14 @@
     [
      "What's a use-case portfolio?",
      "A balanced set of quick wins, core bets and experiments."
+    ],
+    [
+     "Why pilot with volunteers first?",
+     "They give honest feedback and become champions when the tool scales."
+    ],
+    [
+     "What decision should a pilot end with?",
+     "Scale, change or stop, based on agreed metrics."
     ]
    ],
    "deeper": [
@@ -34131,10 +34792,76 @@
      ]
     },
     {
+     "h": "Worked example: reading a retention cohort table",
+     "table": [
+      [
+       "Signup month",
+       "Users",
+       "Month 1",
+       "Month 2",
+       "Month 3"
+      ],
+      [
+       "January",
+       "1,000",
+       "62%",
+       "48%",
+       "44%"
+      ],
+      [
+       "February",
+       "1,200",
+       "60%",
+       "47%",
+       "43%"
+      ],
+      [
+       "March (AI onboarding launched)",
+       "1,100",
+       "71%",
+       "58%",
+       ""
+      ]
+     ],
+     "p": [
+      "March users stay noticeably longer from month 1. That suggests the new onboarding helps, but check that nothing else changed in March, such as a pricing promotion or a different marketing channel."
+     ]
+    },
+    {
+     "h": "Key SaaS formulas",
+     "table": [
+      [
+       "Metric",
+       "Formula"
+      ],
+      [
+       "Monthly recurring revenue (MRR)",
+       "Sum of monthly subscription revenue from active customers"
+      ],
+      [
+       "Churn rate",
+       "Customers lost in the period / customers at the start"
+      ],
+      [
+       "Net revenue retention",
+       "(Start MRR + expansion - contraction - churn) / start MRR"
+      ],
+      [
+       "Customer lifetime value",
+       "Average revenue per customer x gross margin / churn rate"
+      ],
+      [
+       "CAC payback",
+       "Customer acquisition cost / (monthly revenue per customer x gross margin)"
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Ask for cohort charts, not averages, when judging feature impact.",
-      "Pair retention with cost-to-serve for AI features."
+      "Pair retention with cost-to-serve for AI features.",
+      "When a metric moves, list every change that happened in the same period before crediting your feature."
      ]
     },
     {
@@ -34196,6 +34923,14 @@
     [
      "What does a flattening retention curve mean?",
      "A core of users keeps getting value."
+    ],
+    [
+     "What does a cohort table compare?",
+     "How groups of users who started at different times behave over the same time since starting."
+    ],
+    [
+     "What does net revenue retention above 100% mean?",
+     "Existing customers are spending more over time, even after churn."
     ]
    ],
    "deeper": [
@@ -34257,10 +34992,61 @@
      ]
     },
     {
+     "h": "Worked example: designing an AI email draft feature",
+     "table": [
+      [
+       "Moment",
+       "Design choice",
+       "Why"
+      ],
+      [
+       "Before",
+       "Button labelled 'Draft reply with AI'",
+       "Sets expectations that the result is a draft"
+      ],
+      [
+       "During",
+       "Show progress and allow cancel",
+       "Generation can take several seconds"
+      ],
+      [
+       "Result",
+       "Draft appears in the editor, not sent",
+       "User stays in control"
+      ],
+      [
+       "Trust",
+       "Show which emails and documents were used",
+       "Lets users check sources"
+      ],
+      [
+       "Feedback",
+       "Thumbs up or down with optional reason",
+       "Feeds evaluation and improvement"
+      ],
+      [
+       "Failure",
+       "Clear message and a 'write it myself' path",
+       "The task can always be completed"
+      ]
+     ]
+    },
+    {
+     "h": "Common AI UX mistakes",
+     "bullets": [
+      "Hiding that content is AI-generated.",
+      "Taking actions (sending, deleting, paying) without confirmation.",
+      "Showing confident answers with no way to check sources.",
+      "Making users re-type their whole request to fix a small error.",
+      "No way to turn the feature off or give feedback."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Add AI UX checks to design reviews, using the HAX guidelines as the checklist.",
-      "Track 'regenerate' and 'edit' rates; they show where users distrust output."
+      "Track 'regenerate' and 'edit' rates; they show where users distrust output.",
+      "Test AI features with users on bad outputs as well as good ones; how people recover from errors decides whether they trust the feature."
      ]
     },
     {
@@ -34322,6 +35108,14 @@
     [
      "Why show sources?",
      "So users can verify answers."
+    ],
+    [
+     "Why should an AI draft go into the editor rather than being sent?",
+     "So the user reviews it and stays in control of what is sent."
+    ],
+    [
+     "Name one way to help users calibrate trust in an AI answer.",
+     "Show sources, show confidence or limitations, or label it as AI-generated."
     ]
    ],
    "deeper": [
@@ -34389,10 +35183,63 @@
      ]
     },
     {
+     "h": "Worked example: estimating a RAG assistant",
+     "table": [
+      [
+       "Phase",
+       "Typical range",
+       "Exit gate"
+      ],
+      [
+       "Discovery and data audit",
+       "1 to 2 weeks",
+       "Sources, owners and access confirmed"
+      ],
+      [
+       "Prototype",
+       "2 to 3 weeks",
+       "Answers 50 sample questions; team agrees it is promising"
+      ],
+      [
+       "Eval set and baseline",
+       "1 to 2 weeks",
+       "Test set of 150 to 300 questions with expected answers"
+      ],
+      [
+       "Quality iterations",
+       "3 to 6 weeks",
+       "Eval score above target"
+      ],
+      [
+       "Hardening",
+       "2 to 4 weeks",
+       "Security review, monitoring, cost limits, fallback"
+      ],
+      [
+       "Pilot",
+       "2 to 4 weeks",
+       "Real users; adoption and satisfaction targets met"
+      ]
+     ],
+     "p": [
+      "The wide ranges are honest: quality iteration is the hardest phase to predict. Plan it as time-boxed rounds with a decision after each."
+     ]
+    },
+    {
+     "h": "How to present the estimate",
+     "bullets": [
+      "Give a range and say what drives it (data quality, accuracy target, integrations).",
+      "Show gates: leadership can stop or change direction at each one.",
+      "List assumptions, such as access to data by a certain date.",
+      "Commit firmly to the next phase only, and update the rest after each gate."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Put eval creation in the first sprint; it's the backbone of every later estimate.",
-      "Show a quality trend chart in status reports."
+      "Show a quality trend chart in status reports.",
+      "Keep a log of actual versus estimated time for each AI project; after two or three projects your ranges get much tighter."
      ]
     },
     {
@@ -34454,6 +35301,14 @@
     [
      "What decision follows the explore phase?",
      "Go or no-go."
+    ],
+    [
+     "Which phase of AI work is usually hardest to estimate?",
+     "Quality iteration: improving outputs until they meet the eval target."
+    ],
+    [
+     "Why present phases with gates?",
+     "So decision-makers can stop or change course before spending the whole budget."
     ]
    ],
    "deeper": [
@@ -34522,10 +35377,77 @@
      ]
     },
     {
+     "h": "Worked example: one PM's weekly AI routine",
+     "table": [
+      [
+       "When",
+       "Task",
+       "AI's role",
+       "Your role"
+      ],
+      [
+       "Monday",
+       "Plan the week",
+       "Summarise open actions from last week's notes",
+       "Choose the three priorities"
+      ],
+      [
+       "Daily",
+       "Meetings",
+       "Transcribe and list actions",
+       "Confirm decisions and owners"
+      ],
+      [
+       "Wednesday",
+       "Backlog refinement",
+       "Draft acceptance criteria and edge cases",
+       "Edit and agree with the team"
+      ],
+      [
+       "Thursday",
+       "Risk review",
+       "Scan board and threads for blockers",
+       "Decide what to escalate"
+      ],
+      [
+       "Friday",
+       "Status report",
+       "Draft from sources with links",
+       "Write the headline and asks"
+      ]
+     ]
+    },
+    {
+     "h": "Building a prompt library",
+     "steps": [
+      [
+       "Capture",
+       "Save any prompt that produced a good result, with an example input and output."
+      ],
+      [
+       "Name",
+       "Give it a clear name, such as 'PRD critic' or 'Status draft from Jira export'."
+      ],
+      [
+       "Template",
+       "Mark the parts to replace, such as the project name or audience."
+      ],
+      [
+       "Share",
+       "Keep it in a team space and invite improvements."
+      ],
+      [
+       "Review",
+       "Retire prompts that stop working well after model or tool changes."
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Spend 30 minutes a week improving one prompt or template; it compounds quickly.",
-      "Share your best prompts with the team to raise everyone's baseline."
+      "Share your best prompts with the team to raise everyone's baseline.",
+      "Review your AI routine every quarter; drop steps that stopped saving time and add new ones as tools improve."
      ]
     },
     {
@@ -34587,6 +35509,14 @@
     [
      "What should AI not own?",
      "Judgement, commitments and relationships."
+    ],
+    [
+     "In a status report workflow, which part should stay human?",
+     "The headline judgement, risks to escalate and the asks."
+    ],
+    [
+     "What should a saved prompt include besides the prompt text?",
+     "An example input and output, and the parts to replace."
     ]
    ],
    "deeper": [
@@ -34675,10 +35605,88 @@
      ]
     },
     {
+     "h": "Worked example: a RACI for an AI launch",
+     "table": [
+      [
+       "Activity",
+       "PM",
+       "Eng lead",
+       "Legal",
+       "Security",
+       "Support"
+      ],
+      [
+       "Define use case and success metrics",
+       "A",
+       "C",
+       "C",
+       "I",
+       "C"
+      ],
+      [
+       "Choose model and architecture",
+       "C",
+       "A",
+       "I",
+       "C",
+       "I"
+      ],
+      [
+       "Privacy and data review",
+       "R",
+       "C",
+       "A",
+       "C",
+       "I"
+      ],
+      [
+       "Eval and quality sign-off",
+       "A",
+       "R",
+       "I",
+       "I",
+       "C"
+      ],
+      [
+       "Launch communication",
+       "A",
+       "I",
+       "C",
+       "I",
+       "R"
+      ]
+     ],
+     "p": [
+      "R = does the work, A = accountable for the outcome (only one per row), C = consulted, I = informed."
+     ]
+    },
+    {
+     "h": "A conflict conversation in four steps",
+     "steps": [
+      [
+       "Separate people from the problem",
+       "'We both want a safe launch; let's look at the risk together.'"
+      ],
+      [
+       "Find the interests",
+       "Ask what each side is worried about, not just what they are asking for."
+      ],
+      [
+       "Create options",
+       "List at least three options, including partial or phased ones."
+      ],
+      [
+       "Agree criteria and decide",
+       "Use agreed criteria (risk, cost, time) and record who decided and why."
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Meet sceptical stakeholders one-to-one before group meetings.",
-      "Write decisions down with the RACI owner and share them the same day."
+      "Write decisions down with the RACI owner and share them the same day.",
+      "Before a difficult meeting, meet the most concerned stakeholder one-to-one; most conflicts soften once people feel heard."
      ]
     },
     {
@@ -34740,6 +35748,14 @@
     [
      "Name an AI-specific stakeholder concern.",
      "Jobs, risk, control or quality."
+    ],
+    [
+     "How many people should be Accountable for one activity?",
+     "Exactly one."
+    ],
+    [
+     "What is the difference between a position and an interest?",
+     "A position is what someone asks for; an interest is why they want it."
     ]
    ],
    "deeper": [
@@ -34814,10 +35830,54 @@
      ]
     },
     {
+     "h": "Worked example: a query you can read",
+     "p": [
+      "SELECT plan, COUNT(*) AS customers, AVG(monthly_spend) AS avg_spend FROM customers WHERE signup_date >= '2026-01-01' GROUP BY plan ORDER BY customers DESC;",
+      "In plain English: for customers who signed up this year, count how many are on each plan and their average monthly spend, then list the plans from most to fewest customers."
+     ],
+     "table": [
+      [
+       "Part",
+       "Meaning"
+      ],
+      [
+       "SELECT",
+       "Which columns or calculations to show"
+      ],
+      [
+       "FROM customers",
+       "Which table to read"
+      ],
+      [
+       "WHERE",
+       "Which rows to keep"
+      ],
+      [
+       "GROUP BY plan",
+       "Make one row per plan"
+      ],
+      [
+       "ORDER BY ... DESC",
+       "Sort, largest first"
+      ]
+     ]
+    },
+    {
+     "h": "Checking AI-written SQL",
+     "bullets": [
+      "Ask the AI to explain the query line by line in plain English.",
+      "Check the row count makes sense (for example, total customers matches a known figure).",
+      "Watch joins: a wrong join can double-count rows.",
+      "Check date filters and time zones.",
+      "Run on a small date range first; ask an analyst to review anything that drives a decision."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Ask for read-only access to a replica or analytics warehouse, never production.",
-      "Keep a shared file of trusted queries with explanations."
+      "Keep a shared file of trusted queries with explanations.",
+      "Keep a small set of known numbers (total customers, last month's revenue) to sanity-check any query result."
      ]
     },
     {
@@ -34879,6 +35939,14 @@
     [
      "Why might a query be slow?",
      "Missing index, too much data, functions on indexed columns, unfiltered joins."
+    ],
+    [
+     "What does GROUP BY do?",
+     "Combines rows into one row per value, such as one row per plan."
+    ],
+    [
+     "Name one common mistake in AI-written SQL.",
+     "A wrong join that double-counts, or a wrong date filter."
     ]
    ],
    "deeper": [
@@ -34961,10 +36029,65 @@
      ]
     },
     {
+     "h": "Worked example: explaining an API to a sales director",
+     "steps": [
+      [
+       "Start with what they care about",
+       "'This is how our app will pull delivery dates from the shipping company automatically.'"
+      ],
+      [
+       "Use an analogy",
+       "'An API is like a restaurant menu and waiter: you order from a fixed list, and the kitchen sends back exactly what you asked for.'"
+      ],
+      [
+       "Say what it means for them",
+       "'Customers will see accurate delivery dates, so fewer will call to ask.'"
+      ],
+      [
+       "Name the limit",
+       "'If the shipping company's system is down, we fall back to estimated dates.'"
+      ],
+      [
+       "Check understanding",
+       "'How would you explain this to a customer who asks?'"
+      ]
+     ]
+    },
+    {
+     "h": "Explaining AI terms simply",
+     "table": [
+      [
+       "Term",
+       "Plain-English version"
+      ],
+      [
+       "Large language model",
+       "Software trained on huge amounts of text that predicts useful next words"
+      ],
+      [
+       "Hallucination",
+       "When the AI states something wrong with confidence"
+      ],
+      [
+       "RAG",
+       "Giving the AI the right documents to read before it answers"
+      ],
+      [
+       "Fine-tuning",
+       "Extra training on examples so it behaves a particular way"
+      ],
+      [
+       "Evaluation",
+       "Testing the AI on a fixed set of questions with known good answers"
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Keep a personal file of analogies that worked; reuse them.",
-      "Ask Claude to explain a concept 'to a CFO in 80 words', then edit in your voice."
+      "Ask Claude to explain a concept 'to a CFO in 80 words', then edit in your voice.",
+      "Test your explanation on someone outside tech; if they can repeat it back, it works."
      ]
     },
     {
@@ -35026,6 +36149,14 @@
     [
      "How do you check understanding?",
      "Ask them to summarise it back."
+    ],
+    [
+     "What should come first when explaining technology to a business leader?",
+     "What it means for them or the outcome they care about."
+    ],
+    [
+     "Give a plain-English definition of RAG.",
+     "Giving the AI the right documents to read before it answers."
     ]
    ],
    "deeper": [
@@ -35081,10 +36212,38 @@
      ]
     },
     {
+     "h": "Worked example: rewriting a status update",
+     "table": [
+      [
+       "Before",
+       "After (BLUF)"
+      ],
+      [
+       "This week the team worked on the payment integration and had several discussions with the vendor about the API changes, and there were some issues with the test environment which...",
+       "Bottom line: payments launch moves from 3 to 17 March. Cause: the vendor changed their API last week. Ask: approve two extra contractor weeks (cost in appendix) to protect the new date. Everything else is on track."
+      ]
+     ],
+     "p": [
+      "The rewrite gives the decision-maker the outcome, the reason and the ask in three sentences. Details go below or in an attachment."
+     ]
+    },
+    {
+     "h": "A one-page executive update template",
+     "bullets": [
+      "Headline: one sentence on overall status and the most important change.",
+      "Status: green, amber or red, with one line on why.",
+      "Progress: three bullets on what was achieved, in outcomes rather than activities.",
+      "Risks: top two, each with impact, likelihood and owner.",
+      "Decisions or help needed: specific, with a deadline.",
+      "Next milestones: dates for the next two or three."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Ask Claude to 'rewrite this as BLUF in under 120 words' before sending updates.",
-      "Keep the same template weekly so leaders know where to look."
+      "Keep the same template weekly so leaders know where to look.",
+      "Before sending, delete your first paragraph and see if the update still works; often it reads better."
      ]
     },
     {
@@ -35146,6 +36305,14 @@
     [
      "Give one tip for concise speaking.",
      "Lead with the answer, use numbers, stop and invite questions."
+    ],
+    [
+     "What does BLUF stand for?",
+     "Bottom line up front."
+    ],
+    [
+     "What three things should the first lines of an executive update contain?",
+     "The outcome or status, the reason for any change, and what you need."
     ]
    ],
    "deeper": [
@@ -35207,10 +36374,47 @@
      ]
     },
     {
+     "h": "Worked example: escalating a blocked dependency",
+     "p": [
+      "Subject: Decision needed by Thursday: data platform access is blocking the AI pilot.",
+      "Bottom line: the pilot will slip two weeks unless the data team grants read access to the support database by Thursday. Impact: launch moves from 1 to 15 April and the support cost savings start later. Tried so far: ticket raised on 3 March, two follow-ups, meeting with the data team lead, who needs approval from their director. Options: (1) director approves read-only access this week, (2) we use last month's exported data for the pilot, which lowers accuracy, (3) accept the slip. Recommendation: option 1. Ask: can you raise this with the data director today?"
+     ]
+    },
+    {
+     "h": "Escalation do's and don'ts",
+     "table": [
+      [
+       "Do",
+       "Don't"
+      ],
+      [
+       "Escalate early, while options still exist",
+       "Wait until the deadline has passed"
+      ],
+      [
+       "Bring facts, options and a recommendation",
+       "Bring only the problem"
+      ],
+      [
+       "Tell the other team you are escalating",
+       "Go over someone's head without warning"
+      ],
+      [
+       "Describe the issue, not the person",
+       "Blame individuals"
+      ],
+      [
+       "Follow up with the outcome",
+       "Leave the escalation open"
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Pre-wire big bad news with key stakeholders one-to-one before group meetings.",
-      "Never present a problem without at least one option."
+      "Never present a problem without at least one option.",
+      "Frame escalations as 'we need a decision', not 'they are blocking us'; it gets faster, less defensive responses."
      ]
     },
     {
@@ -35272,6 +36476,14 @@
     [
      "What should follow a verbal delay message?",
      "Written detail."
+    ],
+    [
+     "What should every escalation include besides the problem?",
+     "Impact, what has been tried, options and a recommendation with a clear ask."
+    ],
+    [
+     "Why tell the other team before escalating?",
+     "It keeps trust and gives them a final chance to resolve it."
     ]
    ],
    "deeper": [
@@ -35313,10 +36525,62 @@
      ]
     },
     {
+     "h": "Worked example: incident timeline",
+     "table": [
+      [
+       "Time",
+       "Event"
+      ],
+      [
+       "14:02",
+       "Error rate on checkout rises from 0.5% to 18%"
+      ],
+      [
+       "14:06",
+       "Alert fires; on-call engineer starts investigating"
+      ],
+      [
+       "14:12",
+       "Incident declared; incident commander and comms lead assigned"
+      ],
+      [
+       "14:15",
+       "First customer status update posted"
+      ],
+      [
+       "14:24",
+       "Cause linked to the 13:55 deployment; rollback started"
+      ],
+      [
+       "14:31",
+       "Rollback complete; error rate back to normal"
+      ],
+      [
+       "14:45",
+       "Incident resolved; post-mortem scheduled for Thursday"
+      ]
+     ],
+     "p": [
+      "A clear timeline makes the post-mortem factual. Key measures here: 4 minutes to detect, 22 minutes from detection to recovery."
+     ]
+    },
+    {
+     "h": "Post-mortem document outline",
+     "bullets": [
+      "Summary: what happened, impact (users, revenue, duration) and current status.",
+      "Timeline: detection, response, recovery.",
+      "Root causes and contributing factors, without blame.",
+      "What went well, so it is kept.",
+      "Action items, each with an owner and a due date.",
+      "Lessons for other teams."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Give the next update time even when nothing has changed; silence breeds rumours.",
-      "Track post-mortem actions in the same backlog as feature work."
+      "Track post-mortem actions in the same backlog as feature work.",
+      "Track post-mortem action items like any other project work; unfinished actions are why the same incidents repeat."
      ]
     },
     {
@@ -35378,6 +36642,14 @@
     [
      "What makes post-mortems useful?",
      "Owned, dated actions that get completed."
+    ],
+    [
+     "What does a blameless post-mortem focus on?",
+     "Systems and processes that allowed the failure, not individual fault."
+    ],
+    [
+     "Name two time measures worth recording in an incident.",
+     "Time to detect and time to recover (or resolve)."
     ]
    ],
    "deeper": [
@@ -35429,10 +36701,48 @@
      ]
     },
     {
+     "h": "Worked example: making the case in numbers",
+     "table": [
+      [
+       "Symptom",
+       "Evidence",
+       "Business effect"
+      ],
+      [
+       "Slow releases",
+       "Each release needs 3 days of manual testing",
+       "Features reach customers 2 weeks later than competitors"
+      ],
+      [
+       "Frequent incidents",
+       "6 incidents last quarter in the old billing module",
+       "About 40 hours of engineering time and customer credits"
+      ],
+      [
+       "Slow onboarding",
+       "New engineers take 8 weeks to be productive in the old code",
+       "Hiring costs more and delivers later"
+      ]
+     ],
+     "p": [
+      "Proposal: spend 20% of capacity for two quarters on the billing module and test automation. Expected result: release testing down to half a day and billing incidents halved, which you then track and report."
+     ]
+    },
+    {
+     "h": "Ways to fund debt work",
+     "bullets": [
+      "A fixed share of every sprint (often 15 to 20%).",
+      "Bundle the fix with a feature that touches the same code.",
+      "A dedicated short project with a clear before and after metric.",
+      "Fix-it weeks between major releases."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Track a 'debt interest' metric, such as hours lost per sprint, to make it visible.",
-      "Bundle debt paydown with feature work in the same area."
+      "Bundle debt paydown with feature work in the same area.",
+      "Report the before and after numbers when debt work finishes; it makes the next request much easier to approve."
      ]
     },
     {
@@ -35494,6 +36804,14 @@
     [
      "What's a typical capacity allocation?",
      "Around 15 to 20% of each sprint."
+    ],
+    [
+     "How do you make technical debt meaningful to executives?",
+     "Translate it into business effects such as slower releases, incidents and cost."
+    ],
+    [
+     "Name one common way to fund technical debt work.",
+     "A fixed share of sprint capacity, bundling with features, a dedicated project or fix-it weeks."
     ]
    ],
    "deeper": [
@@ -35551,10 +36869,61 @@
      ]
     },
     {
+     "h": "Worked example: a five-slide AI pitch",
+     "table": [
+      [
+       "Slide",
+       "Content"
+      ],
+      [
+       "1. The problem",
+       "Support handles 30,000 order-status questions a month; customers wait on average 6 hours"
+      ],
+      [
+       "2. The proposal",
+       "An assistant that answers order questions from live order data, with handover to an agent"
+      ],
+      [
+       "3. Evidence",
+       "Pilot with 2,000 conversations: 72% resolved without an agent; satisfaction unchanged"
+      ],
+      [
+       "4. Cost and return",
+       "Build and running costs against agent hours saved; payback period"
+      ],
+      [
+       "5. Risks and ask",
+       "Accuracy safeguards, privacy review done, budget and two engineers for one quarter"
+      ]
+     ]
+    },
+    {
+     "h": "Handling 'what if it gets things wrong?'",
+     "steps": [
+      [
+       "Acknowledge",
+       "'It will sometimes be wrong; no system is perfect, including people.'"
+      ],
+      [
+       "Show the measurement",
+       "'We test against 500 real questions before every release, and our target is 95% correct.'"
+      ],
+      [
+       "Show the safeguards",
+       "'It only reads order data, never changes it, and hands over to an agent when unsure.'"
+      ],
+      [
+       "Show monitoring",
+       "'We review flagged answers weekly and can switch it off in minutes.'"
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Lead with the conservative case; beating it later builds trust.",
-      "Rehearse answers to the five hardest questions."
+      "Rehearse answers to the five hardest questions.",
+      "Pre-wire the pitch: share it one-to-one with the finance and risk stakeholders before the big meeting."
      ]
     },
     {
@@ -35616,6 +36985,14 @@
     [
      "What should end a pitch?",
      "A clear ask and next milestone."
+    ],
+    [
+     "What evidence makes an AI pitch more credible than a demo alone?",
+     "Pilot results with real users and measured outcomes."
+    ],
+    [
+     "What are three parts of a good answer to 'what if it is wrong'?",
+     "How you measure accuracy, the safeguards, and the monitoring or off switch."
     ]
    ],
    "deeper": [
@@ -35677,10 +37054,57 @@
      ]
     },
     {
+     "h": "Worked example: a dependency agreement",
+     "table": [
+      [
+       "Field",
+       "Example"
+      ],
+      [
+       "What",
+       "Order status API returning status and delivery date for an order ID"
+      ],
+      [
+       "Provider",
+       "Orders team (owner: named lead)"
+      ],
+      [
+       "Consumer",
+       "AI support assistant team"
+      ],
+      [
+       "Date needed",
+       "In staging by 10 March, production by 24 March"
+      ],
+      [
+       "Quality",
+       "Responds within 300 ms for 99% of calls; documented error codes"
+      ],
+      [
+       "Check-ins",
+       "Weekly 15-minute sync until production"
+      ],
+      [
+       "If it slips",
+       "Notify within one working day; fallback is a nightly data export"
+      ]
+     ]
+    },
+    {
+     "h": "Keeping alignment across teams",
+     "bullets": [
+      "Keep one shared dependency board visible to every team involved.",
+      "Review it in a short weekly meeting with named owners.",
+      "Agree interfaces (API contracts, data formats) early and in writing.",
+      "Celebrate when another team delivers for you; it builds goodwill for the next request."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Review only red and amber dependencies in syncs to keep them short.",
-      "Ask 'can we design this dependency away?' during planning."
+      "Ask 'can we design this dependency away?' during planning.",
+      "Ask the providing team what they need from you too; dependencies run both ways more often than plans show."
      ]
     },
     {
@@ -35742,6 +37166,14 @@
     [
      "First step when a dependency slips?",
      "Raise it early with the owner."
+    ],
+    [
+     "Name four fields in a good dependency agreement.",
+     "What, provider, consumer, date, quality, check-ins, what happens if it slips (any four)."
+    ],
+    [
+     "Why agree interfaces early?",
+     "Teams can build in parallel and avoid late surprises."
     ]
    ],
    "deeper": [
@@ -35795,10 +37227,57 @@
      ]
     },
     {
+     "h": "Worked example: tightening a requirement",
+     "table": [
+      [
+       "Version",
+       "Text"
+      ],
+      [
+       "Vague",
+       "The assistant should give good answers about refunds."
+      ],
+      [
+       "Clearer",
+       "The assistant answers refund questions using the current refund policy page."
+      ],
+      [
+       "Ready to build",
+       "For questions about refund eligibility, timing or method, the assistant answers only from the refund policy page, cites the section used, and hands over to an agent if the order is over 90 days old or above 500 in value. Target: 95% correct on the 120-question refund test set."
+      ]
+     ]
+    },
+    {
+     "h": "Standup formats compared",
+     "table": [
+      [
+       "Format",
+       "How it works",
+       "Good for"
+      ],
+      [
+       "Classic three questions",
+       "Yesterday, today, blockers per person",
+       "New teams"
+      ],
+      [
+       "Walk the board",
+       "Go through work items right to left, focusing on what is stuck",
+       "Teams with many parallel tasks"
+      ],
+      [
+       "Async written",
+       "Short written updates in chat; meet only for blockers",
+       "Distributed teams across time zones"
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Ask an engineer to read your requirement back; gaps show immediately.",
-      "End standup on time even if topics remain; move them to the parking lot."
+      "End standup on time even if topics remain; move them to the parking lot.",
+      "End standups at 15 minutes and move problem-solving to a follow-up with only the people needed."
      ]
     },
     {
@@ -35860,6 +37339,14 @@
     [
      "Where should problem-solving happen?",
      "In a follow-up with only those needed."
+    ],
+    [
+     "What turns a vague requirement into a buildable one?",
+     "Specific scope, sources, rules for edge cases and a measurable target."
+    ],
+    [
+     "What does 'walk the board' focus a standup on?",
+     "Work items, especially what is stuck, rather than each person's activity."
     ]
    ],
    "deeper": [
@@ -35918,10 +37405,65 @@
      ]
     },
     {
+     "h": "Worked example: a first one-to-one with a tech lead",
+     "steps": [
+      [
+       "Purpose",
+       "'I want to understand how you like to work and how I can be most useful.'"
+      ],
+      [
+       "Their view",
+       "Ask about the biggest technical risks and what slows the team down."
+      ],
+      [
+       "History",
+       "Ask what worked and did not work with previous PMs."
+      ],
+      [
+       "Working agreement",
+       "Agree how decisions are made, how you will raise concerns and how often you meet."
+      ],
+      [
+       "Follow up",
+       "Act on one thing they mentioned within a week."
+      ]
+     ]
+    },
+    {
+     "h": "Behaviours that build or lose trust",
+     "table": [
+      [
+       "Builds trust",
+       "Loses trust"
+      ],
+      [
+       "Protects the team from shifting priorities",
+       "Agrees to new scope without asking"
+      ],
+      [
+       "Admits what you do not know and asks good questions",
+       "Pretends to understand technical detail"
+      ],
+      [
+       "Brings clear problems and priorities",
+       "Brings solutions dictated to engineers"
+      ],
+      [
+       "Gives credit publicly",
+       "Takes credit for the team's work"
+      ],
+      [
+       "Keeps commitments, however small",
+       "Forgets follow-ups"
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Batch your questions to engineers instead of interrupting throughout the day.",
-      "Credit engineers publicly for wins."
+      "Credit engineers publicly for wins.",
+      "Learn enough to ask a good second question; that is what signals real understanding to engineers."
      ]
     },
     {
@@ -35983,6 +37525,14 @@
     [
      "Why protect engineers' focus?",
      "Deep work needs uninterrupted time."
+    ],
+    [
+     "What is one good question to ask a tech lead early on?",
+     "What are the biggest technical risks, or what slows the team down?"
+    ],
+    [
+     "Name a behaviour that quickly loses engineering trust.",
+     "Agreeing to new scope without asking, or pretending to understand technical detail."
     ]
    ],
    "deeper": [
@@ -36055,10 +37605,54 @@
      ]
     },
     {
+     "h": "Worked example: a 10-minute capstone presentation",
+     "table": [
+      [
+       "Minute",
+       "Content"
+      ],
+      [
+       "0 to 1",
+       "The problem and who has it, with one data point"
+      ],
+      [
+       "1 to 3",
+       "Your solution and a simple architecture diagram"
+      ],
+      [
+       "3 to 6",
+       "Live demo of the main path, with a recorded backup"
+      ],
+      [
+       "6 to 8",
+       "How you measured quality: eval set, results and one failure you fixed"
+      ],
+      [
+       "8 to 9",
+       "Cost, risks and what you would do next"
+      ],
+      [
+       "9 to 10",
+       "Summary and questions"
+      ]
+     ]
+    },
+    {
+     "h": "Handling questions",
+     "bullets": [
+      "Pause, repeat the question briefly, then answer the part you can.",
+      "If you do not know, say so and offer to follow up with a specific date.",
+      "Bring the answer back to the problem and the evidence.",
+      "Prepare answers to the three hardest questions in advance.",
+      "Have backup slides with detail you can show if asked."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Rehearse with someone non-technical; if they follow, leaders will.",
-      "End with one clear takeaway slide."
+      "End with one clear takeaway slide.",
+      "Rehearse out loud with a timer at least twice; the first rehearsal is usually 30% too long."
      ]
     },
     {
@@ -36120,6 +37714,14 @@
     [
      "What if you don't know an answer?",
      "Say so and commit to follow up."
+    ],
+    [
+     "Why keep a recorded backup of a demo?",
+     "Live demos can fail; the backup lets you continue smoothly."
+    ],
+    [
+     "What should you do if you do not know an answer?",
+     "Say so honestly and commit to a follow-up by a specific date."
     ]
    ],
    "deeper": [
@@ -36191,10 +37793,37 @@
      ]
     },
     {
+     "h": "Example input and output",
+     "table": [
+      [
+       "Input requirement",
+       "Analyzer output"
+      ],
+      [
+       "'Users should be able to export reports quickly.'",
+       "Ambiguous: 'quickly' has no target; export format not stated; which users? Suggested rewrite: 'Admins can export any report as CSV or PDF within 10 seconds for up to 50,000 rows.' Missing: permissions, large-file behaviour, error handling."
+      ]
+     ],
+     "p": [
+      "Aim for this shape: problems found, a suggested rewrite, and questions to ask. Ten real requirements from past projects make a good test set."
+     ]
+    },
+    {
+     "h": "How to judge your POC",
+     "bullets": [
+      "Collect 10 to 20 real requirements, including some you know were problematic.",
+      "Write down what a senior PM would flag for each, before running the tool.",
+      "Run the analyzer and score: issues found, false alarms, usefulness of rewrites.",
+      "Change the prompt, re-run the same set, and compare scores.",
+      "Record the before and after numbers in your write-up."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Use the tool on your own next PRD; real use exposes gaps no test set does.",
-      "Show one failure case in your demo; it proves you evaluated honestly."
+      "Show one failure case in your demo; it proves you evaluated honestly.",
+      "Keep every prompt version with its score; showing how you improved it is the most interesting part of the case study."
      ]
     },
     {
@@ -36256,6 +37885,14 @@
     [
      "Where should you start building?",
      "A Claude Project with a strong prompt, then an app if needed."
+    ],
+    [
+     "Why write down expected findings before running the tool?",
+     "So you can score the output fairly rather than judging it after the fact."
+    ],
+    [
+     "What three things should good analyzer output contain?",
+     "Problems found, a suggested rewrite and questions to ask."
     ]
    ],
    "deeper": [
@@ -36296,10 +37933,47 @@
      ]
     },
     {
+     "h": "Example: a structured output schema",
+     "p": [
+      "For a meeting-notes extractor, ask the model to return JSON with fixed fields: decisions (list of text), actions (list of objects with owner, task and due date), risks (list of text) and open_questions (list of text).",
+      "Fixed fields make the output easy to show in a table, save to a database or send to a task tool, and easy to check automatically."
+     ]
+    },
+    {
+     "h": "Common problems and fixes",
+     "table": [
+      [
+       "Problem",
+       "Fix"
+      ],
+      [
+       "Output is not valid JSON",
+       "Use the provider's structured output or tool-use feature, and validate before saving"
+      ],
+      [
+       "Fields are missing",
+       "Mark them required in the schema and test with short or messy inputs"
+      ],
+      [
+       "Invented owners or dates",
+       "Instruct the model to leave a field empty when the source does not say, and test for it"
+      ],
+      [
+       "Costs grow with long inputs",
+       "Track tokens per call and trim inputs to what is needed"
+      ],
+      [
+       "API key exposed",
+       "Keep keys in environment variables, never in code or screenshots"
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Run your app on messy real inputs, not just clean samples.",
-      "Set a spending limit on your API account before you start."
+      "Set a spending limit on your API account before you start.",
+      "Include a deliberately messy test input in your demo; showing graceful handling impresses more than a perfect happy path."
      ]
     },
     {
@@ -36361,6 +38035,14 @@
     [
      "What should happen on a rate-limit error?",
      "Wait and retry with backoff."
+    ],
+    [
+     "Why use a fixed schema for model output?",
+     "It makes output predictable, easy to validate and easy to use in other systems."
+    ],
+    [
+     "Where should API keys be stored?",
+     "In environment variables or a secrets store, never in code."
     ]
    ],
    "deeper": [
@@ -36428,10 +38110,59 @@
      ]
     },
     {
+     "h": "Example comparison results",
+     "table": [
+      [
+       "Measure",
+       "Local model (Ollama)",
+       "Hosted model API"
+      ],
+      [
+       "Setup time",
+       "About an hour, plus model download",
+       "Minutes, with an API key"
+      ],
+      [
+       "Speed on a laptop",
+       "Slower, depends on hardware",
+       "Usually faster"
+      ],
+      [
+       "Quality on your 20 test prompts",
+       "Score it yourself",
+       "Score it yourself"
+      ],
+      [
+       "Cost",
+       "Free per call; uses your hardware",
+       "Per-token charges"
+      ],
+      [
+       "Privacy",
+       "Data stays on the machine",
+       "Data sent to the provider under their terms"
+      ]
+     ],
+     "p": [
+      "Fill this in with your own measured numbers. The point of the project is the evidence, not the conclusion."
+     ]
+    },
+    {
+     "h": "When local models make sense",
+     "bullets": [
+      "Data that must not leave the device or network.",
+      "Offline or unreliable connectivity.",
+      "Very high volumes of simple tasks where per-token cost adds up.",
+      "Experiments and learning without spending money.",
+      "Less suitable when you need the strongest reasoning or long context."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Pick the smallest model that's good enough; bigger is slower.",
-      "Note your laptop's specs in the write-up so results make sense to others."
+      "Note your laptop's specs in the write-up so results make sense to others.",
+      "Note your laptop's specs in the write-up; local model speed depends heavily on hardware."
      ]
     },
     {
@@ -36493,6 +38224,14 @@
     [
      "What does quantisation do?",
      "Shrinks a model to run on smaller hardware, with some quality loss."
+    ],
+    [
+     "Name two reasons to choose a local model.",
+     "Privacy, offline use, cost at high volume, or free experimentation (any two)."
+    ],
+    [
+     "What is the main output of this project?",
+     "A measured comparison you can explain, not just a working app."
     ]
    ],
    "deeper": [
@@ -36606,10 +38345,64 @@
      ]
     },
     {
+     "h": "Example benchmark results",
+     "table": [
+      [
+       "Version",
+       "Correct answers (of 50)",
+       "Answers with correct citation",
+       "Avg response time"
+      ],
+      [
+       "Baseline: no retrieval",
+       "21",
+       "0",
+       "1.8 s"
+      ],
+      [
+       "RAG v1: 500-word chunks, top 3",
+       "36",
+       "30",
+       "2.6 s"
+      ],
+      [
+       "RAG v2: 300-word chunks, top 5, rewritten queries",
+       "43",
+       "40",
+       "3.1 s"
+      ]
+     ],
+     "p": [
+      "Numbers here are illustrative; record your own. A table like this shows reviewers exactly what each change bought and what it cost in speed."
+     ]
+    },
+    {
+     "h": "Debugging wrong answers",
+     "steps": [
+      [
+       "Check retrieval first",
+       "Were the right passages retrieved? If not, fix chunking, search or the question wording."
+      ],
+      [
+       "Then check generation",
+       "If the right passages were there, improve instructions, for example 'answer only from the sources'."
+      ],
+      [
+       "Check the source",
+       "Sometimes the document itself is outdated or contradicts another."
+      ],
+      [
+       "Add to the test set",
+       "Every bug you find becomes a new benchmark question."
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Most RAG failures are retrieval failures; measure retrieval before tuning prompts.",
-      "Keep your test questions fixed across variants."
+      "Keep your test questions fixed across variants.",
+      "Keep the benchmark questions fixed between versions; changing questions and system together hides what helped."
      ]
     },
     {
@@ -36671,6 +38464,14 @@
     [
      "Why benchmark variants?",
      "To know which change actually improves quality."
+    ],
+    [
+     "When an answer is wrong, what should you check first?",
+     "Whether the right passages were retrieved."
+    ],
+    [
+     "Why include a no-retrieval baseline?",
+     "It shows how much RAG actually improves results."
     ]
    ],
    "deeper": [
@@ -36722,10 +38523,53 @@
      ]
     },
     {
+     "h": "Example: tools for a project-tracker MCP server",
+     "table": [
+      [
+       "Tool",
+       "Inputs",
+       "Returns",
+       "Safety"
+      ],
+      [
+       "list_open_risks",
+       "project name",
+       "Risks with owner, impact and due date",
+       "Read-only"
+      ],
+      [
+       "get_milestones",
+       "project name",
+       "Milestones with dates and status",
+       "Read-only"
+      ],
+      [
+       "add_risk",
+       "project, description, owner, impact",
+       "The new risk's ID",
+       "Ask the user to confirm before writing"
+      ]
+     ],
+     "p": [
+      "Start with read-only tools. Add write tools only with clear names, validation and user confirmation."
+     ]
+    },
+    {
+     "h": "Testing your server",
+     "bullets": [
+      "Use the MCP Inspector to call each tool directly before connecting an AI client.",
+      "Try bad inputs: unknown project, empty fields, very long text.",
+      "Connect it to Claude and ask natural questions; check it picks the right tool.",
+      "Check the tool descriptions: unclear descriptions are the most common reason the model picks the wrong tool.",
+      "Log every call so you can see what the model actually did."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Start read-only; add write tools only after testing.",
-      "Watch the tool call logs; they show how the model interprets your descriptions."
+      "Watch the tool call logs; they show how the model interprets your descriptions.",
+      "Record a short screen capture of Claude using your server; it is the most convincing artefact for your portfolio."
      ]
     },
     {
@@ -36787,6 +38631,14 @@
     [
      "What should the security note cover?",
      "What the server can and can't access."
+    ],
+    [
+     "Why start with read-only tools?",
+     "They cannot change data, so mistakes are low-risk while you learn."
+    ],
+    [
+     "What is a common reason a model picks the wrong tool?",
+     "Unclear or overlapping tool names and descriptions."
     ]
    ],
    "deeper": [
@@ -36887,10 +38739,62 @@
      ]
     },
     {
+     "h": "Example task for all three builds",
+     "p": [
+      "Task: 'Every Monday, collect last week's closed tickets, group them by theme, draft a summary for the product team and post it to a channel.'",
+      "Build it as a fixed automation workflow (for example in n8n), as a single agent with tools, and as two or more agents (a researcher and a writer). Use the same input data each time."
+     ]
+    },
+    {
+     "h": "Example comparison",
+     "table": [
+      [
+       "Measure",
+       "Automation workflow",
+       "Single agent",
+       "Multi-agent"
+      ],
+      [
+       "Build time",
+       "Shortest",
+       "Medium",
+       "Longest"
+      ],
+      [
+       "Predictability",
+       "Highest",
+       "Medium",
+       "Lowest"
+      ],
+      [
+       "Handles unusual weeks",
+       "Poorly",
+       "Well",
+       "Well"
+      ],
+      [
+       "Cost per run",
+       "Lowest",
+       "Medium",
+       "Highest"
+      ],
+      [
+       "Debugging",
+       "Easy",
+       "Medium",
+       "Hard"
+      ]
+     ],
+     "p": [
+      "Fill in your own observations. Many teams conclude a workflow with one AI step is enough, which is a valuable finding."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Expect the simplest version to win more often than you'd think.",
-      "Log every run; variability between runs is a key finding."
+      "Log every run; variability between runs is a key finding.",
+      "State your recommendation clearly at the end of the write-up; reviewers want to see judgement, not just three builds."
      ]
     },
     {
@@ -36952,6 +38856,14 @@
     [
      "When might multi-agent help?",
      "When distinct roles or checks clearly improve quality."
+    ],
+    [
+     "Why use the same input data for all three builds?",
+     "So differences come from the design, not the data."
+    ],
+    [
+     "When is a fixed workflow usually the best choice?",
+     "When the steps are known and predictable, and reliability and cost matter most."
     ]
    ],
    "deeper": [
@@ -37045,10 +38957,76 @@
      ]
     },
     {
+     "h": "Example: risk register entries",
+     "table": [
+      [
+       "Risk",
+       "Likelihood",
+       "Impact",
+       "Mitigation",
+       "Owner"
+      ],
+      [
+       "Wrong answers about refunds",
+       "Medium",
+       "High",
+       "Eval set gate before release; human handover when unsure",
+       "PM"
+      ],
+      [
+       "Prompt injection through customer messages",
+       "Medium",
+       "High",
+       "Input filtering; assistant cannot take actions",
+       "Security lead"
+      ],
+      [
+       "Cost spike from heavy use",
+       "Low",
+       "Medium",
+       "Daily cost alert and per-user limits",
+       "Eng lead"
+      ],
+      [
+       "Personal data in logs",
+       "Medium",
+       "High",
+       "Redact before logging; 30-day retention",
+       "Data owner"
+      ]
+     ]
+    },
+    {
+     "h": "Launch runbook outline",
+     "steps": [
+      [
+       "Before",
+       "Eval scores above target, security review passed, dashboards and alerts live, support briefed."
+      ],
+      [
+       "Launch",
+       "Enable for 5% of users behind a feature flag; watch errors, cost and feedback for 48 hours."
+      ],
+      [
+       "Expand",
+       "Increase to 25%, then 100%, if metrics hold."
+      ],
+      [
+       "Rollback",
+       "Flag off within minutes; communicate to support and users."
+      ],
+      [
+       "After",
+       "Weekly review of flagged answers and costs for the first month."
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Reuse this package as a template at work; teams value a ready-made checklist.",
-      "Get one honest technical reviewer; their questions are the real exam."
+      "Get one honest technical reviewer; their questions are the real exam.",
+      "Ask someone outside the project to read your runbook and find gaps; they will spot assumptions you no longer see."
      ]
     },
     {
@@ -37110,6 +39088,14 @@
     [
      "Why present to a mock board?",
      "To practise defending readiness decisions."
+    ],
+    [
+     "What five columns make a useful risk register?",
+     "Risk, likelihood, impact, mitigation and owner."
+    ],
+    [
+     "Why launch to a small percentage first?",
+     "To catch problems with limited impact and roll back quickly."
     ]
    ],
    "deeper": [
@@ -37193,10 +39179,47 @@
      ]
     },
     {
+     "h": "Example 60-second introduction",
+     "p": [
+      "'I'm a program manager with 11 years of experience delivering software projects across teams of up to 40 people. Recently I've focused on AI: I've built a RAG assistant with citations, an MCP server for project data, and an evaluation set to measure quality. What I enjoy most is turning ambiguous goals into plans engineers trust, and I'm looking for a TPM role where I can lead AI products from pilot to production.'"
+     ],
+     "bullets": [
+      "Past: experience and scale.",
+      "Present: what you are doing now, with proof.",
+      "Future: what you want and why this role."
+     ]
+    },
+    {
+     "h": "Example STAR story",
+     "table": [
+      [
+       "Part",
+       "Example"
+      ],
+      [
+       "Situation",
+       "A payments migration was three weeks behind with a fixed regulatory deadline"
+      ],
+      [
+       "Task",
+       "I was asked to recover the plan without adding headcount"
+      ],
+      [
+       "Action",
+       "Mapped dependencies, cut two non-essential features with the sponsor, set up daily cross-team checkpoints and an escalation path"
+      ],
+      [
+       "Result",
+       "Launched two days before the deadline with no critical incidents; the checkpoint format was adopted by two other programmes"
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Practise out loud; written stories always run long when spoken.",
-      "Ask Claude to play a tough interviewer and probe your stories."
+      "Ask Claude to play a tough interviewer and probe your stories.",
+      "Record yourself giving your introduction and listen back; most people cut 20% after hearing it once."
      ]
     },
     {
@@ -37258,6 +39281,14 @@
     [
      "What are the four parts of the introduction?",
      "Present, past highlight, pivot, future."
+    ],
+    [
+     "What three parts make a good self-introduction?",
+     "Past experience, present focus with proof, and future goal."
+    ],
+    [
+     "In STAR, which part should be the longest?",
+     "Action, showing what you personally did."
     ]
    ],
    "deeper": [
@@ -37332,10 +39363,47 @@
      ]
     },
     {
+     "h": "Example scenario answer",
+     "p": [
+      "Question: 'Your AI feature's accuracy dropped after a model update. What do you do?'",
+      "Strong answer outline: confirm the drop with the eval set and production feedback; check what changed (model version, prompt, data); limit impact by rolling back or switching the feature to a safer mode; communicate status to stakeholders; fix and re-run evals before re-release; add the failing cases to the test set and pin model versions with a test step for future updates."
+     ]
+    },
+    {
+     "h": "Common TPM interview themes",
+     "table": [
+      [
+       "Theme",
+       "What they test"
+      ],
+      [
+       "Program execution",
+       "Planning, dependencies, recovering a slipping project"
+      ],
+      [
+       "Technical depth",
+       "System design basics, trade-offs, asking good questions"
+      ],
+      [
+       "Stakeholder management",
+       "Alignment, conflict, influencing without authority"
+      ],
+      [
+       "AI judgement",
+       "When to use AI, evals, risks, cost"
+      ],
+      [
+       "Communication",
+       "Clear, structured answers under pressure"
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Use the 'In an interview' prompt on every topic page as a ready-made question bank.",
-      "Practise with a timer; most answers should land in two to three minutes."
+      "Practise with a timer; most answers should land in two to three minutes.",
+      "Practise with Claude as interviewer, then ask it to score your answer against a rubric you give it."
      ]
     },
     {
@@ -37397,6 +39465,14 @@
     [
      "Why re-record answers?",
      "To confirm the improvement stuck."
+    ],
+    [
+     "What is the first step when AI accuracy drops after an update?",
+     "Confirm and measure the drop using the eval set and real feedback."
+    ],
+    [
+     "Name three themes common in TPM interviews.",
+     "Execution, technical depth, stakeholders, AI judgement, communication (any three)."
     ]
    ],
    "deeper": [
@@ -37446,10 +39522,43 @@
      ]
     },
     {
+     "h": "Before and after bullets",
+     "table": [
+      [
+       "Before",
+       "After"
+      ],
+      [
+       "Managed AI chatbot project",
+       "Led launch of an AI support assistant across 3 teams; resolved 40% of order queries without agents within 2 months"
+      ],
+      [
+       "Responsible for sprint planning",
+       "Introduced dependency reviews in planning, raising sprint completion from 60% to 85% over a quarter"
+      ],
+      [
+       "Worked with stakeholders on requirements",
+       "Aligned product, legal and security on AI data rules, cutting review time from 6 weeks to 2"
+      ]
+     ]
+    },
+    {
+     "h": "Resume checklist",
+     "bullets": [
+      "Two pages at most; most relevant work first.",
+      "A short summary that names the role you want.",
+      "Every bullet starts with a strong verb and shows a result.",
+      "Numbers wherever honest: size, time, money, percentages.",
+      "An AI projects section linking to your portfolio.",
+      "Keywords from the job description, used truthfully."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Ask Claude to critique each bullet as a sceptical hiring manager.",
-      "Keep a master resume and tailor a copy per application."
+      "Keep a master resume and tailor a copy per application.",
+      "Ask a friend to read your resume for 30 seconds and say what role you want; if they cannot, rewrite the summary."
      ]
     },
     {
@@ -37511,6 +39620,14 @@
     [
      "What if you lack exact numbers?",
      "Use honest estimates you can explain."
+    ],
+    [
+     "What turns a duty into an impact bullet?",
+     "Adding what you did and a measurable result."
+    ],
+    [
+     "Why tailor keywords to the job description?",
+     "Recruiters and screening tools look for them; use them only where true."
     ]
    ],
    "deeper": [
@@ -37566,10 +39683,54 @@
      ]
     },
     {
+     "h": "Example case study outline",
+     "table": [
+      [
+       "Section",
+       "Content"
+      ],
+      [
+       "Title",
+       "Cutting support load with a cited RAG assistant"
+      ],
+      [
+       "Problem",
+       "Agents spent hours answering policy questions; answers were inconsistent"
+      ],
+      [
+       "My role",
+       "Scoped the MVP, built the prototype with AI help, wrote the eval set"
+      ],
+      [
+       "Approach",
+       "Architecture diagram, data sources, key decisions and trade-offs"
+      ],
+      [
+       "Results",
+       "Benchmark table and pilot feedback"
+      ],
+      [
+       "What I would do next",
+       "Monitoring, more sources, cost controls"
+      ]
+     ]
+    },
+    {
+     "h": "Making it easy to review",
+     "bullets": [
+      "Put a three-line summary at the top.",
+      "Use one diagram and one results table rather than many screenshots.",
+      "Include a two-minute video demo.",
+      "Link to the code or prompts if you can share them.",
+      "Be honest about what did not work and what you learned."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Keep each case study readable in three minutes.",
-      "Ask a non-technical friend to read one; if they get the point, it works."
+      "Ask a non-technical friend to read one; if they get the point, it works.",
+      "Time a stranger reading your case study; if they cannot explain it after three minutes, simplify it."
      ]
     },
     {
@@ -37631,6 +39792,14 @@
     [
      "Where should the portfolio be linked?",
      "LinkedIn and resume."
+    ],
+    [
+     "What should be at the top of a case study?",
+     "A short summary of problem, approach and result."
+    ],
+    [
+     "Why include what did not work?",
+     "It shows judgement and honesty, which hiring managers value."
     ]
    ],
    "deeper": [
@@ -37686,10 +39855,28 @@
      ]
     },
     {
+     "h": "Example headline and About section",
+     "p": [
+      "Headline: 'Technical Program Manager | AI products, RAG and agent workflows | 11 years delivering complex software'.",
+      "About (opening lines): 'I help teams take AI from pilot to production. Recently I built a cited RAG assistant and an MCP server, and I write about practical AI delivery for program managers.' Follow with three proof points and what you are looking for."
+     ]
+    },
+    {
+     "h": "A simple networking routine",
+     "bullets": [
+      "Each week, comment thoughtfully on three posts from people in roles you want.",
+      "Send two personalised connection requests that mention something specific.",
+      "Ask for 20-minute conversations about their work, not for jobs.",
+      "Follow up with a thank-you and something useful, such as an article.",
+      "Keep a simple list of contacts and when you last spoke."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Update your profile after each capstone, not all at once at the end.",
-      "Comment thoughtfully on posts by people in target roles."
+      "Comment thoughtfully on posts by people in target roles.",
+      "Update your Featured section with your best case study; it is the first proof visitors see."
      ]
     },
     {
@@ -37751,6 +39938,14 @@
     [
      "What makes a connection note work?",
      "It's short, specific and offers value."
+    ],
+    [
+     "What three things should a headline combine?",
+     "Target role, focus areas and credibility such as experience."
+    ],
+    [
+     "What should a networking conversation ask for?",
+     "Insight into their work, not a job."
     ]
    ],
    "deeper": [
@@ -37804,10 +39999,47 @@
      ]
     },
     {
+     "h": "Example post",
+     "p": [
+      "Opening line: 'I tested our RAG assistant on 50 real questions. It got 36 right. Here is what took it to 43.'",
+      "Body: three short points on what changed (smaller chunks, more results, rewritten queries) and one thing that did not help. Close with a question to readers about their experience."
+     ]
+    },
+    {
+     "h": "Content ideas from your learning",
+     "table": [
+      [
+       "Format",
+       "Example"
+      ],
+      [
+       "Lesson learned",
+       "What I got wrong about evals, and how I fixed it"
+      ],
+      [
+       "Before and after",
+       "A messy requirement and the AI-improved version"
+      ],
+      [
+       "Explainer",
+       "MCP in plain English for project managers"
+      ],
+      [
+       "Comparison",
+       "Local versus hosted models: my measured results"
+      ],
+      [
+       "Checklist",
+       "My AI launch readiness checklist"
+      ]
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Keep a running note of surprises while building; they're your best post ideas.",
-      "Give an internal talk first; it's lower pressure and builds visibility at work."
+      "Give an internal talk first; it's lower pressure and builds visibility at work.",
+      "Write posts in a batch once a week and schedule them; consistency matters more than volume."
      ]
     },
     {
@@ -37869,6 +40101,14 @@
     [
      "Why learn in public?",
      "It consolidates learning and builds credibility."
+    ],
+    [
+     "What makes an opening line effective?",
+     "A specific result or surprise that makes people want to read on."
+    ],
+    [
+     "Why share what did not work?",
+     "It builds credibility and is more useful to readers."
     ]
    ],
    "deeper": [
@@ -37923,10 +40163,51 @@
      ]
     },
     {
+     "h": "Example weekly routine (about 2 hours)",
+     "table": [
+      [
+       "Day",
+       "Time",
+       "Activity"
+      ],
+      [
+       "Monday",
+       "20 min",
+       "Skim one newsletter and the release notes of the tools you use"
+      ],
+      [
+       "Wednesday",
+       "40 min",
+       "Read one article or paper summary in depth; write three takeaways"
+      ],
+      [
+       "Friday",
+       "45 min",
+       "Try one new feature hands-on"
+      ],
+      [
+       "Monthly",
+       "15 min",
+       "Review takeaways; drop sources that rarely help"
+      ]
+     ]
+    },
+    {
+     "h": "Questions to ask about any new AI release",
+     "bullets": [
+      "What problem does it solve that I or my team actually have?",
+      "Is it available now, and at what cost?",
+      "What evidence is there beyond the announcement?",
+      "What would I need to change to use it?",
+      "Can I test it in under an hour?"
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Unsubscribe from sources that rarely pass your filter.",
-      "Test claims yourself before repeating them to leaders."
+      "Test claims yourself before repeating them to leaders.",
+      "Keep one running note of takeaways; it becomes material for posts and interviews."
      ]
     },
     {
@@ -37988,6 +40269,14 @@
     [
      "What's the value of a team digest?",
      "It shares learning and saves others time."
+    ],
+    [
+     "What is a sign a source is worth keeping?",
+     "It regularly gives you ideas you use in your work."
+    ],
+    [
+     "What should you check before adopting a new AI release?",
+     "Whether it solves a real problem, its availability and cost, and evidence beyond the announcement."
     ]
    ],
    "deeper": [
@@ -38082,10 +40371,68 @@
      ]
     },
     {
+     "h": "Example end-to-end story",
+     "p": [
+      "'A support team was overwhelmed by policy questions (problem). I framed the problem with data, scoped an MVP and chose RAG over fine-tuning because policies change often (decisions). I built the prototype, wrote a 50-question eval set and improved accuracy from 72% to 86% (evidence). I planned a phased launch with guardrails, monitoring and a rollback (production). Next I would add more sources and cost alerts (next steps).'",
+      "This one story touches problem framing, AI fundamentals, evaluation, security and delivery: the whole path."
+     ]
+    },
+    {
+     "h": "Final self-assessment",
+     "table": [
+      [
+       "Area",
+       "Can I explain it?",
+       "Have I done it?",
+       "Evidence"
+      ],
+      [
+       "How software and APIs work",
+       "",
+       "",
+       ""
+      ],
+      [
+       "LLMs, prompting and RAG",
+       "",
+       "",
+       ""
+      ],
+      [
+       "Agents and MCP",
+       "",
+       "",
+       ""
+      ],
+      [
+       "Evals and quality",
+       "",
+       "",
+       ""
+      ],
+      [
+       "Security and responsible AI",
+       "",
+       "",
+       ""
+      ],
+      [
+       "Delivery and stakeholders",
+       "",
+       "",
+       ""
+      ]
+     ],
+     "p": [
+      "Fill it in honestly. Any row without evidence is your next small project."
+     ]
+    },
+    {
      "h": "In real projects",
      "p": [
       "Teach one topic to a colleague; it reveals what you really know.",
-      "Celebrate finishing, then pick the next project immediately to keep momentum."
+      "Celebrate finishing, then pick the next project immediately to keep momentum.",
+      "Revisit this self-assessment every three months; it keeps your learning focused on real gaps."
      ]
     },
     {
@@ -38147,6 +40494,14 @@
     [
      "What goes in the 90-day plan?",
      "Applications, a project, talks or posts, skills to deepen."
+    ],
+    [
+     "What five parts make a strong end-to-end story?",
+     "Problem, decisions, evidence, production plan and next steps."
+    ],
+    [
+     "What should you do with an area that has no evidence?",
+     "Pick a small project to create evidence for it."
     ]
    ],
    "deeper": [
