@@ -39,7 +39,7 @@ def test_catalog_has_all_content(client, learner_h):
     assert len(c["phases"]) == 6
     assert len(c["categories"]) == 14
     assert len(c["topics"]) == 203
-    assert sum(t["has_lesson"] for t in c["topics"]) == 137
+    assert sum(t["has_lesson"] for t in c["topics"]) == 203
 
 
 def test_topic_detail_with_lesson_and_resources(client, learner_h):
