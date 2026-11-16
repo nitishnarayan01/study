@@ -95,10 +95,12 @@ docs/                Architecture notes
 .github/workflows/   CI: tests, lint, build on every push
 ```
 
+## Put it online (free)
+
+Follow [docs/DEPLOY.md](docs/DEPLOY.md). It covers Neon for the database, Render for the API and Vercel for the website, all on free plans.
+
 ## Roadmap
 
-- Write lessons for Phases 2–6
-- Deploy online (Vercel + Render + Neon)
 - Google / company SSO login
 - AI tutor inside each topic (Claude API)
 - AI search across all lessons (pgvector)

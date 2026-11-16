@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -20,6 +21,16 @@ class Settings(BaseSettings):
     admin_email: str = "admin@learninghub.dev"
     admin_password: str = "ChangeMe123!"
     admin_name: str = "Admin"
+
+    @field_validator("database_url")
+    @classmethod
+    def use_psycopg_driver(cls, url: str) -> str:
+        """Hosted databases (e.g. Neon) hand out 'postgresql://...' or 'postgres://...' URLs.
+        Rewrite them to the driver this app ships with so they can be pasted in unchanged."""
+        for prefix in ("postgresql://", "postgres://"):
+            if url.startswith(prefix):
+                return "postgresql+psycopg://" + url[len(prefix):]
+        return url
 
     @property
     def cors_origin_list(self) -> list[str]:

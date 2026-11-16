@@ -1,0 +1,27 @@
+# Render Blueprint for the backend API (free plan).
+# The database lives on Neon, not Render (Render's free Postgres is deleted after 30 days).
+# Steps: docs/DEPLOY.md
+services:
+  - type: web
+    name: tpm-learning-hub-api
+    runtime: docker
+    plan: free
+    rootDir: backend
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: "8000"
+      - key: JWT_SECRET
+        generateValue: true   # Render creates a long random secret
+      - key: DATABASE_URL
+        sync: false           # paste the Neon connection string
+      - key: CORS_ORIGINS
+        sync: false           # your Vercel address, e.g. https://tpm-learning-hub.vercel.app
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_NAME
+        sync: false
