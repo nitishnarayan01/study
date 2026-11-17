@@ -120,3 +120,12 @@ class Progress(Base):
     key_points: Mapped[list] = mapped_column(JSON, default=list)  # booleans per concept
     notes: Mapped[str] = mapped_column(Text, default="")
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)
+
+
+class AppMeta(Base):
+    """Small key/value store for app housekeeping, e.g. the fingerprint of the last loaded content."""
+
+    __tablename__ = "app_meta"
+    key: Mapped[str] = mapped_column(String(64), primary_key=True)
+    value: Mapped[str] = mapped_column(Text, default="")
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)
