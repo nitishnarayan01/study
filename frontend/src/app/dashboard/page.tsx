@@ -29,7 +29,6 @@ export default function Home() {
   const studied = hoursDone(all, prog);
   const hpw = Math.max(1, user.hours_per_week || 8);
   const weeks = Math.ceil((totalH - studied) / hpw);
-  const finish = new Date(Date.now() + weeks * 7 * 864e5);
   const resume = nextUp(all, prog);
   const resumeCat = resume ? categoryOf(catalog, resume) : undefined;
   const resumePhase = resumeCat ? catalog.phases.find((p) => p.number === resumeCat.phase) : undefined;
@@ -68,11 +67,6 @@ export default function Home() {
             <Ring value={pct} size={84} label={`${pct}% of the whole path complete`} />
             <dl className="stats">
               <div><dt>Topics done</dt><dd className="num">{doneCount}<small>/{all.length}</small></dd></div>
-              <div><dt>Hours studied</dt><dd className="num">{Math.round(studied)}<small>/{Math.round(totalH)}</small></dd></div>
-              <div>
-                <dt>Finish by</dt>
-                <dd className="num">{finish.toLocaleDateString(undefined, { month: "short", year: "numeric" })}</dd>
-              </div>
             </dl>
           </div>
         </section>
