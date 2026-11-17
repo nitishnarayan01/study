@@ -24,6 +24,10 @@
   {
    "number": 6,
    "name": "Prove it"
+  },
+  {
+   "number": 7,
+   "name": "Code to Live"
   }
  ],
  "categories": [
@@ -110,6 +114,24 @@
    "name": "Career & Brand",
    "phase": 6,
    "order": 13
+  },
+  {
+   "slug": "web-code-to-live",
+   "name": "Web: Code to Live",
+   "phase": 7,
+   "order": 14
+  },
+  {
+   "slug": "mobile-code-to-store",
+   "name": "Mobile: Code to Store",
+   "phase": 7,
+   "order": 15
+  },
+  {
+   "slug": "jargon-and-test-prep",
+   "name": "Jargon & Test Prep",
+   "phase": 7,
+   "order": 16
   }
  ],
  "resources": [
@@ -1539,6 +1561,36 @@
    "key": "amazonStar",
    "title": "Amazon interview guide and the STAR method",
    "url": "https://www.aboutamazon.com/news/workplace/amazon-interview-guide",
+   "kind": "Read"
+  },
+  {
+   "key": "webVitals",
+   "title": "Web Vitals: LCP, INP and CLS (web.dev)",
+   "url": "https://web.dev/articles/vitals",
+   "kind": "Read"
+  },
+  {
+   "key": "playStaged",
+   "title": "Release app updates with staged rollouts (Google Play Console Help)",
+   "url": "https://support.google.com/googleplay/android-developer/answer/6346149",
+   "kind": "Reference"
+  },
+  {
+   "key": "asPhased",
+   "title": "Release a version update in phases (App Store Connect Help)",
+   "url": "https://developer.apple.com/help/app-store-connect/update-your-app/release-a-version-update-in-phases",
+   "kind": "Reference"
+  },
+  {
+   "key": "semver",
+   "title": "Semantic Versioning 2.0.0",
+   "url": "https://semver.org/",
+   "kind": "Reference"
+  },
+  {
+   "key": "owaspTop10",
+   "title": "OWASP Top 10 (2025)",
+   "url": "https://owasp.org/Top10/2025/0x00_2025-Introduction/",
    "kind": "Read"
   }
  ],
@@ -8082,6 +8134,938 @@
    "covers": [
     "Final Revision & Integration",
     "Canva (architecture diagrams)"
+   ]
+  },
+  {
+   "id": "wl01",
+   "category": "web-code-to-live",
+   "title": "The web journey: from first line of code to a live website",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1.5,
+   "order": 203,
+   "status": "full",
+   "summary": "A map of every stage a website goes through before customers can use it: plan, set up, code, review, test, build, deploy, connect a domain, secure, speed up, launch and monitor. Each later topic zooms into one stage.",
+   "why": "Managers test whether you can see the whole picture and know who does what at each step. With this map you can place any jargon you hear and ask the right question at the right stage.",
+   "concepts": [
+    "The 12 stages from code to live",
+    "Inputs and outputs of each stage",
+    "Where things usually go wrong",
+    "Who owns each stage",
+    "Why environments exist",
+    "What 'done' means for a release"
+   ],
+   "resources": [
+    "mdnWeb",
+    "atlCicd",
+    "twelveConfig"
+   ],
+   "do_it": "Pick a website your team runs. For each of the 12 stages, write one line on how your team does it and who owns it. Mark the stages you can't answer.",
+   "prove": "A one-page journey map of your own product with owners and tools at each stage, reviewed by a tech lead.",
+   "interview": "Walk me through what happens between a developer writing code and a customer seeing the change on the website.",
+   "covers": [
+    "Web delivery lifecycle",
+    "SDLC",
+    "Code to production"
+   ]
+  },
+  {
+   "id": "wl02",
+   "category": "web-code-to-live",
+   "title": "Who does what: roles in a web and mobile team",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1,
+   "order": 204,
+   "status": "full",
+   "summary": "The people involved in building and running software, what each one does day to day, and how they hand work to each other: product, design, frontend, backend, mobile, QA, DevOps, SRE, security, data and release management.",
+   "why": "As a TPM you coordinate all of them. Knowing what each role owns tells you who to ask, who to escalate to, and which handoffs need watching.",
+   "concepts": [
+    "Product and design roles",
+    "Frontend, backend and full-stack developers",
+    "Mobile developers",
+    "QA and test engineers",
+    "DevOps, platform and SRE",
+    "Security, data and release roles",
+    "RACI across the journey"
+   ],
+   "resources": [
+    "atlDevops",
+    "sreSlo"
+   ],
+   "do_it": "List the people on your current project by role. For each, write what they hand to the next person (for example, designer to frontend: approved screens).",
+   "prove": "A RACI chart for one release of your product covering build, test, deploy, DNS changes and launch communication.",
+   "interview": "Which roles would you involve to launch a new website, and when would each one join?",
+   "covers": [
+    "Team roles",
+    "RACI",
+    "Handoffs"
+   ]
+  },
+  {
+   "id": "wl03",
+   "category": "web-code-to-live",
+   "title": "Code setup: repository, branches and local environment",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1.5,
+   "order": 205,
+   "status": "full",
+   "summary": "What happens on day one of a project: creating the Git repository, choosing a branching strategy, setting up the folder structure, installing dependencies, configuring environment variables and making the app run on a developer's laptop.",
+   "why": "Slow or broken setup delays every developer. Understanding repos, branches and local environments lets you spot onboarding problems and follow technical discussions.",
+   "concepts": [
+    "Git, GitHub and repositories",
+    "Monorepo vs multiple repos",
+    "Branches and branching strategies",
+    "Package managers and dependencies",
+    "Lock files",
+    "Environment variables and .env files",
+    "README and onboarding",
+    "Running locally (localhost)"
+   ],
+   "resources": [
+    "proGit",
+    "gitBranch",
+    "ghFlow",
+    "gitIgnore"
+   ],
+   "do_it": "Ask a developer to show you how a new joiner gets your project running. Time it and list every step.",
+   "prove": "An onboarding checklist for your repo with time estimates, reviewed by a developer.",
+   "interview": "A new developer takes a week to get the project running. What would you look at?",
+   "covers": [
+    "Repository setup",
+    "Branching",
+    "Local development environment"
+   ]
+  },
+  {
+   "id": "wl04",
+   "category": "web-code-to-live",
+   "title": "Writing the code: frontend, backend, APIs and database",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 2,
+   "order": 206,
+   "status": "full",
+   "summary": "How a web feature is actually built: the frontend that runs in the browser, the backend that runs on servers, the API that connects them, and the database that stores data, plus authentication and database migrations.",
+   "why": "Most estimates, bugs and dependencies come from how these layers fit together. Knowing them helps you break work down and ask 'is this a frontend, backend or data change?'",
+   "concepts": [
+    "Client and server",
+    "Frontend frameworks and components",
+    "Backend services and business logic",
+    "REST APIs and JSON",
+    "Databases, SQL and ORMs",
+    "Schema changes and migrations",
+    "Authentication and authorisation",
+    "Third-party integrations"
+   ],
+   "resources": [
+    "mdnHttp",
+    "mdnJson",
+    "jwt",
+    "rmSql"
+   ],
+   "do_it": "Take one feature (for example 'save to wishlist') and list the frontend, API, backend and database changes it needs.",
+   "prove": "A breakdown of a real feature into layer-by-layer tasks that a tech lead agrees with.",
+   "interview": "A feature needs a new field on a form. Which parts of the system change?",
+   "covers": [
+    "Frontend development",
+    "Backend development",
+    "APIs",
+    "Database"
+   ]
+  },
+  {
+   "id": "wl05",
+   "category": "web-code-to-live",
+   "title": "Pull requests, code review and merging",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1,
+   "order": 207,
+   "status": "full",
+   "summary": "How finished code gets into the main codebase: committing, pushing a branch, opening a pull request, automated checks, peer review, resolving comments and merge conflicts, and merging.",
+   "why": "Review is a common hidden bottleneck. Knowing the flow lets you track 'waiting for review' work and agree service levels for reviews.",
+   "concepts": [
+    "Commits and pushes",
+    "Pull requests (PRs) or merge requests (MRs)",
+    "Automated checks on PRs",
+    "Code review practices",
+    "Merge conflicts",
+    "Merge strategies",
+    "Branch protection rules"
+   ],
+   "resources": [
+    "ghHello",
+    "proGit",
+    "googleCr"
+   ],
+   "do_it": "Look at your team's open pull requests. Note how long each has waited and how many lines it changes.",
+   "prove": "A short proposal for review norms (for example: under 400 lines, first review within one working day) agreed with the team.",
+   "interview": "Features are 'done' but not merged for days. What's going on and what would you do?",
+   "covers": [
+    "Pull requests",
+    "Code review",
+    "Merging"
+   ]
+  },
+  {
+   "id": "wl06",
+   "category": "web-code-to-live",
+   "title": "Testing: from unit tests to UAT",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1.5,
+   "order": 208,
+   "status": "full",
+   "summary": "The types of testing a web team runs, who runs them and when: unit, integration, end-to-end, regression, smoke, performance, security and user acceptance testing, plus how bugs are reported and triaged.",
+   "why": "Testing decides release confidence. You'll be asked if something is 'tested' and need to know which kinds of tests are done and which are missing.",
+   "concepts": [
+    "Unit tests",
+    "Integration tests",
+    "End-to-end (E2E) tests",
+    "Regression and smoke tests",
+    "Manual and exploratory QA",
+    "User acceptance testing (UAT)",
+    "Test coverage",
+    "Bug severity, priority and triage"
+   ],
+   "resources": [
+    "testPyramid",
+    "k6Types"
+   ],
+   "do_it": "Ask your QA lead which test types run automatically on every change and which are manual before release.",
+   "prove": "A test strategy one-pager for a feature: what is tested at each level, by whom, and the exit criteria.",
+   "interview": "How would you know a release is ready to go live from a testing point of view?",
+   "covers": [
+    "Testing types",
+    "QA",
+    "UAT",
+    "Bug triage"
+   ]
+  },
+  {
+   "id": "wl07",
+   "category": "web-code-to-live",
+   "title": "Build and CI: turning code into a deployable package",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1.5,
+   "order": 209,
+   "status": "full",
+   "summary": "What happens after code is merged: the continuous integration (CI) pipeline installs dependencies, runs checks and tests, compiles and bundles the code, packages it (often as a Docker image), versions it and stores it ready for deployment.",
+   "why": "'The build is broken' and 'the pipeline is red' are daily phrases. Knowing what CI does helps you understand delays and why a green pipeline matters for releases.",
+   "concepts": [
+    "Continuous integration (CI)",
+    "Pipeline stages",
+    "Compile, transpile, bundle, minify",
+    "Build artifacts",
+    "Docker images and registries",
+    "Versioning and Git tags",
+    "Build failures and their causes"
+   ],
+   "resources": [
+    "atlCicd",
+    "ghActionsQs",
+    "dockerOverview",
+    "semver"
+   ],
+   "do_it": "Open your project's pipeline (GitHub Actions, Jenkins, GitLab CI). List its stages and how long each takes.",
+   "prove": "A one-page explanation of your team's pipeline with stage times and the most common failure reasons.",
+   "interview": "The pipeline takes 45 minutes and fails often. How does that affect delivery and what would you suggest?",
+   "covers": [
+    "Continuous integration",
+    "Build",
+    "Artifacts",
+    "Versioning"
+   ]
+  },
+  {
+   "id": "wl08",
+   "category": "web-code-to-live",
+   "title": "Environments, configuration and secrets",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1,
+   "order": 210,
+   "status": "full",
+   "summary": "The separate copies of a system (local, dev, QA, staging, UAT, production), how configuration differs between them, how secrets such as passwords and API keys are stored, and how feature flags let teams switch features on and off.",
+   "why": "Many release problems come from environment differences or missing configuration. You'll often coordinate who tests in which environment and when.",
+   "concepts": [
+    "Local, dev, QA, staging, UAT, production",
+    "Environment parity",
+    "Configuration via environment variables",
+    "Secrets managers",
+    "Feature flags and toggles",
+    "Test data and data masking",
+    "Promotion between environments"
+   ],
+   "resources": [
+    "twelveConfig",
+    "ghSecret"
+   ],
+   "do_it": "Draw your product's environments in a row. For each, note who uses it, what data it holds and how code reaches it.",
+   "prove": "An environment map with owners, data rules and promotion steps, reviewed by DevOps.",
+   "interview": "A bug happens only in production, not in staging. What could be different?",
+   "covers": [
+    "Environments",
+    "Configuration",
+    "Secrets",
+    "Feature flags"
+   ]
+  },
+  {
+   "id": "wl09",
+   "category": "web-code-to-live",
+   "title": "Hosting: where a website actually runs",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1.5,
+   "order": 211,
+   "status": "full",
+   "summary": "The main ways to run a website: shared hosting, virtual machines, containers and Kubernetes, platform-as-a-service, serverless functions and static hosting, plus cloud regions, load balancers and autoscaling.",
+   "why": "Hosting choices drive cost, speed, reliability and how releases work. You'll hear 'EC2', 'Kubernetes', 'Vercel' or 'Lambda' in planning and need to know what they imply.",
+   "concepts": [
+    "Servers and the cloud",
+    "Virtual machines (VMs)",
+    "Containers and Kubernetes",
+    "Platform as a service (PaaS)",
+    "Serverless functions",
+    "Static hosting and CDNs",
+    "Regions and availability zones",
+    "Load balancers and autoscaling"
+   ],
+   "resources": [
+    "awsOverview",
+    "dockerOverview",
+    "k8sOverview",
+    "nginxGuide"
+   ],
+   "do_it": "Find out where your product's frontend, backend and database are hosted, and in which region.",
+   "prove": "A simple hosting diagram of your product with services, regions and monthly cost estimates.",
+   "interview": "Traffic will triple during a sale. What hosting questions would you ask the team?",
+   "covers": [
+    "Hosting",
+    "Cloud",
+    "Containers",
+    "Serverless",
+    "Scaling"
+   ]
+  },
+  {
+   "id": "wl10",
+   "category": "web-code-to-live",
+   "title": "Deployment and release strategies",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1.5,
+   "order": 212,
+   "status": "full",
+   "summary": "How a tested build reaches production: continuous delivery and deployment, deployment strategies (all at once, rolling, blue-green, canary), feature-flag releases, database changes during deploys, rollbacks and hotfixes.",
+   "why": "Release risk is a core TPM concern. Knowing the strategies lets you choose the right level of safety and ask 'how do we roll back?' before every launch.",
+   "concepts": [
+    "Continuous delivery vs continuous deployment",
+    "Deploy vs release",
+    "Rolling deployments",
+    "Blue-green deployments",
+    "Canary releases",
+    "Rollback and roll forward",
+    "Zero-downtime and maintenance windows",
+    "Hotfixes"
+   ],
+   "resources": [
+    "fowlerBG",
+    "fowlerCanary",
+    "atlCicd"
+   ],
+   "do_it": "Ask your team how a production deployment works today, how long it takes and how long a rollback takes.",
+   "prove": "A release runbook for your product: steps, owners, checks, rollback trigger and rollback steps.",
+   "interview": "A release causes errors for some users. Walk me through what you'd do in the first 30 minutes.",
+   "covers": [
+    "Continuous delivery",
+    "Deployment strategies",
+    "Rollback",
+    "Hotfix"
+   ]
+  },
+  {
+   "id": "wl11",
+   "category": "web-code-to-live",
+   "title": "Domains, DNS and HTTPS: making the site reachable",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1.5,
+   "order": 213,
+   "status": "full",
+   "summary": "How a web address points to your servers: buying a domain from a registrar, nameservers, DNS records (A, AAAA, CNAME, MX, TXT), TTL and propagation, subdomains, SSL/TLS certificates for HTTPS, and redirects.",
+   "why": "Domain and certificate steps are common last-minute blockers on launch day. Knowing them lets you schedule DNS changes early and avoid outages from expired certificates.",
+   "concepts": [
+    "Domain names and registrars",
+    "Nameservers and DNS providers",
+    "DNS record types",
+    "TTL and propagation",
+    "Apex domain vs www and subdomains",
+    "SSL/TLS certificates and HTTPS",
+    "Certificate authorities and Let's Encrypt",
+    "Redirects and HSTS"
+   ],
+   "resources": [
+    "cfDns",
+    "cfDnsServers",
+    "cfHttps",
+    "leHow"
+   ],
+   "do_it": "Pick your company's website. Find its registrar, DNS provider and certificate expiry date (your DevOps team can tell you, or check the padlock in the browser).",
+   "prove": "A domain go-live checklist: records to create, TTL plan, certificate, redirects and verification steps.",
+   "interview": "The new site is deployed but customers still see the old one. What could be happening?",
+   "covers": [
+    "Domain",
+    "DNS",
+    "SSL/TLS",
+    "HTTPS"
+   ]
+  },
+  {
+   "id": "wl12",
+   "category": "web-code-to-live",
+   "title": "Performance: CDN, caching and Core Web Vitals",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1.5,
+   "order": 214,
+   "status": "full",
+   "summary": "What makes websites fast or slow and how teams measure and improve speed: CDNs, caching at different layers, compression, image optimisation, lazy loading, Core Web Vitals (LCP, INP, CLS), TTFB, Lighthouse and load testing.",
+   "why": "Speed affects conversion, SEO and user trust. You'll set performance targets, read Lighthouse reports and decide trade-offs with engineers.",
+   "concepts": [
+    "Latency and TTFB",
+    "CDNs and edge caching",
+    "Browser, CDN, server and database caching",
+    "Compression and minification",
+    "Image optimisation and lazy loading",
+    "Core Web Vitals: LCP, INP, CLS",
+    "Lighthouse and PageSpeed Insights",
+    "Load and stress testing"
+   ],
+   "resources": [
+    "webVitals",
+    "cfCdn",
+    "awsCaching",
+    "k6Types"
+   ],
+   "do_it": "Run PageSpeed Insights on your company's homepage and note LCP, INP and CLS for mobile.",
+   "prove": "A performance brief: current Core Web Vitals, top three issues from the report and proposed fixes with owners.",
+   "interview": "Our product page is slow on mobile. How would you approach it with the team?",
+   "covers": [
+    "Web performance",
+    "CDN",
+    "Caching",
+    "Core Web Vitals",
+    "Load testing"
+   ]
+  },
+  {
+   "id": "wl13",
+   "category": "web-code-to-live",
+   "title": "Security basics before going live",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1,
+   "order": 215,
+   "status": "full",
+   "summary": "The minimum security a website needs before launch: HTTPS, secure login, input validation, OWASP Top 10 risks, dependency scanning, secrets handling, firewalls and rate limiting, backups, and privacy basics.",
+   "why": "Security issues found after launch are costly and public. TPMs make sure security checks are planned, not skipped under deadline pressure.",
+   "concepts": [
+    "OWASP Top 10",
+    "Authentication and session security",
+    "Input validation and injection",
+    "CORS and security headers",
+    "Dependency and code scanning (SAST, DAST)",
+    "Web application firewall (WAF) and rate limiting",
+    "Backups and disaster recovery",
+    "Privacy and data protection"
+   ],
+   "resources": [
+    "owaspTop10",
+    "mdnCors",
+    "owaspDevsecops",
+    "awsDr"
+   ],
+   "do_it": "Ask your security or DevOps lead which security checks run in your pipeline and which are done manually before release.",
+   "prove": "A pre-launch security checklist for your product agreed with the security team.",
+   "interview": "We're two days from launch and the security scan found a high-severity issue. What do you do?",
+   "covers": [
+    "Web security",
+    "OWASP",
+    "Backups",
+    "Privacy"
+   ]
+  },
+  {
+   "id": "wl14",
+   "category": "web-code-to-live",
+   "title": "Monitoring, launch day and life after go-live",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1.5,
+   "order": 216,
+   "status": "full",
+   "summary": "What the team does around launch and afterwards: go-live checklist, go/no-go meeting, smoke tests, hypercare, monitoring with logs, metrics and traces, alerts and on-call, uptime and error tracking, analytics, SEO basics and incident handling.",
+   "why": "Launch day is where TPMs lead visibly. A clear checklist, owners and monitoring plan turn a stressful day into a routine one.",
+   "concepts": [
+    "Go-live checklist and go/no-go",
+    "Smoke tests in production",
+    "Hypercare period",
+    "Logs, metrics and traces (observability)",
+    "Alerts, on-call and SLOs",
+    "Uptime and error tracking",
+    "Product analytics",
+    "SEO basics: sitemap, robots.txt, meta tags",
+    "Incidents and post-mortems"
+   ],
+   "resources": [
+    "promDocs",
+    "sreSlo",
+    "srePostmortem",
+    "atlMetrics"
+   ],
+   "do_it": "Draft a launch-day timeline for your next release: hour by hour, with owners and checks.",
+   "prove": "A go-live runbook with checklist, communication plan, monitoring dashboard links and rollback triggers.",
+   "interview": "You're the TPM for a website launch tomorrow. What does your checklist include?",
+   "covers": [
+    "Go-live",
+    "Monitoring",
+    "Observability",
+    "Incident management",
+    "SEO basics"
+   ]
+  },
+  {
+   "id": "ml01",
+   "category": "mobile-code-to-store",
+   "title": "The mobile journey: from first line of code to the app stores",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1.5,
+   "order": 217,
+   "status": "full",
+   "summary": "The stages a mobile app goes through from setup to being live in the Apple App Store and Google Play: setup, code, test, build and sign, beta test, store listing, review, staged rollout and monitoring, and how this differs from the web.",
+   "why": "Mobile releases have gates the web doesn't: signing, store review and users who update slowly. Managers often test whether you understand these differences.",
+   "concepts": [
+    "Native vs cross-platform recap",
+    "The mobile delivery stages",
+    "Store review as a release gate",
+    "Why rollback is different on mobile",
+    "Release cadence and release trains",
+    "Backend compatibility with older app versions"
+   ],
+   "resources": [
+    "appReview",
+    "playTesting",
+    "testflight"
+   ],
+   "do_it": "For an app you use daily, check its version history in the store. How often does it release?",
+   "prove": "A one-page map of your team's mobile release process with owners and typical durations.",
+   "interview": "How is releasing a mobile app different from releasing a website?",
+   "covers": [
+    "Mobile delivery lifecycle",
+    "App store release"
+   ]
+  },
+  {
+   "id": "ml02",
+   "category": "mobile-code-to-store",
+   "title": "Mobile project setup: tools, accounts and identifiers",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1,
+   "order": 218,
+   "status": "full",
+   "summary": "What a mobile team sets up before coding: Xcode and Android Studio, SDKs, simulators and emulators, the Apple Developer Program and Google Play Console accounts, bundle IDs and application IDs, dependency managers, and build flavours for different environments.",
+   "why": "Account access and identifiers are frequent blockers, especially in large companies where developer accounts belong to the organisation. Knowing them helps you remove delays early.",
+   "concepts": [
+    "Xcode and Android Studio",
+    "SDKs and minimum OS versions",
+    "Simulators, emulators and real devices",
+    "Apple Developer Program and Play Console accounts",
+    "Bundle ID and application ID",
+    "Dependency managers (CocoaPods, Swift Package Manager, Gradle)",
+    "Build flavours and schemes per environment"
+   ],
+   "resources": [
+    "androidArch",
+    "flutterArch",
+    "rnArch"
+   ],
+   "do_it": "Find out who owns your company's Apple Developer and Google Play accounts and who has admin access.",
+   "prove": "A mobile setup checklist: accounts, roles, identifiers, environments and the minimum OS versions supported.",
+   "interview": "We're starting a new app next month. What needs to be ready before developers can start?",
+   "covers": [
+    "Mobile tooling",
+    "Developer accounts",
+    "App identifiers"
+   ]
+  },
+  {
+   "id": "ml03",
+   "category": "mobile-code-to-store",
+   "title": "Building the app: screens, APIs, data and device features",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1.5,
+   "order": 219,
+   "status": "full",
+   "summary": "What mobile developers build: screens and navigation, state management, calling backend APIs, storing data on the device, offline support, permissions, push notifications, deep links, and third-party SDKs for analytics and crash reporting.",
+   "why": "Mobile features often depend on device capabilities, permissions and backend APIs. Knowing the parts helps you spot dependencies and platform differences.",
+   "concepts": [
+    "Screens and navigation",
+    "State management",
+    "Networking and API calls",
+    "Local storage and offline mode",
+    "Permissions (camera, location, notifications)",
+    "Push notifications (APNs, FCM)",
+    "Deep links",
+    "Third-party SDKs"
+   ],
+   "resources": [
+    "androidLifecycle",
+    "androidOffline",
+    "androidPerms",
+    "fcm",
+    "androidLinks"
+   ],
+   "do_it": "Pick one feature in a mobile app you use. List the screens, API calls, permissions and notifications it involves.",
+   "prove": "A feature breakdown for a mobile story with iOS, Android and backend tasks agreed with the team.",
+   "interview": "We want to send users a notification when their order ships. What's involved?",
+   "covers": [
+    "Mobile development",
+    "Push notifications",
+    "Offline",
+    "Permissions"
+   ]
+  },
+  {
+   "id": "ml04",
+   "category": "mobile-code-to-store",
+   "title": "Testing mobile apps",
+   "depth": "Understand",
+   "priority": "P1",
+   "kind": "New",
+   "hours": 1,
+   "order": 220,
+   "status": "full",
+   "summary": "How mobile apps are tested: unit and UI tests, testing on real devices and many OS versions, device farms, network and interruption testing, accessibility checks, and beta testers.",
+   "why": "Device and OS variety makes mobile testing larger than web testing. You'll plan device coverage and decide what 'tested' means for a release.",
+   "concepts": [
+    "Unit tests",
+    "UI tests (XCUITest, Espresso)",
+    "Device and OS coverage",
+    "Device farms",
+    "Network and interruption testing",
+    "Accessibility",
+    "Regression before release"
+   ],
+   "resources": [
+    "testPyramid",
+    "crashlytics"
+   ],
+   "do_it": "Get your app's device and OS breakdown from analytics. Pick the top devices that cover about 80% of users.",
+   "prove": "A device coverage matrix and release test checklist for your app.",
+   "interview": "How would you decide which devices to test on?",
+   "covers": [
+    "Mobile testing",
+    "Device coverage"
+   ]
+  },
+  {
+   "id": "ml05",
+   "category": "mobile-code-to-store",
+   "title": "Builds, versions and code signing",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1.5,
+   "order": 221,
+   "status": "full",
+   "summary": "How a mobile app becomes an installable, trusted package: debug vs release builds, version name and build number, code signing with certificates, provisioning profiles and keystores, Play App Signing, AAB/APK and IPA files, and mobile CI/CD with tools such as Fastlane.",
+   "why": "Signing and versioning problems block releases at the last minute. Knowing the terms lets you check readiness and ask the right questions.",
+   "concepts": [
+    "Debug vs release builds",
+    "Version name and build number",
+    "Code signing and certificates",
+    "Provisioning profiles (iOS)",
+    "Keystore and upload key (Android)",
+    "Play App Signing",
+    "IPA, APK and AAB files",
+    "Mobile CI/CD and Fastlane"
+   ],
+   "resources": [
+    "playSigning",
+    "semver",
+    "ghActionsQs"
+   ],
+   "do_it": "Ask your mobile lead where signing keys and certificates are stored, who can access them and when they expire.",
+   "prove": "A release build checklist: version numbers, signing, environment configuration and upload steps.",
+   "interview": "The release is approved but the build can't be uploaded because of a signing error. What does that mean?",
+   "covers": [
+    "Mobile builds",
+    "Code signing",
+    "Versioning"
+   ]
+  },
+  {
+   "id": "ml06",
+   "category": "mobile-code-to-store",
+   "title": "Beta testing: TestFlight and Play testing tracks",
+   "depth": "Understand",
+   "priority": "P1",
+   "kind": "New",
+   "hours": 1,
+   "order": 222,
+   "status": "full",
+   "summary": "How teams share pre-release builds with testers before the public: TestFlight internal and external testing on iOS, internal, closed and open testing tracks on Google Play, beta review, feedback and crash data.",
+   "why": "Beta testing catches real-world issues safely. You'll organise beta groups, timelines and feedback loops.",
+   "concepts": [
+    "TestFlight internal vs external testers",
+    "Beta app review for external testing",
+    "Play internal, closed and open testing",
+    "Testing requirements for new personal Play accounts",
+    "Collecting feedback and crashes",
+    "Promoting a build from beta to production"
+   ],
+   "resources": [
+    "testflight",
+    "playTesting"
+   ],
+   "do_it": "Find out whether your team uses TestFlight and Play testing tracks, and who is in each tester group.",
+   "prove": "A beta plan: tester groups, build cadence, feedback channel and exit criteria for production.",
+   "interview": "How would you run a beta for a big app redesign?",
+   "covers": [
+    "Beta testing",
+    "TestFlight",
+    "Play testing tracks"
+   ]
+  },
+  {
+   "id": "ml07",
+   "category": "mobile-code-to-store",
+   "title": "Store listing and app review",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1,
+   "order": 223,
+   "status": "full",
+   "summary": "Preparing an app for the stores: listing text, screenshots, app icon, age rating, privacy details (App Store privacy labels, Google Play Data safety form), review guidelines, review notes and demo accounts, common rejection reasons and how to respond.",
+   "why": "Rejections delay launches. A TPM who prepares listings and review information early keeps release dates.",
+   "concepts": [
+    "Store listing content",
+    "Privacy labels and Data safety",
+    "Age ratings",
+    "Review guidelines",
+    "Demo accounts and review notes",
+    "Common rejection reasons",
+    "Resolving rejections"
+   ],
+   "resources": [
+    "appReview",
+    "appleHig",
+    "masvs"
+   ],
+   "do_it": "Read your app's store listing and privacy section as if you were a reviewer. Note anything unclear or out of date.",
+   "prove": "A store submission checklist covering listing, privacy, demo account and review notes for both stores.",
+   "interview": "Apple rejected our update the day before launch. What do you do?",
+   "covers": [
+    "Store listing",
+    "App review",
+    "Privacy labels"
+   ]
+  },
+  {
+   "id": "ml08",
+   "category": "mobile-code-to-store",
+   "title": "Release, staged rollout and updates",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1.5,
+   "order": 224,
+   "status": "full",
+   "summary": "How an approved app reaches users safely: manual or automatic release after approval, Apple's phased release, Google Play's staged rollout, halting a rollout, forced and optional updates, over-the-air updates for some cross-platform apps, API compatibility and hotfixes.",
+   "why": "Controlling who gets an update, and how fast, is the main safety tool on mobile. You'll decide rollout plans and what to do when a release goes wrong.",
+   "concepts": [
+    "Release timing after approval",
+    "Apple phased release",
+    "Google Play staged rollout",
+    "Halting and resuming",
+    "Forced update and minimum version",
+    "Over-the-air (OTA) updates",
+    "Backend and API versioning",
+    "Mobile hotfix process"
+   ],
+   "resources": [
+    "asPhased",
+    "playStaged",
+    "easUpdate"
+   ],
+   "do_it": "Check whether your team uses phased or staged rollouts and what metrics they watch before increasing.",
+   "prove": "A rollout plan for your next release: percentages, timing, metrics, halt criteria and owners.",
+   "interview": "A new app version is causing crashes for 2% of users. What are your options?",
+   "covers": [
+    "Staged rollout",
+    "Phased release",
+    "Forced update",
+    "OTA updates"
+   ]
+  },
+  {
+   "id": "ml09",
+   "category": "mobile-code-to-store",
+   "title": "After launch: crashes, performance and ratings",
+   "depth": "Understand",
+   "priority": "P1",
+   "kind": "New",
+   "hours": 1,
+   "order": 225,
+   "status": "full",
+   "summary": "What mobile teams watch after release: crash-free users and sessions, ANRs, app start time, app size, battery use, analytics funnels, store ratings and reviews, app store optimisation (ASO), and keeping up with yearly OS releases.",
+   "why": "Mobile quality shows directly in ratings, which affect downloads. You'll own the post-launch health review and prioritise fixes.",
+   "concepts": [
+    "Crash-free users and sessions",
+    "ANRs and app hangs",
+    "Start-up time and app size",
+    "Android vitals and Xcode Organizer",
+    "Analytics events and funnels",
+    "Ratings, reviews and responses",
+    "App store optimisation (ASO)",
+    "Annual OS updates"
+   ],
+   "resources": [
+    "crashlytics",
+    "atlMetrics"
+   ],
+   "do_it": "Look at your app's crash-free rate, top crash and average rating for the last 30 days.",
+   "prove": "A monthly mobile health report template with crashes, performance, ratings and actions.",
+   "interview": "Our rating dropped from 4.5 to 3.9 after the last release. How would you investigate?",
+   "covers": [
+    "Crash reporting",
+    "App performance",
+    "Ratings",
+    "ASO"
+   ]
+  },
+  {
+   "id": "jt01",
+   "category": "jargon-and-test-prep",
+   "title": "Web and mobile delivery glossary A to Z",
+   "depth": "Understand",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1.5,
+   "order": 226,
+   "status": "full",
+   "summary": "One place with the jargon from this course, grouped by stage of the journey, each explained in one plain sentence. Use it to revise before a test or a technical meeting.",
+   "why": "Tests and meetings move fast. Being able to define a term in one sentence, and say where it fits in the journey, shows real understanding.",
+   "concepts": [
+    "Setup and code terms",
+    "Review and testing terms",
+    "Build and deployment terms",
+    "Hosting and infrastructure terms",
+    "Domain, security and performance terms",
+    "Mobile release terms",
+    "Operations terms"
+   ],
+   "resources": [
+    "mdnWeb",
+    "atlCicd",
+    "cfDns"
+   ],
+   "do_it": "Cover the right-hand column and explain each term aloud. Mark the ones you hesitate on and revisit their topics.",
+   "prove": "Explain 20 random terms to a colleague in under 10 minutes, each with where it fits in the journey.",
+   "interview": "Explain the difference between CI and CD, DNS and CDN, and deploy and release.",
+   "covers": [
+    "Glossary",
+    "Technical jargon"
+   ]
+  },
+  {
+   "id": "jt02",
+   "category": "jargon-and-test-prep",
+   "title": "Practice test: code to live",
+   "depth": "Use",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1.5,
+   "order": 227,
+   "status": "full",
+   "summary": "A self-test with scenario and definition questions covering the whole web and mobile journey, in the style a manager might use. Answer first, then open each question to check.",
+   "why": "Testing yourself is the fastest way to find gaps before the real test.",
+   "concepts": [
+    "Definitions",
+    "Order of stages",
+    "Scenario judgement",
+    "Risk and rollback",
+    "Mobile specifics"
+   ],
+   "resources": [
+    "atlCicd",
+    "fowlerBG",
+    "asPhased"
+   ],
+   "do_it": "Answer all questions aloud without looking. Score yourself, then reread the topics for any you missed.",
+   "prove": "Score 25 or more out of 30, then explain three scenario answers to a colleague.",
+   "interview": "Pick any scenario question here and answer it in two minutes.",
+   "covers": [
+    "Test preparation",
+    "Self-assessment"
+   ]
+  },
+  {
+   "id": "jt03",
+   "category": "jargon-and-test-prep",
+   "title": "Explaining the journey to your manager",
+   "depth": "Use",
+   "priority": "P0",
+   "kind": "New",
+   "hours": 1,
+   "order": 228,
+   "status": "full",
+   "summary": "A ready-to-use five-minute talk track that walks through the web and mobile journeys, plus strong answers to the follow-up questions managers typically ask, so you can explain confidently in a test or review.",
+   "why": "Being able to explain the whole journey clearly, in order and with the right terms, is often exactly what a manager's test checks.",
+   "concepts": [
+    "Five-minute web walkthrough",
+    "Two-minute mobile differences",
+    "Whiteboard sketch",
+    "Follow-up questions",
+    "Structuring scenario answers"
+   ],
+   "resources": [
+    "mdnWeb",
+    "appReview"
+   ],
+   "do_it": "Record yourself giving the five-minute walkthrough. Play it back and note where you hesitated or used vague words.",
+   "prove": "Deliver the walkthrough to a colleague or your manager and answer three follow-up questions.",
+   "interview": "Explain, end to end, how a change goes from a developer's laptop to customers on web and mobile.",
+   "covers": [
+    "Communication",
+    "Test preparation",
+    "Whiteboard explanation"
    ]
   }
  ],
@@ -40507,6 +41491,4931 @@
    "deeper": [
     "c4",
     "sdPrimer"
+   ]
+  },
+  "wl01": {
+   "sections": [
+    {
+     "h": "The big picture",
+     "p": [
+      "Every website, from a small blog to a bank, goes through the same journey. Code is written on a developer's laptop, checked by others, tested, packaged, sent to servers, connected to a web address and then watched once real users arrive.",
+      "Engineers often call this the software delivery lifecycle (SDLC) or the 'path to production'. Knowing the stages in order is the single most useful thing for a TPM, because every status update, risk and delay belongs to one of them."
+     ]
+    },
+    {
+     "h": "The journey at a glance",
+     "flowLabel": "From an idea to a live website and back again",
+     "flow": [
+      [
+       "Build it",
+       [
+        [
+         "Plan",
+         "stories, design, estimates"
+        ],
+        [
+         "Set up",
+         "repo, tools, local environment"
+        ],
+        [
+         "Code",
+         "frontend, backend, database"
+        ],
+        [
+         "Review",
+         "pull request, code review"
+        ]
+       ]
+      ],
+      [
+       "Prove it",
+       [
+        [
+         "Test",
+         "unit, integration, QA, UAT"
+        ],
+        [
+         "Build",
+         "CI pipeline makes an artifact"
+        ],
+        [
+         "Stage",
+         "deploy to a staging copy"
+        ]
+       ]
+      ],
+      [
+       "Go live",
+       [
+        [
+         "Deploy",
+         "release to production servers"
+        ],
+        [
+         "Domain",
+         "DNS and HTTPS certificate"
+        ],
+        [
+         "Speed",
+         "CDN, caching"
+        ],
+        [
+         "Launch",
+         "go-live checklist"
+        ],
+        [
+         "Monitor",
+         "logs, alerts, analytics"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "h": "Each stage in one line",
+     "table": [
+      [
+       "Stage",
+       "What happens",
+       "Main owner",
+       "Output"
+      ],
+      [
+       "Plan",
+       "Work is broken into user stories with acceptance criteria",
+       "PM, tech lead, designer",
+       "Ready backlog"
+      ],
+      [
+       "Set up",
+       "Code repository, tools and local environment are created",
+       "Tech lead, DevOps",
+       "Repo anyone can run"
+      ],
+      [
+       "Code",
+       "Features are written",
+       "Frontend and backend developers",
+       "Code changes on a branch"
+      ],
+      [
+       "Review",
+       "Another developer checks the change",
+       "Developers",
+       "Approved pull request"
+      ],
+      [
+       "Test",
+       "Automated and manual checks",
+       "Developers, QA",
+       "Test results, bug list"
+      ],
+      [
+       "Build",
+       "Code is compiled and packaged",
+       "CI pipeline (DevOps owns it)",
+       "Build artifact"
+      ],
+      [
+       "Stage",
+       "Release candidate tested in a production-like copy",
+       "QA, business users",
+       "Sign-off"
+      ],
+      [
+       "Deploy",
+       "Artifact goes to production servers",
+       "DevOps or developers via CD",
+       "Live new version"
+      ],
+      [
+       "Domain and HTTPS",
+       "Web address points to the servers; traffic encrypted",
+       "DevOps",
+       "https://yoursite.com works"
+      ],
+      [
+       "Performance",
+       "Content cached close to users; pages optimised",
+       "Frontend, DevOps",
+       "Fast pages"
+      ],
+      [
+       "Launch",
+       "Final checks, go/no-go, communication",
+       "TPM, release manager",
+       "Released feature"
+      ],
+      [
+       "Monitor",
+       "Errors, speed and usage watched",
+       "SRE, on-call developers",
+       "Alerts and dashboards"
+      ]
+     ]
+    },
+    {
+     "h": "Where projects usually slip",
+     "bullets": [
+      "Set up: environments or access not ready, so developers wait.",
+      "Review: pull requests sit for days without a reviewer.",
+      "Test: bugs found late because testing starts after all coding ends.",
+      "Stage: staging is different from production, so 'it worked in staging' fails live.",
+      "Domain and HTTPS: DNS changes take time to spread; certificates expire.",
+      "Launch: no rollback plan, so a bad release stays live longer than it should."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "In status reports, name the stage a feature is in (for example 'in review' or 'on staging') rather than a vague percentage.",
+      "Ask early who owns each stage; gaps in ownership are the most common hidden risk."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Deploying and releasing are the same thing.",
+       "Deploy puts code on servers; release makes it available to users, often later via feature flags."
+      ],
+      [
+       "Testing is one step at the end.",
+       "Testing happens throughout: developers, CI, QA and users all test at different stages."
+      ],
+      [
+       "Once live, the work is done.",
+       "Monitoring, fixes and improvements continue after launch."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "SDLC",
+       "Software delivery lifecycle: the stages from idea to running software"
+      ],
+      [
+       "Production (prod)",
+       "The live environment real users use"
+      ],
+      [
+       "Staging",
+       "A production-like copy used for final testing"
+      ],
+      [
+       "Artifact",
+       "The packaged, ready-to-deploy output of a build"
+      ],
+      [
+       "Release",
+       "Making a new version available to users"
+      ],
+      [
+       "Path to production",
+       "The route and checks a change passes through before going live"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Name the stage where code is packaged into something deployable.",
+     "Build (in the CI pipeline), producing an artifact."
+    ],
+    [
+     "What is staging?",
+     "A production-like copy of the system used for final testing before release."
+    ],
+    [
+     "Which stage makes https://yoursite.com point to your servers?",
+     "Domain and DNS, plus an HTTPS certificate."
+    ],
+    [
+     "Why does 'it worked in staging' sometimes fail in production?",
+     "Because staging differs from production in data, configuration, scale or setup."
+    ],
+    [
+     "Who usually owns monitoring after launch?",
+     "SRE or on-call developers, with alerts and dashboards."
+    ]
+   ],
+   "deeper": [
+    "mdnWeb",
+    "atlCicd",
+    "twelveConfig"
+   ]
+  },
+  "wl02": {
+   "sections": [
+    {
+     "h": "The core roles",
+     "table": [
+      [
+       "Role",
+       "Owns",
+       "Typical tools"
+      ],
+      [
+       "Product manager or owner",
+       "What to build and why; priorities; acceptance",
+       "Jira, Confluence, analytics"
+      ],
+      [
+       "UX/UI designer",
+       "User flows, screens, design system",
+       "Figma"
+      ],
+      [
+       "Frontend developer",
+       "What users see in the browser: pages, buttons, forms",
+       "React, Next.js, Angular, HTML/CSS"
+      ],
+      [
+       "Backend developer",
+       "Server logic, APIs, database, integrations",
+       "Node.js, Java, Python, .NET, SQL"
+      ],
+      [
+       "Full-stack developer",
+       "Both frontend and backend",
+       "Any of the above"
+      ],
+      [
+       "Mobile developer",
+       "iOS and Android apps",
+       "Swift, Kotlin, Flutter, React Native"
+      ],
+      [
+       "QA / test engineer",
+       "Test plans, manual and automated tests, bug reports",
+       "Selenium, Playwright, Appium"
+      ],
+      [
+       "DevOps / platform engineer",
+       "CI/CD pipelines, cloud, environments, infrastructure as code",
+       "GitHub Actions, Jenkins, Docker, Terraform, AWS"
+      ],
+      [
+       "SRE (site reliability engineer)",
+       "Uptime, monitoring, incident response, SLOs",
+       "Grafana, Datadog, PagerDuty"
+      ],
+      [
+       "Security engineer",
+       "Threat reviews, scans, penetration tests",
+       "SAST/DAST tools"
+      ],
+      [
+       "Tech lead / architect",
+       "Technical design and standards; unblocks developers",
+       "Design docs, diagrams"
+      ],
+      [
+       "Release manager",
+       "Release schedule, go/no-go, coordination",
+       "Release calendar, checklists"
+      ]
+     ]
+    },
+    {
+     "h": "Handoffs to watch",
+     "steps": [
+      [
+       "Product to design",
+       "Problem, users and goals become flows and screens."
+      ],
+      [
+       "Design to developers",
+       "Approved screens and design specs; developers ask about edge cases."
+      ],
+      [
+       "Developers to QA",
+       "Feature on a test environment with notes on what changed."
+      ],
+      [
+       "QA to business users",
+       "UAT on staging with test scripts."
+      ],
+      [
+       "Developers to DevOps",
+       "Build and deployment needs: new services, environment variables, secrets."
+      ],
+      [
+       "Everyone to support",
+       "Release notes and known issues before launch."
+      ]
+     ]
+    },
+    {
+     "h": "Smaller teams",
+     "p": [
+      "In a startup, one person may cover several roles: a full-stack developer may also run deployments, and the PM may do QA. Ask who covers each responsibility rather than assuming a job title exists."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Invite DevOps to planning for any feature that needs new infrastructure; late requests are a common cause of slips.",
+      "Ask QA to review acceptance criteria before coding starts."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "DevOps is just one person who deploys.",
+       "DevOps is a way of working; the role builds pipelines and platforms so teams deploy safely themselves."
+      ],
+      [
+       "QA is responsible for quality.",
+       "Everyone owns quality; QA designs and runs checks and highlights risk."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Full-stack",
+       "A developer who works on both frontend and backend"
+      ],
+      [
+       "DevOps",
+       "A culture and set of practices joining development and operations, also used as a job title"
+      ],
+      [
+       "SRE",
+       "Site reliability engineering: keeping systems reliable using engineering"
+      ],
+      [
+       "QA",
+       "Quality assurance: testing and quality checks"
+      ],
+      [
+       "RACI",
+       "Responsible, Accountable, Consulted, Informed"
+      ],
+      [
+       "On-call",
+       "The engineer responsible for responding to alerts at a given time"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Who builds the APIs and database logic?",
+     "Backend developers."
+    ],
+    [
+     "What does an SRE focus on?",
+     "Reliability: uptime, monitoring, incidents and service level objectives."
+    ],
+    [
+     "Who usually owns the CI/CD pipeline?",
+     "DevOps or platform engineers."
+    ],
+    [
+     "What should developers hand QA?",
+     "The feature deployed on a test environment with notes on what changed."
+    ]
+   ],
+   "deeper": [
+    "atlDevops",
+    "sreSlo"
+   ]
+  },
+  "wl03": {
+   "sections": [
+    {
+     "h": "What 'setting up the code' means",
+     "p": [
+      "Before any feature is built, the team creates a home for the code and a way for every developer to run the app on their own computer. This is the foundation; when it is messy, every later stage is slower."
+     ]
+    },
+    {
+     "h": "Setup steps",
+     "steps": [
+      [
+       "Create the repository",
+       "A Git repository (repo) on GitHub, GitLab or Bitbucket stores the code and its full history."
+      ],
+      [
+       "Choose the structure",
+       "Monorepo (frontend, backend and shared code in one repo) or separate repos per service."
+      ],
+      [
+       "Pick the stack",
+       "Framework and language, for example Next.js for the frontend and Node.js or Python for the backend."
+      ],
+      [
+       "Add dependencies",
+       "Libraries installed with a package manager (npm, yarn, pip, Maven). A lock file pins exact versions."
+      ],
+      [
+       "Configure environment variables",
+       "Settings such as database address and API keys live in a .env file locally and are never committed."
+      ],
+      [
+       "Set the branching rules",
+       "For example: main is protected, work happens on feature branches, merges need a review."
+      ],
+      [
+       "Write the README",
+       "Exact steps to run the app locally, often one command such as 'docker compose up'."
+      ],
+      [
+       "Run locally",
+       "The app runs on the developer's machine at an address like http://localhost:3000."
+      ]
+     ]
+    },
+    {
+     "h": "Branching strategies",
+     "table": [
+      [
+       "Strategy",
+       "How it works",
+       "Good for"
+      ],
+      [
+       "Trunk-based",
+       "Small, short-lived branches merged into main daily; unfinished work hidden with feature flags",
+       "Teams deploying often"
+      ],
+      [
+       "GitHub flow",
+       "Branch from main, open a pull request, review, merge, deploy",
+       "Most web teams"
+      ],
+      [
+       "GitFlow",
+       "Separate develop, release and hotfix branches",
+       "Scheduled releases, mobile apps, regulated products"
+      ]
+     ]
+    },
+    {
+     "h": "Signs of a healthy setup",
+     "bullets": [
+      "A new developer runs the app within a day.",
+      "The README is accurate.",
+      "Secrets are not in the repo.",
+      "Main branch is protected and always deployable.",
+      "Everyone uses the same versions of tools, often via Docker or version files."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Track 'time to first run' for new joiners; it's a quick health check of the codebase.",
+      "Ask whether main is always deployable; if not, releases will be stressful."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Git and GitHub are the same.",
+       "Git is the version control tool; GitHub is a hosting service for Git repos."
+      ],
+      [
+       "More branches mean more control.",
+       "Long-lived branches cause painful merges; short-lived branches are safer."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Repository (repo)",
+       "Storage for code and its history"
+      ],
+      [
+       "Branch",
+       "A separate line of work in a repo"
+      ],
+      [
+       "Main / master",
+       "The primary branch, usually what is deployed"
+      ],
+      [
+       "Dependency",
+       "An external library the code uses"
+      ],
+      [
+       "Lock file",
+       "Records exact dependency versions so everyone installs the same ones"
+      ],
+      [
+       "Environment variable",
+       "A setting provided outside the code, such as a database URL"
+      ],
+      [
+       ".env file",
+       "Local file holding environment variables; kept out of Git"
+      ],
+      [
+       "localhost",
+       "Your own computer, used to run the app during development"
+      ],
+      [
+       "Clone",
+       "Copy a repo to your computer"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What is a lock file for?",
+     "It pins exact dependency versions so every install is identical."
+    ],
+    [
+     "Why should .env files not be committed?",
+     "They contain secrets such as passwords and API keys."
+    ],
+    [
+     "What is trunk-based development?",
+     "Merging small changes into main frequently, hiding unfinished work behind feature flags."
+    ],
+    [
+     "What does localhost mean?",
+     "The developer's own computer running the app."
+    ]
+   ],
+   "deeper": [
+    "proGit",
+    "gitBranch",
+    "ghFlow"
+   ]
+  },
+  "wl04": {
+   "sections": [
+    {
+     "h": "The layers",
+     "flowLabel": "What happens when a user saves a form",
+     "flow": [
+      [
+       "Browser",
+       [
+        [
+         "Frontend",
+         "form, validation, button"
+        ]
+       ]
+      ],
+      [
+       "Network",
+       [
+        [
+         "API call",
+         "POST /api/wishlist with JSON"
+        ]
+       ]
+      ],
+      [
+       "Server",
+       [
+        [
+         "Backend",
+         "checks login, applies rules"
+        ],
+        [
+         "Database",
+         "stores the row"
+        ]
+       ]
+      ],
+      [
+       "Back to browser",
+       [
+        [
+         "Response",
+         "200 OK and updated data"
+        ],
+        [
+         "UI update",
+         "shows 'Saved'"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "h": "What each layer does",
+     "table": [
+      [
+       "Layer",
+       "Responsibility",
+       "Examples"
+      ],
+      [
+       "Frontend (client)",
+       "Screens, interaction, input checks, calling APIs",
+       "React, Next.js, Angular, Vue, HTML, CSS, JavaScript/TypeScript"
+      ],
+      [
+       "API",
+       "Agreed contract for requests and responses",
+       "REST with JSON, GraphQL"
+      ],
+      [
+       "Backend (server)",
+       "Business rules, security checks, integrations",
+       "Node.js, Python (FastAPI, Django), Java (Spring), .NET"
+      ],
+      [
+       "Database",
+       "Storing and querying data",
+       "PostgreSQL, MySQL (SQL); MongoDB (NoSQL); Redis (cache)"
+      ],
+      [
+       "Integrations",
+       "Other services",
+       "Payment gateway, email, SMS, maps"
+      ]
+     ]
+    },
+    {
+     "h": "Changing the database safely",
+     "p": [
+      "When a feature needs a new column or table, developers write a migration: a small script that changes the database structure in a controlled, repeatable way. Migrations run in each environment in order, so dev, staging and production stay in step. Risky migrations (renaming or deleting columns on large tables) are planned carefully because they can lock tables or break the old version during deployment."
+     ]
+    },
+    {
+     "h": "Login and permissions",
+     "bullets": [
+      "Authentication: proving who you are (password, single sign-on, one-time code).",
+      "Authorisation: what you are allowed to do (roles such as admin or viewer).",
+      "Sessions or tokens (often JWT) keep you logged in between requests.",
+      "Permissions must be checked on the backend; hiding a button is not security."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "When estimating, ask whether a change touches the API contract; contract changes often need frontend, backend and mobile teams together.",
+      "Agree API contracts early so frontend and backend can work in parallel using mock data."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Frontend work is just styling.",
+       "Frontend includes state, validation, accessibility, performance and API integration."
+      ],
+      [
+       "Adding a database column is trivial.",
+       "On large tables, schema changes can lock data or break older code; they need planning."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Client",
+       "The browser or app the user interacts with"
+      ],
+      [
+       "Server",
+       "A computer that runs the backend and answers requests"
+      ],
+      [
+       "API",
+       "Application programming interface: how software talks to other software"
+      ],
+      [
+       "REST",
+       "A common style of web API using URLs and HTTP methods"
+      ],
+      [
+       "JSON",
+       "A text format for data exchanged by APIs"
+      ],
+      [
+       "Endpoint",
+       "One URL an API exposes, such as /api/orders"
+      ],
+      [
+       "ORM",
+       "Library that maps database tables to code objects"
+      ],
+      [
+       "Migration",
+       "A script that changes database structure safely"
+      ],
+      [
+       "JWT",
+       "JSON Web Token: a signed token proving who is logged in"
+      ],
+      [
+       "Status code",
+       "Number in an HTTP response, for example 200 OK, 404 Not Found, 500 Server Error"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What is the difference between authentication and authorisation?",
+     "Authentication checks who you are; authorisation checks what you may do."
+    ],
+    [
+     "What is a database migration?",
+     "A controlled script that changes the database structure in every environment."
+    ],
+    [
+     "What does HTTP status 500 mean?",
+     "A server-side error."
+    ],
+    [
+     "Why must permission checks happen on the backend?",
+     "Because anyone can bypass or modify the frontend."
+    ],
+    [
+     "What format do most web APIs use for data?",
+     "JSON."
+    ]
+   ],
+   "deeper": [
+    "mdnHttp",
+    "mdnJson",
+    "jwt",
+    "rmSql"
+   ]
+  },
+  "wl05": {
+   "sections": [
+    {
+     "h": "The flow",
+     "steps": [
+      [
+       "Commit",
+       "The developer saves changes with a message, for example 'Add wishlist API'."
+      ],
+      [
+       "Push",
+       "Commits are uploaded to a branch in the shared repo."
+      ],
+      [
+       "Open a pull request",
+       "A PR asks to merge the branch into main and describes what changed and how it was tested."
+      ],
+      [
+       "Automated checks",
+       "CI runs linting, tests and builds; results show on the PR."
+      ],
+      [
+       "Review",
+       "One or more developers read the code, comment and approve or request changes."
+      ],
+      [
+       "Fix and update",
+       "The author addresses comments and pushes again."
+      ],
+      [
+       "Merge",
+       "Once approved and green, the branch is merged into main."
+      ]
+     ]
+    },
+    {
+     "h": "What reviewers look for",
+     "bullets": [
+      "Does it do what the story asks, including edge cases?",
+      "Is it readable and consistent with team standards?",
+      "Are there tests?",
+      "Any security risks, such as unchecked input or exposed secrets?",
+      "Performance problems, such as slow database queries?",
+      "Will it be easy to change later?"
+     ]
+    },
+    {
+     "h": "Merge conflicts",
+     "p": [
+      "A merge conflict happens when two branches change the same lines. Git cannot decide which to keep, so a developer must resolve it by hand. Conflicts grow with branch age; small, frequent merges keep them rare."
+     ]
+    },
+    {
+     "h": "Merge options",
+     "table": [
+      [
+       "Option",
+       "Result"
+      ],
+      [
+       "Merge commit",
+       "Keeps all commits plus a merge record"
+      ],
+      [
+       "Squash and merge",
+       "Combines the branch into one commit on main"
+      ],
+      [
+       "Rebase and merge",
+       "Replays commits on top of main for a straight history"
+      ]
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Add a 'In review' column on the board and watch its age; it shows bottlenecks quickly.",
+      "Smaller PRs get reviewed faster and more carefully."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Code review is mainly about finding bugs.",
+       "It also spreads knowledge, keeps standards and improves design."
+      ],
+      [
+       "A big PR is efficient.",
+       "Big PRs are reviewed slowly and less carefully."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Commit",
+       "A saved set of changes with a message"
+      ],
+      [
+       "Push",
+       "Upload commits to the remote repo"
+      ],
+      [
+       "Pull request (PR)",
+       "Request to merge a branch, with review and checks; GitLab calls it a merge request (MR)"
+      ],
+      [
+       "Approve",
+       "Reviewer signs off a PR"
+      ],
+      [
+       "Linting",
+       "Automatic checks for style and common mistakes"
+      ],
+      [
+       "Merge conflict",
+       "Two changes to the same lines that need manual resolution"
+      ],
+      [
+       "Branch protection",
+       "Rules such as 'needs one approval and passing checks before merge'"
+      ],
+      [
+       "LGTM",
+       "'Looks good to me': informal approval"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What is a pull request?",
+     "A request to merge a branch into main, with review and automated checks."
+    ],
+    [
+     "What causes a merge conflict?",
+     "Two branches changing the same lines of code."
+    ],
+    [
+     "What does squash and merge do?",
+     "Combines all branch commits into a single commit on main."
+    ],
+    [
+     "Name two things a reviewer checks.",
+     "Correctness, tests, security, readability or performance."
+    ]
+   ],
+   "deeper": [
+    "ghHello",
+    "googleCr"
+   ]
+  },
+  "wl06": {
+   "sections": [
+    {
+     "h": "The test pyramid",
+     "p": [
+      "Teams aim for many fast, cheap tests at the bottom and fewer slow, expensive ones at the top. Unit tests check small pieces of code in milliseconds; end-to-end tests drive a real browser through whole user journeys and take minutes."
+     ],
+     "table": [
+      [
+       "Level",
+       "Checks",
+       "Speed",
+       "Who"
+      ],
+      [
+       "Unit",
+       "One function or component",
+       "Milliseconds",
+       "Developers"
+      ],
+      [
+       "Integration",
+       "Parts working together, such as API plus database",
+       "Seconds",
+       "Developers"
+      ],
+      [
+       "End-to-end (E2E)",
+       "A full user journey in a browser",
+       "Minutes",
+       "QA automation, developers"
+      ],
+      [
+       "Manual / exploratory",
+       "Things automation misses, usability",
+       "Hours",
+       "QA"
+      ],
+      [
+       "UAT",
+       "Business needs are met",
+       "Days",
+       "Business users, product"
+      ]
+     ]
+    },
+    {
+     "h": "Other test types",
+     "table": [
+      [
+       "Type",
+       "Purpose"
+      ],
+      [
+       "Regression",
+       "Check old features still work after a change"
+      ],
+      [
+       "Smoke",
+       "Quick check that the main paths work after a deploy"
+      ],
+      [
+       "Performance / load",
+       "Check speed and behaviour under many users"
+      ],
+      [
+       "Security",
+       "Find vulnerabilities (scans, penetration tests)"
+      ],
+      [
+       "Accessibility",
+       "Check usability for people with disabilities"
+      ],
+      [
+       "Cross-browser / device",
+       "Check Chrome, Safari, Firefox, mobile sizes"
+      ]
+     ]
+    },
+    {
+     "h": "Bug triage",
+     "steps": [
+      [
+       "Report",
+       "Steps to reproduce, expected vs actual, environment, screenshots."
+      ],
+      [
+       "Severity",
+       "How bad the impact is: critical, major, minor, trivial."
+      ],
+      [
+       "Priority",
+       "How soon to fix: P1 now, P2 this release, P3 later."
+      ],
+      [
+       "Assign",
+       "An owner and a target release."
+      ],
+      [
+       "Verify",
+       "QA retests the fix before closing."
+      ]
+     ]
+    },
+    {
+     "h": "Exit criteria example",
+     "bullets": [
+      "All automated tests pass in CI.",
+      "No open critical or major bugs.",
+      "Regression suite passed on staging.",
+      "UAT signed off by the business owner.",
+      "Performance test meets agreed targets."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Agree exit criteria at sprint planning, not on release day.",
+      "Treat flaky tests as bugs; teams stop trusting the pipeline otherwise."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "100% test coverage means no bugs.",
+       "Coverage shows code was run, not that behaviour is correct."
+      ],
+      [
+       "QA can test everything at the end.",
+       "Late testing finds bugs when they're most expensive to fix."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Test coverage",
+       "Share of code exercised by automated tests"
+      ],
+      [
+       "Regression",
+       "A previously working feature that breaks"
+      ],
+      [
+       "Smoke test",
+       "Quick check of critical paths"
+      ],
+      [
+       "UAT",
+       "User acceptance testing by business users"
+      ],
+      [
+       "Severity vs priority",
+       "Impact vs urgency of a bug"
+      ],
+      [
+       "Flaky test",
+       "A test that sometimes passes and sometimes fails without code changes"
+      ],
+      [
+       "Test environment",
+       "Where testing happens, such as QA or staging"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Which tests are fastest and most numerous?",
+     "Unit tests."
+    ],
+    [
+     "What is a smoke test?",
+     "A quick check that critical paths work, usually right after deployment."
+    ],
+    [
+     "Difference between severity and priority?",
+     "Severity is impact; priority is how urgently to fix."
+    ],
+    [
+     "Who performs UAT?",
+     "Business users or product owners."
+    ],
+    [
+     "What is a regression?",
+     "A previously working feature that breaks after a change."
+    ]
+   ],
+   "deeper": [
+    "testPyramid",
+    "k6Types"
+   ]
+  },
+  "wl07": {
+   "sections": [
+    {
+     "h": "What CI does",
+     "p": [
+      "Continuous integration means every change is automatically built and tested as soon as it is pushed. A CI server (GitHub Actions, GitLab CI, Jenkins, CircleCI) runs a pipeline: a series of steps defined in a file in the repo."
+     ]
+    },
+    {
+     "h": "A typical pipeline",
+     "flowLabel": "Pipeline triggered by a push or merge",
+     "flow": [
+      [
+       "Prepare",
+       [
+        [
+         "Checkout",
+         "get the code"
+        ],
+        [
+         "Install",
+         "download dependencies"
+        ]
+       ]
+      ],
+      [
+       "Check",
+       [
+        [
+         "Lint",
+         "style and simple errors"
+        ],
+        [
+         "Test",
+         "unit and integration"
+        ],
+        [
+         "Scan",
+         "security and dependency checks"
+        ]
+       ]
+      ],
+      [
+       "Package",
+       [
+        [
+         "Build",
+         "compile, bundle, minify"
+        ],
+        [
+         "Image",
+         "create Docker image"
+        ],
+        [
+         "Publish",
+         "push to a registry with a version tag"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "h": "What 'build' means for a website",
+     "table": [
+      [
+       "Step",
+       "What happens"
+      ],
+      [
+       "Transpile",
+       "Convert TypeScript or modern JavaScript into code all browsers understand"
+      ],
+      [
+       "Bundle",
+       "Combine many files into a few optimised files"
+      ],
+      [
+       "Minify",
+       "Remove spaces and shorten names to make files smaller"
+      ],
+      [
+       "Optimise assets",
+       "Compress images, generate different sizes"
+      ],
+      [
+       "Package",
+       "Create the artifact: a folder of static files or a Docker image"
+      ]
+     ]
+    },
+    {
+     "h": "Versioning",
+     "p": [
+      "Each build gets an identity so you know exactly what is deployed. Many teams use semantic versioning: MAJOR.MINOR.PATCH (for example 2.4.1). Major changes break compatibility, minor adds features, patch fixes bugs. A Git tag marks the commit used for a release."
+     ]
+    },
+    {
+     "h": "Why builds fail",
+     "bullets": [
+      "A test fails because of a real bug or a flaky test.",
+      "Code doesn't compile (syntax or type errors).",
+      "A dependency version changed or a download failed.",
+      "Linting rules not met.",
+      "A secret or environment variable is missing in CI."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Pipeline time is developer waiting time; a 10-minute target is common for fast feedback.",
+      "Ask for the same artifact to be promoted from staging to production, not rebuilt; rebuilding can introduce differences."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "CI is the same as CD.",
+       "CI builds and tests; CD (continuous delivery or deployment) takes the artifact to environments."
+      ],
+      [
+       "A green build means the feature is ready.",
+       "It means automated checks passed; UAT and other checks may still be needed."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "CI",
+       "Continuous integration: build and test every change automatically"
+      ],
+      [
+       "Pipeline",
+       "Ordered automated steps defined in code"
+      ],
+      [
+       "Job / stage",
+       "A group of steps in a pipeline"
+      ],
+      [
+       "Artifact",
+       "Packaged build output ready to deploy"
+      ],
+      [
+       "Docker image",
+       "A packaged app with everything it needs to run"
+      ],
+      [
+       "Container registry",
+       "Storage for Docker images, such as Docker Hub or Amazon ECR"
+      ],
+      [
+       "Bundle",
+       "Combined, optimised frontend files"
+      ],
+      [
+       "Semantic versioning",
+       "MAJOR.MINOR.PATCH numbering"
+      ],
+      [
+       "Red / green build",
+       "Failed / passed pipeline"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What does CI stand for and do?",
+     "Continuous integration: automatically build and test every change."
+    ],
+    [
+     "What is a build artifact?",
+     "The packaged output of a build, ready to deploy."
+    ],
+    [
+     "In version 3.2.5, what does the 5 mean?",
+     "Patch: bug fixes."
+    ],
+    [
+     "Name two reasons a build fails.",
+     "Failing tests, compile errors, dependency problems, lint errors or missing secrets."
+    ],
+    [
+     "What is a container registry?",
+     "A store for Docker images."
+    ]
+   ],
+   "deeper": [
+    "atlCicd",
+    "ghActionsQs",
+    "dockerOverview",
+    "semver"
+   ]
+  },
+  "wl08": {
+   "sections": [
+    {
+     "h": "The environment ladder",
+     "flowLabel": "A change moves up the ladder, checked at each step",
+     "flow": [
+      [
+       "Build",
+       [
+        [
+         "Local",
+         "developer laptop"
+        ],
+        [
+         "Dev",
+         "shared, latest merged code"
+        ]
+       ]
+      ],
+      [
+       "Check",
+       [
+        [
+         "QA",
+         "testers verify features"
+        ],
+        [
+         "Staging / UAT",
+         "production-like; business sign-off"
+        ]
+       ]
+      ],
+      [
+       "Live",
+       [
+        [
+         "Production",
+         "real users and real data"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "h": "What differs between environments",
+     "table": [
+      [
+       "Item",
+       "Example in staging",
+       "Example in production"
+      ],
+      [
+       "Web address",
+       "staging.example.com",
+       "www.example.com"
+      ],
+      [
+       "Database",
+       "Copy with masked or fake data",
+       "Real customer data"
+      ],
+      [
+       "Payment gateway",
+       "Sandbox/test mode",
+       "Live mode"
+      ],
+      [
+       "Scale",
+       "1 small server",
+       "Several servers with autoscaling"
+      ],
+      [
+       "Secrets",
+       "Test keys",
+       "Live keys, tightly restricted"
+      ],
+      [
+       "Monitoring",
+       "Basic",
+       "Full alerts and on-call"
+      ]
+     ]
+    },
+    {
+     "h": "Configuration and secrets",
+     "bullets": [
+      "The same code runs everywhere; only configuration changes. This idea comes from the 'twelve-factor app' guidelines.",
+      "Configuration is passed in as environment variables, such as DATABASE_URL.",
+      "Secrets (passwords, API keys, certificates) live in a secrets manager such as AWS Secrets Manager, Azure Key Vault or the CI/CD tool's secret store, never in code.",
+      "Access to production secrets is limited and audited."
+     ]
+    },
+    {
+     "h": "Feature flags",
+     "p": [
+      "A feature flag is a switch in configuration that turns a feature on or off without a new deployment. Teams deploy code with the flag off, then switch it on for internal users, a small percentage of customers, then everyone. If something goes wrong, they switch it off in seconds. Flags separate 'deploy' from 'release'."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Keep a shared calendar of who uses staging when; contention for staging is a common delay.",
+      "List new environment variables in each release's notes so DevOps can set them before deploy."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Staging is just a smaller production.",
+       "If it differs too much in data, configuration or scale, it won't catch production issues."
+      ],
+      [
+       "Feature flags are only for experiments.",
+       "They are also a safety switch for risky launches."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Environment",
+       "A separate running copy of the system for a purpose"
+      ],
+      [
+       "Staging",
+       "Production-like environment for final checks"
+      ],
+      [
+       "UAT environment",
+       "Where business users accept the release"
+      ],
+      [
+       "Environment parity",
+       "Keeping environments as similar as possible"
+      ],
+      [
+       "Secret",
+       "Sensitive value such as a password or API key"
+      ],
+      [
+       "Secrets manager",
+       "Secure service that stores and serves secrets"
+      ],
+      [
+       "Feature flag",
+       "Switch that enables or disables a feature without deploying"
+      ],
+      [
+       "Data masking",
+       "Hiding real personal data in non-production environments"
+      ],
+      [
+       "Sandbox",
+       "Test mode of a third-party service"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Why keep environments similar?",
+     "So issues are caught before production instead of appearing only live."
+    ],
+    [
+     "Where should production secrets be stored?",
+     "In a secrets manager, not in code or chat."
+    ],
+    [
+     "What does a feature flag let you do?",
+     "Turn a feature on or off without deploying, including for a subset of users."
+    ],
+    [
+     "Why mask data in staging?",
+     "To protect real customers' personal data."
+    ]
+   ],
+   "deeper": [
+    "twelveConfig",
+    "ghSecret"
+   ]
+  },
+  "wl09": {
+   "sections": [
+    {
+     "h": "Hosting options",
+     "table": [
+      [
+       "Option",
+       "What you manage",
+       "Examples",
+       "Good for"
+      ],
+      [
+       "Virtual machine (VM)",
+       "Operating system, software, scaling",
+       "AWS EC2, Azure VMs, Google Compute Engine",
+       "Full control, legacy apps"
+      ],
+      [
+       "Containers + orchestration",
+       "Container images and cluster setup",
+       "Docker on Kubernetes (EKS, AKS, GKE), AWS ECS",
+       "Many services, large teams"
+      ],
+      [
+       "Platform as a service (PaaS)",
+       "Just your code and settings",
+       "Render, Heroku, Azure App Service, Google App Engine",
+       "Fast setup, small teams"
+      ],
+      [
+       "Serverless functions",
+       "Individual functions",
+       "AWS Lambda, Azure Functions, Cloudflare Workers",
+       "Spiky traffic, event-driven tasks"
+      ],
+      [
+       "Static / frontend hosting",
+       "Built files only",
+       "Vercel, Netlify, Cloudflare Pages, S3 + CloudFront",
+       "Websites and frontends"
+      ],
+      [
+       "Managed database",
+       "Data and settings",
+       "Amazon RDS, Neon, Supabase, Cloud SQL",
+       "Most apps"
+      ]
+     ]
+    },
+    {
+     "h": "How traffic reaches your app",
+     "flowLabel": "Request path in a typical cloud setup",
+     "flow": [
+      [
+       "Edge",
+       [
+        [
+         "DNS",
+         "finds the address"
+        ],
+        [
+         "CDN",
+         "serves cached files"
+        ]
+       ]
+      ],
+      [
+       "Entry",
+       [
+        [
+         "Load balancer",
+         "spreads traffic"
+        ],
+        [
+         "Web servers",
+         "several copies of the app"
+        ]
+       ]
+      ],
+      [
+       "Data",
+       [
+        [
+         "Database",
+         "primary plus replicas"
+        ],
+        [
+         "Cache",
+         "Redis for fast reads"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "h": "Scaling and reliability",
+     "bullets": [
+      "Vertical scaling: a bigger server. Simple but limited.",
+      "Horizontal scaling: more servers behind a load balancer. The common approach.",
+      "Autoscaling: the platform adds or removes servers based on load.",
+      "Regions are geographic locations (for example Mumbai, Singapore); availability zones are separate data centres within a region. Running in more than one zone protects against a single data centre failure.",
+      "Put servers close to users and close to the database; distance adds delay to every request."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Ask for a cost estimate alongside any hosting decision; cloud bills grow quietly.",
+      "Check that the app servers and database are in the same region; mismatches slow every request."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Serverless means there are no servers.",
+       "Servers exist; the provider manages them."
+      ],
+      [
+       "Kubernetes is always the best choice.",
+       "It adds complexity; small teams are often faster on PaaS."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Cloud",
+       "Renting computing from providers such as AWS, Azure or Google Cloud"
+      ],
+      [
+       "VM",
+       "A virtual computer running on shared hardware"
+      ],
+      [
+       "Container",
+       "A packaged app that runs the same everywhere"
+      ],
+      [
+       "Kubernetes (K8s)",
+       "System that runs and manages containers at scale"
+      ],
+      [
+       "PaaS",
+       "Platform that runs your code without you managing servers"
+      ],
+      [
+       "Serverless",
+       "Code that runs on demand; you pay per use"
+      ],
+      [
+       "Load balancer",
+       "Spreads incoming traffic across servers"
+      ],
+      [
+       "Autoscaling",
+       "Automatically adding or removing capacity"
+      ],
+      [
+       "Region / availability zone",
+       "Geographic area / separate data centre within it"
+      ],
+      [
+       "Cold start",
+       "Delay when an idle service or function starts up"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What does a load balancer do?",
+     "Spreads incoming traffic across several servers."
+    ],
+    [
+     "Difference between vertical and horizontal scaling?",
+     "Vertical: a bigger server. Horizontal: more servers."
+    ],
+    [
+     "What is serverless?",
+     "Running code on demand without managing servers, usually paying per use."
+    ],
+    [
+     "Why run in more than one availability zone?",
+     "To survive a single data centre failure."
+    ],
+    [
+     "What is a cold start?",
+     "The delay when an idle service or function has to start before responding."
+    ]
+   ],
+   "deeper": [
+    "awsOverview",
+    "dockerOverview",
+    "k8sOverview"
+   ]
+  },
+  "wl10": {
+   "sections": [
+    {
+     "h": "CD: two meanings",
+     "table": [
+      [
+       "Term",
+       "Meaning"
+      ],
+      [
+       "Continuous delivery",
+       "Every change is ready to deploy; a person presses the button"
+      ],
+      [
+       "Continuous deployment",
+       "Every change that passes checks goes to production automatically"
+      ]
+     ]
+    },
+    {
+     "h": "Deployment strategies",
+     "table": [
+      [
+       "Strategy",
+       "How it works",
+       "Risk",
+       "Rollback"
+      ],
+      [
+       "All at once (big bang)",
+       "Replace the old version everywhere together",
+       "High; may cause downtime",
+       "Redeploy old version"
+      ],
+      [
+       "Rolling",
+       "Replace servers a few at a time",
+       "Medium",
+       "Stop and roll back gradually"
+      ],
+      [
+       "Blue-green",
+       "Run the new version (green) next to the old (blue), then switch traffic",
+       "Low",
+       "Switch traffic back instantly"
+      ],
+      [
+       "Canary",
+       "Send a small share of traffic (for example 5%) to the new version, watch, then increase",
+       "Low",
+       "Send all traffic back to old version"
+      ],
+      [
+       "Feature flag release",
+       "Deploy dark, then turn the feature on for chosen users",
+       "Low",
+       "Turn the flag off"
+      ]
+     ]
+    },
+    {
+     "h": "A typical production release",
+     "steps": [
+      [
+       "Freeze",
+       "Agree the release contents; stop adding scope."
+      ],
+      [
+       "Final checks",
+       "Staging sign-off, change approval if required."
+      ],
+      [
+       "Deploy",
+       "Pipeline deploys the same artifact that passed staging."
+      ],
+      [
+       "Migrate",
+       "Run database migrations designed to work with old and new code."
+      ],
+      [
+       "Smoke test",
+       "Check key journeys: login, search, checkout."
+      ],
+      [
+       "Watch",
+       "Monitor errors, speed and business metrics for a set period."
+      ],
+      [
+       "Communicate",
+       "Release notes to support and stakeholders."
+      ]
+     ]
+    },
+    {
+     "h": "When things go wrong",
+     "bullets": [
+      "Rollback: return to the previous version. Fast if the old artifact is kept and the database change is backward compatible.",
+      "Roll forward: fix quickly and deploy a new version, used when rollback is impossible (for example after a data change).",
+      "Hotfix: an urgent small fix that skips the normal release train, still reviewed and tested.",
+      "Agree rollback triggers in advance, for example 'error rate above 2% for 5 minutes'."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Never schedule a big release just before a weekend or holiday without full support cover.",
+      "Write rollback steps in the runbook and practise them; untested rollbacks often fail."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Rollback is always possible.",
+       "Data or schema changes can make rollback hard; plan backward-compatible changes."
+      ],
+      [
+       "Deploying less often is safer.",
+       "Smaller, frequent releases are usually lower risk and easier to fix."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Deploy",
+       "Put a version onto servers"
+      ],
+      [
+       "Release",
+       "Make functionality available to users"
+      ],
+      [
+       "Blue-green",
+       "Two identical environments; switch traffic between them"
+      ],
+      [
+       "Canary",
+       "Release to a small share of users first"
+      ],
+      [
+       "Rollback",
+       "Return to the previous version"
+      ],
+      [
+       "Hotfix",
+       "Urgent fix released outside the normal cycle"
+      ],
+      [
+       "Downtime",
+       "Period when the service is unavailable"
+      ],
+      [
+       "Change freeze",
+       "Period with no deployments, for example during peak sales"
+      ],
+      [
+       "Release train",
+       "Regular scheduled releases that ship whatever is ready"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Difference between continuous delivery and continuous deployment?",
+     "Delivery: always ready, a person deploys. Deployment: automatic to production."
+    ],
+    [
+     "How does blue-green allow fast rollback?",
+     "Traffic switches back to the old (blue) environment, which is still running."
+    ],
+    [
+     "What is a canary release?",
+     "Releasing to a small percentage of traffic first and watching before expanding."
+    ],
+    [
+     "What is a hotfix?",
+     "An urgent fix released outside the normal schedule."
+    ],
+    [
+     "Why must migrations work with old and new code?",
+     "So the old version still works during deployment and rollback stays possible."
+    ]
+   ],
+   "deeper": [
+    "fowlerBG",
+    "fowlerCanary",
+    "atlCicd"
+   ]
+  },
+  "wl11": {
+   "sections": [
+    {
+     "h": "How a browser finds your site",
+     "flowLabel": "Typing www.example.com",
+     "flow": [
+      [
+       "Ask",
+       [
+        [
+         "Browser",
+         "checks its cache"
+        ],
+        [
+         "Resolver",
+         "asks DNS servers on your behalf"
+        ]
+       ]
+      ],
+      [
+       "Look up",
+       [
+        [
+         "Root and TLD",
+         "who handles .com?"
+        ],
+        [
+         "Nameserver",
+         "your DNS provider answers"
+        ]
+       ]
+      ],
+      [
+       "Connect",
+       [
+        [
+         "IP address",
+         "for example 203.0.113.10"
+        ],
+        [
+         "HTTPS",
+         "secure connection with certificate"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "h": "The pieces",
+     "table": [
+      [
+       "Piece",
+       "What it is",
+       "Examples"
+      ],
+      [
+       "Domain name",
+       "The human-readable address",
+       "example.com"
+      ],
+      [
+       "Registrar",
+       "Where you buy and renew the domain",
+       "GoDaddy, Namecheap, Cloudflare, AWS Route 53"
+      ],
+      [
+       "DNS provider",
+       "Hosts the records that say where the domain points",
+       "Cloudflare, AWS Route 53, registrar's DNS"
+      ],
+      [
+       "Nameservers",
+       "Tell the internet which DNS provider is in charge",
+       "ns1.provider.com"
+      ],
+      [
+       "Hosting",
+       "The servers or platform the records point to",
+       "Vercel, AWS, Azure"
+      ]
+     ]
+    },
+    {
+     "h": "Common DNS records",
+     "table": [
+      [
+       "Record",
+       "Purpose",
+       "Example"
+      ],
+      [
+       "A",
+       "Points a name to an IPv4 address",
+       "example.com → 203.0.113.10"
+      ],
+      [
+       "AAAA",
+       "Points a name to an IPv6 address",
+       "example.com → 2001:db8::10"
+      ],
+      [
+       "CNAME",
+       "Points a name to another name",
+       "www → mysite.vercel.app"
+      ],
+      [
+       "MX",
+       "Where email for the domain goes",
+       "Google Workspace, Microsoft 365"
+      ],
+      [
+       "TXT",
+       "Text used for verification and email security",
+       "Domain ownership checks, SPF"
+      ],
+      [
+       "NS",
+       "Which nameservers handle the domain",
+       "Set at the registrar"
+      ]
+     ]
+    },
+    {
+     "h": "TTL and propagation",
+     "p": [
+      "TTL (time to live) tells resolvers how long to remember an answer, for example 3600 seconds. After you change a record, some users keep the old answer until it expires. This is called DNS propagation. Before a planned switch, teams lower the TTL (for example to 300 seconds) a day or two ahead so the change takes effect quickly."
+     ]
+    },
+    {
+     "h": "HTTPS and certificates",
+     "bullets": [
+      "HTTPS encrypts traffic between browser and server using TLS (the successor to SSL).",
+      "It needs a certificate that proves you control the domain, issued by a certificate authority.",
+      "Let's Encrypt issues free certificates automatically; most platforms renew them for you.",
+      "Certificates expire; expired certificates show scary browser warnings. Monitor expiry dates.",
+      "Redirect http:// to https:// and pick one main address (www or not) with a permanent (301) redirect from the other.",
+      "HSTS tells browsers to always use HTTPS for your domain."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Do DNS and certificate set-up days before launch, and test on the real domain.",
+      "Put domain renewal and certificate expiry on a shared calendar with owners."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "DNS changes are instant.",
+       "They can take minutes to hours to reach everyone, depending on TTL."
+      ],
+      [
+       "HTTPS is only for payment pages.",
+       "Every page should use HTTPS; browsers flag plain HTTP as not secure."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "DNS",
+       "Domain Name System: the internet's address book"
+      ],
+      [
+       "Registrar",
+       "Company where a domain is registered and renewed"
+      ],
+      [
+       "Nameserver",
+       "Server that holds a domain's DNS records"
+      ],
+      [
+       "A record",
+       "Name to IPv4 address"
+      ],
+      [
+       "CNAME",
+       "Name to another name"
+      ],
+      [
+       "TTL",
+       "How long DNS answers are cached"
+      ],
+      [
+       "Propagation",
+       "Time for DNS changes to reach everyone"
+      ],
+      [
+       "Apex / root domain",
+       "The domain without a subdomain, such as example.com"
+      ],
+      [
+       "Subdomain",
+       "A prefix such as www, api or staging"
+      ],
+      [
+       "TLS / SSL",
+       "Encryption protocols behind HTTPS"
+      ],
+      [
+       "Certificate authority (CA)",
+       "Trusted organisation that issues certificates"
+      ],
+      [
+       "301 redirect",
+       "Permanent redirect to another address"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What does a CNAME record do?",
+     "Points one name to another name."
+    ],
+    [
+     "Why lower TTL before a DNS change?",
+     "So the change reaches users quickly instead of waiting for long caches to expire."
+    ],
+    [
+     "What issues free certificates automatically?",
+     "Let's Encrypt (a certificate authority)."
+    ],
+    [
+     "What happens when a certificate expires?",
+     "Browsers show security warnings and many users can't reach the site."
+    ],
+    [
+     "Registrar vs DNS provider?",
+     "Registrar sells and renews the domain; DNS provider hosts its records (can be the same company)."
+    ]
+   ],
+   "deeper": [
+    "cfDns",
+    "cfHttps",
+    "leHow"
+   ]
+  },
+  "wl12": {
+   "sections": [
+    {
+     "h": "Where time goes",
+     "flowLabel": "The parts of a page load",
+     "flow": [
+      [
+       "Network",
+       [
+        [
+         "DNS + connect",
+         "find and connect to server"
+        ],
+        [
+         "TTFB",
+         "time to first byte from server"
+        ]
+       ]
+      ],
+      [
+       "Download",
+       [
+        [
+         "HTML, CSS, JS",
+         "files arrive"
+        ],
+        [
+         "Images, fonts",
+         "often the heaviest"
+        ]
+       ]
+      ],
+      [
+       "Render",
+       [
+        [
+         "Paint",
+         "content appears"
+        ],
+        [
+         "Interactive",
+         "page responds to taps"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "h": "Core Web Vitals",
+     "p": [
+      "Google's Core Web Vitals are three measures of real user experience, judged at the 75th percentile of visits on mobile and desktop."
+     ],
+     "table": [
+      [
+       "Metric",
+       "Measures",
+       "Good"
+      ],
+      [
+       "LCP: Largest Contentful Paint",
+       "How fast the main content appears",
+       "2.5 seconds or less"
+      ],
+      [
+       "INP: Interaction to Next Paint",
+       "How quickly the page responds to clicks and taps",
+       "200 milliseconds or less"
+      ],
+      [
+       "CLS: Cumulative Layout Shift",
+       "How much content jumps around while loading",
+       "0.1 or less"
+      ]
+     ]
+    },
+    {
+     "h": "Common fixes",
+     "table": [
+      [
+       "Problem",
+       "Fix"
+      ],
+      [
+       "Far from users",
+       "CDN serves files from locations near users"
+      ],
+      [
+       "Large images",
+       "Modern formats (WebP, AVIF), right sizes, compression"
+      ],
+      [
+       "Too much JavaScript",
+       "Code splitting, removing unused libraries"
+      ],
+      [
+       "Below-the-fold content loads early",
+       "Lazy loading"
+      ],
+      [
+       "Slow server responses",
+       "Caching (Redis), faster queries, database indexes"
+      ],
+      [
+       "Repeated downloads",
+       "Cache headers so browsers reuse files"
+      ],
+      [
+       "Layout jumps",
+       "Set image sizes; reserve space for ads and banners"
+      ],
+      [
+       "Big text files",
+       "Gzip or Brotli compression"
+      ]
+     ]
+    },
+    {
+     "h": "Caching layers",
+     "bullets": [
+      "Browser cache: files kept on the user's device.",
+      "CDN cache: copies at edge locations worldwide.",
+      "Server or application cache: computed results kept in memory or Redis.",
+      "Database cache and indexes: faster lookups.",
+      "The hard part is invalidation: making sure users see updates when content changes."
+     ]
+    },
+    {
+     "h": "Load testing",
+     "p": [
+      "Load tests simulate many users to check speed and stability before big events. A stress test pushes beyond expected load to find the breaking point; a soak test runs for hours to find slow leaks. Tools include k6, JMeter and Gatling. Agree targets first, for example '1,000 concurrent users with 95% of pages under 2 seconds'."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Set performance budgets (for example 'LCP under 2.5s on mobile') as acceptance criteria, not afterthoughts.",
+      "Use field data from real users, not only lab tests on fast laptops."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "A fast office connection shows real speed.",
+       "Many users are on mid-range phones and slower networks."
+      ],
+      [
+       "Adding a CDN fixes everything.",
+       "Slow APIs, heavy JavaScript and large images still need work."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Latency",
+       "Delay before data starts arriving"
+      ],
+      [
+       "TTFB",
+       "Time to first byte from the server"
+      ],
+      [
+       "CDN",
+       "Content delivery network: servers worldwide that cache content near users"
+      ],
+      [
+       "Edge",
+       "CDN locations close to users"
+      ],
+      [
+       "Cache hit / miss",
+       "Found in cache / had to fetch from the origin"
+      ],
+      [
+       "Lazy loading",
+       "Loading content only when it's needed"
+      ],
+      [
+       "Lighthouse",
+       "Google tool that audits performance, accessibility and SEO"
+      ],
+      [
+       "p95",
+       "95th percentile: 95% of requests are this fast or faster"
+      ],
+      [
+       "Load test",
+       "Test with many simulated users"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What does LCP measure and what is a good value?",
+     "How fast the main content appears; 2.5 seconds or less."
+    ],
+    [
+     "What does a CDN do?",
+     "Caches and serves content from servers close to users."
+    ],
+    [
+     "Which metric captures layout jumping?",
+     "CLS (Cumulative Layout Shift)."
+    ],
+    [
+     "What is p95 response time?",
+     "The time within which 95% of requests complete."
+    ],
+    [
+     "Name two ways to speed up images.",
+     "Modern formats, correct sizes, compression, lazy loading."
+    ]
+   ],
+   "deeper": [
+    "webVitals",
+    "cfCdn",
+    "awsCaching",
+    "k6Types"
+   ]
+  },
+  "wl13": {
+   "sections": [
+    {
+     "h": "Top risks in plain words",
+     "table": [
+      [
+       "Risk",
+       "What it means",
+       "Typical defence"
+      ],
+      [
+       "Broken access control",
+       "Users can see or change things they shouldn't",
+       "Permission checks on every backend request"
+      ],
+      [
+       "Injection",
+       "Malicious input is run as code or a database query",
+       "Validate input; parameterised queries"
+      ],
+      [
+       "Security misconfiguration",
+       "Default passwords, open storage, debug mode on",
+       "Hardened configuration, reviews"
+      ],
+      [
+       "Vulnerable dependencies",
+       "Old libraries with known holes",
+       "Dependency scanning and updates"
+      ],
+      [
+       "Authentication failures",
+       "Weak passwords, no lockout, stolen sessions",
+       "MFA, rate limiting, secure cookies"
+      ],
+      [
+       "Exposed secrets",
+       "Keys in code or logs",
+       "Secrets manager, secret scanning"
+      ]
+     ]
+    },
+    {
+     "h": "Pre-launch security checklist",
+     "bullets": [
+      "HTTPS everywhere with a valid certificate.",
+      "Security headers set (for example Content-Security-Policy, HSTS).",
+      "CORS allows only your own domains.",
+      "Automated scans: SAST (code), dependency scan, DAST (running app).",
+      "Penetration test for high-risk products.",
+      "Rate limiting and a WAF on login and public APIs.",
+      "Backups automated and a restore tested.",
+      "Logs exclude passwords and personal data.",
+      "Privacy policy and cookie consent where required."
+     ]
+    },
+    {
+     "h": "Backups and disaster recovery",
+     "p": [
+      "Backups only count if you can restore them. Teams agree two numbers: RPO (how much data you can afford to lose, for example 15 minutes) and RTO (how long you can be down, for example 1 hour). These drive the backup frequency and recovery design."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Book security reviews early in the plan; they often have queues.",
+      "Treat a high-severity finding as a launch blocker unless the risk owner formally accepts it in writing."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "HTTPS means the site is secure.",
+       "HTTPS protects traffic in transit; the app can still have many other weaknesses."
+      ],
+      [
+       "We have backups, so we're safe.",
+       "Untested backups often fail when needed."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "OWASP Top 10",
+       "Widely used list of the most critical web application security risks"
+      ],
+      [
+       "SAST",
+       "Static testing: scanning source code"
+      ],
+      [
+       "DAST",
+       "Dynamic testing: probing the running app"
+      ],
+      [
+       "Penetration test",
+       "Authorised simulated attack by security experts"
+      ],
+      [
+       "WAF",
+       "Web application firewall that blocks malicious traffic"
+      ],
+      [
+       "Rate limiting",
+       "Capping requests per user or IP"
+      ],
+      [
+       "CORS",
+       "Browser rule controlling which sites may call your API"
+      ],
+      [
+       "MFA",
+       "Multi-factor authentication"
+      ],
+      [
+       "RPO / RTO",
+       "Acceptable data loss / acceptable downtime"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What is broken access control?",
+     "Users can access or change data or actions they're not allowed to."
+    ],
+    [
+     "SAST vs DAST?",
+     "SAST scans code; DAST tests the running application."
+    ],
+    [
+     "What do RPO and RTO mean?",
+     "Maximum acceptable data loss and maximum acceptable downtime."
+    ],
+    [
+     "What does a WAF do?",
+     "Filters and blocks malicious web traffic."
+    ]
+   ],
+   "deeper": [
+    "owaspTop10",
+    "mdnCors",
+    "owaspDevsecops"
+   ]
+  },
+  "wl14": {
+   "sections": [
+    {
+     "h": "Go-live checklist",
+     "table": [
+      [
+       "Area",
+       "Check",
+       "Owner"
+      ],
+      [
+       "Readiness",
+       "UAT signed off; no open critical bugs",
+       "QA, product"
+      ],
+      [
+       "Release",
+       "Release notes, version, artifact confirmed",
+       "Release manager"
+      ],
+      [
+       "Infrastructure",
+       "Production scaled; environment variables and secrets set",
+       "DevOps"
+      ],
+      [
+       "Domain",
+       "DNS records live, certificate valid, redirects working",
+       "DevOps"
+      ],
+      [
+       "Data",
+       "Migrations tested; backup taken before release",
+       "Backend, DBA"
+      ],
+      [
+       "Monitoring",
+       "Dashboards and alerts ready; on-call named",
+       "SRE"
+      ],
+      [
+       "Rollback",
+       "Steps written and tested; trigger agreed",
+       "Tech lead"
+      ],
+      [
+       "Support",
+       "Support team briefed; FAQ and known issues",
+       "TPM, support lead"
+      ],
+      [
+       "Comms",
+       "Internal and customer announcements scheduled",
+       "TPM, marketing"
+      ]
+     ]
+    },
+    {
+     "h": "Launch day flow",
+     "steps": [
+      [
+       "Go/no-go",
+       "Short meeting: each owner confirms their checks."
+      ],
+      [
+       "Deploy",
+       "Release using the agreed strategy."
+      ],
+      [
+       "Smoke test",
+       "Key journeys tested in production."
+      ],
+      [
+       "Open up",
+       "Switch feature flag on or move DNS; announce."
+      ],
+      [
+       "Watch",
+       "Dashboards for errors, speed, sign-ups or orders."
+      ],
+      [
+       "Hypercare",
+       "Extra support and fast fixes for the first days or weeks."
+      ]
+     ]
+    },
+    {
+     "h": "Observability: three signals",
+     "table": [
+      [
+       "Signal",
+       "Answers",
+       "Tools"
+      ],
+      [
+       "Logs",
+       "What happened, in detail",
+       "ELK/Elastic, CloudWatch, Loki"
+      ],
+      [
+       "Metrics",
+       "How much and how fast: errors, latency, traffic",
+       "Prometheus, Grafana, Datadog"
+      ],
+      [
+       "Traces",
+       "Where time went across services",
+       "OpenTelemetry, Jaeger, Datadog APM"
+      ]
+     ],
+     "p": [
+      "Plus uptime checks (is the site up from outside?), error tracking (Sentry) and product analytics (Google Analytics, Mixpanel, Amplitude) for user behaviour."
+     ]
+    },
+    {
+     "h": "SEO basics for a new site",
+     "bullets": [
+      "Page titles and meta descriptions on every page.",
+      "A sitemap.xml listing pages; robots.txt saying what may be crawled.",
+      "Make sure staging is blocked from search engines and production is not.",
+      "Keep old URLs working with 301 redirects when replacing a site.",
+      "Submit the site to Google Search Console."
+     ]
+    },
+    {
+     "h": "When an incident happens",
+     "p": [
+      "Declare it, assign an incident commander, communicate status regularly, restore service first (often by rollback), then find the root cause in a blameless post-mortem with action items."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Run a short dress rehearsal of the launch on staging, including the rollback.",
+      "Name one decision-maker for launch day to avoid confusion when something goes wrong."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "No alerts means everything is fine.",
+       "Missing monitoring looks the same as healthy; check alerts actually fire."
+      ],
+      [
+       "Post-mortems are about blame.",
+       "They focus on fixing systems and processes."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Go/no-go",
+       "Decision meeting to proceed with release"
+      ],
+      [
+       "Hypercare",
+       "Period of extra support after launch"
+      ],
+      [
+       "Observability",
+       "Ability to understand a system from logs, metrics and traces"
+      ],
+      [
+       "SLO",
+       "Service level objective, for example 99.9% uptime"
+      ],
+      [
+       "SLA",
+       "Service level agreement: a promise to customers, often with penalties"
+      ],
+      [
+       "On-call",
+       "Engineer responsible for alerts at a given time"
+      ],
+      [
+       "MTTR",
+       "Mean time to recover from incidents"
+      ],
+      [
+       "Sitemap / robots.txt",
+       "Files that guide search engine crawling"
+      ],
+      [
+       "Post-mortem",
+       "Blameless review after an incident"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What happens in a go/no-go meeting?",
+     "Each owner confirms readiness and the team decides whether to release."
+    ],
+    [
+     "Name the three observability signals.",
+     "Logs, metrics and traces."
+    ],
+    [
+     "SLO vs SLA?",
+     "SLO is an internal target; SLA is a customer promise, often with penalties."
+    ],
+    [
+     "What is hypercare?",
+     "A period of extra monitoring and support after launch."
+    ],
+    [
+     "Why check robots.txt at launch?",
+     "Staging may block search engines; production must not, or the site won't be indexed."
+    ]
+   ],
+   "deeper": [
+    "promDocs",
+    "sreSlo",
+    "srePostmortem"
+   ]
+  },
+  "ml01": {
+   "sections": [
+    {
+     "h": "The journey at a glance",
+     "flowLabel": "From code to a phone near you",
+     "flow": [
+      [
+       "Build it",
+       [
+        [
+         "Set up",
+         "Xcode, Android Studio, accounts"
+        ],
+        [
+         "Code",
+         "screens, APIs, device features"
+        ],
+        [
+         "Test",
+         "unit, UI, real devices"
+        ]
+       ]
+      ],
+      [
+       "Package it",
+       [
+        [
+         "Build and sign",
+         "release build with certificates"
+        ],
+        [
+         "Beta",
+         "TestFlight, Play testing tracks"
+        ]
+       ]
+      ],
+      [
+       "Ship it",
+       [
+        [
+         "Store listing",
+         "text, screenshots, privacy"
+        ],
+        [
+         "Review",
+         "Apple and Google check the app"
+        ],
+        [
+         "Rollout",
+         "phased or staged release"
+        ],
+        [
+         "Monitor",
+         "crashes, ratings, analytics"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "h": "Web vs mobile release",
+     "table": [
+      [
+       "Topic",
+       "Web",
+       "Mobile"
+      ],
+      [
+       "Who approves",
+       "Your team",
+       "Your team plus Apple or Google review"
+      ],
+      [
+       "Time to users",
+       "Minutes after deploy",
+       "Hours to days (review, then users update)"
+      ],
+      [
+       "Rollback",
+       "Redeploy old version",
+       "No true rollback; release a new version or halt rollout"
+      ],
+      [
+       "Versions in use",
+       "One (latest)",
+       "Many: users stay on old versions"
+      ],
+      [
+       "Signing",
+       "Not needed",
+       "Builds must be signed with your certificates"
+      ],
+      [
+       "Testing",
+       "Browsers",
+       "Many devices, screen sizes and OS versions"
+      ]
+     ]
+    },
+    {
+     "h": "Consequences for planning",
+     "bullets": [
+      "Plan release dates with buffer for store review.",
+      "Keep the backend compatible with older app versions still in use.",
+      "Use feature flags or remote config to switch features without a new release.",
+      "Agree a minimum supported app version and a forced-update approach for critical fixes.",
+      "Many teams run a fixed release train, for example every two weeks."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Add store review time to every mobile release plan; never promise a same-day mobile fix.",
+      "Track the share of users on each app version to decide when old versions can be retired."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Mobile apps update for everyone instantly.",
+       "Updates roll out over days and many users delay updating."
+      ],
+      [
+       "A web fix is enough for an app bug.",
+       "Only if the bug is in the backend; app code needs a new release."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "App Store / Google Play",
+       "Apple's and Google's app marketplaces"
+      ],
+      [
+       "App Store Connect",
+       "Apple's portal for managing apps and releases"
+      ],
+      [
+       "Google Play Console",
+       "Google's portal for managing apps and releases"
+      ],
+      [
+       "Store review",
+       "Platform check before an app or update goes live"
+      ],
+      [
+       "Release train",
+       "Fixed release schedule"
+      ],
+      [
+       "Remote config",
+       "Settings fetched by the app at runtime to change behaviour without a release"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Why is rollback different on mobile?",
+     "Users who installed a version keep it; you can only halt the rollout or ship a new version."
+    ],
+    [
+     "What extra gate does a mobile release have?",
+     "Store review by Apple or Google."
+    ],
+    [
+     "Why keep APIs compatible with old app versions?",
+     "Many users don't update straight away."
+    ],
+    [
+     "Name Apple's and Google's release portals.",
+     "App Store Connect and Google Play Console."
+    ]
+   ],
+   "deeper": [
+    "appReview",
+    "playTesting",
+    "testflight"
+   ]
+  },
+  "ml02": {
+   "sections": [
+    {
+     "h": "What needs to exist",
+     "table": [
+      [
+       "Item",
+       "iOS",
+       "Android"
+      ],
+      [
+       "IDE (development tool)",
+       "Xcode (needs a Mac)",
+       "Android Studio"
+      ],
+      [
+       "Language",
+       "Swift (older: Objective-C)",
+       "Kotlin (older: Java)"
+      ],
+      [
+       "Cross-platform option",
+       "Flutter (Dart), React Native (JavaScript)",
+       "Same"
+      ],
+      [
+       "Store account",
+       "Apple Developer Program (paid yearly)",
+       "Google Play Console (one-time fee)"
+      ],
+      [
+       "App identifier",
+       "Bundle ID, for example com.company.app",
+       "Application ID, same style"
+      ],
+      [
+       "Dependencies",
+       "Swift Package Manager or CocoaPods",
+       "Gradle"
+      ],
+      [
+       "Test devices",
+       "Simulator plus real iPhones",
+       "Emulator plus real Android phones"
+      ]
+     ]
+    },
+    {
+     "h": "Decisions to make early",
+     "bullets": [
+      "Minimum OS versions to support (affects features and testing effort).",
+      "Native or cross-platform (one codebase or two).",
+      "Organisation-owned accounts, not personal ones.",
+      "Bundle and application IDs: hard to change after release.",
+      "Environment builds: dev, staging and production versions that point to different backends (Android 'flavours', iOS 'schemes' or configurations)."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Request developer account access and device budgets in week one; procurement can take weeks.",
+      "Decide minimum OS versions with data on your users' devices."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Emulators are enough for testing.",
+       "Real devices catch performance, camera, network and battery issues emulators miss."
+      ],
+      [
+       "Identifiers can be changed later.",
+       "Changing them means a new app listing; users don't move over automatically."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "SDK",
+       "Software development kit: tools and libraries for a platform"
+      ],
+      [
+       "IDE",
+       "Integrated development environment"
+      ],
+      [
+       "Simulator / emulator",
+       "Software that imitates a phone on a computer"
+      ],
+      [
+       "Bundle ID / application ID",
+       "Unique identifier of an app in the store"
+      ],
+      [
+       "Gradle",
+       "Android build and dependency tool"
+      ],
+      [
+       "Build flavour / scheme",
+       "Different versions of the app from the same code, such as staging and production"
+      ],
+      [
+       "Minimum SDK / deployment target",
+       "Oldest OS version the app supports"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Which tool is needed to build iOS apps and what does it run on?",
+     "Xcode, which runs on a Mac."
+    ],
+    [
+     "What is a bundle ID?",
+     "The unique identifier of an iOS app, such as com.company.app."
+    ],
+    [
+     "Why use organisation-owned developer accounts?",
+     "So access and ownership don't depend on one person."
+    ],
+    [
+     "What are build flavours?",
+     "Variants of the app, such as staging and production, built from the same code."
+    ]
+   ],
+   "deeper": [
+    "androidArch",
+    "flutterArch"
+   ]
+  },
+  "ml03": {
+   "sections": [
+    {
+     "h": "Parts of a mobile app",
+     "table": [
+      [
+       "Part",
+       "What it does",
+       "Examples"
+      ],
+      [
+       "UI and navigation",
+       "Screens and moving between them",
+       "SwiftUI, Jetpack Compose, Flutter widgets"
+      ],
+      [
+       "State",
+       "Remembers what's on screen and what the user did",
+       "ViewModel, Bloc, Redux"
+      ],
+      [
+       "Networking",
+       "Calls backend APIs",
+       "URLSession, Retrofit, Dio"
+      ],
+      [
+       "Local storage",
+       "Saves data on the phone",
+       "SQLite, Room, Core Data, secure keychain/keystore"
+      ],
+      [
+       "Device features",
+       "Camera, GPS, biometrics, contacts",
+       "Platform APIs"
+      ],
+      [
+       "Notifications",
+       "Messages when the app is closed",
+       "APNs (Apple), FCM (Firebase Cloud Messaging)"
+      ],
+      [
+       "Deep links",
+       "Open a specific screen from a link",
+       "Universal Links (iOS), App Links (Android)"
+      ],
+      [
+       "SDKs",
+       "Ready-made features from others",
+       "Analytics, crash reporting, payments, maps"
+      ]
+     ]
+    },
+    {
+     "h": "How a push notification reaches a phone",
+     "steps": [
+      [
+       "Register",
+       "The app asks permission and receives a device token."
+      ],
+      [
+       "Store",
+       "The app sends the token to your backend."
+      ],
+      [
+       "Trigger",
+       "An event happens, for example 'order shipped'."
+      ],
+      [
+       "Send",
+       "The backend sends a message to APNs or FCM with the token."
+      ],
+      [
+       "Deliver",
+       "Apple or Google delivers it to the device."
+      ]
+     ]
+    },
+    {
+     "h": "Mobile-specific challenges",
+     "bullets": [
+      "Unreliable networks: handle timeouts and offline mode.",
+      "Battery and memory limits: avoid heavy background work.",
+      "Permissions can be denied; the app must still work.",
+      "App lifecycle: the OS can pause or close the app at any time.",
+      "Platform differences between iOS and Android behaviour and design guidelines."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Ask for permission at the moment it's needed, with a clear reason; acceptance rates are higher.",
+      "Check iOS and Android designs separately; copying one platform's patterns to the other feels wrong to users."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Cross-platform means no platform-specific work.",
+       "Notifications, permissions, signing and store work still differ per platform."
+      ],
+      [
+       "Push notifications always arrive.",
+       "Delivery isn't guaranteed; don't rely on them for critical information."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Native",
+       "Built with the platform's own language and tools"
+      ],
+      [
+       "Cross-platform",
+       "One codebase for iOS and Android, such as Flutter or React Native"
+      ],
+      [
+       "APNs",
+       "Apple Push Notification service"
+      ],
+      [
+       "FCM",
+       "Firebase Cloud Messaging, Google's push service"
+      ],
+      [
+       "Device token",
+       "ID used to send push notifications to a specific device"
+      ],
+      [
+       "Deep link",
+       "Link that opens a specific screen in the app"
+      ],
+      [
+       "Offline-first",
+       "Design where the app works without a connection and syncs later"
+      ],
+      [
+       "Permission prompt",
+       "OS dialog asking the user to allow access"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What is FCM?",
+     "Firebase Cloud Messaging, used to send push notifications."
+    ],
+    [
+     "What does the backend need to send a push notification?",
+     "The device token and access to APNs or FCM."
+    ],
+    [
+     "What is a deep link?",
+     "A link that opens a specific screen inside the app."
+    ],
+    [
+     "Why design for permission denial?",
+     "Users can refuse; the app must still work."
+    ]
+   ],
+   "deeper": [
+    "androidOffline",
+    "androidPerms",
+    "fcm",
+    "androidLinks"
+   ]
+  },
+  "ml04": {
+   "sections": [
+    {
+     "h": "Test levels",
+     "table": [
+      [
+       "Level",
+       "Tool examples",
+       "Checks"
+      ],
+      [
+       "Unit",
+       "XCTest, JUnit",
+       "Logic in isolation"
+      ],
+      [
+       "UI tests",
+       "XCUITest (iOS), Espresso (Android), Appium, Maestro",
+       "Screens and flows"
+      ],
+      [
+       "Manual and exploratory",
+       "Real devices",
+       "Usability, edge cases"
+      ],
+      [
+       "Beta",
+       "TestFlight, Play testing tracks",
+       "Real users, real devices"
+      ]
+     ]
+    },
+    {
+     "h": "What makes mobile testing harder",
+     "bullets": [
+      "Hundreds of device models and screen sizes, especially on Android.",
+      "Several OS versions in use at once.",
+      "Interruptions: calls, notifications, switching apps, low battery.",
+      "Network changes: Wi-Fi to mobile data, airplane mode, slow connections.",
+      "Permissions granted or denied.",
+      "Upgrade testing: installing the new version over the old one with existing data."
+     ]
+    },
+    {
+     "h": "Device farms",
+     "p": [
+      "Device farms such as Firebase Test Lab, AWS Device Farm and BrowserStack let teams run tests on many real devices in the cloud. They help coverage without buying every phone."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Choose test devices from your real user data, not from the team's own phones.",
+      "Always include one older, low-memory Android device."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Testing on the latest phones is enough.",
+       "Many users have older or cheaper devices where problems show."
+      ],
+      [
+       "Simulators behave like phones.",
+       "They miss real performance, sensors and network behaviour."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "XCUITest / Espresso",
+       "iOS / Android UI test frameworks"
+      ],
+      [
+       "Appium",
+       "Cross-platform mobile test automation tool"
+      ],
+      [
+       "Device farm",
+       "Cloud service with many real devices for testing"
+      ],
+      [
+       "Fragmentation",
+       "Wide variety of devices and OS versions"
+      ],
+      [
+       "Upgrade test",
+       "Installing a new version over an old one"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What is a device farm?",
+     "A cloud service offering many real devices for testing."
+    ],
+    [
+     "Why test upgrades from older versions?",
+     "Existing data and settings can break with a new version."
+    ],
+    [
+     "Name an iOS and an Android UI test framework.",
+     "XCUITest and Espresso."
+    ]
+   ],
+   "deeper": [
+    "testPyramid",
+    "crashlytics"
+   ]
+  },
+  "ml05": {
+   "sections": [
+    {
+     "h": "Debug vs release",
+     "table": [
+      [
+       "Build",
+       "Purpose",
+       "Notes"
+      ],
+      [
+       "Debug",
+       "Development and testing",
+       "Extra logging, slower, signed with a development certificate"
+      ],
+      [
+       "Release",
+       "Store or beta distribution",
+       "Optimised, signed for distribution, points to production backend"
+      ]
+     ]
+    },
+    {
+     "h": "Two version numbers",
+     "table": [
+      [
+       "Platform",
+       "User-facing version",
+       "Internal build number"
+      ],
+      [
+       "iOS",
+       "Version (CFBundleShortVersionString), for example 3.4.0",
+       "Build (CFBundleVersion), increases with every upload"
+      ],
+      [
+       "Android",
+       "versionName, for example 3.4.0",
+       "versionCode, an integer that must increase with every release"
+      ]
+     ],
+     "p": [
+      "The store rejects an upload whose build number isn't higher than the last one."
+     ]
+    },
+    {
+     "h": "Code signing",
+     "steps": [
+      [
+       "Why",
+       "Signing proves the app comes from you and hasn't been changed."
+      ],
+      [
+       "iOS",
+       "A distribution certificate plus a provisioning profile that links the app ID, certificate and allowed devices or store distribution."
+      ],
+      [
+       "Android",
+       "The app is signed with a key stored in a keystore. With Play App Signing, Google holds the app signing key and you sign uploads with an upload key."
+      ],
+      [
+       "Expiry and loss",
+       "iOS certificates expire and need renewing. Losing an Android upload key needs a reset with Google; protect keys carefully."
+      ]
+     ]
+    },
+    {
+     "h": "Release files",
+     "table": [
+      [
+       "File",
+       "Platform",
+       "Used for"
+      ],
+      [
+       "IPA",
+       "iOS",
+       "App package uploaded to App Store Connect"
+      ],
+      [
+       "AAB (Android App Bundle)",
+       "Android",
+       "Required format for new apps on Google Play; Google builds optimised APKs per device"
+      ],
+      [
+       "APK",
+       "Android",
+       "Installable package, used for direct installs and testing"
+      ]
+     ]
+    },
+    {
+     "h": "Mobile CI/CD",
+     "p": [
+      "Teams automate building, signing and uploading with tools such as Fastlane, Xcode Cloud, Bitrise, Codemagic or GitHub Actions. Automation avoids 'only one person can build the release' risk."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Keep signing keys in a secure shared store with at least two owners.",
+      "Put certificate expiry dates on the team calendar."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Version name and build number are the same thing.",
+       "The version is for users; the build number is internal and must always increase."
+      ],
+      [
+       "Anyone can build the release on their laptop.",
+       "Release builds need protected signing keys; use CI."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Code signing",
+       "Digitally signing an app to prove its origin"
+      ],
+      [
+       "Certificate",
+       "Digital identity used to sign iOS apps"
+      ],
+      [
+       "Provisioning profile",
+       "iOS file linking app, certificate and distribution method"
+      ],
+      [
+       "Keystore",
+       "File holding Android signing keys"
+      ],
+      [
+       "Play App Signing",
+       "Google manages the app signing key"
+      ],
+      [
+       "versionCode / build number",
+       "Internal number that must increase each upload"
+      ],
+      [
+       "AAB",
+       "Android App Bundle, the Play upload format"
+      ],
+      [
+       "IPA",
+       "iOS app archive"
+      ],
+      [
+       "Fastlane",
+       "Tool that automates mobile builds and releases"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What must increase with every Android release?",
+     "The versionCode."
+    ],
+    [
+     "What does a provisioning profile do?",
+     "Links an iOS app ID, signing certificate and distribution method."
+    ],
+    [
+     "What file format does Google Play require for new apps?",
+     "Android App Bundle (AAB)."
+    ],
+    [
+     "Why automate mobile builds?",
+     "To avoid manual errors and dependence on one person's machine."
+    ],
+    [
+     "What happens if an iOS distribution certificate expires?",
+     "New builds can't be signed until it's renewed."
+    ]
+   ],
+   "deeper": [
+    "playSigning",
+    "semver"
+   ]
+  },
+  "ml06": {
+   "sections": [
+    {
+     "h": "iOS: TestFlight",
+     "table": [
+      [
+       "Group",
+       "Who",
+       "Review needed"
+      ],
+      [
+       "Internal testers",
+       "Members of your App Store Connect team",
+       "No"
+      ],
+      [
+       "External testers",
+       "Anyone you invite by email or public link",
+       "First build goes through beta app review"
+      ]
+     ]
+    },
+    {
+     "h": "Android: Play testing tracks",
+     "table": [
+      [
+       "Track",
+       "Who",
+       "Typical use"
+      ],
+      [
+       "Internal testing",
+       "Small trusted group",
+       "Fast checks of every build"
+      ],
+      [
+       "Closed testing",
+       "Invited testers or groups",
+       "Beta programmes"
+      ],
+      [
+       "Open testing",
+       "Anyone who joins from the store listing",
+       "Large public betas"
+      ],
+      [
+       "Production",
+       "All users",
+       "Public release, often staged"
+      ]
+     ],
+     "p": [
+      "Google requires developers with personal accounts created after 13 November 2023 to meet testing requirements before an app can be published on Google Play."
+     ]
+    },
+    {
+     "h": "Running a good beta",
+     "steps": [
+      [
+       "Define goals",
+       "What you want to learn: stability, usability, performance."
+      ],
+      [
+       "Pick testers",
+       "Mix of devices, OS versions and user types."
+      ],
+      [
+       "Set cadence",
+       "For example a new build every Tuesday."
+      ],
+      [
+       "Collect feedback",
+       "In-app feedback, a form or a chat channel."
+      ],
+      [
+       "Watch data",
+       "Crash-free rate and key metrics in beta."
+      ],
+      [
+       "Exit criteria",
+       "For example crash-free users above 99.5% and no critical bugs."
+      ]
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Include internal staff from support and sales in betas; they know customer pain points.",
+      "Promote the exact build that was beta tested to production."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Beta is just early access.",
+       "It's a structured test with goals and exit criteria."
+      ],
+      [
+       "Beta feedback is enough without data.",
+       "Combine feedback with crash and usage data."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "TestFlight",
+       "Apple's beta testing service"
+      ],
+      [
+       "Internal tester",
+       "Team member testing without review"
+      ],
+      [
+       "External tester",
+       "Outside tester; first build needs beta review"
+      ],
+      [
+       "Testing track",
+       "Google Play channel for a group of testers"
+      ],
+      [
+       "Promote",
+       "Move a tested build to the next track or to production"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Do TestFlight internal testers need beta review?",
+     "No; external testing needs beta app review for the first build."
+    ],
+    [
+     "Name Google Play's three testing tracks.",
+     "Internal, closed and open testing."
+    ],
+    [
+     "Give one beta exit criterion.",
+     "For example crash-free users above 99.5% or no critical bugs."
+    ]
+   ],
+   "deeper": [
+    "testflight",
+    "playTesting"
+   ]
+  },
+  "ml07": {
+   "sections": [
+    {
+     "h": "What you submit",
+     "table": [
+      [
+       "Item",
+       "Notes"
+      ],
+      [
+       "App name, subtitle, description",
+       "Clear, accurate, no misleading claims"
+      ],
+      [
+       "Screenshots and preview video",
+       "Show real app screens for required device sizes"
+      ],
+      [
+       "App icon",
+       "Meets platform rules"
+      ],
+      [
+       "Category and age rating",
+       "Answer the rating questionnaire honestly"
+      ],
+      [
+       "Privacy information",
+       "Apple privacy labels; Google Play Data safety form; privacy policy URL"
+      ],
+      [
+       "Review notes and demo account",
+       "Login details and instructions so reviewers can test"
+      ],
+      [
+       "Release notes",
+       "What's new in this version"
+      ]
+     ]
+    },
+    {
+     "h": "Common rejection reasons",
+     "bullets": [
+      "Crashes or broken features during review.",
+      "Reviewer can't log in (no demo account).",
+      "Privacy details don't match what the app collects.",
+      "Requesting permissions without a clear purpose.",
+      "Incomplete information, placeholder content or broken links.",
+      "Digital purchases not using the platform's required payment system where rules apply."
+     ]
+    },
+    {
+     "h": "Handling a rejection",
+     "steps": [
+      [
+       "Read carefully",
+       "Find the exact guideline cited."
+      ],
+      [
+       "Fix or explain",
+       "Change the app, or reply with clarification if the reviewer misunderstood."
+      ],
+      [
+       "Resubmit",
+       "Use the resolution centre or reply in the console."
+      ],
+      [
+       "Appeal",
+       "If you disagree, use the platform's appeal process."
+      ],
+      [
+       "Learn",
+       "Add the issue to your submission checklist."
+      ]
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Prepare listing and privacy content in parallel with development, not on release day.",
+      "Keep the demo account working; reviewers come back for every update."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Review is a formality.",
+       "Rejections are common and can delay launches."
+      ],
+      [
+       "Privacy labels can be filled once.",
+       "Update them whenever data collection changes."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Store listing",
+       "The app's page in the store"
+      ],
+      [
+       "Privacy label",
+       "Apple's summary of data an app collects"
+      ],
+      [
+       "Data safety",
+       "Google Play's section on data collection and sharing"
+      ],
+      [
+       "Age rating",
+       "Content rating based on a questionnaire"
+      ],
+      [
+       "Review guidelines",
+       "Platform rules apps must follow"
+      ],
+      [
+       "Resolution centre",
+       "Where Apple communicates review issues"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Why provide a demo account for review?",
+     "So reviewers can test features behind login; missing access is a common rejection reason."
+    ],
+    [
+     "What is Google Play's Data safety form?",
+     "A declaration of what data the app collects and shares."
+    ],
+    [
+     "First step after a rejection?",
+     "Read the cited guideline and decide whether to fix or clarify."
+    ]
+   ],
+   "deeper": [
+    "appReview",
+    "masvs"
+   ]
+  },
+  "ml08": {
+   "sections": [
+    {
+     "h": "Apple vs Google",
+     "table": [
+      [
+       "Topic",
+       "Apple App Store",
+       "Google Play"
+      ],
+      [
+       "Name",
+       "Phased release for automatic updates",
+       "Staged rollout"
+      ],
+      [
+       "How it grows",
+       "Fixed 7-day schedule: 1%, 2%, 5%, 10%, 20%, 50%, 100% of users with automatic updates on",
+       "You choose the percentage and raise it manually"
+      ],
+      [
+       "Pause",
+       "Pause for up to 30 days in total",
+       "Halt the rollout; resume later"
+      ],
+      [
+       "First release",
+       "Only for updates",
+       "Only for updates, not first publication"
+      ],
+      [
+       "Note",
+       "Anyone can still update manually from the store",
+       "Users who already got the version keep it after a halt"
+      ]
+     ]
+    },
+    {
+     "h": "A typical rollout plan",
+     "steps": [
+      [
+       "Release to a small share",
+       "For example 1 to 5%."
+      ],
+      [
+       "Watch for 24 to 48 hours",
+       "Crash-free users, ANRs, key business metrics, reviews."
+      ],
+      [
+       "Increase",
+       "10%, 25%, 50%, 100% if healthy."
+      ],
+      [
+       "Halt if needed",
+       "Stop the rollout if halt criteria are met."
+      ],
+      [
+       "Fix and replace",
+       "Ship a fixed version with a higher build number."
+      ]
+     ]
+    },
+    {
+     "h": "Other update tools",
+     "table": [
+      [
+       "Tool",
+       "What it does",
+       "Limits"
+      ],
+      [
+       "Feature flags / remote config",
+       "Turn features on or off without a release",
+       "Code must already be in the app"
+      ],
+      [
+       "Forced update",
+       "App blocks use below a minimum version and sends users to the store",
+       "Use sparingly; frustrating for users"
+      ],
+      [
+       "OTA updates",
+       "Some React Native/Expo apps can update JavaScript code without a store release",
+       "Only non-native code; must follow store rules"
+      ],
+      [
+       "API versioning",
+       "Backend supports old and new app versions",
+       "Needs planning and retirement dates"
+      ]
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Agree halt criteria before release, for example 'crash-free users below 99.5%'.",
+      "Plan API changes so at least the last few app versions keep working."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Halting a rollout removes the version from phones.",
+       "It only stops new users getting it; installed copies remain."
+      ],
+      [
+       "OTA lets you change anything.",
+       "Only certain code can update over the air, within store rules."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Phased release",
+       "Apple's gradual 7-day rollout of updates"
+      ],
+      [
+       "Staged rollout",
+       "Google Play's percentage-based rollout"
+      ],
+      [
+       "Halt",
+       "Stop a rollout from reaching more users"
+      ],
+      [
+       "Forced update",
+       "Requiring users to update before continuing"
+      ],
+      [
+       "OTA update",
+       "Over-the-air update of app code outside the store, where allowed"
+      ],
+      [
+       "Minimum supported version",
+       "Oldest app version the backend still supports"
+      ],
+      [
+       "ANR",
+       "Android 'application not responding' error"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "How long is Apple's phased release?",
+     "Seven days, from 1% up to 100% of users with automatic updates on."
+    ],
+    [
+     "Can you use a staged rollout for an app's first release on Google Play?",
+     "No, only for updates."
+    ],
+    [
+     "What happens to users who already installed a halted version?",
+     "They keep it until a newer version is released."
+    ],
+    [
+     "When might you force an update?",
+     "For critical security or compatibility issues."
+    ],
+    [
+     "What can remote config change without a release?",
+     "Behaviour or features already built into the app."
+    ]
+   ],
+   "deeper": [
+    "asPhased",
+    "playStaged",
+    "easUpdate"
+   ]
+  },
+  "ml09": {
+   "sections": [
+    {
+     "h": "Health metrics",
+     "table": [
+      [
+       "Metric",
+       "Meaning",
+       "Typical target"
+      ],
+      [
+       "Crash-free users",
+       "Share of users with no crash in a period",
+       "Above 99.5%"
+      ],
+      [
+       "ANR rate (Android)",
+       "App froze for several seconds",
+       "As low as possible; Google flags high rates"
+      ],
+      [
+       "Cold start time",
+       "Time to open the app from scratch",
+       "A couple of seconds or less"
+      ],
+      [
+       "App size",
+       "Download and install size",
+       "Smaller improves installs"
+      ],
+      [
+       "Rating",
+       "Average store rating",
+       "4.5 or higher is strong"
+      ]
+     ]
+    },
+    {
+     "h": "Where the data comes from",
+     "bullets": [
+      "Crash reporting: Firebase Crashlytics, Sentry.",
+      "Platform consoles: Android vitals in Play Console; Xcode Organizer and App Store Connect for iOS.",
+      "Product analytics: Firebase Analytics, Mixpanel, Amplitude.",
+      "Store reviews: read and reply in App Store Connect and Play Console."
+     ]
+    },
+    {
+     "h": "Investigating a rating drop",
+     "steps": [
+      [
+       "Check timing",
+       "Did it start with a specific version?"
+      ],
+      [
+       "Read reviews",
+       "Group complaints by theme."
+      ],
+      [
+       "Check crashes",
+       "New top crashes in that version?"
+      ],
+      [
+       "Check performance",
+       "Slower start or more ANRs?"
+      ],
+      [
+       "Fix and respond",
+       "Ship a fix; reply to reviews when fixed."
+      ]
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Review crash and rating trends in every sprint review.",
+      "Test your app on the new iOS and Android betas each summer before the public releases."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "A few crashes don't matter.",
+       "Crashes drive bad reviews and uninstalls, and stores consider quality."
+      ],
+      [
+       "Ratings only reflect features.",
+       "Speed, stability and support responses strongly affect ratings."
+      ]
+     ]
+    },
+    {
+     "h": "Key terms",
+     "gloss": [
+      [
+       "Crash-free users",
+       "Percentage of users without crashes"
+      ],
+      [
+       "ANR",
+       "Application not responding (Android)"
+      ],
+      [
+       "Android vitals",
+       "Google's quality metrics for Android apps"
+      ],
+      [
+       "ASO",
+       "App store optimisation: improving store visibility and conversion"
+      ],
+      [
+       "Funnel",
+       "Sequence of steps users take, with drop-off at each"
+      ],
+      [
+       "Cold start",
+       "Opening an app that isn't already in memory"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What is a good crash-free users target?",
+     "Above about 99.5%."
+    ],
+    [
+     "What is an ANR?",
+     "An Android 'application not responding' error when the app freezes."
+    ],
+    [
+     "What is ASO?",
+     "App store optimisation: improving visibility and conversion in the stores."
+    ]
+   ],
+   "deeper": [
+    "crashlytics",
+    "atlMetrics"
+   ]
+  },
+  "jt01": {
+   "sections": [
+    {
+     "h": "How to use this glossary",
+     "p": [
+      "Terms are grouped in journey order. For each, practise a one-sentence definition and one example from your own product. The commonly confused pairs at the end are favourite test questions."
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Make flashcards from the confused pairs; they are the most common test questions.",
+      "When you hear a new term at work, add it here with where it fits in the journey."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Knowing definitions is enough.",
+       "Tests often ask where a term fits and why it matters; practise both."
+      ]
+     ]
+    },
+    {
+     "h": "Setup and code",
+     "gloss": [
+      [
+       "Repository (repo)",
+       "Where code and its history are stored, for example on GitHub"
+      ],
+      [
+       "Branch",
+       "A separate line of work in the repo"
+      ],
+      [
+       "Monorepo",
+       "One repo for several apps or services"
+      ],
+      [
+       "Dependency",
+       "Third-party library the code uses"
+      ],
+      [
+       "Package manager",
+       "Tool that installs dependencies: npm, pip, Gradle"
+      ],
+      [
+       "Environment variable",
+       "Setting supplied outside the code"
+      ],
+      [
+       "Framework",
+       "Ready-made structure for building apps: React, Next.js, Spring, Django"
+      ],
+      [
+       "Frontend",
+       "What runs in the browser or app"
+      ],
+      [
+       "Backend",
+       "What runs on servers: logic, APIs, data"
+      ],
+      [
+       "API",
+       "How software components talk to each other"
+      ],
+      [
+       "Endpoint",
+       "One API address such as /api/orders"
+      ],
+      [
+       "Database migration",
+       "Script that changes the database structure"
+      ],
+      [
+       "ORM",
+       "Maps database tables to code objects"
+      ]
+     ]
+    },
+    {
+     "h": "Review and testing",
+     "gloss": [
+      [
+       "Commit",
+       "A saved change with a message"
+      ],
+      [
+       "Pull request (PR)",
+       "Request to merge code, with review and checks"
+      ],
+      [
+       "Code review",
+       "Peers check code before merging"
+      ],
+      [
+       "Merge conflict",
+       "Two changes to the same lines"
+      ],
+      [
+       "Linting",
+       "Automated style and error checks"
+      ],
+      [
+       "Unit test",
+       "Tests a small piece of code"
+      ],
+      [
+       "Integration test",
+       "Tests parts working together"
+      ],
+      [
+       "E2E test",
+       "Tests a whole user journey"
+      ],
+      [
+       "Regression",
+       "Something that used to work breaks"
+      ],
+      [
+       "Smoke test",
+       "Quick check that critical paths work"
+      ],
+      [
+       "UAT",
+       "Business users accept the release"
+      ],
+      [
+       "Severity / priority",
+       "Impact / urgency of a bug"
+      ]
+     ]
+    },
+    {
+     "h": "Build and deploy",
+     "gloss": [
+      [
+       "CI",
+       "Automatically build and test every change"
+      ],
+      [
+       "CD",
+       "Continuous delivery (always deployable) or deployment (automatic to production)"
+      ],
+      [
+       "Pipeline",
+       "Automated sequence of build, test and deploy steps"
+      ],
+      [
+       "Artifact",
+       "Packaged output ready to deploy"
+      ],
+      [
+       "Docker image / container",
+       "Packaged app that runs the same everywhere"
+      ],
+      [
+       "Semantic versioning",
+       "MAJOR.MINOR.PATCH numbering"
+      ],
+      [
+       "Environment",
+       "Separate copy: dev, QA, staging, production"
+      ],
+      [
+       "Feature flag",
+       "Switch to turn a feature on or off without deploying"
+      ],
+      [
+       "Blue-green",
+       "Switch traffic between two identical environments"
+      ],
+      [
+       "Canary",
+       "Release to a small share of users first"
+      ],
+      [
+       "Rollback",
+       "Return to the previous version"
+      ],
+      [
+       "Hotfix",
+       "Urgent fix outside the normal release"
+      ]
+     ]
+    },
+    {
+     "h": "Hosting and infrastructure",
+     "gloss": [
+      [
+       "Cloud",
+       "Rented computing: AWS, Azure, Google Cloud"
+      ],
+      [
+       "VM",
+       "Virtual server"
+      ],
+      [
+       "Kubernetes",
+       "Runs and manages containers at scale"
+      ],
+      [
+       "PaaS",
+       "Platform that runs your code for you"
+      ],
+      [
+       "Serverless",
+       "Code runs on demand; no servers to manage"
+      ],
+      [
+       "Load balancer",
+       "Spreads traffic across servers"
+      ],
+      [
+       "Autoscaling",
+       "Adds or removes servers automatically"
+      ],
+      [
+       "Region / availability zone",
+       "Geographic area / separate data centre"
+      ],
+      [
+       "Infrastructure as code",
+       "Defining servers and networks in code, for example Terraform"
+      ]
+     ]
+    },
+    {
+     "h": "Domain, security and performance",
+     "gloss": [
+      [
+       "Domain",
+       "Human-readable address such as example.com"
+      ],
+      [
+       "Registrar",
+       "Where domains are bought and renewed"
+      ],
+      [
+       "DNS",
+       "Translates names into server addresses"
+      ],
+      [
+       "A / CNAME record",
+       "Name to IP address / name to another name"
+      ],
+      [
+       "TTL",
+       "How long DNS answers are cached"
+      ],
+      [
+       "SSL/TLS certificate",
+       "Enables HTTPS encryption"
+      ],
+      [
+       "CDN",
+       "Servers worldwide that cache content near users"
+      ],
+      [
+       "Cache",
+       "Stored copy for faster access"
+      ],
+      [
+       "Core Web Vitals",
+       "LCP, INP and CLS: Google's user experience metrics"
+      ],
+      [
+       "WAF",
+       "Firewall for web traffic"
+      ],
+      [
+       "OWASP Top 10",
+       "List of the most critical web security risks"
+      ],
+      [
+       "CORS",
+       "Browser rule about which sites may call an API"
+      ]
+     ]
+    },
+    {
+     "h": "Mobile release",
+     "gloss": [
+      [
+       "Bundle ID / application ID",
+       "Unique app identifier in the stores"
+      ],
+      [
+       "Code signing",
+       "Proves the app comes from you"
+      ],
+      [
+       "Provisioning profile",
+       "iOS file linking app, certificate and distribution"
+      ],
+      [
+       "Keystore",
+       "Android file holding signing keys"
+      ],
+      [
+       "IPA / AAB / APK",
+       "iOS package / Android upload bundle / Android installable package"
+      ],
+      [
+       "versionCode / build number",
+       "Internal number that must increase every upload"
+      ],
+      [
+       "TestFlight",
+       "Apple's beta testing service"
+      ],
+      [
+       "Testing tracks",
+       "Google Play internal, closed and open testing"
+      ],
+      [
+       "App review",
+       "Apple or Google checks before release"
+      ],
+      [
+       "Phased release / staged rollout",
+       "Gradual release to a share of users"
+      ],
+      [
+       "Forced update",
+       "Users must update to keep using the app"
+      ],
+      [
+       "Crash-free users",
+       "Share of users without crashes"
+      ]
+     ]
+    },
+    {
+     "h": "Operations",
+     "gloss": [
+      [
+       "Monitoring",
+       "Watching system health"
+      ],
+      [
+       "Observability",
+       "Understanding the system through logs, metrics and traces"
+      ],
+      [
+       "Alert",
+       "Automatic notification when something is wrong"
+      ],
+      [
+       "On-call",
+       "Engineer responsible for responding to alerts"
+      ],
+      [
+       "SLO / SLA",
+       "Internal reliability target / customer promise"
+      ],
+      [
+       "Incident",
+       "Unplanned problem affecting users"
+      ],
+      [
+       "Post-mortem",
+       "Blameless review after an incident"
+      ],
+      [
+       "Hypercare",
+       "Extra support period after launch"
+      ],
+      [
+       "MTTR",
+       "Mean time to recover"
+      ]
+     ]
+    },
+    {
+     "h": "Commonly confused pairs",
+     "table": [
+      [
+       "Pair",
+       "Difference"
+      ],
+      [
+       "Deploy vs release",
+       "Code on servers vs feature available to users"
+      ],
+      [
+       "CI vs CD",
+       "Build and test vs deliver to environments"
+      ],
+      [
+       "DNS vs CDN",
+       "Finds the server vs serves cached content near users"
+      ],
+      [
+       "Authentication vs authorisation",
+       "Who you are vs what you may do"
+      ],
+      [
+       "Severity vs priority",
+       "Impact vs urgency"
+      ],
+      [
+       "SLO vs SLA",
+       "Internal target vs external promise"
+      ],
+      [
+       "Staging vs production",
+       "Final test copy vs live system"
+      ],
+      [
+       "Rollback vs roll forward",
+       "Return to old version vs fix and deploy new version"
+      ],
+      [
+       "Phased release vs staged rollout",
+       "Apple's fixed 7-day plan vs Google's manual percentages"
+      ],
+      [
+       "Version vs build number",
+       "User-facing vs internal, always increasing"
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "Deploy vs release?",
+     "Deploy puts code on servers; release makes features available to users."
+    ],
+    [
+     "DNS vs CDN?",
+     "DNS finds the server's address; a CDN serves cached content from locations near users."
+    ],
+    [
+     "What is an artifact?",
+     "The packaged build output that gets deployed."
+    ],
+    [
+     "What is a provisioning profile?",
+     "An iOS file linking the app, signing certificate and distribution method."
+    ],
+    [
+     "SLO vs SLA?",
+     "SLO is an internal reliability target; SLA is a promise to customers."
+    ]
+   ],
+   "deeper": [
+    "mdnWeb",
+    "atlCicd",
+    "cfDns"
+   ]
+  },
+  "jt02": {
+   "sections": [
+    {
+     "h": "How to take this test",
+     "steps": [
+      [
+       "Set a timer",
+       "30 minutes for 30 questions."
+      ],
+      [
+       "Answer aloud or on paper",
+       "Don't open the answers until you've tried."
+      ],
+      [
+       "Score",
+       "One point each; half a point if partly right."
+      ],
+      [
+       "Review",
+       "For each miss, note the topic and reread it."
+      ],
+      [
+       "Retake",
+       "Retake in a few days; aim for 25 or more."
+      ]
+     ]
+    },
+    {
+     "h": "Order the journey",
+     "p": [
+      "Before the questions, put these in order from memory: deploy, code review, set up repo, build in CI, monitor, write code, DNS and certificate, UAT on staging, launch, automated tests.",
+      "Answer: set up repo, write code, code review, automated tests, build in CI, UAT on staging, deploy, DNS and certificate, launch, monitor. (DNS and certificates are often prepared earlier but confirmed at go-live.)"
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Do the test twice: once now, once the day before your manager's test.",
+      "For scenario questions, structure answers as: check facts, contain impact, communicate, fix, learn."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Memorising answers is enough.",
+       "Managers rephrase questions; understand the why behind each answer."
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "1. What is the difference between a Git branch and a pull request?",
+     "A branch is a separate line of work; a pull request asks to merge that branch into main with review and checks."
+    ],
+    [
+     "2. Why use a lock file?",
+     "To make every install use exactly the same dependency versions."
+    ],
+    [
+     "3. What is the purpose of a staging environment?",
+     "Final testing in a production-like setup before release."
+    ],
+    [
+     "4. A bug appears only in production. Name three possible reasons.",
+     "Different data, configuration or secrets, scale or traffic, third-party live services, or caching."
+    ],
+    [
+     "5. What does a CI pipeline usually include?",
+     "Install dependencies, lint, run tests, security scans, build and publish an artifact."
+    ],
+    [
+     "6. What is the difference between continuous delivery and continuous deployment?",
+     "Delivery keeps every change deployable with a manual trigger; deployment releases automatically."
+    ],
+    [
+     "7. Explain blue-green deployment in one sentence.",
+     "Run the new version alongside the old one and switch traffic over, so you can switch back instantly."
+    ],
+    [
+     "8. When would you choose a canary release?",
+     "When a change is risky and you want a small share of users first while you watch metrics."
+    ],
+    [
+     "9. Why might a rollback be impossible?",
+     "A database or data change isn't backward compatible."
+    ],
+    [
+     "10. What is a feature flag and why is it useful at launch?",
+     "A switch to turn features on or off without deploying; it lets you launch gradually and turn off quickly."
+    ],
+    [
+     "11. What DNS record would you use to point www to a hosting provider's name?",
+     "A CNAME record."
+    ],
+    [
+     "12. Why lower the TTL before moving a domain?",
+     "So the change reaches users quickly instead of waiting for long-cached answers."
+    ],
+    [
+     "13. What happens if an SSL certificate expires?",
+     "Browsers show security warnings and block or scare away users."
+    ],
+    [
+     "14. Name the three Core Web Vitals and good values.",
+     "LCP 2.5 s or less, INP 200 ms or less, CLS 0.1 or less."
+    ],
+    [
+     "15. What does a CDN improve?",
+     "Speed and load on servers, by serving cached content from locations near users."
+    ],
+    [
+     "16. What is the difference between SAST and DAST?",
+     "SAST scans source code; DAST tests the running application."
+    ],
+    [
+     "17. Define RPO and RTO.",
+     "Maximum acceptable data loss and maximum acceptable downtime."
+    ],
+    [
+     "18. What happens in a go/no-go meeting?",
+     "Owners confirm readiness against the checklist and decide whether to release."
+    ],
+    [
+     "19. Name the three pillars of observability.",
+     "Logs, metrics and traces."
+    ],
+    [
+     "20. What is hypercare?",
+     "A period of extra monitoring and support right after launch."
+    ],
+    [
+     "21. Why is mobile rollback different from web rollback?",
+     "Installed versions stay on phones; you can halt a rollout or ship a new version but not pull it back."
+    ],
+    [
+     "22. What must increase with every Android upload?",
+     "The versionCode."
+    ],
+    [
+     "23. What is code signing for?",
+     "Proving the app comes from you and hasn't been tampered with."
+    ],
+    [
+     "24. What is TestFlight?",
+     "Apple's service for distributing beta builds to testers."
+    ],
+    [
+     "25. Describe Apple's phased release.",
+     "Updates go to users with automatic updates over 7 days: 1%, 2%, 5%, 10%, 20%, 50%, 100%; you can pause."
+    ],
+    [
+     "26. Describe Google Play's staged rollout.",
+     "You release an update to a chosen percentage of users and raise it manually; you can halt it."
+    ],
+    [
+     "27. Name two common App Store rejection reasons.",
+     "Crashes, no demo account, privacy mismatch, unclear permissions or incomplete content."
+    ],
+    [
+     "28. Why keep backend APIs compatible with older app versions?",
+     "Many users don't update straight away."
+    ],
+    [
+     "29. Scenario: launch is tomorrow and a high-severity security issue is found. What do you do?",
+     "Assess with security, decide fix vs delay with the risk owner, communicate, and don't launch with an unaccepted high risk."
+    ],
+    [
+     "30. Scenario: after a release, error rates jump. Your first three actions?",
+     "Confirm the impact on dashboards, decide rollback or halt using agreed triggers, and start incident communication with an owner."
+    ]
+   ],
+   "deeper": [
+    "atlCicd",
+    "fowlerBG",
+    "asPhased",
+    "playStaged"
+   ]
+  },
+  "jt03": {
+   "sections": [
+    {
+     "h": "The five-minute talk track (web)",
+     "steps": [
+      [
+       "Setup",
+       "'Code lives in a Git repository. Developers run the app locally, work on feature branches and keep secrets out of the code using environment variables.'"
+      ],
+      [
+       "Code",
+       "'A feature usually touches the frontend in the browser, an API, the backend logic and the database, sometimes with a migration.'"
+      ],
+      [
+       "Review",
+       "'Developers open a pull request. CI runs linting and tests, and a colleague reviews before merging to main.'"
+      ],
+      [
+       "Build",
+       "'The CI pipeline builds an artifact, often a Docker image, with a version number.'"
+      ],
+      [
+       "Test",
+       "'The same artifact goes to QA and staging for regression and UAT.'"
+      ],
+      [
+       "Deploy",
+       "'We deploy to production with a safe strategy, such as blue-green or canary, often behind a feature flag, with a tested rollback plan.'"
+      ],
+      [
+       "Reachable",
+       "'DNS points our domain to the hosting platform, and a TLS certificate gives us HTTPS.'"
+      ],
+      [
+       "Fast and safe",
+       "'A CDN and caching keep it fast; we track Core Web Vitals. Security checks include OWASP risks, scans and backups.'"
+      ],
+      [
+       "Launch and run",
+       "'A go/no-go meeting, smoke tests, then monitoring with logs, metrics and traces, alerts, on-call and hypercare.'"
+      ]
+     ]
+    },
+    {
+     "h": "The two-minute mobile difference",
+     "bullets": [
+      "Builds must be signed: certificates and provisioning profiles on iOS, a keystore and Play App Signing on Android.",
+      "Every upload needs a higher build number.",
+      "Beta testing via TestFlight and Play testing tracks.",
+      "Store listing, privacy labels and app review are a release gate.",
+      "Release gradually: Apple's 7-day phased release, Google Play's staged rollout. You can halt but not pull back installed versions.",
+      "Backend must support older app versions; feature flags and forced updates help manage this."
+     ]
+    },
+    {
+     "h": "Whiteboard sketch",
+     "p": [
+      "Draw one line left to right: Laptop → Git → CI → Artifact → Staging → Production → Users. Above Production, draw DNS and CDN. Below the line, write Monitoring with arrows back to the team. For mobile, draw a branch after CI: Sign → TestFlight/Play testing → Store review → Phased rollout → Phones."
+     ]
+    },
+    {
+     "h": "Likely follow-up questions",
+     "table": [
+      [
+       "Question",
+       "Strong answer outline"
+      ],
+      [
+       "How do you know a release is ready?",
+       "Agreed exit criteria: tests green, no critical bugs, UAT signed off, rollback ready, monitoring in place"
+      ],
+      [
+       "What's your biggest launch risk?",
+       "Name one specific risk (for example a database migration), its impact and mitigation"
+      ],
+      [
+       "How do you roll back on mobile?",
+       "Halt rollout, ship a fixed version, use feature flags or remote config, force update if critical"
+      ],
+      [
+       "Why is the site slow?",
+       "Measure first (Core Web Vitals, TTFB), then check CDN, images, JavaScript, API speed and region"
+      ],
+      [
+       "Who do you involve for a domain change?",
+       "DevOps for DNS and certificates, security, marketing for any URL changes, SEO owner for redirects"
+      ]
+     ]
+    },
+    {
+     "h": "Answering scenario questions",
+     "steps": [
+      [
+       "Clarify",
+       "Ask one question to understand impact."
+      ],
+      [
+       "Contain",
+       "Limit user impact: rollback, halt, feature flag."
+      ],
+      [
+       "Communicate",
+       "Who needs to know, and how often."
+      ],
+      [
+       "Fix",
+       "Owner, plan and timeline."
+      ],
+      [
+       "Learn",
+       "Post-mortem and prevention."
+      ]
+     ]
+    },
+    {
+     "h": "In real projects",
+     "p": [
+      "Use your own product's names and tools in the talk track; real examples are more convincing.",
+      "Keep a single-page cheat sheet of the journey for the day of the test."
+     ]
+    },
+    {
+     "h": "Common misconceptions",
+     "mis": [
+      [
+       "Using lots of jargon sounds expert.",
+       "Clear order and simple explanations with the right terms impress more."
+      ]
+     ]
+    }
+   ],
+   "quiz": [
+    [
+     "What line do you draw for the whiteboard sketch?",
+     "Laptop → Git → CI → Artifact → Staging → Production → Users, with DNS/CDN above and monitoring below."
+    ],
+    [
+     "Name three mobile-specific steps.",
+     "Code signing, beta via TestFlight or Play tracks, store review, phased or staged rollout."
+    ],
+    [
+     "What five steps structure a scenario answer?",
+     "Clarify, contain, communicate, fix, learn."
+    ]
+   ],
+   "deeper": [
+    "mdnWeb",
+    "appReview"
    ]
   }
  }

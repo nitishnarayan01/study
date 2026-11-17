@@ -39,13 +39,13 @@ export default function LoginPage() {
         <div>
           <p className="auth-big">Become an AI-enabled technical program manager.</p>
           <ul className="auth-points">
-            <li>6 courses, 203 topics, from how software works to shipping AI safely</li>
+            <li>7 courses, 229 topics, from how software works to shipping apps and websites live</li>
             <li>Short lessons, hands-on exercises and interview practice</li>
             <li>Your progress saved, so you can pick up on any device</li>
           </ul>
         </div>
         <div className="auth-phases">
-          {[1, 2, 3, 4, 5, 6].map((n) => <span key={n} className={`ph${n}`}>{n}</span>)}
+          {[1, 2, 3, 4, 5, 6, 7].map((n) => <span key={n} className={`ph${n}`}>{n}</span>)}
         </div>
       </section>
       <section className="auth-form">

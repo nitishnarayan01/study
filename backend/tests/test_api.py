@@ -36,10 +36,10 @@ def test_seeded_admin_must_change_password(client, admin_h):
 # ---------- catalog ----------
 def test_catalog_has_all_content(client, learner_h):
     c = client.get("/api/catalog", headers=learner_h).json()
-    assert len(c["phases"]) == 6
-    assert len(c["categories"]) == 14
-    assert len(c["topics"]) == 203
-    assert sum(t["has_lesson"] for t in c["topics"]) == 203
+    assert len(c["phases"]) == 7
+    assert len(c["categories"]) == 17
+    assert len(c["topics"]) == 229
+    assert sum(t["has_lesson"] for t in c["topics"]) == 229
 
 
 def test_topic_detail_with_lesson_and_resources(client, learner_h):
@@ -121,7 +121,7 @@ def test_manager_sees_only_own_team(client, manager_h, learner_h):
     assert [t["name"] for t in teams] == ["Team A"]
     r = client.get(f"/api/teams/{teams[0]['id']}/progress", headers=manager_h).json()
     lee = next(m for m in r["members"] if m["email"] == "learner@acme.com")
-    assert lee["done"] == 1 and lee["total"] == 203 and lee["by_phase"]["1"]["done"] == 1
+    assert lee["done"] == 1 and lee["total"] == 229 and lee["by_phase"]["1"]["done"] == 1
 
 
 def test_manager_blocked_from_other_team(client, manager_h, admin_h):

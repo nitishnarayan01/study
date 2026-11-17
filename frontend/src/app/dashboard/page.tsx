@@ -59,7 +59,7 @@ export default function Home() {
             <h1>{doneCount === 0 ? `Welcome, ${first}` : `Welcome back, ${first}`}</h1>
             <p className="muted">
               {doneCount === 0
-                ? "Your path to AI-enabled TPM: six short courses, from how software works to a portfolio you can show."
+                ? "Your path to AI-enabled TPM: seven short courses, from how software works to taking websites and apps live."
                 : `${doneCount} of ${all.length} topics done. Pick up where you left off below.`}
             </p>
           </div>
@@ -73,7 +73,7 @@ export default function Home() {
 
         {resume && resumeCat && resumePhase && (
           <section className="resume" aria-labelledby="resume-h">
-            <div className={`resume-art ph${((resumePhase.number - 1) % 6) + 1}`} aria-hidden="true">
+            <div className={`resume-art ph${((resumePhase.number - 1) % 7) + 1}`} aria-hidden="true">
               <span>{String(resumePhase.number).padStart(2, "0")}</span>
             </div>
             <div className="resume-b">

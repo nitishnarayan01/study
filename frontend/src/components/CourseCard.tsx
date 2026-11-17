@@ -18,7 +18,7 @@ export default function CourseCard({
   const resume = nextUp(topics, prog);
   const cta = pct === 100 ? "Review" : started ? "Continue" : "Start course";
   return (
-    <article className={`course ph${((phase.number - 1) % 6) + 1}`}>
+    <article className={`course ph${((phase.number - 1) % 7) + 1}`}>
       <Link href={`/phases/${phase.number}`} className="banner" aria-label={`Phase ${phase.number}: ${phase.name}`}>
         <span className="banner-k">Phase {phase.number}</span>
         <span className="banner-n" aria-hidden="true">{String(phase.number).padStart(2, "0")}</span>

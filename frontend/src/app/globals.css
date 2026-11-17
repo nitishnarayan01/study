@@ -10,6 +10,7 @@
   --ph4a: #b5482a; --ph4b: #e9845c;
   --ph5a: #1b7a4f; --ph5b: #4cb97e;
   --ph6a: #8a2f6e; --ph6b: #d2689f;
+  --ph7a: #9a6b00; --ph7b: #e0a526;
   --hero-a: #13203d; --hero-b: #233a6b;
   --shadow: 0 1px 2px rgba(20, 27, 42, .05), 0 4px 14px rgba(20, 27, 42, .06);
   --shadow-lg: 0 2px 4px rgba(20, 27, 42, .06), 0 12px 32px rgba(20, 27, 42, .10);
@@ -128,6 +129,7 @@ table.grid th { font-size: 12px; text-transform: uppercase; letter-spacing: .05e
 .ph1 { --pa: var(--ph1a); --pb: var(--ph1b); } .ph2 { --pa: var(--ph2a); --pb: var(--ph2b); }
 .ph3 { --pa: var(--ph3a); --pb: var(--ph3b); } .ph4 { --pa: var(--ph4a); --pb: var(--ph4b); }
 .ph5 { --pa: var(--ph5a); --pb: var(--ph5b); } .ph6 { --pa: var(--ph6a); --pb: var(--ph6b); }
+.ph7 { --pa: var(--ph7a); --pb: var(--ph7b); }
 
 /* home */
 .hero { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; padding: 28px;

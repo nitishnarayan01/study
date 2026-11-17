@@ -38,7 +38,7 @@ export default function PhasePage() {
   return (
     <>
       <TopBar />
-      <header className={`course-hero ph${((num - 1) % 6) + 1}`}>
+      <header className={`course-hero ph${((num - 1) % 7) + 1}`}>
         <div className="inner">
           <nav className="crumbs" aria-label="Breadcrumb">
             <Link href="/dashboard">My learning</Link> <span aria-hidden="true">›</span> Phase {num}
