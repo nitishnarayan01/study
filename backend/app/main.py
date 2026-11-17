@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 
 from app.config import get_settings
 from app.routers import admin, auth, catalog, progress
@@ -9,6 +10,9 @@ app = FastAPI(
     version="0.1.0",
     description="Learning path, lessons and progress tracking for AI-enabled TPMs.",
 )
+
+# Compress larger responses (the catalog and lessons) so they download faster.
+app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 app.add_middleware(
     CORSMiddleware,

@@ -8,6 +8,7 @@ import LessonView, { readingMinutes } from "@/components/LessonView";
 import TopBar from "@/components/TopBar";
 import { Meter } from "@/components/ui";
 import { api } from "@/lib/api";
+import { loadTopic, peekTopic, prefetchTopic } from "@/lib/cache";
 import { useRequireAuth } from "@/lib/auth";
 import {
   categoryOf, hoursLabel, orderedTopics, percentDone, phaseCategories, phaseTopics, statusOf,
@@ -23,8 +24,8 @@ export default function TopicPage() {
   const router = useRouter();
   const { id } = useParams<{ id: string }>();
   const { catalog, prog, setProg, error: loadError } = useLearning(user);
-  const [topic, setTopic] = useState<TopicDetail | null>(null);
-  const [tab, setTab] = useState<Tab>("lesson");
+  const [topic, setTopic] = useState<TopicDetail | null>(() => peekTopic(id));
+  const [tab, setTab] = useState<Tab>(() => (peekTopic(id)?.lesson === null ? "practice" : "lesson"));
   const [error, setError] = useState("");
   const [saved, setSaved] = useState("");
   const [copied, setCopied] = useState(false);
@@ -35,12 +36,14 @@ export default function TopicPage() {
 
   useEffect(() => {
     if (!user || !id) return;
-    setTopic(null);
+    const cached = peekTopic(id);
+    setTopic(cached);
+    if (cached) setTab(cached.lesson ? "lesson" : "practice");
     setDrawer(false);
-    api.topic(id)
+    loadTopic(id)
       .then((t) => {
         setTopic(t);
-        setTab(t.lesson ? "lesson" : "practice");
+        if (!cached) setTab(t.lesson ? "lesson" : "practice");
       })
       .catch((e) => setError(e instanceof Error ? e.message : "Couldn't load this topic."));
   }, [user, id]);
@@ -76,6 +79,18 @@ export default function TopicPage() {
     autoStarted.current = id;
     if (statusOf(prog, id) === 0) save({ status: 1 });
     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [catalog, topic, id]);
+
+  // Fetch the next and previous topics in the background so clicking them is instant.
+  useEffect(() => {
+    if (!catalog || !topic) return;
+    const all = orderedTopics(catalog);
+    const i = all.findIndex((t) => t.id === id);
+    const t = setTimeout(() => {
+      if (i >= 0 && i < all.length - 1) prefetchTopic(all[i + 1].id);
+      if (i > 0) prefetchTopic(all[i - 1].id);
+    }, 300);
+    return () => clearTimeout(t);
   }, [catalog, topic, id]);
 
   function onNotes(v: string) {

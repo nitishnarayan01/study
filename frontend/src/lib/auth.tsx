@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
 import { api, getToken, setToken } from "./api";
 import type { Role, User } from "./types";
+import { clearCache } from "./cache";
 
 interface AuthState {
   user: User | null;
@@ -47,6 +48,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const logout = () => {
+    clearCache();
     setToken(null);
     setUser(null);
     window.location.href = "/login";

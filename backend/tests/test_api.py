@@ -134,3 +134,9 @@ def test_deactivated_user_cannot_use_token(client, admin_h, learner_h):
     lee = next(u for u in users if u["email"] == "learner@acme.com")
     client.patch(f"/api/users/{lee['id']}", json={"is_active": False}, headers=admin_h)
     assert client.get("/api/catalog", headers=learner_h).status_code == 401
+
+
+def test_large_responses_are_compressed(client, learner_h):
+    r = client.get("/api/catalog", headers={**learner_h, "Accept-Encoding": "gzip"})
+    assert r.status_code == 200
+    assert r.headers.get("content-encoding") == "gzip"
