@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import TopBar from "@/components/TopBar";
 import { api } from "@/lib/api";
 import { useAuth, useRequireAuth } from "@/lib/auth";
+import { ThemePicker } from "@/lib/theme";
 
 export default function AccountPage() {
   const { user } = useRequireAuth();
@@ -38,6 +39,11 @@ export default function AccountPage() {
       <main className="wrap narrow">
         <h1 style={{ fontSize: 22 }}>Account</h1>
         {user.must_change_password && <div className="notice">You’re using a temporary password. Please set your own below.</div>}
+        <section className="card" aria-labelledby="appearance-h" style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+          <h2 id="appearance-h" className="card-h" style={{ margin: 0 }}>Appearance</h2>
+          <ThemePicker />
+          <p className="muted small" style={{ margin: 0 }}>Saved on this device. You can also switch any time with the moon or sun button at the top.</p>
+        </section>
         <div className="card" style={{ display: "grid", gap: 6 }}>
           <div><b>{user.name}</b></div>
           <div className="muted">{user.email} · {user.role}</div>

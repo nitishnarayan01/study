@@ -31,6 +31,17 @@ async function session(name, opts) {
     await page.waitForTimeout(600);
     await page.screenshot({ path: `${name}-${label}.png`, fullPage: label !== "lesson" });
   }
+  // Theme switch: flip it and screenshot the home page, then flip back.
+  await page.goto(`${base}/dashboard`);
+  await page.waitForLoadState("networkidle");
+  await page.locator(".topbar .theme-btn").click();
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: `${name}-toggled.png` });
+  await page.reload();
+  await page.waitForLoadState("networkidle");
+  const kept = await page.evaluate(() => document.documentElement.dataset.theme || "none");
+  if (kept === "none") errors.push(`${name}: theme choice was not remembered after reload`);
+  await page.locator(".topbar .theme-btn").click();
   // Lesson: practice tab, then scrolled down, then complete-and-continue.
   await page.goto(`${base}/topics/hsw06`);
   await page.waitForLoadState("networkidle");

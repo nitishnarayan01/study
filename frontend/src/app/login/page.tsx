@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState, type FormEvent } from "react";
 import { useAuth } from "@/lib/auth";
+import { ThemeToggle } from "@/lib/theme";
 
 export default function LoginPage() {
   const { user, login } = useAuth();
@@ -32,6 +33,7 @@ export default function LoginPage() {
 
   return (
     <main className="auth">
+      <ThemeToggle className="auth-theme" />
       <section className="auth-art" aria-hidden="true">
         <div className="auth-brand"><span className="logo">TL</span> TPM Learning Hub</div>
         <div>

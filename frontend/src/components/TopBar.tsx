@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAuth } from "@/lib/auth";
+import { ThemeToggle } from "@/lib/theme";
 
 function initials(name: string) {
   return name.split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]?.toUpperCase()).join("") || "?";
@@ -34,6 +35,7 @@ export default function TopBar() {
           ))}
         </nav>
         <div className="who">
+          <ThemeToggle />
           <Link href="/account" className="avatar" title={`${user.name} · Account settings`}
             aria-current={path.startsWith("/account") ? "page" : undefined}>
             {initials(user.name)}
