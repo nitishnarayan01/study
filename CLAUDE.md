@@ -11,7 +11,7 @@ This repo is the TPM Learning Hub. The owner is a project manager who builds wit
 - Every schema change needs a new Alembic migration in `backend/alembic/versions/` that matches `app/models.py`.
 - Permissions are enforced in the backend (`app/deps.py`: `CurrentUser`, `AdminUser`, `ManagerOrAdmin`). Never rely on the frontend to hide data.
 - Add or update tests in `backend/tests/` for every API change; run `pytest -q` in `backend/`.
-- Content lives in `backend/app/seed/content.json`. The seed script must stay idempotent and must never modify `progress`.
+- Lesson content is written in `content-source/src/` and exported to `backend/app/seed/content.json` with `node content-source/scripts/export.js`. Never edit content.json by hand. The seed script must stay idempotent and must never modify `progress`.
 - Lesson JSON format: `{sections: [{h, p?, steps?, table?, bullets?, gloss?, mis?, flow?, flowLabel?}], quiz: [[q, a]], deeper: [resourceKey]}`. Headings have no numbers; the UI numbers them.
 - Resource URLs must be real and checked; never invent links.
 - Frontend calls go through `src/lib/api.ts`; types live in `src/lib/types.ts`.

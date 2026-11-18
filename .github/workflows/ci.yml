@@ -53,3 +53,18 @@ jobs:
         run: npm run lint
       - name: Type-check and build
         run: npm run build
+
+  content:
+    # Makes sure lesson source files are valid and content.json was regenerated after edits.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Check lesson sources
+        run: node content-source/scripts/check.js
+      - name: content.json matches the sources
+        run: |
+          node content-source/scripts/export.js
+          git diff --exit-code backend/app/seed/content.json || { echo "::error::content.json is out of date. Run: node content-source/scripts/export.js and commit the result."; exit 1; }
